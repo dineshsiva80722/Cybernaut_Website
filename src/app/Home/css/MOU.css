@@ -1,0 +1,26 @@
+/* .box {
+    width: 300px;
+    height: 150px;
+    background-color: #e5e5e5;
+    border-radius: 8px;
+    box-shadow: inset 8px 0 10px rgba(0, 0, 0, 0.2), inset -8px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    font-size: 16px;
+  } */
+   /* #mainsection{
+    overflow-x: auto;
+   } */
+
+
+   @keyframes scroll{
+
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+    
+  }
