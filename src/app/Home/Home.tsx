@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { StaticImageData } from 'next/image';
 import Founder from '@/app/Home/Mobile-Components/Founder_img';
 import AnimatedTooltip from '@/components/ui/animated-tooltip'
-import React, { useEffect, useState, useRef, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import './css/MOU.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -20,12 +20,13 @@ function HeroIllustration() {
     const [micSvgTranslateY, setMicSvgTranslateY] = useState(0);
     const [micSvgTranslateX, setMicSvgTranslateX] = useState(0);
     const [scrollTranslate, setScrollTranslate] = useState(0);
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [, setCurrentSlide] = useState(0)
 
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
+          
             if (scrollPosition < 500) {
                 setMicSvgTranslateY(0);
                 setMicSvgTranslateX(0);
@@ -46,7 +47,7 @@ function HeroIllustration() {
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
-            const translateX = Math.min(scrollY * 0.2, 700);
+            // const translateX = Math.min(scrollY * 0.2, 700);
 
             if (scrollY < 400) {
                 setScrollTranslate(0);
