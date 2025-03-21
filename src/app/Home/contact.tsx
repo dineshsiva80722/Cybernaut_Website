@@ -27,8 +27,8 @@ function Contact() {
             } else {
                 alert('Failed to subscribe. Please try again.');
             }
-        } catch (err) {
-            alert('An error occurred. Please try again.');
+        } catch (error) {
+            alert(`An error occurred. Please try again. ${error}`);
         } finally {
             setIsLoading(false);
             setEmail('');
