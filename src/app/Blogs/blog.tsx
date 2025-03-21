@@ -249,7 +249,7 @@ function App() {
                 alert('Failed to subscribe. Please try again.');
             }
         } catch (error) {
-            alert('An error occurred. Please try again.');
+            alert(`An error occurred. Please try again.${error}`);
         } finally {
             setIsLoading(false);
             setEmail('');
