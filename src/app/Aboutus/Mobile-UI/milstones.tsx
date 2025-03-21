@@ -76,10 +76,10 @@ const Card = () => {
       </div>
       <div className="group relative flex h-[5em] w-full items-center justify-center overflow-hidden rounded-[1.5rem] bg-[#FFF599]">
         <p className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[1rem] font-bold duration-500 group-hover:-translate-x-[250%]">
-          Today's Quote
+          Today&apos;s Quote
         </p>
         <p className="absolute left-1/2 top-1/2 h-fit w-full -translate-y-1/2 translate-x-1/2 px-[1rem]  text-[0.75rem] font-bold duration-500 group-hover:-translate-x-1/2 text-center">
-          “The real workout starts when you want to stop.” – Ronnie Coleman
+          The real workout starts when you want to stop. - Ronnie Coleman
         </p>
       </div>
     </div>
