@@ -1,9 +1,8 @@
 'use client';
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { Card } from '@/components/ui/card'
-import { useState, useEffect } from 'react';
 import FounderCard from '@/app/Aboutus/Mobile-UI/FounderCard'
 import AnimatedTooltip from '@/components/ui/animated-tooltip'
 import { NumberTicker } from "@/components/magicui/number-ticker";
@@ -39,18 +38,16 @@ const people : { id: number; name: string; designation: string; image: string | 
 
 const images = ["https://res.cloudinary.com/dn60aovto/image/upload/v1742450995/JS_hkszd9.png", "https://res.cloudinary.com/dn60aovto/image/upload/v1742451262/Manish_q6qmq6.png"]; // Array of images
 
-const founders = () => {
+const Founders = () => {
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const [, setCurrentImageIndex] = useState(0);
+  const isHovered = false; // Or simply remove this line if not needed
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -98,7 +95,7 @@ const founders = () => {
                 </div>
               </div>
               <div className="lg:flex hidden justify-start items-center relative -left-[2.3rem] top-[3.7rem] pb-4  w-[30rem] h-28  rounded-br-[3rem] rounded-bl-[3rem]  shadow-[0.1rem_0.1rem_0_0] shadow-blue-500 z-30">
-                <Button className='bg-blue-500  p-8 px-10  rounded-full text-lg mx-10'>Let's Contect</Button>
+                <Button className='bg-blue-500  p-8 px-10  rounded-full text-lg mx-10'>Let&apos;s Contect</Button>
                 <div className=' lg:flex hidden justify-center  items-center flex-col relative -left-5 w-full '>
                   <div className="flex flex-row items-start relative justify-start w-[14rem]">
                     <AnimatedTooltip items={people} />
@@ -141,7 +138,7 @@ const founders = () => {
             </div>
           </section>
           <section className='relative hidden lg:block -top-20'>
-            <Card className="relative mx-auto w-[70rem] bg-zinc-500  h-[37rem] z-40 rounded-[3rem] border-b-white border-b-0 border-r-2  border-t-2 border-l-2 overflow-hidden bg-transparent border-blue-500 p-8">
+            <Card className="relative mx-auto w-[70rem]  h-[37rem] z-40 rounded-[3rem] border-b-white border-b-0 border-r-2  border-t-2 border-l-2 overflow-hidden bg-transparent border-blue-500 p-8">
               <div className="flex flex-col gap-8  lg:flex-row lg:items-start lg:justify-between">
                 <div className="lg:w-[400px]">
                   <div className="flex justify-center items-center space-y-8">
@@ -164,7 +161,7 @@ const founders = () => {
                     Manish Kumar
                   </h1>
                   <p className="text-lg text-justify leading-relaxed text-gray-800">
-                    B. Manish Kumar, President and UI/UX Designer at Cybernaut, combines design expertise with strategic vision. His commitment to quality drives innovation and supports the company’s growth, shaping Cybernaut’s journey toward long-term success and excellence in education and technology.
+                    B. Manish Kumar, President and UI/UX Designer at Cybernaut, combines design expertise with strategic vision. His commitment to quality drives innovation and supports the company&apos;s growth, shaping Cybernaut&apos;s journey toward long-term success and excellence in education and technology.
                   </p>
                 </div>
               </div>
@@ -179,7 +176,7 @@ const founders = () => {
                     </p>
                   </div>
                 </div>
-                <Button className='p-8 px-8 bg-blue-500 rounded-full text-lg mx-10 '>Let's Contect</Button>
+                <Button className='p-8 px-8 bg-blue-500 rounded-full text-lg mx-10 '>Let&apos;s Contect</Button>
               </div>
               <div className="absolute bottom-0 top-[25rem] -left-[0.1rem] w-[40rem] h-28  rounded-t-[3rem] mx-auto shadow-[0.1rem_-0.1rem_0_0] rounded-tl-none rounded-tr-[2rem]  rounded-bl-none shadow-blue-500">
               </div>
@@ -229,7 +226,7 @@ const founders = () => {
           <div className="w-full md:w-1/2 min-h-96 flex items-center justify-center   ">
             <div className='w-[33rem] min-h-80  space-y-2'>
               <h1 className="text-3xl md:text-2xl lg:text-2xl font-bold    text-[#1F1F3D]">
-                Hello, I'm Jayasurya Gnanavel
+                Hello, I&apos;m Jayasurya Gnanavel
               </h1>
               <h2 className="text-xl md:text-xl text-[#00A3FF] font-semibold">
                 Founder & CEO
@@ -299,13 +296,14 @@ const founders = () => {
           <div className="w-full md:w-1/2 min-h-96 flex items-center justify-center   ">
             <div className='w-[33rem] min-h-80  space-y-3'>
               <h1 className="text-3xl md:text-2xl lg:text-2xl font-bold    text-[#1F1F3D]">
-                Hello, I’m Manish Kumar
+                Hello, I&apos;m Manish Kumar
               </h1>
               <h2 className="text-xl md:text-xl text-[#00A3FF] font-semibold">
                 Co-Founder & President
               </h2>
               <p className="text-gray-600 text-md leading-relaxed ">
-                B. Manish Kumar, President and UI/UX Designer at Cybernaut, combines design expertise with strategic vision. His commitment to quality drives innovation and supports the company’s growth, shaping Cybernaut’s journey toward long-term success and excellence in education and technology.              </p>
+                B. Manish Kumar, President and UI/UX Designer at Cybernaut, combines design expertise with strategic vision. His commitment to quality drives innovation and supports the company&apos;s growth, shaping Cybernaut&apos;s journey toward long-term success and excellence in education and technology.  
+              </p>
               <div className="flex flex-row items-start relative justify-start w-[14rem]">
                 <AnimatedTooltip items={people} />
               </div>
@@ -344,4 +342,4 @@ const founders = () => {
   )
 }
 
-export default founders;
+export default Founders;
