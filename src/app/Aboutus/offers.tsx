@@ -3,20 +3,13 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { cn } from '@/lib/utils';
+import { Tabs, TabsContent } from '@/components/ui/tabs';
 import What from '@/app/Home/assets/wwd.png'
 import { gsap } from 'gsap';
-import { Key } from 'lucide-react';
 import MobileOffers from './Mobile-UI/OfferscolCompany';
 
 
 type TabValue = 'colleges' | 'companies';
-
-interface GalleryImage {
-    src: string;
-    alt: string;
-}
 
 const handleClickOne = () => {
     gsap.to(".moving-bar ", {
