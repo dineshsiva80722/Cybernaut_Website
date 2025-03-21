@@ -166,25 +166,31 @@ import { ArrowRight, GraduationCap } from 'lucide-react';
 import { Dancing_Script } from 'next/font/google';
 const dancingScript = Dancing_Script({ subsets: ['latin'] });
 
+interface Blog {
+    title: string;
+    content: string; 
+}
+
 function App() {
-    const [blogs, setBlogs] = useState<any[]>([]);
-    const [filteredBlogs, setFilteredBlogs] = useState<any[]>([]);
-    const [activeCategory, setActiveCategory] = useState('All');
-    const [searchQuery, setSearchQuery] = useState('');
+    const [blogs, setBlogs] = useState<Blog[]>([]); // Use the Blog type
+    const [filteredBlogs, setFilteredBlogs] = useState<Blog[]>([]); // Use the Blog type
+    const [activeCategory, setActiveCategory] = useState<string>('All'); // Specify the type
+    const [searchQuery, setSearchQuery] = useState<string>(''); // Specify the type
 
     useEffect(() => {
         fetch("https://medium-postscraper-api.onrender.com/scrape?url=https://cybernautblogs.medium.com/")
             .then(response => response.json())
             .then(data => {
-                const categorizedBlogs = data.map((blog: any) => ({
+                const categorizedBlogs = data.map((blog: Blog) => ({ // Use the Blog type
                     ...blog,
                     category: categorizeBlog(blog)
                 }));
                 setBlogs(categorizedBlogs);
                 setFilteredBlogs(categorizedBlogs);
             })
-            .catch(error => console.error("Error fetching blogs:", error));
+            .catch(error => console.error(`Error fetching blogs: ${error}`));
     }, []);
+
 
     const categorizeBlog = (blog: { title: string }) => {
         const lowerTitle = blog.title.toLowerCase();
