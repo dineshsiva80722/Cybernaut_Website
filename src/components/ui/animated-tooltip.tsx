@@ -57,7 +57,7 @@ const AnimatedTooltip = ({
 
   const handleMouseMove = (event: React.MouseEvent) => {
     const halfWidth = (event.currentTarget as HTMLElement).offsetWidth / 2;
-        x.set(event.nativeEvent.offsetX - halfWidth);
+    x.set(event.nativeEvent.offsetX - halfWidth);
   };
 
   return (
