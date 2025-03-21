@@ -186,10 +186,7 @@ function About() {
                         {/* Main Image */}
                         <div className=" w-[40rem] h-[35rem] rounded-[30px]">
                             <VideoCard
-                                title="Mountain Sunrise"
-                                description="Experience the breathtaking view of sunrise over the mountains"
                                 videoUrl="https://res.cloudinary.com/dn60aovto/video/upload/v1742274023/Cybernaut_fiki4i.mp4" // Use the relative path from the public directory
-
                             />
                         </div>
 
