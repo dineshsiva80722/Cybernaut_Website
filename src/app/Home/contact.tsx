@@ -27,7 +27,7 @@ function Contact() {
             } else {
                 alert('Failed to subscribe. Please try again.');
             }
-        } catch (error) {
+        } catch (err) {
             alert('An error occurred. Please try again.');
         } finally {
             setIsLoading(false);
