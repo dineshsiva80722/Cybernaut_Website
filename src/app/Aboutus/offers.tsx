@@ -7,6 +7,7 @@ import { Tabs, TabsContent } from '@/components/ui/tabs';
 import What from '@/app/Home/assets/wwd.png'
 import { gsap } from 'gsap';
 import MobileOffers from './Mobile-UI/OfferscolCompany';
+import { JSX } from 'react';
 
 
 type TabValue = 'colleges' | 'companies';

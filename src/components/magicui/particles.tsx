@@ -100,12 +100,23 @@ export const Particles: React.FC<ParticlesProps> = ({
   const resizeTimeout = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
+    if (canvasRef.current) {
+      context.current = canvasRef.current.getContext("2d");
+    }
+    initCanvas();
+    animate();
+
     const handleResize = () => {
-      // Your resize logic
+      if (resizeTimeout.current) {
+        clearTimeout(resizeTimeout.current);
+      }
+      resizeTimeout.current = setTimeout(() => {
+        initCanvas();
+      }, 200);
     };
-  
+
     window.addEventListener("resize", handleResize);
-  
+
     return () => {
       if (rafID.current != null) {
         window.cancelAnimationFrame(rafID.current);
@@ -115,19 +126,15 @@ export const Particles: React.FC<ParticlesProps> = ({
       }
       window.removeEventListener("resize", handleResize);
     };
-  }, [color,animate, initCanvas]); // Added dependencies
-  
+  }, [color]);
+
   useEffect(() => {
     onMouseMove();
-  }, [mousePosition.x, mousePosition.y, onMouseMove]); // Added dependency
-  
+  }, [mousePosition.x, mousePosition.y]);
 
-
-useEffect(() => {
-  initCanvas();
-}, [refresh, initCanvas])
-
-
+  useEffect(() => {
+    initCanvas();
+  }, [refresh]);
 
   const initCanvas = () => {
     resizeCanvas();
