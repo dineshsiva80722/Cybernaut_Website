@@ -1,8 +1,12 @@
+import React from 'react'
+import Home from '@/app/Home/page'
 
-export default function Home() {
+const page = () => {
   return (
-    <>
-      <section className="min-h-screen bg-gray-600 text-4xl font-bold flex items-center justify-center text-white"> Hi Vercel is working</section>
-    </>
-  );
+    <div>
+        <Home/>
+    </div>
+  )
 }
+
+export default page
