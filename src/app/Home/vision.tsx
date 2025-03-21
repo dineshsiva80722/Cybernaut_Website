@@ -7,7 +7,7 @@ import Image from 'next/image';
 type SectionType = 'vision' | 'mission' | 'activities';
 
 
-function vision() {
+function Vision() {
   const [openSection, setOpenSection] = useState<SectionType>('vision'); 
 
   const toggleSection = (section: SectionType) => {
@@ -163,4 +163,4 @@ function vision() {
   );
 }
 
-export default vision;
+export default Vision;
