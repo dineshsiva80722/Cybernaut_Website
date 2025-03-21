@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 function Mobileoffers() {
   const [activeTab, setActiveTab] = useState('colleges');
@@ -11,22 +12,20 @@ function Mobileoffers() {
         {/* Tabs */}
         <div className="flex border-b">
           <button
-            className={`py-4 px-6 text-md font-medium flex-1 ${
-              activeTab === 'colleges' 
-                ? 'text-blue-500 border-b-2 border-blue-500' 
+            className={`py-4 px-6 text-md font-medium flex-1 ${activeTab === 'colleges'
+                ? 'text-blue-500 border-b-2 border-blue-500'
                 : 'text-gray-600'
-            }`}
+              }`}
             onClick={() => setActiveTab('colleges')}
           >
             For Colleges
           </button>
           <button
 
-            className={`py-4 px-6 text-md font-medium flex-1 ${
-              activeTab === 'companies' 
-                ? 'text-blue-500 border-b-2 border-blue-500' 
+            className={`py-4 px-6 text-md font-medium flex-1 ${activeTab === 'companies'
+                ? 'text-blue-500 border-b-2 border-blue-500'
                 : 'text-gray-600'
-            }`}
+              }`}
 
             onClick={() => setActiveTab('companies')}
           >
@@ -76,14 +75,19 @@ function Mobileoffers() {
               </div>
 
               <div className="mt-6 grid grid-cols-2 gap-4">
-                <img 
-                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
-                  alt="Students in classroom" 
+                <Image
+                  width={500}
+                  height={500}
+                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                  alt="Students in classroom"
                   className="rounded-lg w-full h-32 object-cover"
                 />
-                <img 
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
-                  alt="Students in auditorium" 
+                <Image
+                  width={500}
+                  height={500}
+
+                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                  alt="Students in auditorium"
                   className="rounded-lg w-full h-32 object-cover"
                 />
               </div>
@@ -130,14 +134,18 @@ function Mobileoffers() {
               </div>
 
               <div className="mt-6 grid grid-cols-2 gap-4">
-                <img 
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
-                  alt="Corporate meeting" 
+                <Image
+                  width={500}
+                  height={500}
+                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                  alt="Corporate meeting"
                   className="rounded-lg w-full h-32 object-cover"
                 />
-                <img 
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
-                  alt="Business team" 
+                <Image
+                  width={500}
+                  height={500}
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                  alt="Business team"
                   className="rounded-lg w-full h-32 object-cover"
                 />
               </div>
