@@ -250,7 +250,7 @@ function About() {
                     <p className="text-gray-600 w-10/12 ">
                         At Cybernaut Edu-Tech, we offer premier educational solutions, including
                         products, services, and training programs. Partner with us to enhance your
-                        institution's learning experience.
+                        institution&apos;s learning experience.
                     </p>
 
                     {/* Our Mission */}
