@@ -19,7 +19,6 @@ gsap.registerPlugin(ScrollTrigger);
 function HeroIllustration() {
     const [micSvgTranslateY, setMicSvgTranslateY] = useState(0);
     const [micSvgTranslateX, setMicSvgTranslateX] = useState(0);
-    const [micSvg2TranslateX, setMicSvg2TranslateX] = useState(0);
     const [scrollTranslate, setScrollTranslate] = useState(0);
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -47,7 +46,6 @@ function HeroIllustration() {
         const handleScroll = () => {
             const scrollY = window.scrollY;
             const translateX = Math.min(scrollY * 0.2, 700);
-            setMicSvg2TranslateX(translateX);
 
             if (scrollY < 400) {
                 setScrollTranslate(0);
@@ -182,10 +180,7 @@ const getContent = (scrollTranslate: number) => {
 
 export default function Home() {
     const [wordIndex, setWordIndex] = useState(0);
-    const [isClient, setIsClient] = useState(false);
     const [scrollTranslate, setScrollTranslate] = useState(0);
-    const heroRef = useRef(null);
-    const [activeTab, setActiveTab] = useState('tab1');
     const [autoContentIndex, setAutoContentIndex] = useState(0);
     const autoContents = [
         "Boost Up and Build Your Tech Career with our Courses ",
@@ -202,7 +197,7 @@ export default function Home() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setBodyContent((prevIndex) => (prevIndex + 1) % bodycontents.length);
+            setBodyContent((prevIndex) => (prevIndex + 1) );
         }, 3000); // Change content every 3 seconds
 
         return () => clearInterval(interval);
@@ -227,7 +222,6 @@ export default function Home() {
     }, []);
 
     useEffect(() => {
-        setIsClient(true);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [handleScroll]);
@@ -264,7 +258,7 @@ export default function Home() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setAutoContentIndex((prevIndex) => (prevIndex + 1) % autoContents.length);
+            setAutoContentIndex((prevIndex) => (prevIndex + 1) );
         }, 3000); // Change content every 3 seconds
 
         return () => clearInterval(interval);

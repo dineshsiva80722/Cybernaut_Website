@@ -110,34 +110,6 @@ const Gallery = () => {
     setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  // gsap animation
-  const [showCourses, setShowCourses] = useState(false);
-  const [showDescription, setShowDescription] = useState(true);
-  const [showBenefits, setShowBenefits] = useState(false);
-  const [showCertification, setShowCertification] = useState(false);
-  const [showRequirements, setShowRequirements] = useState(false);
-  const [showTestimonials, setShowTestimonials] = useState(false); // New state for Testimonials
-  const [showFAQs, setShowFAQs] = useState(false); // New state for FAQs
-
-  const handleModulesClick = () => {
-    setShowCourses(true);
-    setShowDescription(false);
-    setShowBenefits(false);
-    setShowCertification(false);
-    setShowRequirements(false);
-    setShowTestimonials(false);
-    setShowFAQs(false);
-  };
-
-  const handleDescriptionClick = () => {
-    setShowDescription(true);
-    setShowCourses(false);
-    setShowBenefits(false);
-    setShowCertification(false);
-    setShowRequirements(false);
-    setShowTestimonials(false);
-    setShowFAQs(false);
-  };
 
   return (
     <div className="container mx-auto lg:py-5 px-4 sm:px-6 lg:px-8">

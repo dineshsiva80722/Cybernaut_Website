@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React , { useState, useEffect } from 'react';
 import Nav from './nav'
 import Home from './Home'
 import Ratings from './Ratings'
@@ -12,11 +12,10 @@ import Blogs from './Blogs'
 import Contact from './contact'
 import OnOfline from './onofline'
 import Footer from './footer'
-import { useState, useEffect } from 'react'
 import { ArrowUp } from 'lucide-react';
 
 
-const page = () => {
+const Page = () => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -75,4 +74,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

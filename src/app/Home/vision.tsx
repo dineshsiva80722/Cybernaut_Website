@@ -51,7 +51,7 @@ function vision() {
         </h1>
 
         <p className="text-gray-700 text-lg ">
-          Connect with top tech minds and access exclusive resources. you don't just learn innovation—you build it!
+          Connect with top tech minds and access exclusive resources. you don&#39;t just learn innovation—you build it!
         </p>
 
         {/* Accordion sections */}
@@ -75,7 +75,7 @@ function vision() {
                 }`}
             >
               <p className="text-gray-600 pl-2 border-l-2 border-blue-400">
-                This clan embraces the motto: <span className="font-medium">"Create leaders, not employees."</span>
+                This clan embraces the motto: <span className="font-medium">&#34;Create leaders, not employees.&#34;</span>
               </p>
             </div>
           </div>

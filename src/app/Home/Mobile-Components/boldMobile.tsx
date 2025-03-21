@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Calendar, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 interface ImageSliderProps {
     images: string[];
@@ -37,13 +38,19 @@ export default function ImageSlider({ images }: ImageSliderProps) {
     const [dragX, setDragX] = useState(0);
     const sliderRef = useRef<HTMLDivElement>(null);
 
+    const goToNext = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
     useEffect(() => {
         const interval = setInterval(() => {
             goToNext();
         }, 3000); // Change slide every 3 seconds
 
         return () => clearInterval(interval); // Cleanup on unmount
-    }, [images.length]);
+    }, [images.length, goToNext]);
 
     const handleMouseDown = (e: React.MouseEvent) => {
         setIsDragging(true);
@@ -71,12 +78,7 @@ export default function ImageSlider({ images }: ImageSliderProps) {
         setDragX(0);
     };
 
-    const goToNext = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === images.length - 1 ? 0 : prevIndex + 1
-        );
-    };
-
+  
     const goToPrevious = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex === 0 ? images.length - 1 : prevIndex - 1
@@ -105,7 +107,9 @@ export default function ImageSlider({ images }: ImageSliderProps) {
                                 transform: index === currentIndex ? `translateX(${dragX}px)` : 'none'
                             }}
                         >
-                            <img
+                            <Image
+                                width={300}
+                                height={300}
                                 src={item.image}
                                 alt={item.description}
                                 className="w-full h-full object-cover"

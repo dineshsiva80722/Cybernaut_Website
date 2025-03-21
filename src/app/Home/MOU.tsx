@@ -65,7 +65,7 @@ const MOU = () => {
         {/* Header Section */}
         <h1 className="lg:text-4xl text-xl font-extrabold py-5 lg:py-0" >OUR MOU PARTNERS</h1>
         <p className=" mb-8 lg:w-8/12 w-12/12 mx-auto lg:text-lg text-sm lg:my-10 text-center">
-          At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution's learning experience.</p>
+        At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution&apos;s learning experience.          </p>
         <Marquee gradient={false} pauseOnHover={true} speed={50} direction="left" className="">
           <div className="flex lg:mb-20 lg:gap-10 lg:h-auto h-40 lg:ml-10 gap-5 ml-5">
             {data.map((item, index) => (
@@ -86,7 +86,7 @@ const MOU = () => {
         {/* Header Section */}
         <h1 className="lg:text-4xl text-xl font-extrabold py-5 lg:py-0" >OUR MOU PARTNERS</h1>
         <p className="w-12/12 mx-auto text-sm text-center">
-          At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution's learning experience.</p>
+          At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution&apos;s learning experience.</p>
         <Marquee gradient={false} pauseOnHover={true} speed={50} direction="left" className="pt-5 overflow-hidden">
           <div className="flex lg:mb-20 lg:gap-10 lg:h-auto justify-center items-center min-h-32 gap-5 mx-auto">
             {Mobiledata.map((item, index) => (

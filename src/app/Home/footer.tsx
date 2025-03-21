@@ -106,7 +106,7 @@ import React from 'react';
 
 import Image from "next/image";
 import { useRouter } from 'next/navigation';
-import { Facebook, Linkedin, Twitter, Instagram } from 'lucide-react';
+import {  Linkedin, Instagram } from 'lucide-react';
 
 const footerData = {
   address: {

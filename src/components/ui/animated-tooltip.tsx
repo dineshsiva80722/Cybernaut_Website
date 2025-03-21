@@ -28,16 +28,19 @@ import {
  * The component uses Framer Motion for animations and provides an interactive
  * experience with hover effects and animated tooltips.
  */
+
+interface Item {
+  id: number;
+  name: string;
+  designation: string;
+  image: string | StaticImageData;
+}
+
 const AnimatedTooltip = ({
   items,
   prefix = "",
 }: {
-  items: {
-    id: number;
-    name: string;
-    designation: string;
-    image: string | StaticImageData;
-  }[];
+  items: Item[];
   prefix?: string;
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -51,8 +54,9 @@ const AnimatedTooltip = ({
     useTransform(x, [-100, 100], [-50, 50]),
     springConfig
   );
-  const handleMouseMove = (event: any) => {
-    const halfWidth = event.target.offsetWidth / 2;
+
+  const handleMouseMove = (event: React.MouseEvent) => {
+    const halfWidth = event.currentTarget.offsetWidth / 2;
     x.set(event.nativeEvent.offsetX - halfWidth);
   };
 

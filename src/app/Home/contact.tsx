@@ -54,7 +54,7 @@ function Contact() {
 
             <div className='w-10/12 h-32 mx-auto'>
                 <div className=' text-center leading-relaxed animate-fade-in space-y-1'>
-                    <h1 className='font-bold text-3xl'> Don't just take our word for it,</h1>
+                    <h1 className='font-bold text-3xl'> Don&#39;t just take our word for it,</h1>
                     <h1 className='text-3xl  text-blue-500 font-bold '>Hear from our students.</h1>
                     <h1 className='text-md  text-gray-500'>Our student's success stories speak volumes about the quality of our programs and mentorship.</h1>
                 </div>
