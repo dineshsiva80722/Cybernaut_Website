@@ -234,11 +234,11 @@ type Action =
       id: string;
     }
   | {
-      type: typeof actionTypes.DISMISS_TOAST;
+      type: typeof actionTypes.DISMISS_TOAST; // Use actionTypes directly
       toastId?: ToasterToast["id"];
     }
   | {
-      type: typeof actionTypes.REMOVE_TOAST;
+      type: typeof actionTypes.REMOVE_TOAST; // Use actionTypes directly
       toastId?: ToasterToast["id"];
     };
 
