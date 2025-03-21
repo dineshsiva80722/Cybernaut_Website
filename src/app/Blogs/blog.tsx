@@ -169,6 +169,9 @@ const dancingScript = Dancing_Script({ subsets: ['latin'] });
 interface Blog {
     title: string;
     content: string; 
+    url: string;
+    category: string;
+    description: string;
 }
 
 function App() {
