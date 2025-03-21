@@ -334,14 +334,13 @@ export default About
 
 
 interface VideoCardProps {
-    title: string;
-    description: string;
+    
     videoUrl: string;
 }
 
 
 
-function VideoCard({ title, description, videoUrl }: VideoCardProps) {
+function VideoCard({ videoUrl }: VideoCardProps) {
     const videoRef = useRef<HTMLVideoElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
 
