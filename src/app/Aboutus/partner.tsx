@@ -44,7 +44,7 @@ export default function Partner() {
           </h2>
           <p className="text-lg py-4 max-w-4xl mx-auto">
             At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services,
-            and training programs. Partner with us to enhance your institution's learning experience.
+            and training programs. Partner with us to enhance your institution&apos;s learning experience.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function Partner() {
       <div className="w-full  min-h-96 py-5 items-center place-content-center mx-auto lg:hidden">
         <div className="w-11/12 bg-blue-200 rounded-lg lg:h-[30rem]  mx-auto p-5">
           <h1 className="text-xl  font-bold ">Why <span className="text-blue-500">Partner With us?</span> </h1>
-          <p className="text-md py-5">At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution's learning experience.</p>
+          <p className="text-md py-5">At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution&apos;s learning experience.</p>
 
 
           <ul className='w-full'>
