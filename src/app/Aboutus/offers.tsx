@@ -11,6 +11,8 @@ import MobileOffers from './Mobile-UI/OfferscolCompany';
 
 type TabValue = 'colleges' | 'companies';
 
+
+
 const handleClickOne = () => {
     gsap.to(".moving-bar ", {
         duration: 0.3,
