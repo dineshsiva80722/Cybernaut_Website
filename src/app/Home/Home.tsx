@@ -37,6 +37,7 @@ function HeroIllustration() {
                 setMicSvgTranslateX(400);
             }
         };
+       
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -507,3 +508,6 @@ export default function Home() {
         </>
     );
 }
+
+
+
