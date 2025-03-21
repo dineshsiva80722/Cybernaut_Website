@@ -3,7 +3,7 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { CoolMode } from "@/components/magicui/cool-mode";
+import { ParticleEffectWrapper } from "@/components/magicui/cool-mode";
 import {Particles} from "@/components/magicui/particles";
 export default function ParticlesDemo() {
   const { resolvedTheme } = useTheme();
@@ -29,14 +29,14 @@ export default function ParticlesDemo() {
         color={color}
         refresh
       />
-       <CoolMode>
+       <ParticleEffectWrapper>
         <Button className="p-0 w-full h-full flex flex-col bg-white text-black hover:bg-white hover:text-black shadow-none cursor-pointer">
         <h1 style={{lineHeight: 1.2}} className="text-5xl text-black leading-9 md:text-8xl font-bold text-center">
           The <span className="text-blue-600">World</span> Around <br /> 
           <span className="text-8xl text-blue-600">Cybernaut</span>
         </h1>
         </Button>
-      </CoolMode>
+      </ParticleEffectWrapper>
     </div>
 
 
