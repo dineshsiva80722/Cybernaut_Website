@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Calendar, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
@@ -38,11 +38,11 @@ export default function ImageSlider({ images }: ImageSliderProps) {
     const [dragX, setDragX] = useState(0);
     const sliderRef = useRef<HTMLDivElement>(null);
 
-    const goToNext = () => {
+    const goToNext = useCallback(() => {
         setCurrentIndex((prevIndex) =>
             prevIndex === images.length - 1 ? 0 : prevIndex + 1
         );
-    };
+    }, [images.length]);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -85,7 +85,6 @@ export default function ImageSlider({ images }: ImageSliderProps) {
         );
     };
 
-    const date = new Date(); // or any specific date you want
     return (
         <>
             <div className="bg-white rounded-xl shadow-[0px_26px_40px_rgba(43,_45,_54,_0.05)] overflow-hidden">
