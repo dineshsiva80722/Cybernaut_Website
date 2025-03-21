@@ -4,41 +4,43 @@ import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { Calendar, ArrowRight } from 'lucide-react';
+// import { Calendar, ArrowRight } from 'lucide-react';
 import { StaticImageData } from 'next/image';
 
-interface BlogCardProps {
-  title: string;
-  date: string;
-  imageUrl: string;
-}
+// interface BlogCardProps {
+//   title: string;
+//   date: string;
+//   imageUrl: string;
+// }
 
-const BlogCard: React.FC<BlogCardProps> = ({ title, date, imageUrl }) => {
-  return (
-    <div className="group rounded-xl overflow-hidden shadow-[0px_26px_40px_rgba(43,_45,_54,_0.05)] transition-all duration-300 hover:shadow-xl">
-      <div className="relative h-64 overflow-hidden">
-        <img
-          src={imageUrl}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-      </div>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-4 text-gray-800">{title}</h3>
-        <div className='flex justify-between'>
-          <div className="flex items-center text-blue-600 font-medium group-hover:text-blue-700">
-            Read more
-            <ArrowRight className="w-4 h-4 ml-2 mt-1 transition-transform group-hover:translate-x-1" />
-          </div>
-          <div className="flex items-center text-gray-500 ">
-            <Calendar className="w-4 h-4 mr-2" />
-            <span className="text-sm">{date}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+// const BlogCard: React.FC<BlogCardProps> = ({ title, date, imageUrl }) => {
+//   return (
+//     <div className="group rounded-xl overflow-hidden shadow-[0px_26px_40px_rgba(43,_45,_54,_0.05)] transition-all duration-300 hover:shadow-xl">
+//       <div className="relative h-64 overflow-hidden">
+//         <Image
+//           width={660}
+//           height={300}
+//           src={imageUrl}
+//           alt={title}
+//           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+//         />
+//       </div>
+//       <div className="p-6">
+//         <h3 className="text-xl font-semibold mb-4 text-gray-800">{title}</h3>
+//         <div className='flex justify-between'>
+//           <div className="flex items-center text-blue-600 font-medium group-hover:text-blue-700">
+//             Read more
+//             <ArrowRight className="w-4 h-4 ml-2 mt-1 transition-transform group-hover:translate-x-1" />
+//           </div>
+//           <div className="flex items-center text-gray-500 ">
+//             <Calendar className="w-4 h-4 mr-2" />
+//             <span className="text-sm">{date}</span>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 
 const timelineContent: {
@@ -129,7 +131,7 @@ export default function Journey() {
             Our Journey
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            As your business grows, Sagstainable grows with you. Our platform's flexibility allows you to adapt and scale without compromising
+            As your business grows, Sagstainable grows with you. Our platform&apos;s flexibility allows you to adapt and scale without compromising
             on performance or sustainability.
           </p>
         </div>
