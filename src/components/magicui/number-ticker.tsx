@@ -28,13 +28,17 @@ export function NumberTicker({
   });
   const isInView = useInView(ref, { once: true, margin: "0px" });
 
-  useEffect(() => {
-    isInView &&
-      setTimeout(() => {
-        motionValue.set(direction === "down" ? 0 : value);
-      }, delay * 1000);
-  }, [motionValue, isInView, delay, value, direction]);
-
+ useEffect(() => {
+   if (isInView) {
+     const timeoutId = setTimeout(() => {
+       motionValue.set(direction === "down" ? 0 : value);
+     }, delay * 1000);
+ 
+     // Cleanup function to clear the timeout
+     return () => clearTimeout(timeoutId);
+   }
+ }, [motionValue, isInView, delay, value, direction]);
+ 
   useEffect(
     () =>
       springValue.on("change", (latest) => {
