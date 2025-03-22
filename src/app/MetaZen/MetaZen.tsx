@@ -134,19 +134,19 @@ const Techtrio = () => {
         faqsRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const [visibleOption, setVisibleOption] = useState(0);
-    const options = ['Description', 'Modules', 'Benefits', 'Certification', 'Requirements', 'Testimonials', 'FAQs'];
+    // const [visibleOption, setVisibleOption] = useState(0);
+    // const options = ['Description', 'Modules', 'Benefits', 'Certification', 'Requirements', 'Testimonials', 'FAQs'];
 
-    const handleScroll = (event: React.UIEvent) => {
-        const { scrollTop, clientHeight } = event.currentTarget;
-        const scrollHeight = event.currentTarget.scrollHeight;
+    // const handleScroll = (event: React.UIEvent) => {
+    //     const { scrollTop, clientHeight } = event.currentTarget;
+    //     const scrollHeight = event.currentTarget.scrollHeight;
 
-        if (scrollTop + clientHeight >= scrollHeight) {
-            setVisibleOption(prev => Math.min(prev + 1, options.length - 1)); // Move to next option
-        } else if (scrollTop === 0) {
-            setVisibleOption(prev => Math.max(prev - 1, 0)); // Move to previous option
-        }
-    };
+    //     if (scrollTop + clientHeight >= scrollHeight) {
+    //         setVisibleOption(prev => Math.min(prev + 1, options.length - 1)); // Move to next option
+    //     } else if (scrollTop === 0) {
+    //         setVisibleOption(prev => Math.max(prev - 1, 0)); // Move to previous option
+    //     }
+    // };
     const sectionRef = useRef<HTMLDivElement>(null);
     const triggerRef = useRef<HTMLDivElement>(null);
 
