@@ -178,10 +178,10 @@ const WebDevelopment = () => {
     return (
         <section className=''>
             <section className='mt-[70px]'>
-            <div
-                className='flex flex-col lg:flex-row justify-between w-full min-h-[ 569px]'
-                style={{ backgroundImage: `url('https://res.cloudinary.com/dn60aovto/image/upload/v1742460377/Fullstack_kc5hsw.png')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-            >
+                <div
+                    className='flex flex-col lg:flex-row justify-between w-full min-h-[ 569px]'
+                    style={{ backgroundImage: `url('https://res.cloudinary.com/dn60aovto/image/upload/v1742460377/Fullstack_kc5hsw.png')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                >
                     {/* Left side content */}
                     <div className='w-full lg:w-1/2 flex items-start justify-center p-5 lg:p-24'>
                         <div className='relative lg:-top-10 w-full'>
@@ -324,7 +324,7 @@ const WebDevelopment = () => {
                     <button className={`w-32 h-10 text-center text-sm ${showTestimonials ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleTestimonialsClick}>Testimonials</button>
                     <button className={`w-32 h-10 text-center text-sm ${showFAQs ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleFAQsClick}>FAQs</button>
                 </ul>
-            </div>  
+            </div>
 
             <section className='w-full min-h-[40rem] relative'>
                 <div className='lg:w-11/12 bg-[#f5f5f5] shadow-xl mx-auto overflow-hidden rounded-lg'>
@@ -390,14 +390,15 @@ const WebDevelopment = () => {
                     <div ref={faqsRef} className="w-ful pt-10 place-content-center">
                         <Contact />
                     </div>
-                    <div ref={faqsRef} className="w-ful pt-10 place-content-center">
-                        <Footer />
-                    </div>
+
 
 
 
                 </div>
             </section>
+            <div ref={faqsRef} className="w-ful pt-10 place-content-center">
+                <Footer />
+            </div>
         </section>
     )
 }
