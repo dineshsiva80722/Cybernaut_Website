@@ -411,7 +411,7 @@ const Gallery = () => {
               alt="Previous"
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-0 left-0 bg-black/75 text-white w-full p-2">
+            <div className="absolute bottom-0 left-0 bg-black/50 text-white w-full p-2">
               <h3 className="text-sm font-semibold">{activeTab === 'outreach' ? OutreachimageNames[(currentImage - 1 + images.length) % images.length] : imageNames[(currentImage - 1 + images.length) % images.length]}</h3>
               <p className="text-[0.7rem]">{activeTab === 'outreach' ? OutreachimageDescriptions[(currentImage - 1 + images.length) % images.length] : imageDescriptions[(currentImage - 1 + images.length) % images.length]}</p>
             </div>
@@ -426,7 +426,7 @@ const Gallery = () => {
               alt="Current"
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-0 left-0 bg-black/75 text-white w-full p-2">
+            <div className="absolute bottom-0 left-0 bg-black/50 text-white w-full p-2">
               <h3 className="text-lg font-semibold">{activeTab === 'outreach' ? OutreachimageNames[currentImage] : imageNames[currentImage]}</h3>
               <p className="text-sm">{activeTab === 'outreach' ? OutreachimageDescriptions[currentImage] : imageDescriptions[currentImage]}</p>
             </div>
@@ -441,7 +441,7 @@ const Gallery = () => {
               alt="Next"
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-0 left-0 bg-black/75 text-white w-full p-2">
+            <div className="absolute bottom-0 left-0 bg-black/50 text-white w-full p-2">
               <h3 className="text-sm font-semibold">{activeTab === 'outreach' ? OutreachimageNames[(currentImage + 1) % images.length] : imageNames[(currentImage + 1) % images.length]}</h3>
               <p className="text-[0.7rem]">{activeTab === 'outreach' ? OutreachimageDescriptions[(currentImage + 1) % images.length] : imageDescriptions[(currentImage + 1) % images.length]}</p>
             </div>
