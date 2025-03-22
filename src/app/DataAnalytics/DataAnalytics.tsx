@@ -9,8 +9,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { User, Star, StarHalf, BarChart3 } from 'lucide-react';
-import Contact from '@/app/Home/contact'
-import Footer from '@/app/Home/footer'
 import { ChevronDown } from 'lucide-react';
 import { countries } from './countries';
 import { Package } from 'lucide-react';
@@ -369,7 +367,7 @@ const DataAnalytics = () => {
                 alert('Failed to subscribe. Please try again.');
             }
         } catch (error) {
-            alert('An error occurred. Please try again.');
+            alert(`An error occurred. Please try again. ${error}`);
         } finally {
             setIsLoading(false);
             setEmail('');
