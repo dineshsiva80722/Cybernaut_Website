@@ -116,19 +116,17 @@ const UIUXDesign = () => {
         faqsRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const [visibleOption, setVisibleOption] = useState(0);
-    const options = ['Description', 'Modules', 'Benefits', 'Certification', 'Requirements', 'Testimonials', 'FAQs'];
+   
+    // const handleScroll = (event: React.UIEvent) => {
+    //     const { scrollTop, clientHeight } = event.currentTarget;
+    //     const scrollHeight = event.currentTarget.scrollHeight;
 
-    const handleScroll = (event: React.UIEvent) => {
-        const { scrollTop, clientHeight } = event.currentTarget;
-        const scrollHeight = event.currentTarget.scrollHeight;
-
-        if (scrollTop + clientHeight >= scrollHeight) {
-            setVisibleOption(prev => Math.min(prev + 1, options.length - 1)); // Move to next option
-        } else if (scrollTop === 0) {
-            setVisibleOption(prev => Math.max(prev - 1, 0)); // Move to previous option
-        }
-    };
+    //     if (scrollTop + clientHeight >= scrollHeight) {
+    //         setVisibleOption(prev => Math.min(prev + 1, options.length - 1)); // Move to next option
+    //     } else if (scrollTop === 0) {
+    //         setVisibleOption(prev => Math.max(prev - 1, 0)); // Move to previous option
+    //     }
+    // };
     const sectionRef = useRef<HTMLDivElement>(null);
     const triggerRef = useRef<HTMLDivElement>(null);
 
@@ -323,7 +321,7 @@ const UIUXDesign = () => {
                                 <p className="text-xs sm:text-sm md:text-base pt-3 md:pt-5 text-gray-600 text-justify">
                                     Explore the world of UI/UX Design with our 6-month hands-on training program, combining Figma and Adobe XD. This course covers essential design principles, user research, wireframing, prototyping, and UI/UX testing, preparing you to create intuitive, visually appealing user interfaces. Master the tools of the trade, from designing responsive layouts to crafting brand-aligned visuals.
                                     <br className="hidden md:block" />
-                                    By the end of the program, you'll have a diverse portfolio of real-world projects and a certificate showcasing your skills. Whether you're an aspiring designer or a professional looking to upgrade your skills, this course will equip you with everything you need to succeed in UI/UX design.
+                                    By the end of the program, you&apos;ll have a diverse portfolio of real-world projects and a certificate showcasing your skills. Whether you&apos;re an aspiring designer or a professional looking to upgrade your skills, this course will equip you with everything you need to succeed in UI/UX design.
                                 </p>
                             </div>
                             <div className="w-full md:w-1/2 flex items-center justify-center p-4">

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Star } from 'lucide-react';
 
 function Testimonials() {
@@ -78,7 +79,9 @@ function Testimonials() {
               </div>
 
               <div className="flex items-center">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src={testimonial.avatar}
                   alt={testimonial.author}
                   className="w-12 h-12 rounded-full mr-4"
