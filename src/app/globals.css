@@ -10,8 +10,8 @@
     display: none;
 }
 .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
 }
 
 
@@ -41,3 +41,26 @@
     animation: shimmer 2s infinite;
   }
   
+
+  /* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background:#fff; /* Track color */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #00a2ff; /* Thumb color */
+    border-radius: 10px; /* Rounded corners for the thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0370af; /* Thumb color on hover */
+  }
+  
+  .scrollbar-hide {
+    scrollbar-width: thin; /* Makes scrollbar thin in Firefox */
+    scrollbar-color: var(--primary) var(--background); /* Thumb and track color in Firefox */
+  }
