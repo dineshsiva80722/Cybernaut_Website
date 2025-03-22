@@ -550,7 +550,7 @@ const Techtrio = () => {
                                 </div>
                                 <div>
                                     <input
-                                        className="outline-none border border-gray-300 h-[36px] border-2 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                        className="outline-none border border-gray-300 h-[36px]  rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
                                         placeholder="Education Qualification"
                                         id="education"
                                         name="education"
