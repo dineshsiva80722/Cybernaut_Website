@@ -3,7 +3,6 @@ import React from 'react'
 import Techtrio from './Techtrio'
 import Nav from '@/app/Home/nav'
 import Footer from '@/app/Home/footer'
-import Contact from '@/app/Home/contact'
 import { useState, useEffect } from 'react'
 import { ArrowUp } from 'lucide-react';
 

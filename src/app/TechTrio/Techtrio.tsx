@@ -133,19 +133,19 @@ const Techtrio = () => {
         faqsRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const [visibleOption, setVisibleOption] = useState(0);
+    const [, setVisibleOption] = useState(0);
     const options = ['Description', 'Modules', 'Benefits', 'Certification', 'Requirements', 'Testimonials', 'FAQs'];
 
-    const handleScroll = (event: React.UIEvent) => {
-        const { scrollTop, clientHeight } = event.currentTarget;
-        const scrollHeight = event.currentTarget.scrollHeight;
+    // const handleScroll = (event: React.UIEvent) => {
+    //     const { scrollTop, clientHeight } = event.currentTarget;
+    //     const scrollHeight = event.currentTarget.scrollHeight;
 
-        if (scrollTop + clientHeight >= scrollHeight) {
-            setVisibleOption(prev => Math.min(prev + 1, options.length - 1)); // Move to next option
-        } else if (scrollTop === 0) {
-            setVisibleOption(prev => Math.max(prev - 1, 0)); // Move to previous option
-        }
-    };
+    //     if (scrollTop + clientHeight >= scrollHeight) {
+    //         setVisibleOption(prev => Math.min(prev + 1, options.length - 1)); // Move to next option
+    //     } else if (scrollTop === 0) {
+    //         setVisibleOption(prev => Math.max(prev - 1, 0)); // Move to previous option
+    //     }
+    // };
     const sectionRef = useRef<HTMLDivElement>(null);
     const triggerRef = useRef<HTMLDivElement>(null);
 
@@ -370,7 +370,7 @@ const Techtrio = () => {
                 alert('Failed to subscribe. Please try again.');
             }
         } catch (error) {
-            alert('An error occurred. Please try again.');
+            alert(`An error occurred. Please try again. ${error}`);
         } finally {
             setIsLoading(false);
             setEmail('');
@@ -631,7 +631,7 @@ const Techtrio = () => {
                         <div className="min-h-[30rem]  items-center justify-center p-8">
                             <div className='py-4'>
                                 <h1 className="text-xl font-semibold">What you Learn</h1>
-                                <p className='text-md text-gray-600'>Whether your're a beginner or have prior experience, our course will equip you with the knowledge and skills needed to excel in the world of STACK development.</p>
+                                <p className='text-md text-gray-600'>Whether your&apos;re a beginner or have prior experience, our course will equip you with the knowledge and skills needed to excel in the world of STACK development.</p>
                             </div>
                             <div className="mx-auto rounded-xl text-justify overflow-hidden">
                                 {languages.map((language, index) => (
@@ -862,7 +862,9 @@ const Techtrio = () => {
                                             </div>
 
                                             <div className="flex items-center">
-                                                <img
+                                                <Image
+                                                    width={48}
+                                                    height={48}
                                                     src={testimonial.avatar}
                                                     alt={testimonial.author}
                                                     className="w-12 h-12 rounded-full mr-4"

@@ -202,7 +202,7 @@ export default function ContactSection() {
             toast.error('Error in submitting form, please try again.');
         }
     } catch (error) {
-        toast.error('Error in submitting form, please try again.');
+        toast.error(`Error in submitting form, please try again. ${error}`);
     } finally {
         setLoading(false); // Reset loading state
         const form = e.target as HTMLFormElement;
