@@ -789,7 +789,7 @@ const Techtrio = () => {
                                             <div className="aspect-[16/9] w-full">
                                                 <Image
                                                     width={1000}
-                                                    height={1000}   
+                                                    height={1000}
                                                     src={project.image}
                                                     alt={project.title}
                                                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -858,7 +858,7 @@ const Techtrio = () => {
 
                     <div ref={faqsRef} className="w-ful pt-10 place-content-center">
                         <Fqas />
-                       
+
                     </div>
                     <div ref={faqsRef} className="w-ful pt-10 place-content-center">
                         {/* <Contact /> */}
@@ -896,10 +896,12 @@ const Techtrio = () => {
                                                 </div>
                                             </div>
 
-                                            <button className='group w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-[#13D8FB] to-[#00A3FF] px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-medium hover:shadow-lg hover:shadow-blue-200/50 transform hover:-translate-y-0.5 transition-all duration-200'>
-                                                Get Started Now
-                                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                                            </button>
+                                            <Link href="/Program">
+                                                <button className='group w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-[#13D8FB] to-[#00A3FF] px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-medium hover:shadow-lg hover:shadow-blue-200/50 transform hover:-translate-y-0.5 transition-all duration-200'>
+                                                    Get Started Now
+                                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                                                </button>
+                                            </Link>
 
                                             <div className="flex items-center gap-3 text-gray-500">
                                                 <GraduationCap className="w-5 h-5 text-blue-500" />
@@ -973,7 +975,7 @@ const Techtrio = () => {
                 }
             `}</style>
                     </div>
-                    
+
                 </div>
             </section>
 

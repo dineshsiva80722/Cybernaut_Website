@@ -116,7 +116,7 @@ const UIUXDesign = () => {
         faqsRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-   
+
     // const handleScroll = (event: React.UIEvent) => {
     //     const { scrollTop, clientHeight } = event.currentTarget;
     //     const scrollHeight = event.currentTarget.scrollHeight;
@@ -380,11 +380,12 @@ const UIUXDesign = () => {
                     <div ref={faqsRef} className="w-ful pt-10 place-content-center">
                         <Contact />
                     </div>
-                    <div ref={faqsRef} className="w-ful pt-10 place-content-center">
-                        <Footer />
-                    </div>
+
                 </div>
             </section>
+            <div ref={faqsRef} className="w-ful pt-10 place-content-center">
+                <Footer />
+            </div>
         </section>
     )
 }

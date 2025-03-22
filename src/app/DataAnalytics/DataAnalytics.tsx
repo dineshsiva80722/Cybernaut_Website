@@ -175,7 +175,7 @@ const DataAnalytics = () => {
     const navItems = [
         { name: 'Home >', link: '/' },
         { name: 'Programs >', link: '/Program' },
-        { name: 'MetaZen', link: '/MetaZen' },
+        { name: 'Data Analytics', link: '/DataAnalytics' },
 
     ]
     // numberbox

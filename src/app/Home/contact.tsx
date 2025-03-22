@@ -35,37 +35,62 @@ function Contact() {
         }
     };
 
+    // useEffect(() => {
+    //     // Check if script already exists to prevent multiple injections
+    //     if (!document.querySelector('script[src="https://featurable.com/assets/bundle.js"]')) {
+    //         const script = document.createElement("script");
+    //         script.src = "https://featurable.com/assets/bundle.js";
+    //         script.defer = true;
+    //         script.setAttribute("charset", "UTF-8");
+    //         document.body.appendChild(script);
+    //     }
+    // }, []);
+
     useEffect(() => {
-        // Check if script already exists to prevent multiple injections
-        if (!document.querySelector('script[src="https://featurable.com/assets/bundle.js"]')) {
-            const script = document.createElement("script");
-            script.src = "https://featurable.com/assets/bundle.js";
-            script.defer = true;
-            script.setAttribute("charset", "UTF-8");
-            document.body.appendChild(script);
-        }
+        const script = document.createElement("script");
+        script.src = "https://featurable.com/assets/bundle.js";
+        script.defer = true;
+        script.setAttribute("charset", "UTF-8");
+        document.body.appendChild(script);
+
+        // Function to refresh the Featurable widget
+        const refreshFeaturable = () => {
+            const element = document.getElementById('featurable-b7323408-197d-4e2d-90e8-054cd79c232e');
+            if (element) {
+                element.innerHTML = '';
+                const newScript = document.createElement("script");
+                newScript.src = "https://featurable.com/assets/bundle.js";
+                newScript.defer = true;
+                newScript.setAttribute("charset", "UTF-8");
+                element.appendChild(newScript);
+            }
+        };
+        // Set refresh interval (every 5 minutes)
+        const refreshInterval = setInterval(refreshFeaturable, 5 * 60 * 1000);
+
+        // Clean up on component unmount
+        return () => {
+            clearInterval(refreshInterval);
+        };
     }, []);
-
-
 
     return (
         <>
-        <section className='min-h-80 py-20 w-full'>
-
-            <div className='w-10/12 h-32 mx-auto'>
-                <div className=' text-center leading-relaxed animate-fade-in space-y-1'>
-                    <h1 className='font-bold text-3xl'> Don&#39;t just take our word for it,</h1>
-                    <h1 className='text-3xl  text-blue-500 font-bold '>Hear from our students.</h1>
-                    <h1 className='text-md  text-gray-500'>Our students&#39; success stories speak volumes about the quality of our programs and mentorship.</h1>
+            <section className='min-h-80 py-20 w-full'>
+                <div className='w-10/12 h-32 mx-auto'>
+                    <div className=' text-center leading-relaxed animate-fade-in space-y-1'>
+                        <h1 className='font-bold text-3xl'> Don&#39;t just take our word for it,</h1>
+                        <h1 className='text-3xl  text-blue-500 font-bold '>Hear from our students.</h1>
+                        <h1 className='text-md  text-gray-500'>Our students&#39; success stories speak volumes about the quality of our programs and mentorship.</h1>
+                    </div>
                 </div>
-            </div>
-            <div
-                suppressHydrationWarning
-                id="featurable-b7323408-197d-4e2d-90e8-054cd79c232e"
-                data-featurable-async
-                className='min-h-20 w-full'
-            ></div>
-        </section>
+                <div
+                    suppressHydrationWarning
+                    id="featurable-b7323408-197d-4e2d-90e8-054cd79c232e"
+                    data-featurable-async
+                    className='min-h-20 w-full'
+                ></div>
+            </section>
             {/* <FeaturableWidget /> */}
             <section className='relative h-[40rem]  justify-center items-center py-8 md:py-16 px-4 bg-white overflow-hidden'>
                 <div className='relative w-full max-w-6xl mx-auto'>

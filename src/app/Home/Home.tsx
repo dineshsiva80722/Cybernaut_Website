@@ -26,7 +26,7 @@ function HeroIllustration() {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-          
+
             if (scrollPosition < 500) {
                 setMicSvgTranslateY(0);
                 setMicSvgTranslateX(0);
@@ -38,7 +38,7 @@ function HeroIllustration() {
                 setMicSvgTranslateX(400);
             }
         };
-       
+
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -81,8 +81,8 @@ function HeroIllustration() {
 
     const sliderImages = [
         'https://res.cloudinary.com/dn60aovto/image/upload/v1742388576/teaching2_cbsc8b.jpg',
-       'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Herosection1_ixcwp8.jpg',
-       'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Herosection2_pg9smu.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Herosection1_ixcwp8.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Herosection2_pg9smu.jpg',
         'https://res.cloudinary.com/dn60aovto/image/upload/v1742386631/Herosection4_fpza5i.jpg',
         'https://res.cloudinary.com/dn60aovto/image/upload/v1742386632/herosection5_bycxql.jpg',
         'https://res.cloudinary.com/dn60aovto/image/upload/v1742386632/Herosection6_zicjax.jpg',
@@ -199,7 +199,7 @@ export default function Home() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setBodyContent((prevIndex) => (prevIndex + 1) );
+            setBodyContent((prevIndex) => (prevIndex + 1));
         }, 3000); // Change content every 3 seconds
 
         return () => clearInterval(interval);
@@ -260,7 +260,7 @@ export default function Home() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setAutoContentIndex((prevIndex) => (prevIndex + 1) );
+            setAutoContentIndex((prevIndex) => (prevIndex + 1));
         }, 3000); // Change content every 3 seconds
 
         return () => clearInterval(interval);
@@ -303,7 +303,7 @@ export default function Home() {
             <div className="min-h-20 container mx-auto hidden pb-20 lg:block">
                 <section className='container mx-auto min-h-[140rem]  relative top-20'>
                     <main className='w-[91rem]  mx-auto  h-[40rem] rounded-xl sticky top-20 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]'>
-                        {/* Main content area */}
+                      
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-2   gap-8 items-center">
 
@@ -367,9 +367,7 @@ export default function Home() {
                             >
                                 <div id="animatedBox" className={`relative w-52 h-28 bg-white mx-auto place-content-center rounded-3xl b border-2 ${getBorderColor(scrollTranslate)} z-50 left-5 top-3 transition-all duration-500 ease-in-out`}>
                                     <div className='text-md mx-auto  px-1 font-normal  text-gray-600 p-2'>
-                                        {/* <h1>Cybernaut Edu-Tech</h1> */}
                                         <h1 className='text-[0.8rem] p-4 '> <span className={`font-semibold  ${getTextColor(scrollTranslate)}`}>{['Connecting Minds, Collaborating on Ideas, and Creating the Future', 'Sharing Our Knowledge to Inspire Growth and Innovation', 'Connecting Minds, Collaborating on Ideas, and Creating the Future'][wordIndex]}</span></h1>
-                                        {/* <h1 className='text-[0.8rem]'> <span className={`font-semibold ${getTextColor(scrollTranslate)}`}>{['', 'Followers', 'Workers'][wordIndex]}</span></h1> */}
                                     </div>
                                 </div>
                             </section>
@@ -384,9 +382,93 @@ export default function Home() {
                             className={`w-10/12 my-5 -z-10 rounded-r-[25rem] border-[0.2rem]  border-l-transparent border-b-transparent left-0 pt-20 h-[135.1rem] absolute top-16 ${getBorderColor(scrollTranslate)}`}>
                         </div>
                     </main>
-
                 </section>
             </div>
+
+            {/* <div className="min-h-20 container mx-auto hidden pb-20 lg:block">
+                <section className='container mx-auto min-h-[140rem] relative top-20'>
+                    <main className='w-[91rem] mx-auto h-[40rem] rounded-xl sticky top-20 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]'>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+                            <div className='h-[26rem] w-[46rem] p-5 pt-14 ml-12 space-y-6 '>
+                                <p style={{ lineHeight: '60px' }} className="text-2xl md:text-3xl w-full text-start lg:text-[45px] font-bold transition-all duration-300 ease-in-out">
+                                    {getContent(scrollTranslate)}
+                                </p>
+                                <div className="w-full">
+                                    <div className="transform overflow-hidden">
+                                        <h1
+                                            className={`
+                                    text-[18px] text-gray-500
+                                    transform transition-all duration-300 ease-in-out
+                                    ${isAnimating ? 'opacity-0 translate-y-8' : 'opacity-100 translate-y-0'}
+                                `}
+                                        >
+                                            {content}
+                                        </h1>
+                                    </div>
+                                </div>
+                                <div className="flex gap-5">
+                                    <button className="overflow-hidden w-28 md:w-40 p-2 md:px-6 py-3 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative z-10 group">
+                                        Contact us
+                                        <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
+                                        <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
+                                        <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
+                                        <Link href="/contact">
+                                            <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-3 left-6 z-10 text-lg">Contact us</span>
+                                        </Link>
+                                    </button>
+                                    <Link href="/Program">
+                                        <button className="inline-flex items-center cursor-pointer px-4 md:px-6 py-3 border border-transparent text-sm md:text-lg font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
+                                            Explore Solutions
+                                        </button>
+                                    </Link>
+                                </div>
+
+                                <div className="flex w-full items-center justify-start">
+                                    <div className='w-1/2 h-16 space-y-3'>
+                                        <h6 className='text-[16px] w-60 font-medium text-gray-400'>Students Trusted on</h6>
+                                        <div className="flex flex-row items-start relative justify-start w-[15rem] gap-2">
+                                            <AnimatedTooltip items={people} />
+                                            <h1 className='pl-5 font-bold text-[25px]'>1L+</h1>
+                                        </div>
+                                    </div>
+                                    <div className='w-1/2 h-16 space-y-3'>
+                                        <h6 className='text-[16px] text-end font-medium text-gray-400'>Students Trained</h6>
+                                        <h1 className='pl-5 text-end font-bold text-[25px]'>75K+</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="hidden md:block">
+                                <HeroIllustration />
+                            </div>
+                        </div>
+
+                        <section className={`absolute left-96 right-0 top-0 mx-auto w-52 h-32 mt-5 place-content-center rounded-3xl z-50 transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
+                            style={{ transform: `translateY(${scrollTranslate * 1}px)` }}
+                        >
+                            <div id="animatedBox" className={`relative w-52 h-28 bg-white mx-auto place-content-center rounded-3xl border border-2 ${getBorderColor(scrollTranslate)} z-50 left-5 top-3 transition-all duration-500 ease-in-out`}>
+                                <div className='text-md mx-auto px-1 font-normal text-gray-600 p-2'>
+                                    <h1 className='text-[0.8rem] p-4'>
+                                        <span className={`font-semibold ${getTextColor(scrollTranslate)}`}>
+                                            {['Connecting Minds, Collaborating on Ideas, and Creating the Future', 'Sharing Our Knowledge to Inspire Growth and Innovation', 'Connecting Minds, Collaborating on Ideas, and Creating the Future'][wordIndex]}
+                                        </span>
+                                    </h1>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div className='w-full relative -left-10 h-20 bg-gradient-to-b from-white/10 via-white/90 to-white'></div>
+                        <div style={{
+                            transform: `translateY(${scrollTranslate * -1.9}px)`,
+                            transition: 'transform 0.3s ease-out'
+                        }}
+                            className={`w-full my-5 -z-10 rounded-r-[25rem] border-[0.2rem] border-l-transparent border-b-transparent -left-32 pt-20 h-[135.1rem] absolute top-16 ${getBorderColor(scrollTranslate)}`}
+                        >
+                        </div>
+                    </main>
+                </section>
+            </div> */}
+
+
 
             <div className="w-full min-h-screen hidden md:block lg:hidden bg-gray-50">
                 {/* Tablet View */}
