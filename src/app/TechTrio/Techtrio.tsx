@@ -133,8 +133,7 @@ const Techtrio = () => {
         faqsRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const [, setVisibleOption] = useState(0);
-    const options = ['Description', 'Modules', 'Benefits', 'Certification', 'Requirements', 'Testimonials', 'FAQs'];
+    // const options = ['Description', 'Modules', 'Benefits', 'Certification', 'Requirements', 'Testimonials', 'FAQs'];
 
     // const handleScroll = (event: React.UIEvent) => {
     //     const { scrollTop, clientHeight } = event.currentTarget;
