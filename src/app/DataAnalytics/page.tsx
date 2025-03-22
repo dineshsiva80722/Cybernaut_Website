@@ -6,7 +6,7 @@ import DataAnalytics from './DataAnalytics'
 import { ArrowUp } from 'lucide-react';
 
 
-const page = () => {
+const Page = () => {
 
   const [showButton, setShowButton] = useState(false);
 
@@ -55,4 +55,4 @@ return (
 )
 }
 
-export default page
+export default Page
