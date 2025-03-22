@@ -377,7 +377,7 @@ const Techtrio = () => {
     };
     return (
         <section className=''>
-            <section className='mt-[70px]'>
+            <section className='mt-[10px]'>
                 <div className='flex flex-col lg:flex-row justify-between w-full min-h-[569px]'
                     style={{ backgroundImage: `url('https://res.cloudinary.com/dn60aovto/image/upload/v1742460976/coursesBG_dpaul6.png')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                 >
