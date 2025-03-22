@@ -214,7 +214,7 @@ export default function ContactSection() {
     <section className="container mx-auto my-16 px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
       <div className="mx-auto max-w-2xl lg:max-w-6xl">
         <div className="text-center">
-          <h1 className="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight">
+          <h1 className="text-balance text-2xl font-bold tracking-tight text-neutral-200 dark:text-black md:text-4xl md:leading-tight">
             Contact Us
           </h1>
           <p className="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
@@ -225,7 +225,7 @@ export default function ContactSection() {
 
         <div className="mt-12 grid items-center gap-6 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col rounded-xl p-4 sm:p-6 lg:p-8">
-            <h2 className="mb-8 text-xl font-bold text-neutral-700 dark:text-neutral-300">
+            <h2 className="mb-8 text-xl font-bold text-neutral-700 dark:text-white">
               Fill in the form below
             </h2>
 

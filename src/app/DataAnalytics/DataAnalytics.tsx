@@ -450,7 +450,7 @@ const DataAnalytics = () => {
                             <form className="w-full mt-4 space-y-4 sm:space-y-2.5 place-content-center">
                                 <div>
                                     <input
-                                        className="outline-none h-[36px] border-2 rounded-md px-2 w-full text-slate-500 focus:border-blue-300"
+                                        className="outline-none h-[36px] border border-gray-200 rounded-md px-2 w-full text-slate-500 focus:border-blue-300"
                                         placeholder="Name"
                                         id="Name"
                                         name="Name"
@@ -460,7 +460,7 @@ const DataAnalytics = () => {
                                 </div>
                                 <div>
                                     <input
-                                        className="outline-none h-[36px] border-2 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                        className="outline-none h-[36px] border border-gray-200 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
                                         placeholder="Email"
                                         id="email"
                                         name="email"
@@ -539,7 +539,7 @@ const DataAnalytics = () => {
                                 </div>
                                 <div>
                                     <input
-                                        className="outline-none h-[36px] border-2 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                        className="outline-none h-[36px] border border-gray-200 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
                                         placeholder="Education Qualification"
                                         id="education"
                                         name="education"
@@ -549,7 +549,7 @@ const DataAnalytics = () => {
                                 </div>
                                 <div>
                                     <input
-                                        className="outline-none h-[36px] border-2 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                        className="outline-none h-[36px] border border-gray-200 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
                                         placeholder="Current Profile"
                                         id="currentprofile"
                                         name="currentprofile"

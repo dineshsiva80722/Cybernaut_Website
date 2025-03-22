@@ -16,7 +16,7 @@ export default function ParticlesDemo() {
   return (
 
     <>
-    <div className="relative flex h-[460px] mt-[70px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background">
+    <div className="relative flex h-[460px] mt-[70px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background">
       <span className="pointer-events-none z-10 whitespace-pre-wrap text-center text-8xl font-semibold leading-none">
       <div className="relative justify-center">
       </div>

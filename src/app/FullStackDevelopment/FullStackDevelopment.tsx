@@ -239,17 +239,17 @@ const WebDevelopment = () => {
 
                     {/* Right side form */}
                     <div className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5 '>
-                        <div className="w-full sm:w-[25rem] h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[60px]">
+                        <div className="w-full sm:w-[25rem] h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[10px]">
                             <div className="flex flex-col justify-center items-center">
                                 <h2 className="text-lg sm:text-xl text-center font-semibold text-zinc-500">
                                     {content.enrollmentMessage}
                                 </h2>
                             </div>
 
-                            <form className="w-full mt-4 space-y-4 sm:space-y-2.5 place-content-center">
+                            <form className="w-full mt-1 space-y-4 sm:space-y-2.5 place-content-center">
                                 <div>
                                     <input
-                                        className="outline-none h-[36px] border-2 rounded-md px-2 w-full text-slate-500 focus:border-blue-300"
+                                        className="outline-none h-[36px] border border-gray-200 rounded-md px-2 w-full text-slate-500 focus:border-blue-300"
                                         placeholder="Name"
                                         id="Name"
                                         name="Name"
@@ -259,7 +259,7 @@ const WebDevelopment = () => {
                                 </div>
                                 <div>
                                     <input
-                                        className="outline-none h-[36px] border-2 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                        className="outline-none h-[36px] border border-gray-200 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
                                         placeholder="Email"
                                         id="email"
                                         name="email"
@@ -272,7 +272,7 @@ const WebDevelopment = () => {
                                 </div>
                                 <div>
                                     <input
-                                        className="outline-none h-[36px] border-2 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                        className="outline-none h-[36px] border border-gray-200 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
                                         placeholder="Education Qualification"
                                         id="education"
                                         name="education"
@@ -282,7 +282,7 @@ const WebDevelopment = () => {
                                 </div>
                                 <div>
                                     <input
-                                        className="outline-none h-[36px] border-2 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                        className="outline-none h-[36px] border border-gray-200 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
                                         placeholder="Current Profile"
                                         id="currentprofile"
                                         name="currentprofile"

@@ -13,8 +13,8 @@ interface MilestoneCardProps {
 
 function MilestoneCard({ type, number, label, className }: MilestoneCardProps) {
     return (
-        <Card className={`bg-white shadow-sm hover:shadow-md transition-shadow ${className}`}>
-            <CardContent className="p-6 flex flex-col ">
+        <Card className={`bg-white shadow-sm  hover:shadow-md transition-shadow ${className}`}>
+            <CardContent className="p-6 flex flex-col  ">
                 {type === "idea" ? (
                     <div className="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center mb-4">
                         <LightbulbIcon className="w-6 h-6 text-sky-400" />

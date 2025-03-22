@@ -29,14 +29,14 @@ export default function ContactIconBlock({
       <div className="flex gap-x-7 py-6 ">
         {children}
         <div className="grow">
-          <h3 className="font-bold text-neutral-700 dark:text-neutral-300">{heading}</h3>
-          <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">{content}</p>
+          <h3 className="font-bold text-neutral-200 dark:text-black">{heading}</h3>
+          <p className="mt-1 text-sm text-neutral-200 dark:text-black">{content}</p>
           {isAddressVisible ? (
-            <p className="mt-1 text-sm italic text-neutral-500">{addressContent}</p>
+            <p className="mt-1 text-sm italic text-neutral-800">{addressContent}</p>
           ) : null}
           {isLinkVisible && linkURL && (
             <Link
-              className="group mt-2 inline-flex  text-[#38A7F4] items-center gap-x-2 rounded-lg text-sm font-medium text-primary outline-none ring-zinc-500 transition duration-300 hover:text-zinc-800 focus-visible:ring dark:text-zinc-400 dark:ring-zinc-200 dark:hover:text-zinc-200 dark:focus:outline-none dark:focus:ring-1"
+              className="group mt-2 inline-flex  text-[#38A7F4] items-center gap-x-2 rounded-lg text-sm font-medium text-primary outline-none ring-zinc-500 transition duration-300 hover:text-zinc-800 focus-visible:ring dark:text-blue-500 dark:ring-zinc-200 dark:hover:text-zinc-200 dark:focus:outline-none dark:focus:ring-1"
               href={linkURL}
               target={targetBlack ? '_blank' : undefined}
             >

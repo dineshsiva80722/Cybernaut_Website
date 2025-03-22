@@ -336,7 +336,7 @@ export default function Home() {
                                         </Link>                          
                                     </button>
                                     <Link href="/Program">
-                                    <button className="inline-flex items-center px-4  md:px-6 py-3 border border-transparent text-sm md:text-lg font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
+                                    <button className="inline-flex items-center cursor-pointer px-4  md:px-6 py-3 border border-transparent text-sm md:text-lg font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
                                         Explore Solutions
                                     </button>
                                     </Link>
@@ -346,7 +346,7 @@ export default function Home() {
                                 <div className="flex w-6/12 items-center justify-start">
                                     <div className='w-1/2 h-16 space-y-3'>
                                         <h6 className='text-[16px] w-60 font-medium text-gray-400'>Students Trusted on</h6>
-                                        <div className="flex flex-row items-start  relative   justify-start  w-[15rem] gap-2">
+                                        <div className="flex flex-row items-start relative justify-start w-[15rem] gap-2">
                                             <AnimatedTooltip items={people} />
                                             <h1 className='pl-5 font-bold text-[25px]'>1L+</h1>
                                         </div>
@@ -423,7 +423,7 @@ export default function Home() {
                                                 <span className="absolute w-36 h-32 -top-8 -left-2 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
                                                 <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-2.5 left-5 z-10">Contact us</span>
                                             </button>
-                                            <button className="inline-flex items-center px-4 md:px-6 py-3 border border-transparent text-sm md:text-base font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
+                                            <button className="inline-flex cursor-pointer items-center px-4 md:px-6 py-3 border border-transparent text-sm md:text-base font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
                                                 Explore Solutions
                                             </button>
                                         </div>

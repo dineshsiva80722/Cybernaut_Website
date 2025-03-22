@@ -461,7 +461,7 @@ const Techtrio = () => {
                                 />
                                 <div>
                                     <input
-                                        className="outline-none h-[36px] border-2 rounded-md px-2 w-full text-slate-500 focus:border-blue-300"
+                                        className="outline-none border border-gray-300 h-[36px] rounded-md px-2 w-full text-slate-500 focus:border-blue-300"
                                         placeholder="Name"
                                         id="Name"
                                         name="Name"
@@ -471,7 +471,7 @@ const Techtrio = () => {
                                 </div>
                                 <div>
                                     <input
-                                        className="outline-none h-[36px] border-2 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                        className="outline-none border border-gray-300 h-[36px] rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
                                         placeholder="Email"
                                         id="email"
                                         name="email"
@@ -550,7 +550,7 @@ const Techtrio = () => {
                                 </div>
                                 <div>
                                     <input
-                                        className="outline-none h-[36px] border-2 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                        className="outline-none border border-gray-300 h-[36px] border-2 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
                                         placeholder="Education Qualification"
                                         id="education"
                                         name="education"
@@ -560,7 +560,7 @@ const Techtrio = () => {
                                 </div>
                                 <div>
                                     <input
-                                        className="outline-none h-[36px] border-2 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                        className="outline-none border border-gray-300 h-[36px] rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
                                         placeholder="Current Profile"
                                         id="currentprofile"
                                         name="currentprofile"
@@ -578,12 +578,12 @@ const Techtrio = () => {
                                     Enroll Now
                                 </button>
 
-                                <p className="flex justify-center gap-2 space-x-1 bg-[#EAF7FF] py-1 rounded-md text-[#00A3FF] text-xs sm:text-sm">
+                                <p className=" gap-2 space-x-1 bg-[#afe1ff] items-center justify-center flex py-1 rounded-md  text-xs sm:text-sm">
                                     <NumberTicker
                                         value={1450}
-                                        className="whitespace-pre-wrap font-semibold text-base sm:text-lg tracking-tighter text-[#00A3FF]"
+                                        className="whitespace-pre-wrap font-semibold text-base sm:text-lg tracking-tighter text-black"
                                     />
-                                    enrolled in this course
+                                    Enrolled in this course
                                 </p>
                             </form>
                         </div>
@@ -812,8 +812,8 @@ const Techtrio = () => {
                                         <div key={index} className="group relative rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl">
                                             <div className="aspect-[16/9] w-full">
                                                 <Image
-                                                width={1000}
-                                                height={500}
+                                                    width={1000}
+                                                    height={500}
                                                     src={project.image}
                                                     alt={project.title}
                                                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -905,11 +905,12 @@ const Techtrio = () => {
                                                     </h2>
                                                 </div>
                                             </div>
-
-                                            <button className='group w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-[#13D8FB] to-[#00A3FF] px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-medium hover:shadow-lg hover:shadow-blue-200/50 transform hover:-translate-y-0.5 transition-all duration-200'>
-                                                Get Started Now
-                                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                                            </button>
+                                            <Link href="/Program">
+                                                <button className='group w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-[#13D8FB] to-[#00A3FF] px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-medium hover:shadow-lg hover:shadow-blue-200/50 transform hover:-translate-y-0.5 transition-all duration-200'>
+                                                    Get Started Now
+                                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                                                </button>
+                                            </Link>
 
                                             <div className="flex items-center gap-3 text-gray-500">
                                                 <GraduationCap className="w-5 h-5 text-blue-500" />

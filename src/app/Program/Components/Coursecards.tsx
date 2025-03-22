@@ -308,7 +308,7 @@ function Coursecards() {
 // CourseCard component
 function CourseCard({ item }: { item: CourseItem  }) {
     return (
-        <div className="flex flex-col  w-full bg-white border hover:border-gray-800 rounded-xl  overflow-hidden hover:shadow-lg transition-shadow duration-300">
+        <div className="flex flex-col  w-full bg-white hover:border hover:border-gray-800 rounded-xl  overflow-hidden hover:shadow-lg transition-shadow duration-300">
             {/* Image container with aspect ratio */}
             <div className="relative w-full pt-[56%]">
                 <Image
