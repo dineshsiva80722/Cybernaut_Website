@@ -73,7 +73,7 @@ const Outreaches = () => {
   ]
 
   return (
-    <section className="relative h-[42rem] bg-zinc-800 my-20 overflow-hidden">
+    <section className="relative h-[42rem] bg-zinc-800 my-20 lg:block hidden overflow-hidden">
       {/* Gradient overlays for smooth transitions */}
       <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-zinc-800 to-transparent z-10"></div>
       <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-zinc-800 to-transparent z-10"></div>

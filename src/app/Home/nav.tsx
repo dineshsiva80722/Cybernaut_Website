@@ -31,18 +31,18 @@ export default function Navbar() {
 
     return (
         <header className={cn(
-            'fixed top-0 z-50 h-[70px] items-center flex justify-center  transition-all duration-300 mx-auto w-full ',
+            'fixed top-0 z-50 h-[70px] items-center flex justify-center  transition-all duration-300 mx-auto w-screen ',
             isScrolled ? 'bg-white shadow-md' : 'bg-gray-50'
         )}>
-            <nav className="xl:container mx-auto px-4 sm:px-6 lg:px-8  w-full">
-                <div className="flex items-center justify-between lg:justify-around gap-32 py-4">
+            <nav className="xl:container mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div className="flex items-center justify-between lg:justify-around lg:gap-32 lg:py-4">
                     {/* Logo */}
                     <Link href="/" className="flex items-center">
                         <Image
                             src="https://res.cloudinary.com/dn60aovto/image/upload/v1742390286/Logo_f8ucbs.png"
-                            width={200}
-                            height={50}
-                            className="w-32 sm:w-40 lg:w-40"
+                            width={500}
+                            height={100}
+                            className=" w-[8rem] lg:w-40"
                             alt="Logo"
                         />
                     </Link>

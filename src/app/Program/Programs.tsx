@@ -18,7 +18,7 @@ const Programs = () => {
     return (
         <div className='mx-auto xl:container rounded-xl '>
             {/* IMage Slider */}
-            <div className='bg-gray-400 w-11/12 h-80  mt-24 rounded-xl my-10 mx-auto relative'>
+            <div className=' w-12/12 h-80  mt-24 rounded-xl my-10 mx-auto relative'>
                 <Slider
                     dots={false}
                     infinite={true}
@@ -28,15 +28,18 @@ const Programs = () => {
                     autoplay={true}
                     autoplaySpeed={3000}
                     arrows={false}
+                    className='flex items-center justify-center '
                     afterChange={(index: number) => setCurrentSlide(index)}
                 >
                     {sliderImages.map((image, index) => (
-                        <div key={index} className="relative rounded-2xl w-full h-80 overflow-hidden">
+                        <div key={index} className="relative flex items-center justify-center rounded-2xl w-full h-80 overflow-hidden">
                             <Image
+                                width={600}
+                                height={500}
                                 src={image}
                                 alt={`Event Image ${index + 1}`}
-                                className="object-cover "
-                                fill
+                                className="object-cover w-full h-full "
+                                
                             />
                         </div>
                     ))}

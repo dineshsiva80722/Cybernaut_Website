@@ -44,7 +44,7 @@ function Vision() {
   return (
     <div className="container mx-auto overflow-hidden items-center justify-center  bg-gray-50 flex flex-col md:flex-row p-4 md:p-8 lg:p-28">
       {/* Left side content */}
-      <div className="w-full md:w-1/2 min-h-[35rem] mx-auto flex flex-col justify-center pr-0 md:pr-8 mb-8 md:mb-18 space-y-5">
+      <div className="w-full md:w-1/2  mx-auto flex flex-col justify-center pr-0 md:pr-8  md:mb-18 lg:space-y-5">
 
         <h1 style={{ lineHeight: "1.2" }} className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
           Cybernaut Developers Student Community
@@ -135,7 +135,7 @@ function Vision() {
         </div>
 
         {/* CTA Button */}
-        <div className='lg:pt-10 pt-32'>
+        <div className='lg:pt-10 hidden lg:block'>
           <button className="bg-blue-500 hidden hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-full transition-colors duration-300  shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 active:shadow-md">
             Become a member
           </button>
@@ -144,7 +144,7 @@ function Vision() {
       </div>
 
       {/* Right side image */}
-      <div className="w-full md:w-1/2 md:h-[32rem]  relative">
+      <div className="w-full md:w-1/2 md:h-[32rem] lg:pt-0 pt-20 relative">
         <div className="relative  md:h-full rounded-xl overflow-hidden shadow-xl">
           <Image
             width={1000}
@@ -155,7 +155,7 @@ function Vision() {
             key={currentImage.url}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-end p-8">
-            <h2 className="text-white text-4xl font-bold">{currentImage.title}</h2>
+            <h2 className="text-white text-xl md:text-4xl lg:text-5xl font-bold">{currentImage.title}</h2>
           </div>
         </div>
       </div>

@@ -260,13 +260,11 @@ export default function Home() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setAutoContentIndex((prevIndex) => (prevIndex + 1));
+            setAutoContentIndex((prevIndex) => (prevIndex + 1) % autoContents.length);
         }, 3000); // Change content every 3 seconds
 
         return () => clearInterval(interval);
     }, []);
-
-
 
     const people: { id: number; name: string; designation: string; image: string | StaticImageData }[] = [
         {
@@ -296,6 +294,26 @@ export default function Home() {
 
     ];
 
+
+
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIsAnimating(true);
+            setTimeout(() => {
+                setAutoContentIndex((prevIndex) => (prevIndex + 1) % autoContents.length);
+                setBodyContent((prevIndex) => (prevIndex + 1) % bodycontents.length);
+                setIsAnimating(false);
+            }, 300);
+        }, 3000); // Change content every 3 seconds
+
+        return () => clearInterval(interval);
+    }, []);
+
+
+
+
+
     return (
         <>
 
@@ -303,7 +321,7 @@ export default function Home() {
             <div className="min-h-20 container mx-auto hidden pb-20 lg:block">
                 <section className='container mx-auto min-h-[140rem]  relative top-20'>
                     <main className='w-[91rem]  mx-auto  h-[40rem] rounded-xl sticky top-20 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]'>
-                      
+
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-2   gap-8 items-center">
 
@@ -333,12 +351,12 @@ export default function Home() {
                                         <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
                                         <Link href="/contact">
                                             <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-3 left-6 z-10 text-lg">Contact us</span>
-                                        </Link>                          
+                                        </Link>
                                     </button>
                                     <Link href="/Program">
-                                    <button className="inline-flex items-center cursor-pointer px-4  md:px-6 py-3 border border-transparent text-sm md:text-lg font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
-                                        Explore Solutions
-                                    </button>
+                                        <button className="inline-flex items-center cursor-pointer px-4  md:px-6 py-3 border border-transparent text-sm md:text-lg font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
+                                            Explore Solutions
+                                        </button>
                                     </Link>
                                 </div>
 
@@ -468,8 +486,6 @@ export default function Home() {
                 </section>
             </div> */}
 
-
-
             <div className="w-full min-h-screen hidden md:block lg:hidden bg-gray-50">
                 {/* Tablet View */}
                 <section className='md:block w-full min-h-screen'>
@@ -497,18 +513,16 @@ export default function Home() {
                                                 </h1>
                                             </div>
                                         </div>
-                                        <div className="py-2 flex gap-4">
-                                            <button className="overflow-hidden w-28 md:w-32 p-2 h-12 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative z-10 group">
-                                                Contact us
-                                                <span className="absolute w-36 h-32 -top-8 -left-2 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
-                                                <span className="absolute w-36 h-32 -top-8 -left-2 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
-                                                <span className="absolute w-36 h-32 -top-8 -left-2 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
-                                                <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-2.5 left-5 z-10">Contact us</span>
-                                            </button>
-                                            <button className="inline-flex cursor-pointer items-center px-4 md:px-6 py-3 border border-transparent text-sm md:text-base font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
-                                                Explore Solutions
-                                            </button>
-                                        </div>
+                                        <button className="overflow-hidden w-28 md:w-32 p-2 h-12 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative z-10 group">
+                                            Contact us
+                                            <span className="absolute w-36 h-32 -top-8 -left-2 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
+                                            <span className="absolute w-36 h-32 -top-8 -left-2 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
+                                            <span className="absolute w-36 h-32 -top-8 -left-2 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
+                                            <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-2.5 left-5 z-10">Contact us</span>
+                                        </button>
+                                        <button className="inline-flex cursor-pointer items-center px-4 md:px-6 py-3 border border-transparent text-sm md:text-base font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
+                                            Explore Solutions
+                                        </button>
                                     </div>
                                     <div className="mt-8">
                                         <HeroIllustration />
@@ -522,7 +536,7 @@ export default function Home() {
 
 
             {/* Mobile View */}
-            <section className='block md:hidden w-full min-h-screen mt-10'>
+            <section className='block md:hidden container min-h-screen mt-10'>
                 <div className="heading pb-5 p-4">
                     <div className='w-full py-5 min-h-[13rem] '>
                         <p
@@ -571,7 +585,7 @@ export default function Home() {
                 </div>
 
                 <div className="w-full h-96 relative items-center justify-center flex">
-                    <div className="lg:w-80 h-72 relative left-5 top-5 mx-auto rounded-xl bg-sky-300"></div>
+                    <div className="w-80 h-72 relative left-5 top-6 mx-auto rounded-xl bg-sky-300"></div>
                     <div className="w-80   absolute border-2 overflow-hidden border-sky-300 mx-auto rounded-xl bg-white">
                         <div className='relative '>
                             <Image

@@ -17,7 +17,7 @@ const WhatWeDo = () => {
               height={500}
               src='https://res.cloudinary.com/dn60aovto/image/upload/v1742391211/What_tu8dmd.jpg'
               alt="Students in a classroom"
-              className="w-full h-[35rem] rounded-2xl object-cover shadow-lg transition-transform duration-200"
+              className="w-full lg:h-[35rem]  rounded-2xl object-cover shadow-lg transition-transform duration-200"
             />
           </div>
 

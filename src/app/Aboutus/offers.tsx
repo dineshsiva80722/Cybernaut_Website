@@ -230,8 +230,8 @@ const Offers = () => {
                             </div>
 
                             <div className='flex gap-5  justify-center relative -top-24 md:-top-[8rem] lg:top-0 w-full '>
-                                <Image src={What} alt='' className='lg:w-[100rem] w-1/2 object-contain' />
-                                <Image src={What} alt='' className='lg:hidden w-1/2 object-contain' />
+                                <Image width={500} height={500} src="https://res.cloudinary.com/dn60aovto/image/upload/v1742448505/Outreach_1_lc97mp.jpg" alt='' className='lg:w-[100rem] w-1/2 object-contain' />
+                                <Image width={500} height={500} src={What} alt='' className='lg:hidden w-1/2 object-contain' />
                             </div>
 
                         </div>

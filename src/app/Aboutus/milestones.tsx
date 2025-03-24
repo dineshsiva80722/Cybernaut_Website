@@ -111,18 +111,18 @@ export default function Page() {
 
 
             <div className='block lg:hidden w-full min-h-60'>
-                <div className="bg-gray-100 flex items-center justify-center p-4">
+                <div className="flex items-center justify-center p-4">
                     <div className="bg-blue-50 rounded-3xl p-6 max-w-md w-full">
                         {/* Top row - full width */}
                         <div className="bg-white rounded-3xl p-5 mb-3">
-                            <h2 className="text-xl font-bold text-center text-gray-800">
+                            <h2 className="text-lg font-bold text-center text-gray-800">
                                 10+ COLLEGES SUPPORTED
                             </h2>
                         </div>
                         <div className="grid grid-cols-2 gap-3 mb-3">
                             {/* Left box - Students trained */}
                             <div className="bg-white rounded-3xl p-5 flex items-center justify-center">
-                                <h2 className="text-xl font-bold text-center text-gray-800">
+                                <h2 className="text-lg font-bold text-center text-gray-800">
                                     5K+ STUDENTS<br />TRAINED
                                 </h2>
                             </div>
@@ -131,14 +131,14 @@ export default function Page() {
                             <div className="grid grid-cols-1 gap-3">
                                 {/* Years of impact */}
                                 <div className="bg-white rounded-3xl p-5 flex items-center justify-center">
-                                    <h2 className="text-xl font-bold text-center text-gray-800">
+                                    <h2 className="text-lg font-bold text-center text-gray-800">
                                         5 YEARS OF<br />IMPACT
                                     </h2>
                                 </div>
 
                                 {/* MOUs signed */}
                                 <div className="bg-white rounded-3xl p-5 flex items-center justify-center">
-                                    <h2 className="text-xl font-bold text-center text-gray-800">
+                                    <h2 className="text-lg font-bold text-center text-gray-800">
                                         20+ MOUS<br />SIGNED
                                     </h2>
                                 </div>
@@ -149,14 +149,14 @@ export default function Page() {
                         <div className="grid grid-cols-2 gap-3 mb-3">
                             {/* MAANG alumni */}
                             <div className="bg-white rounded-3xl p-5 flex items-center justify-center">
-                                <h2 className="text-xl font-bold text-center text-gray-800">
+                                <h2 className="text-lg font-bold text-center text-gray-800">
                                     1,000+ MAANG<br />ALUMNI
                                 </h2>
                             </div>
 
                             {/* Project intern */}
                             <div className="bg-white rounded-3xl p-5 flex items-center justify-center">
-                                <h2 className="text-xl font-bold text-center text-gray-800">
+                                <h2 className="text-lg font-bold text-center text-gray-800">
                                     1500+<br />PROJECT<br />INTERN
                                 </h2>
                             </div>
@@ -164,7 +164,7 @@ export default function Page() {
 
                         {/* Bottom row - full width */}
                         <div className="bg-white rounded-3xl p-5 flex items-center justify-center">
-                            <h2 className="text-xl font-bold text-center text-gray-800">
+                            <h2 className="text-lg font-bold text-center text-gray-800">
                                 150+ OUTREACH PROGRAMS
                             </h2>
                         </div>

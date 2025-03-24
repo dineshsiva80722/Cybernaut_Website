@@ -76,12 +76,12 @@ function Contact() {
 
     return (
         <>
-            <section className='min-h-80 py-20 w-full'>
-                <div className='w-10/12 h-32 mx-auto'>
-                    <div className=' text-center leading-relaxed animate-fade-in space-y-1'>
-                        <h1 className='font-bold text-3xl'> Don&#39;t just take our word for it,</h1>
-                        <h1 className='text-3xl  text-blue-500 font-bold '>Hear from our students.</h1>
-                        <h1 className='text-md  text-gray-500'>Our students&#39; success stories speak volumes about the quality of our programs and mentorship.</h1>
+            <section className='min-h-80 py-5 w-full'>
+                <div className='w-10/12 min-h-32  mx-auto'>
+                    <div className=' text-center leading-relaxed animate-fade-in space-y-2'>
+                        <h1 className='font-bold lg:text-3xl text-xl'> Don&#39;t just take our word for it,</h1>
+                        <h1 className='lg:text-3xl text-xl text-blue-500 font-bold '>Hear from our students.</h1>
+                        <h1 className='lg:text-md text-sm  text-gray-500'>Our students&#39; success stories speak volumes about the quality of our programs and mentorship.</h1>
                     </div>
                 </div>
                 <div
@@ -92,23 +92,9 @@ function Contact() {
                 ></div>
             </section>
             {/* <FeaturableWidget /> */}
-            <section className='relative h-[40rem]  justify-center items-center py-8 md:py-16 px-4 bg-white overflow-hidden'>
+            <section className='relative min-h-[40rem]  justify-center items-center py-6 md:py-16 px-4 bg-white overflow-hidden'>
                 <div className='relative w-full max-w-6xl mx-auto'>
                     <div className='relative w-full lg:h-96 flex shadow-md rounded-2xl bg-white flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12 overflow-hidden'>
-                        {/* Background Image */}
-                        {/* <div className="absolute inset-0 w-full h-full">
-                            <Image
-                                src={Bgimage}
-                                alt="Background Pattern"
-                                fill
-                                sizes="100vw"
-                                priority
-                                className="w-full h-full object-cover opacity-10"
-                                style={{ objectFit: 'cover' }}
-                            />
-                            <div className="absolute inset-0"></div>
-                        </div> */}
-
                         {/* Left Section */}
                         <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 rounded-3xl transition-shadow duration-300 '>
                             <div className='max-w-md mx-auto space-y-6 md:space-y-4  '>
@@ -128,7 +114,7 @@ function Contact() {
 
 
                                 <Link href="/Program">
-                                    <button className='group w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r  mt-5 from-[#13D8FB] to-[#00A3FF] px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-medium hover:shadow-lg hover:shadow-blue-200/50 transform hover:-translate-y-0.5 transition-all duration-200'>
+                                    <button className='group w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r  my-5 from-[#13D8FB] to-[#00A3FF] px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-medium hover:shadow-lg hover:shadow-blue-200/50 transform hover:-translate-y-0.5 transition-all duration-200'>
                                         Get Started Now
                                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                                     </button>

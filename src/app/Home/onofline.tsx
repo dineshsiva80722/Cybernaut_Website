@@ -188,6 +188,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import styled from 'styled-components';
+
 
 function OnlineOffline() {
     const [activeTab, setActiveTab] = useState('gallery');
@@ -228,20 +230,19 @@ function OnlineOffline() {
     };
 
     return (
-        <div className="mx-auto xl:container py-20">
+        <div className="container py-20">
             <div className="mx-auto flex-wrap xl:container">
-                <h1 className="text-center xl:container lg:text-4xl text-xl font-bold my-4">
-                    Learn. Practice. Earn. Have Fun!
+                <h1 className="text-center lg:w-full w-60 mx-auto xl:container lg:text-4xl text-xl font-bold my-4">
+                    Learn. Practice. Earn. <br /> Have Fun!
                 </h1>
                 <section>
                     <div className="flex justify-center my-6">
-                        <div className="flex justify-center">
+                        <div className="flex lg:justify-center justify-evenly lg:gap-0 gap-6 py-5 w-full">
                             <button
-                                className={`px-7 py-3 text-xl font-medium ${
-                                    activeTab === 'gallery'
-                                        ? 'text-black'
-                                        : 'text-gray-500 hover:text-gray-700'
-                                }`}
+                                className={`lg:px-7 lg:py-3 text-xl font-medium ${activeTab === 'gallery'
+                                    ? 'text-black'
+                                    : 'text-gray-500 hover:text-gray-700'
+                                    }`}
                                 onClick={() => {
                                     setActiveTab('gallery');
                                     setActiveDiv(1); // Reset to first card when switching tabs
@@ -250,11 +251,10 @@ function OnlineOffline() {
                                 Online
                             </button>
                             <button
-                                className={`px-6 py-3 text-xl font-medium ${
-                                    activeTab === 'outreach'
-                                        ? 'text-black'
-                                        : 'text-gray-500 hover:text-gray-700'
-                                }`}
+                                className={`lg:px-7 lg:py-3 text-xl font-medium ${activeTab === 'outreach'
+                                    ? 'text-black'
+                                    : 'text-gray-500 hover:text-gray-700'
+                                    }`}
                                 onClick={() => {
                                     setActiveTab('outreach');
                                     setActiveDiv(1); // Reset to first card when switching tabs
@@ -265,11 +265,10 @@ function OnlineOffline() {
                         </div>
                     </div>
 
-                    <div className="flex mb-10 relative mx-auto w-[15rem] h-[0.1rem] overflow-hidden -mt-7 bg-gray-300">
+                    <div className="flex mb-10 relative mx-auto lg:w-[15rem] w-9/12 lg:h-[0.1rem] h-[0.1rem] overflow-hidden -mt-7 bg-gray-300">
                         <div
-                            className={`w-[8rem] h-[0.2rem] absolute left-0 top-0 bg-blue-500 transform transition-transform duration-300 ${
-                                activeTab === 'outreach' ? 'translate-x-[130px]' : 'translate-x-0'
-                            }`}
+                            className={`lg:w-[8rem] w-[9rem] h-[0.3rem] absolute left-0 top-0 bg-blue-500 transform transition-transform duration-300 ${activeTab === 'outreach' ? 'lg:translate-x-[130px] translate-x-[140px]' : 'translate-x-0'
+                                }`}
                         />
                     </div>
 
@@ -277,22 +276,20 @@ function OnlineOffline() {
                         <div className="lg:w-[40rem] space-y-4">
                             <div className="relative overflow-hidden w-[15rem] lg:h-12 h-10 lg:w-full">
                                 <div
-                                    className={`absolute w-full transition-all duration-700 ease-in-out ${
-                                        activeTab === 'gallery'
-                                            ? 'translate-y-0 opacity-100'
-                                            : '-translate-y-full opacity-0'
-                                    }`}
+                                    className={`absolute w-full transition-all duration-700 ease-in-out ${activeTab === 'gallery'
+                                        ? 'translate-y-0 opacity-100'
+                                        : '-translate-y-full opacity-0'
+                                        }`}
                                 >
                                     <h1 className="text-4xl font-bold text-black">
                                         Online Learning
                                     </h1>
                                 </div>
                                 <div
-                                    className={`absolute w-full transition-all duration-700 ease-in-out ${
-                                        activeTab === 'outreach'
-                                            ? 'translate-y-0 opacity-100'
-                                            : 'translate-y-full opacity-0'
-                                    }`}
+                                    className={`absolute w-full transition-all duration-700 ease-in-out ${activeTab === 'outreach'
+                                        ? 'translate-y-0 opacity-100'
+                                        : 'translate-y-full opacity-0'
+                                        }`}
                                 >
                                     <h1 className="text-4xl font-bold text-black">
                                         Offline Learning
@@ -312,7 +309,7 @@ function OnlineOffline() {
                             </div>
 
                             <div className="relative overflow-hidden w-60 h-20">
-                                <Link href="/program">
+                                <Link href="/Program">
                                     <button className="my-4 px-6 py-4 rounded-full bg-gradient-to-r from-[#13D8FB] to-[#00A3FF] text-white hover:opacity-90 transition-opacity">
                                         View More
                                     </button>
@@ -323,7 +320,7 @@ function OnlineOffline() {
                         {/* Mobile and tablet view */}
                         <div className="lg:hidden block">
                             <div className="grid grid-cols-2 gap-4">
-                                {(activeTab === 'gallery' ? onlineCards : offlineCards).map((card, index) => (
+                                {/* {(activeTab === 'gallery' ? onlineCards : offlineCards).map((card, index) => (
                                     <div
                                         key={index}
                                         className="relative p-4 rounded-lg overflow-hidden h-32"
@@ -339,11 +336,21 @@ function OnlineOffline() {
                                             {card.title}
                                         </span>
                                     </div>
-                                ))}
+                                ))} */}
+                                <StyledWrapper>
+                                    <div className="card flex justify-center items-center w-80">
+                                        {(activeTab === 'gallery' ? onlineCards : offlineCards).map((card, index) => (
+                                            <p style={{backgroundImage: `url(${card.bgImage})`}} key={index}><span></span></p>
+                                        ))}
+                                    </div>
+                                </StyledWrapper>
+
                             </div>
-                            <button className="w-full h-10 mt-3 text-sm bg-sky-500 text-white rounded-sm hover:bg-sky-600 transition-colors">
-                                Get Started
-                            </button>
+                            <Link href="/Program">
+                                <button className="w-full h-10 mt-3 text-sm bg-sky-500 text-white rounded-sm hover:bg-sky-600 transition-colors">
+                                    Get Started
+                                </button>
+                            </Link>
                         </div>
 
                         {/* Desktop view */}
@@ -382,5 +389,42 @@ function OnlineOffline() {
         </div>
     );
 }
+
+const StyledWrapper = styled.div`
+  .card {
+    height: 254px;
+    display: flex;
+  }
+
+  .card p {
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card p:hover {
+    flex: 4;
+  }
+
+  .card p span {
+    min-width: 14em;
+    padding: .5em;
+    text-align: center;
+    transform: rotate(-90deg);
+    transition: all .5s;
+    text-transform: uppercase;
+    color: #ff568e;
+    letter-spacing: .1em;
+  }
+
+  .card p:hover span {
+    transform: rotate(0);
+  }`;
 
 export default OnlineOffline;

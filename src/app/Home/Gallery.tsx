@@ -296,7 +296,7 @@ const imageDescriptions = [
   "Kovaipudur",
   "Namakkal",
   " Namakkal",
-  " Namakkal",
+  " Chennai",
   "Ramapuram, Chennai",
   " Chennai",
   "Chennai",
@@ -426,9 +426,9 @@ const Gallery = () => {
               alt="Current"
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-0 left-0 bg-black/50 text-white w-full p-2">
-              <h3 className="text-lg font-semibold">{activeTab === 'outreach' ? OutreachimageNames[currentImage] : imageNames[currentImage]}</h3>
-              <p className="text-sm">{activeTab === 'outreach' ? OutreachimageDescriptions[currentImage] : imageDescriptions[currentImage]}</p>
+            <div className="absolute bottom-0 left-0 bg-black/50 text-white w-full lg:h-auto  p-2">
+              <h3 className="lg:text-lg text-sm font-semibold">{activeTab === 'outreach' ? OutreachimageNames[currentImage] : imageNames[currentImage]}</h3>
+              <p className="lg:text-sm text-[0.7rem]">{activeTab === 'outreach' ? OutreachimageDescriptions[currentImage] : imageDescriptions[currentImage]}</p>
             </div>
           </div>
 
@@ -450,15 +450,15 @@ const Gallery = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevImage}
-            className="absolute -left-12 top-1/2 -translate-y-1/2 lg:bg-blue-300/80 rounded-full p-2 lg:shadow-lg lg:hover:bg-white transition-colors"
+            className="absolute lg:-left-12 -left-3 top-1/2 -translate-y-1/2 lg:bg-blue-300/80 rounded-full p-2 lg:shadow-lg lg:hover:bg-white transition-colors"
           >
-            <ChevronLeft className="lg:w-6 lg:h-6 w-4 h-4 lg:block hidden text-blue-500" />
+            <ChevronLeft className="lg:w-6 lg:h-6 w-4 h-4   text-blue-500" />
           </button>
           <button
             onClick={nextImage}
-            className="absolute -right-12 top-1/2 -translate-y-1/2 lg:bg-blue-300/80 rounded-full p-2 lg:shadow-lg lg:hover:bg-white transition-colors"
+            className="absolute lg:-right-12 -right-3 top-1/2 -translate-y-1/2 lg:bg-blue-300/80 rounded-full p-2 lg:shadow-lg lg:hover:bg-white transition-colors"
           >
-            <ChevronRight className="lg:w-6 lg:h-6 w-4 h-4 lg:block hidden text-blue-500" />
+            <ChevronRight className="lg:w-6 lg:h-6 w-4 h-4   text-blue-500" />
           </button>
         </div>
 

@@ -78,7 +78,7 @@ function Mobileoffers() {
                 <Image
                   width={500}
                   height={500}
-                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                  src="https://res.cloudinary.com/dn60aovto/image/upload/v1742448505/Outreach_1_lc97mp.jpg"
                   alt="Students in classroom"
                   className="rounded-lg w-full h-32 object-cover"
                 />
@@ -86,7 +86,7 @@ function Mobileoffers() {
                   width={500}
                   height={500}
 
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                  src="https://res.cloudinary.com/dn60aovto/image/upload/v1742455415/15_ylloii.jpg"
                   alt="Students in auditorium"
                   className="rounded-lg w-full h-32 object-cover"
                 />
@@ -137,14 +137,14 @@ function Mobileoffers() {
                 <Image
                   width={500}
                   height={500}
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                  src="https://res.cloudinary.com/dn60aovto/image/upload/v1742450774/forCompanies_kgsikx.jpg"
                   alt="Corporate meeting"
                   className="rounded-lg w-full h-32 object-cover"
                 />
                 <Image
                   width={500}
                   height={500}
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                  src="https://res.cloudinary.com/dn60aovto/image/upload/v1742813815/163a62c7-5212-4d08-aa3f-0535b0562dda.png"
                   alt="Business team"
                   className="rounded-lg w-full h-32 object-cover"
                 />

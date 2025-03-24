@@ -1,140 +1,3 @@
-// 'use client';
-// import React, { useState } from 'react'
-// import Image from 'next/image'
-// import Mission from '@/app/Home/assets/Mission.png'
-// import Vision from '@/app/Home/assets/Vision.png'
-// import Chez from '@/app/Home/assets/DSA.png'
-// import gsap from 'gsap';
-
-
-// const About = () => {
-
-//     const content = [
-//         {
-//             title: "About us",
-//             para: 'At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institutionl earning experience.'
-//         }
-//     ]
-//     const nextContent = [
-//         {
-//             icon: Mission,
-//             title: "Mission",
-//             para: "Empowering the tech ecosystem by sharing knowledge, fostering innovation, and expanding opportunities for the next generation of problem-solvers."
-//         },
-//         {
-//             icon: Vision,
-//             title: "Vision",
-//             para: "Cultivating future-ready tech innovators and entrepreneurs by equipping them with the skills, mindset, and tools to drive technological advancement."
-//         }
-//     ]
-
-//     // gsapp animation 
-//     const handlemissionclick = () => {
-//         gsap.to(".moving-mission", {
-//             duration: 0.3,
-//             repeat: 0,
-//             x: 0,
-//         });
-//     };
-
-//     const handlvisionclick = () => {
-//         gsap.to(".moving-mission", {
-//             x: 150,
-//             duration: 0.3,
-//             repeat: 0,
-//         });
-//     };
-//     const [activeTab, setActiveTab] = useState('mission'); // Default to 'mission'
-
-
-
-//     return (
-//         <div className='h-auto max-w-7xl mx-auto'>
-//             <div className='flex flex-col justify-center mx-auto my-10 lg:my-0  xl:container '>
-//                 {content.map((item, index) => (
-//                     <div key={index} className='flex flex-col justify-center mx-auto xl:container mt-20 lg:mt-40 p-5'>
-//                         <h1 className='lg:text-4xl text-xl font-extrabold text-black text-center'>{item.title}</h1>
-//                         <p className='lg:text-xl md:text-md text-sm text-center font-light py-4 w-10/12 mx-auto'>{item.para}</p>
-//                     </div>
-//                 ))}
-//                 <button className='w-11/12 mx-auto flex md:hidden justify-center items-center h-10 text-sm border bg-sky-500 text-white border-sky-500 rounded-sm py-2'>
-//                     get started
-//                 </button>
-//             </div>
-
-//             <div className='flex md:hidden flex-col justify-center mx-auto my-10 lg:my-0  xl:container '>
-//                 <Image src={Chez} alt="Profile" className='flex justify-center w-full object-contain' />
-//             </div>
-
-//             <div className='md:hidden block'>
-//                 <h1 className='text-2xl font-bold text-center py-2'>Mission / Vision</h1>
-//                 <div className="flex gap-16 justify-center">
-//                     <button
-//                         className={`lg:w-32 lg:text-lg text-md relative font-medium ${activeTab === 'mission' ? 'text-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
-//                         onClick={() => {
-//                             setActiveTab('mission');
-//                             handlemissionclick();
-//                         }}
-//                     >
-//                         Our Mission
-//                     </button>
-//                     <button
-//                         className={`lg:w-52 py-3 lg:text-lg text-sm relative lg:left-7 left-2 font-medium ${activeTab === 'vision' ? 'text-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
-//                         onClick={() => {
-//                             setActiveTab('vision');
-//                             handlvisionclick();
-//                         }}
-//                     >
-//                         Our Vision
-//                     </button>
-//                 </div>
-
-
-//                 <div className='flex mb-10 relative  mx-auto lg:w-[28rem] w-[18rem] h-[0.2rem] overflow-hidden -mt-1  bg-gray-300'>
-//                     <div className="lg:w-[15rem] w-[9rem] h-[0.2rem] moving-mission absolute left-0 top-0 bg-sky-500">
-//                     </div>
-//                 </div>
-
-
-//                 <div className='border-2 w-11/12 min-h-20 mx-auto border-sky-500 rounded-3xl px-4 place-content-center py-5 flex flex-col items-center'>
-//                     {activeTab === 'mission' ? (
-//                         <>
-//                             <Image src={Mission} alt='Mission' className='flex justify-center w-20 py-5' />
-//                             <h2 className='flex justify-center py-1 text-xl font-bold'>Our Mission</h2>
-//                             <p className='relative text-center py-2 text-sm tracking-wide'>Pick the month or yearly plan that best suits your business needs. No long-term commitments, cancel anytime</p>
-//                         </>
-//                     ) : (
-//                         <>
-//                             <Image src={Vision} alt='Vision' className='flex justify-center w-20 py-5' />
-//                             <h2 className='flex justify-center  text-xl font-bold'>Our Vision</h2>
-//                             <p className='relative text-center  text-sm tracking-wide'>Pick the month or yearly plan that best suits your business needs. No long-term commitments, cancel anytime</p>
-//                         </>
-//                     )}
-//                 </div>
-//             </div>
-
-//             <div className='mx-auto  xl:container'>
-//                 <div className='md:flex hidden justify-center mx-10 lg:mx-32 gap-10 '>
-//                     {nextContent.map((item, index) => (
-//                         <div key={index} className='border-2 border-sky-500 rounded-3xl px-4 place-content-center lg:py-24 flex flex-col items-center'>
-//                             <Image  src={item.icon} alt={item.title} className='flex justify-center w-20  py-5' />
-//                             <h2 className='flex justify-center text-xl font-bold'>{item.title}</h2>
-//                             <p className='relative text-center lg:text-xl text-sm tracking-wide'>{item.para}</p>
-//                         </div>
-//                     ))}
-//                 </div>
-//             </div>
-//         </div>
-
-//     )
-// }
-
-// export default About;
-
-
-
-
-
 'use client';
 import React from 'react';
 import { Trophy, Lightbulb } from 'lucide-react';
@@ -145,23 +8,25 @@ import { useEffect, useRef } from "react";
 function About() {
     return (
         <div className=" container mx-auto bg-white py-5">
-            <div className="container mx-auto px-4 py-12 flex flex-col justify-center md:flex-row gap-8">
+            <div className="container mx-auto px-4 lg:py-12  flex flex-col justify-center md:flex-row gap-8">
                 {/* Left Section */}
-                <div className="w-full md:w-1/2 left-14 relative">
+                <div className="w-full md:w-1/2 lg:left-14 relative">
                     <div className="relative">
                         {/* Trophy Icon with Blue Background */}
-                        <div className="absolute left-12 top-5 z-40 bg-blue-500 p-3 rounded-lg">
+                        <div className='relative lg:left-0 -left-10'>
+                        <div className="absolute lg:left-12 left-8 top-5 z-40 bg-blue-500 p-3 rounded-lg">
                             <Trophy className="text-white w-6 h-6" />
                         </div>
 
                         {/* +230 Stats */}
-                        <div className="mb-2 absolute bg-white rounded-lg left-10  px-10 py-5 flex flex-col items-center justify-center z-30 top-10">
+                        <div className="mb-2 absolute bg-white rounded-lg left-10  lg:px-10 lg:py-5 px-5 py-3 flex flex-col items-center justify-center z-30 top-10">
                             <h2 className="text-blue-500 text-3xl font-bold">+230</h2>
                             <p className="text-gray-600 text-sm">Outreach Events</p>
                         </div>
+                        </div>
 
                         {/* Decorative Elements */}
-                        <div className="absolute -left-5  top-16 w-16 h-16">
+                        <div className="absolute -left-5 hidden lg:block top-16 w-16 h-16">
                             {/* <svg viewBox="0 0 100 100" className="text-blue-100">
                                 <path d="M0,50 a50,50 0 1,0 100,0" fill="none" stroke="currentColor" strokeWidth="8"></path>
                             </svg> */}
@@ -182,16 +47,16 @@ function About() {
                                 <path d="M104.753 65.09C106.282 71.0061 106.768 77.1037 108.127 83.0507C109.213 87.8372 108.973 93.1792 111.793 97.4013C112.391 98.3032 113.792 97.3967 113.194 96.4947C110.498 92.4635 110.696 87.1801 109.718 82.562C108.449 76.6052 107.885 70.5102 106.344 64.6013C106.078 63.5484 104.494 64.0483 104.753 65.09Z" fill="#00A3FF" fillOpacity="0.5" />
                             </svg>
                         </div>
-
+                    
                         {/* Main Image */}
-                        <div className=" w-[40rem] h-[35rem] rounded-[30px]">
+                        <div className=" lg:w-[40rem] lg:h-[35rem]  relative  rounded-[30px]">
                             <VideoCard
                                 videoUrl="https://res.cloudinary.com/dn60aovto/video/upload/v1742274023/Cybernaut_fiki4i.mp4" // Use the relative path from the public directory
                             />
                         </div>
 
                         {/* Secondary Image */}
-                        <div className="absolute -bottom-8 left-4 w-64 h-64 rounded-[20px] overflow-hidden shadow-lg border-4 border-white">
+                        <div className="absolute -bottom-8 lg:left-4 lg:w-64 lg:h-64 w-44 h-44 rounded-[20px] overflow-hidden shadow-lg border-4 border-white">
                             <Image
                                 width={500}
                                 height={500}
@@ -207,7 +72,7 @@ function About() {
                         </div>
 
                         {/* Decorative Paper Plane */}
-                        <div className="absolute bottom-0 right-0 left-64 top-[28rem] mx-auto">
+                        <div className="absolute hidden lg:block bottom-0 right-0 left-64 top-[28rem] mx-auto">
                             <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 375 131" fill="none">
                                 <g clipPath="url(#clip0_19_4288)">
                                     <path d="M296.556 72.7695C299.77 74.8117 303.014 76.8052 306.257 78.7987C299.112 81.9981 292.016 85.6351 285.52 90.05C289.644 84.5848 293.371 78.8279 296.556 72.7695Z" fill="#F1F2FD" />
@@ -228,7 +93,7 @@ function About() {
                 </div>
 
                 {/* Right Section */}
-                <div className="w-full md:w-1/2 space-y-4">
+                <div className="w-full md:w-1/2 pt-10 lg:py-0 space-y-4">
                     {/* About Us Header */}
                     <div className="flex items-center gap-2 ">
                         <h3 className="text-blue-500 font-bold text-xl">About Us</h3>
@@ -239,12 +104,12 @@ function About() {
                         </div>
                     </div>
                     {/* Main Heading */}    
-                    <h1 className="text-4xl font-bold text-gray-800">
+                    <h1 className="text-xl lg:text-4xl font-bold text-gray-800">
                         Building a Community for Lifelong Learning and Growth
                     </h1>
 
                     {/* Description */}
-                    <p className="text-gray-600 w-10/12 ">
+                    <p className="text-gray-600 lg:w-10/12 lg:text-start text-justify ">
                         At Cybernaut Edu-Tech, we offer premier educational solutions, including
                         products, services, and training programs. Partner with us to enhance your
                         institution&apos;s learning experience.
@@ -252,7 +117,7 @@ function About() {
 
                     {/* Our Mission */}
                     <div className=" items-start gap-4 mb-8 space-y-2">
-                        <div className="w-full flex items-center justify-start p-2 gap-5">
+                        <div className="w-full flex items-center justify-start p-2 gap-2 lg:gap-5">
                             {/* <Target className="text-blue-500 w-6 h-6" /> */}
                             <span className=''>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 51" fill="none">
@@ -280,7 +145,7 @@ function About() {
                             <h3 className="text-2xl font-bold  text-gray-800 ">Our Mission</h3>
                         </div>
                         <div>
-                            <p className="text-gray-600 w-10/12 px-3">
+                            <p className="text-gray-600 lg:w-10/12 lg:text-start text-justify px-3">
                                 Empowering the tech ecosystem by sharing knowledge, fostering
                                 innovation, and expanding opportunities for the next generation of
                                 problem-solvers.
@@ -289,8 +154,8 @@ function About() {
                     </div>
 
                     {/* Our Vision */}
-                    <div className=" items-start gap-4 mb-8 space-y-2">
-                        <div className="w-full flex items-center justify-start p-2 gap-5">
+                    <div className=" items-start gap-4 lg:mb-8 space-y-2">
+                        <div className="w-full flex items-center justify-start p-2 gap-2 lg:gap-5">
                             {/* <Target className="text-blue-500 w-6 h-6" /> */}
                             <span className=''>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 51" fill="none">
@@ -314,7 +179,7 @@ function About() {
                             <h3 className="text-2xl font-bold  text-gray-800 ">Our Vision</h3>
                         </div>
                         <div>
-                            <p className="text-gray-600 w-9/12 px-3">
+                            <p className="text-gray-600 lg:w-9/12 lg:text-start text-justify px-3">
                                 Cultivating future-ready tech innovators and entrepreneurs by
                                 equipping them with the skills, mindset, and tools to drive technological
                                 advancement.
@@ -378,7 +243,7 @@ function VideoCard({ videoUrl }: VideoCardProps) {
                 <div className="relative aspect-video">
                     <video
                         ref={videoRef}
-                        className="w-[30rem] shadow-none relative left-10  mx-auto rounded-xl h-[35rem] object-cover"
+                        className="w-[30rem] shadow-none relative lg:left-10  mx-auto rounded-xl h-[28rem] lg:h-[35rem] object-cover"
                         loop
                         muted
                         playsInline

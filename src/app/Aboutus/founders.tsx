@@ -217,21 +217,24 @@ const Founders = () => {
       <section className='min-h-screen py-20'>
         <div className='flex flex-col justify-center  space-y-5 mx-auto py-10'>
           <h1 className='lg:text-3xl text-2xl   text-center  font-bold my-2 gap-2 '>MEET OUR FOUNDERS </h1>
-          <p className='text-center max-w-3xl mx-auto'>
+          <p className='text-center lg:max-w-3xl w-11/12  text-sm lg:text-lg mx-auto'>
             Unlock your potential with our advanced educational tools and top-tier training. Join 10,000+ successful learners and enhance your skills with Tech Trio, Full Stack, UI & UX, and more. Find the perfect program for your career goals today.
           </p>
         </div>
-        <div className=" px-10 flex flex-col md:flex-row items-center justify-between gap-5  mx-auto">
+        <div className=" px-10 flex flex-col-reverse md:flex-row items-center justify-between gap-5  mx-auto">
           {/* Left Content */}
-          <div className="w-full md:w-1/2 min-h-96 flex items-center justify-center   ">
+          <div className="w-full md:w-1/2 min-h-96 flex items-center justify-center  py-10 lg:py-0  ">
             <div className='w-[33rem] min-h-80  space-y-2'>
-              <h1 className="text-3xl md:text-2xl lg:text-2xl font-bold    text-[#1F1F3D]">
+              <h1 className="text-2xl hidden lg:block md:text-2xl lg:text-2xl font-bold    text-[#1F1F3D]">
                 Hello, I&apos;m Jayasurya Gnanavel
+              </h1>
+              <h1 className="text-2xl block lg:hidden md:text-2xl lg:text-2xl font-bold    text-[#1F1F3D]">
+               Jayasurya Gnanavel
               </h1>
               <h2 className="text-xl md:text-xl text-[#00A3FF] font-semibold">
                 Founder & CEO
               </h2>
-              <p className="text-gray-600 text-md leading-relaxed ">
+              <p className="text-gray-600 lg:text-md text-sm lg:text-start text-justify leading-relaxed ">
                 Jaya Surya is a passionate philomath from India, dedicated to teaching, inspiring, and shaping future leaders. Specializing in career and business strategy, he guides youth in discovering their purpose and pursuing it confidently. With a mission to empower the next generation, he encourages bold thinking, decisive action, and impactful leadership.
               </p>
               <div className="flex flex-row items-start relative justify-start w-[14rem]">
@@ -255,39 +258,45 @@ const Founders = () => {
                 </div>
               </div>
               <a href="https://www.linkedin.com/in/jayasurya-gnanavel-b96300197">
-
-                <Button className='p-8 px-8 bg-blue-500 rounded-full text-lg  '>Get in Touch</Button>
+                <Button className='lg:p-8 p-3 px-8 bg-blue-500 rounded-full text-lg  '>Get in Touch</Button>
               </a>
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 h-[30rem] space-y-6  flex  justify-center ">
-            <div className='relative  w-[29rem] min-h-96'>
-              <div className='w-80 h-80 bg-blue-200 rounded-[2rem] absolute -right-5 -bottom-1'>
+          <div className="w-full md:w-1/2 lg:w-full lg:h-[30rem] space-y-6  flex  justify-center ">
+            <div className='relative w-[35rem] lg:w-[29rem] lg:min-h-96'>
+              <div className='w-80 h-80 bg-blue-200 hidden lg:block rounded-[2rem] absolute -right-5 -bottom-1'>
               </div>
               <Image
-                width={300}
+                width={350}
                 height={354}
                 src="https://res.cloudinary.com/dn60aovto/image/upload/v1742450995/JS_hkszd9.png"
                 alt="Profile"
-                className="rounded-[2rem] w-[30rem] relative z-10 object-cover"
+                className="lg:rounded-[2rem]  lg:w-[30rem] w-[35rem] relative z-10 object-cover"
               />
             </div>
           </div>
         </div>
-
+{/* ----------------------------Manish---------------------------------------- */}
         <div className="min-h-screen px-10 flex flex-col md:flex-row items-center justify-between gap-5  mx-auto">
 
-          <div className="w-full md:w-1/2 h-[30rem] space-y-6  flex  justify-center ">
-            <div className='relative  w-[29rem] min-h-96'>
-              <div className='w-80 h-80 bg-blue-200 rounded-[2rem] absolute -left-5 -bottom-5'>
+          <div className="w-full md:w-1/2 lg:w-screen lg:h-[30rem] space-y-6  flex  justify-center ">
+            <div className='relative  w-[29rem] lg:min-h-96'>
+              <div className='w-80 h-80 bg-blue-200 hidden lg:block rounded-[2rem] absolute -left-5 -bottom-5'>
               </div>
               <Image
                 width={300}
                 height={354}
                 src="https://res.cloudinary.com/dn60aovto/image/upload/v1742451262/Manish_q6qmq6.png"
                 alt="Profile"
-                className="rounded-[2rem] w-[30rem] h-[30rem] relative z-10 object-cover"
+                className="rounded-[2rem] w-[30rem] h-[30rem] relative z-10 object-cover hidden lg:block"
+              />
+              <Image
+                width={300}
+                height={354}
+                src="https://res.cloudinary.com/dn60aovto/image/upload/v1742814922/Manish_mydood.png"
+                alt="Profile"
+                className="rounded-[2rem] w-[30rem] h-96 relative z-10 object-cover lg:hidden"
               />
             </div>
           </div>
