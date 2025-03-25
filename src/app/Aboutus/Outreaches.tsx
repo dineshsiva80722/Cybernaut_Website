@@ -39,12 +39,12 @@ const Outreaches = () => {
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742455425/20_w8e4wo.jpg",
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742455423/19_yaqzbo.jpg",
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742455421/18_mhxhhj.jpg",
-    
+
 
 
 
   ];
-  const placeholderImagesrow1 =[
+  const placeholderImagesrow1 = [
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742455419/17_czsizo.jpg",
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742455417/16_ujderi.jpg",
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742455415/15_ylloii.jpg",
@@ -57,7 +57,7 @@ const Outreaches = () => {
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742455400/8_xjdepz.jpg",
 
   ]
-  const placeholderImagesrow2=[
+  const placeholderImagesrow2 = [
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742455397/7_l9blpo.jpg",
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742455397/6_a7dwqm.jpg",
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742455395/5_nu5gyk.jpg",
@@ -69,95 +69,97 @@ const Outreaches = () => {
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742454929/29_vxsi9s.jpg",
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742454929/30_xfylqd.jpg",
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742454928/28_aeroxc.jpg",
-    
+
   ]
 
   return (
-    <section className="relative h-[42rem] bg-zinc-800 my-20 lg:block hidden overflow-hidden">
-      {/* Gradient overlays for smooth transitions */}
-      <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-zinc-800 to-transparent z-10"></div>
-      <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-zinc-800 to-transparent z-10"></div>
+    <>
+      <section className="relative h-[42rem] bg-zinc-800 my-20 lg:block hidden overflow-hidden">
+        {/* Gradient overlays for smooth transitions */}
+        <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-zinc-800 to-transparent z-10"></div>
+        <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-zinc-800 to-transparent z-10"></div>
 
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* Content section */}
-          <div className="lg:col-span-4 flex flex-col w-96 mx-auto space-y-4 h-[26rem] justify-center z-20">
-            <h2 className="text-4xl font-bold text-white tracking-tight">Our Outreaches</h2>
-            <p className="text-lg text-gray-200  leading-relaxed">Power Up with Our Outreach Workshops</p>
-            <div className="h-1 w-24 bg-white"></div>
-            <p className="text-gray-200 text-sm leading-relaxed">
-              With 150+ outreach programs, we’ve inspired young minds and introduced thousands of students to new skills, ideas, and possibilities, empowering them to shape a brighter future.
-            </p>
-            <Button className="bg-white text-zinc-800 relative top-3 hover:bg-gray-200 w-fit group flex items-center gap-2 transition-all">
-              Contact us
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
-
-          {/* Marquee section */}
-          <div className="lg:col-span-8 z-0 ">
-            {/* First row - right direction */}
-            <div className="mb-0">
-              <Marquee
-                gradient={false}
-                pauseOnHover={true}
-                speed={40}
-                direction="right"
-              >
-                <div className="flex">
-                  {placeholderImages.slice(0, 8).map((imageUrl, index) => (
-                    <OutreachCard
-                      key={`row1-${index}`}
-                      imageUrl={imageUrl}
-                      className="w-[320px] h-[220px]"
-                    />
-                  ))}
-                </div>
-              </Marquee>
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            {/* Content section */}
+            <div className="lg:col-span-4 flex flex-col w-96 mx-auto space-y-4 h-[26rem] justify-center z-20">
+              <h2 className="text-4xl font-bold text-white tracking-tight">Our Outreaches</h2>
+              <p className="text-lg text-gray-200  leading-relaxed">Power Up with Our Outreach Workshops</p>
+              <div className="h-1 w-24 bg-white"></div>
+              <p className="text-gray-200 text-sm leading-relaxed">
+                With 150+ outreach programs, we’ve inspired young minds and introduced thousands of students to new skills, ideas, and possibilities, empowering them to shape a brighter future.
+              </p>
+              <Button className="bg-white text-zinc-800 relative top-3 hover:bg-gray-200 w-fit group flex items-center gap-2 transition-all">
+                Contact us
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
             </div>
 
-            {/* Second row - left direction */}
-            <div className="mt-2">
-              <Marquee
-                gradient={false}
-                pauseOnHover={true}
-                speed={30}
-              >
-                <div className="flex">
-                  {placeholderImagesrow1.slice(7, 15).map((imageUrl, index) => (
-                    <OutreachCard
-                      key={`row2-${index}`}
-                      imageUrl={imageUrl}
-                      className="w-[330px] h-[220px]"
-                    />
-                  ))}
-                </div>
-              </Marquee>
-            </div>
+            {/* Marquee section */}
+            <div className="lg:col-span-8 z-0 ">
+              {/* First row - right direction */}
+              <div className="mb-0">
+                <Marquee
+                  gradient={false}
+                  pauseOnHover={true}
+                  speed={40}
+                  direction="right"
+                >
+                  <div className="flex">
+                    {placeholderImages.slice(0, 8).map((imageUrl, index) => (
+                      <OutreachCard
+                        key={`row1-${index}`}
+                        imageUrl={imageUrl}
+                        className="w-[320px] h-[220px]"
+                      />
+                    ))}
+                  </div>
+                </Marquee>
+              </div>
 
-            {/* Third row - right direction (slightly slower) */}
-            <div className='w-[93rem] relative -left-[31rem] mt-2 '>
-              <Marquee
-                gradient={false}
-                pauseOnHover={true}
-                speed={35}
-                direction="right"
-              >
-                <div className="flex">
-                  {[...placeholderImagesrow2.slice(3, 15), ...placeholderImagesrow2.slice(0, 3)].map((imageUrl, index) => (
-                    <OutreachCard
-                      key={`row3-${index}`}
-                      imageUrl={imageUrl}
-                      className="w-[320px] h-[220px]"
-                    />
-                  ))}
-                </div>
-              </Marquee>
+              {/* Second row - left direction */}
+              <div className="mt-2">
+                <Marquee
+                  gradient={false}
+                  pauseOnHover={true}
+                  speed={30}
+                >
+                  <div className="flex">
+                    {placeholderImagesrow1.slice(7, 15).map((imageUrl, index) => (
+                      <OutreachCard
+                        key={`row2-${index}`}
+                        imageUrl={imageUrl}
+                        className="w-[330px] h-[220px]"
+                      />
+                    ))}
+                  </div>
+                </Marquee>
+              </div>
+
+              {/* Third row - right direction (slightly slower) */}
+              <div className='w-[93rem] relative -left-[31rem] mt-2 '>
+                <Marquee
+                  gradient={false}
+                  pauseOnHover={true}
+                  speed={35}
+                  direction="right"
+                >
+                  <div className="flex">
+                    {[...placeholderImagesrow2.slice(3, 15), ...placeholderImagesrow2.slice(0, 3)].map((imageUrl, index) => (
+                      <OutreachCard
+                        key={`row3-${index}`}
+                        imageUrl={imageUrl}
+                        className="w-[320px] h-[220px]"
+                      />
+                    ))}
+                  </div>
+                </Marquee>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

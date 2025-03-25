@@ -13,6 +13,7 @@ import Contact from './contact'
 import OnOfline from './onofline'
 import Footer from './footer'
 import { ArrowUp } from 'lucide-react';
+import Review from './Review';
 
 
 const Page = () => {
@@ -65,12 +66,13 @@ const Page = () => {
       <What />
       <Recognition />
       <div className='overflow-hidden mx-auto container' >
-      <Gallery />
-      <OnOfline />
-      <Vision />
-      <Blogs />
-      <Contact />
-      <Footer />
+        <Gallery />
+        <OnOfline />
+        <Vision />
+        <Blogs />
+        <Review />
+        <Contact />
+        <Footer />
       </div>
     </div>
 
