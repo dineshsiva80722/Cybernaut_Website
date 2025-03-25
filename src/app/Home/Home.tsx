@@ -119,7 +119,7 @@ function HeroIllustration() {
                     afterChange={(index: number) => setCurrentSlide(index)}
                 >
                     {getImageSrc().map((image, index) => (
-                        <div key={index} className="relative rounded-2xl w-full h-[30rem] overflow-hidden">
+                        <div key={index} className="relative rounded-2xl min-w-[20rem] h-[30rem] overflow-hidden">
                             <Image
                                 src={image}
                                 alt={`Event Image ${index + 1}`}
