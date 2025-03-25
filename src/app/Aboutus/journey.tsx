@@ -264,7 +264,9 @@ export default function Journey() {
 
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <div className="relative aspect-video">
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   src={journeyData[currentIndex].image}
                   alt={journeyData[currentIndex].title}
                   className="w-full h-full object-cover"

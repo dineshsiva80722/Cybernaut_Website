@@ -370,7 +370,7 @@ const Founders = () => {
             <div className="lg:w-1/2 space-y-6">
               <div className="max-w-xl">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1F1F3D] mb-2">
-                  Hello, I'm Jayasurya Gnanavel
+                  Hello, I&apos;m Jayasurya Gnanavel
                 </h2>
                 <h3 className="text-xl text-[#00A3FF] font-semibold mb-4">
                   Founder & CEO
@@ -427,7 +427,9 @@ const Founders = () => {
             <div className="lg:w-1/2">
               <div className="relative">
                 <div className="w-80 h-80 bg-blue-200 rounded-[2rem] absolute -right-5 -bottom-5 hidden lg:block" />
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   src="https://res.cloudinary.com/dn60aovto/image/upload/v1742450995/JS_hkszd9.png"
                   alt="Jayasurya Gnanavel"
                   className="rounded-[2rem] relative z-10 object-cover w-full max-w-xl mx-auto"
@@ -441,12 +443,16 @@ const Founders = () => {
             <div className="lg:w-1/2">
               <div className="relative">
                 <div className="w-80 h-80 bg-blue-200 rounded-[2rem] absolute -left-5 -bottom-5 hidden lg:block" />
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   src="https://res.cloudinary.com/dn60aovto/image/upload/v1742451262/Manish_q6qmq6.png"
                   alt="Manish Kumar"
                   className="rounded-[2rem] relative z-10 object-cover w-full max-w-xl mx-auto hidden lg:block"
                 />
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   src="https://res.cloudinary.com/dn60aovto/image/upload/v1742814922/Manish_mydood.png"
                   alt="Manish Kumar"
                   className="rounded-[2rem] relative z-10 object-cover w-full max-w-xl mx-auto lg:hidden"
@@ -457,7 +463,7 @@ const Founders = () => {
             <div className="lg:w-1/2 space-y-6">
               <div className="max-w-xl">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1F1F3D] mb-2">
-                  Hello, I'm Manish Kumar
+                  Hello, I&apos;m Manish Kumar
                 </h2>
                 <h3 className="text-xl text-[#00A3FF] font-semibold mb-4">
                   Co-Founder & President
@@ -465,7 +471,7 @@ const Founders = () => {
                 <p className="text-gray-600 leading-relaxed mb-6">
                   B. Manish Kumar, President and UI/UX Designer at Cybernaut, combines design
                   expertise with strategic vision. His commitment to quality drives innovation
-                  and supports the company's growth, shaping Cybernaut's journey toward
+                  and supports the company&apos;s growth, shaping Cybernaut&apos;s journey toward
                   long-term success and excellence in education and technology.
                 </p>
 
