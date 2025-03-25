@@ -42,7 +42,7 @@ const Blogs: React.FC = () => {
     }, []);
 
     return (
-        <div className="lg:py-32 py-10 px-4 md:px-10 mx-auto xl:container">
+        <div className="lg:py-20 py-10 px-4 md:px-10 mx-auto xl:container">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1 className="lg:text-4xl text-xl font-bold text-gray-900 my-4">Explore the Blog</h1>
                 <p className="lg:text-lg text-sm text-gray-600 max-w-2xl mx-auto my-6 tracking-wide">

@@ -42,9 +42,9 @@ function Vision() {
   const currentImage = getSectionImage();
 
   return (
-    <div className="container mx-auto overflow-hidden items-center justify-center  bg-gray-50 flex flex-col md:flex-row p-4 md:p-8 lg:p-28">
+    <div className="container mx-auto overflow-hidden items-center justify-center  bg-[#EEF9FF] flex flex-col md:flex-row p-4 md:p-8 lg:px-28">
       {/* Left side content */}
-      <div className="w-full md:w-1/2  mx-auto flex flex-col justify-center pr-0 md:pr-8  md:mb-18 lg:space-y-5">
+      <div className="w-full md:w-1/2  mx-auto flex flex-col justify-center pr-0 md:pr-8  lg:space-y-5">
 
         <h1 style={{ lineHeight: "1.2" }} className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
           Cybernaut Developers Student Community

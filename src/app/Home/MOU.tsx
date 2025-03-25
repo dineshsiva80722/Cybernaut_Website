@@ -60,7 +60,7 @@ const MOU = () => {
       <div className="container hidden lg:block overflow-hidden mx-auto xl:container h-80 p-10 px-6 text-center relative lg:my-20">
         {/* Header Section */}
         <h1 className="lg:text-4xl text-xl font-extrabold py-5 lg:py-0">OUR MOU PARTNERS</h1>
-        <p className="mb-8 lg:w-8/12 w-12/12 mx-auto lg:text-lg text-sm lg:my-10 text-center">
+        <p className="mb-8 lg:w-8/12w-12/12 mx-auto lg:text-lg text-sm lg:my-10 text-center">
           At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution&apos;s learning experience.
         </p>
         <Marquee gradient={false} pauseOnHover={true} speed={50} direction="left" className="">
@@ -82,7 +82,7 @@ const MOU = () => {
       <div className="container lg:hidden block mx-auto xl:container min-h-80 text-center overflow-hidden relative lg:my-20">
         {/* Header Section */}
         <h1 className="lg:text-4xl text-xl font-extrabold py-5 lg:py-0">OUR MOU PARTNERS</h1>
-        <p className="w-80 mx-auto text-sm text-center">
+        <p className="w-11/12 mx-auto text-sm  text-center">
           At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution&apos;s learning experience.
         </p>
         <Marquee gradient={false} pauseOnHover={true} speed={50} direction="left" className="pt-5 overflow-hidden">

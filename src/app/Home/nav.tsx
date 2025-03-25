@@ -65,7 +65,7 @@ export default function Navbar() {
                         ))}
                     </div>
                     <Link href="/contact">
-                        <button className='bg-blue-400  text-white py-2 px-5   lg:flex justify-center items-center hidden  rounded-lg'>Get in Touch</button>
+                        <button className='bg-blue-400  text-white py-2 px-5   md:flex justify-center items-center hidden  rounded-lg'>Get in Touch</button>
                     </Link>
 
                     {/* Mobile Menu Button */}

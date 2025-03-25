@@ -76,7 +76,7 @@ function Contact() {
 
     return (
         <>
-            <section className='min-h-80 py-5 w-full'>
+            <section className='min-h-80 py-5  w-full'>
                 <div className='w-10/12 min-h-32  mx-auto'>
                     <div className=' text-center leading-relaxed animate-fade-in space-y-2'>
                         <h1 className='font-bold lg:text-3xl text-xl'> Don&#39;t just take our word for it,</h1>

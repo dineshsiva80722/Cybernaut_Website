@@ -136,7 +136,7 @@ const Outreaches = () => {
             </div>
 
             {/* Third row - right direction (slightly slower) */}
-            <div className='bg-red-500 w-[93rem] relative -left-[31rem] mt-2 '>
+            <div className='w-[93rem] relative -left-[31rem] mt-2 '>
               <Marquee
                 gradient={false}
                 pauseOnHover={true}

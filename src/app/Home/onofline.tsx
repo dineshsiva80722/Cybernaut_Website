@@ -230,17 +230,17 @@ function OnlineOffline() {
     };
 
     return (
-        <div className="container py-20">
+        <div className="container py-10">
             <div className="mx-auto flex-wrap xl:container">
                 <h1 className="text-center lg:w-full w-60 mx-auto xl:container lg:text-4xl text-xl font-bold my-4">
                     Learn. Practice. Earn. <br /> Have Fun!
                 </h1>
                 <section>
                     <div className="flex justify-center my-6">
-                        <div className="flex lg:justify-center justify-evenly lg:gap-0 gap-6 py-5 w-full">
+                        <div className="flex lg:justify-center justify-evenly md:justify-center lg:gap-0 gap-6 py-5 w-full">
                             <button
                                 className={`lg:px-7 lg:py-3 text-xl font-medium ${activeTab === 'gallery'
-                                    ? 'text-black'
+                                    ? 'text-black md:underline'
                                     : 'text-gray-500 hover:text-gray-700'
                                     }`}
                                 onClick={() => {
@@ -252,7 +252,7 @@ function OnlineOffline() {
                             </button>
                             <button
                                 className={`lg:px-7 lg:py-3 text-xl font-medium ${activeTab === 'outreach'
-                                    ? 'text-black'
+                                    ? 'text-black md:underline'
                                     : 'text-gray-500 hover:text-gray-700'
                                     }`}
                                 onClick={() => {
@@ -263,9 +263,9 @@ function OnlineOffline() {
                                 Offline
                             </button>
                         </div>
-                    </div>
+                    </div> 
 
-                    <div className="flex mb-10 relative mx-auto lg:w-[15rem] w-9/12 lg:h-[0.1rem] h-[0.1rem] overflow-hidden -mt-7 bg-gray-300">
+                    <div className="lg:flex mb-10 flex md:hidden  relative mx-auto lg:w-[15rem] w-9/12 lg:h-[0.1rem] h-[0.1rem] overflow-hidden lg:-mt-12 -mt-10 bg-gray-300">
                         <div
                             className={`lg:w-[8rem] w-[9rem] h-[0.3rem] absolute left-0 top-0 bg-blue-500 transform transition-transform duration-300 ${activeTab === 'outreach' ? 'lg:translate-x-[130px] translate-x-[140px]' : 'translate-x-0'
                                 }`}
@@ -296,7 +296,7 @@ function OnlineOffline() {
                                     </h1>
                                 </div>
                             </div>
-                            <div className="lg:w-full float-start lg:ml-0 lg:py-0 py-4 mx-auto lg:text-lg text-sm text-gray-500 min-h-[120px]">
+                            <div className="lg:w-full float-start lg:ml-0 lg:py-0 py-4 mx-auto lg:text-lg text-sm text-gray-500 lg:min-h-[120px]">
                                 {activeTab === 'gallery' ? (
                                     <p className="text-left -tracking-tight">
                                         Experience 120 minutes of immersive, hands-on learning everyday. Sharpen your tech skills, solve real-world problems, and challenge your limits—all from the comfort of your home. Stay ahead of the curve and transform your potential into mastery.
@@ -337,10 +337,10 @@ function OnlineOffline() {
                                         </span>
                                     </div>
                                 ))} */}
-                                <StyledWrapper>
-                                    <div className="card flex justify-center items-center w-80">
+                                <StyledWrapper className='md:w-[45rem] lg:w-full w-full md:flex items-center justify-center mx-auto '>
+                                    <div className="card flex justify-center items-center w-80 md:w-full">
                                         {(activeTab === 'gallery' ? onlineCards : offlineCards).map((card, index) => (
-                                            <p style={{backgroundImage: `url(${card.bgImage})`}} key={index}><span></span></p>
+                                            <p style={{backgroundImage: `url(${card.bgImage})` ,backgroundRepeat: 'no-repeat'}} key={index}><span></span></p>
                                         ))}
                                     </div>
                                 </StyledWrapper>

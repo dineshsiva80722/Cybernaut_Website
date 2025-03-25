@@ -9,9 +9,9 @@ const WhatWeDo = () => {
       {/* Main container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         {/* About section */}
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
           {/* Left side - Image */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full lg:w-1/2">
             <Image
               width={500}
               height={500}
@@ -22,7 +22,7 @@ const WhatWeDo = () => {
           </div>
 
           {/* Right side - Content */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full lg:w-1/2">
             <div className="space-y-5">
               {/* About Us heading */}
               <h3 className="text-blue-500 font-medium">About Us</h3>
