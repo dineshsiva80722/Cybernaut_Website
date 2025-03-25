@@ -324,7 +324,7 @@ export default function Home() {
 
                         <div className='flex  items-center justify-center'>
                             <div className='min-h-[10rem]  w-1/2 p-5 space-y-6 '>
-                                <p style={{ lineHeight: '40px' }} className="text-2xl md:text-3xl w-full text-start lg:text-3xl font-bold transition-all duration-300 ease-in-out">
+                                <p style={{ lineHeight: '40px' }} className="text-2xl md:text-3xl w-full font-extrabold text-start lg:text-3xl transition-all duration-300 ease-in-out">
                                     {getContent(scrollTranslate)}
                                 </p>
                                 <div className=" w-full">
