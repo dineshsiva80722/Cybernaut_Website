@@ -356,10 +356,10 @@ const Gallery = () => {
     <div className="container mx-auto lg:py-5 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className='flex justify-around my-6'>
-          <div className="flex items-center flex-row justify-center gap-10 lg:gap-0 md:space-y-0 md:space-x-20 w-full md:w-5/12">
+          <div className="flex items-center flex-row justify-center gap-1 lg:gap-0 md:space-y-0 md:space-x-20 w-full md:w-5/12">
             <button
               className={`px-4 py-2 md:px-6 md:py-3 flex gap-2 text-lg md:text-xl font-medium ${activeTab === 'gallery'
-                ? 'text-black'
+                ? 'text-black underline lg:underline-none'
                 : 'text-gray-500 hover:text-gray-700'
                 }`}
               onClick={() => {
@@ -371,7 +371,7 @@ const Gallery = () => {
             </button>
             <button
               className={`px-4 py-2 md:px-6 md:py-3 flex gap-2 relative left-2 text-lg md:text-xl font-medium ${activeTab === 'outreach'
-                ? 'text-black'
+                ? 'text-black underline lg:underline-none'
                 : 'text-gray-500 hover:text-gray-700'
                 }`}
               onClick={() => {
@@ -383,7 +383,7 @@ const Gallery = () => {
             </button>
           </div>
         </div>
-        <div className='flex mb-5 relative mx-auto w-full md:w-[32rem] h-[0.1rem] overflow-hidden -mt-7 bg-gray-300'>
+        <div className='lg:flex hidden mb-5 relative mx-auto w-full md:w-[32rem] h-[0.1rem] overflow-hidden -mt-7 bg-gray-300'>
           <div className={`w-[50%] md:w-[15.5rem] h-[0.2rem] absolute left-0 top-0 bg-blue-500 transform transition-transform duration-300 ${activeTab === 'outreach' ? 'translate-x-[100%] md:translate-x-[15rem] w-[50%] md:w-[21rem]' : 'translate-x-0'}`}>
           </div>
         </div>

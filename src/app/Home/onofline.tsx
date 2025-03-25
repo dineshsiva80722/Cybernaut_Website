@@ -237,10 +237,10 @@ function OnlineOffline() {
                 </h1>
                 <section>
                     <div className="flex justify-center my-6">
-                        <div className="flex lg:justify-center justify-evenly md:justify-center lg:gap-0 gap-6 py-5 w-full">
+                        <div className="flex justify-center lg:gap-0 gap-6 py-5 w-full">
                             <button
                                 className={`lg:px-7 lg:py-3 text-xl font-medium ${activeTab === 'gallery'
-                                    ? 'text-black md:underline'
+                                    ? 'text-black underline lg:underline-none'
                                     : 'text-gray-500 hover:text-gray-700'
                                     }`}
                                 onClick={() => {
@@ -252,7 +252,7 @@ function OnlineOffline() {
                             </button>
                             <button
                                 className={`lg:px-7 lg:py-3 text-xl font-medium ${activeTab === 'outreach'
-                                    ? 'text-black md:underline'
+                                    ? 'text-black underline lg:underline-none'
                                     : 'text-gray-500 hover:text-gray-700'
                                     }`}
                                 onClick={() => {
@@ -263,9 +263,9 @@ function OnlineOffline() {
                                 Offline
                             </button>
                         </div>
-                    </div> 
+                    </div>
 
-                    <div className="lg:flex mb-10 flex md:hidden  relative mx-auto lg:w-[15rem] w-9/12 lg:h-[0.1rem] h-[0.1rem] overflow-hidden lg:-mt-12 -mt-10 bg-gray-300">
+                    <div className="lg:flex mb-10 hidden  relative mx-auto lg:w-[15rem] w-9/12 lg:h-[0.1rem] h-[0.1rem] overflow-hidden lg:-mt-12 -mt-10 bg-gray-300">
                         <div
                             className={`lg:w-[8rem] w-[9rem] h-[0.3rem] absolute left-0 top-0 bg-blue-500 transform transition-transform duration-300 ${activeTab === 'outreach' ? 'lg:translate-x-[130px] translate-x-[140px]' : 'translate-x-0'
                                 }`}
@@ -340,7 +340,7 @@ function OnlineOffline() {
                                 <StyledWrapper className='md:w-[45rem] lg:w-full w-full md:flex items-center justify-center mx-auto '>
                                     <div className="card flex justify-center items-center w-80 md:w-full">
                                         {(activeTab === 'gallery' ? onlineCards : offlineCards).map((card, index) => (
-                                            <p style={{backgroundImage: `url(${card.bgImage})` ,backgroundRepeat: 'no-repeat'}} key={index}><span></span></p>
+                                            <p style={{ backgroundImage: `url(${card.bgImage})`, backgroundRepeat: 'no-repeat' }} key={index}><span></span></p>
                                         ))}
                                     </div>
                                 </StyledWrapper>
