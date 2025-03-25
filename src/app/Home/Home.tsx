@@ -104,9 +104,9 @@ function HeroIllustration() {
 
 
     return (
-        <div className="flex items-center justify-center w-full px-4 sm:px-6 lg:px-8 my-8 sm:my-12 lg:my-16 relative ">
+        <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8 my-8 sm:my-12 lg:my-16 relative ">
 
-            <div className={`min-w-[42rem]   lg:min-w-[30rem] h-[420px] lg:max-w-xs sm:max-w-md  xl:max-w-[30rem] aspect-square overflow-hidden shadow-2xl border-2 z-20  rounded-2xl lg:rounded-[50px] relative -top-10 lg:top-0 lg:left-20 ${getBorderClass()}`}>
+            <div className={` lg:max-w-xs sm:max-w-md  xl:max-w-[30rem] mr-12 aspect-square overflow-hidden shadow-2xl border-2 z-20  rounded-2xl lg:rounded-[50px] relative -top-10 lg:top-0 lg:left-20 ${getBorderClass()}`}>
                 <Slider
                     dots={false}
                     infinite={true}
@@ -119,11 +119,11 @@ function HeroIllustration() {
                     afterChange={(index: number) => setCurrentSlide(index)}
                 >
                     {getImageSrc().map((image, index) => (
-                        <div key={index} className="relative rounded-2xl w-full h-[27rem] overflow-hidden">
+                        <div key={index} className="relative rounded-2xl w-full h-[30rem] overflow-hidden">
                             <Image
                                 src={image}
                                 alt={`Event Image ${index + 1}`}
-                                className="object-cover "
+                                className="object-cover w-full h-full "
                                 fill
                             />
                         </div>
@@ -140,7 +140,7 @@ function HeroIllustration() {
                 >
                 </div>
             </div>
-            <div className={`absolute lg:w-[470px] right-2 rounded-[70px]  top-5 h-[420px]  ${getBorderClass()}`}>
+            <div className={`absolute rounded-[50px] -right-3 top-10 hidden sm:max-w-md  xl:max-w-[30rem]   ${getBorderClass()}`}>
 
             </div>
         </div>
@@ -247,10 +247,9 @@ export default function Home() {
 
             if (newContent !== content) {
                 setIsAnimating(true);
-                setTimeout(() => {
                     setContent(newContent);
                     setIsAnimating(false);
-                }, 300);
+    
             }
         };
 
@@ -319,21 +318,20 @@ export default function Home() {
 
             {/* Desktop View */}
             <div className="min-h-20 container mx-auto hidden pb-20 lg:block">
-                <section className='container mx-auto min-h-[140rem]  relative top-20'>
-                    <main className='w-[91rem]  mx-auto  h-[40rem] rounded-xl sticky top-20 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]'>
+                <section className='container mx-auto min-h-[140rem]  relative top-16'>
+                    <main className='mx-auto h-[40rem] rounded-xl sticky top-16 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]'>
 
 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-2   gap-8 items-center">
-
-                            <div className='h-[26rem] w-[46rem] p-5 pt-14 ml-12 space-y-6 '>
-                                <p style={{ lineHeight: '60px' }} className="text-2xl md:text-3xl w-full text-start lg:text-[45px] font-bold transition-all duration-300 ease-in-out">
+                        <div className='flex  items-center justify-center'>
+                            <div className='min-h-[10rem]  w-1/2 p-5 space-y-6 '>
+                                <p style={{ lineHeight: '40px' }} className="text-2xl md:text-3xl w-full text-start lg:text-3xl font-bold transition-all duration-300 ease-in-out">
                                     {getContent(scrollTranslate)}
                                 </p>
                                 <div className=" w-full">
                                     <div className="transform  overflow-hidden">
                                         <h1
                                             className={`
-                                                               text-[18px]  text-gray-500
+                                                               text-[16px]  text-gray-500
                                                                transform transition-all duration-300 ease-in-out
                                                                ${isAnimating ? 'opacity-0 translate-y-8' : 'opacity-100 translate-y-0'}
                                                              `}
@@ -343,25 +341,30 @@ export default function Home() {
                                         </h1>
                                     </div>
                                 </div>
-                                <div className="flex gap-5">
-                                    <button className="overflow-hidden w-28 md:w-40 p-2   md:px-6 py-3 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative z-10 group">
-                                        Contact us
-                                        <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
-                                        <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
-                                        <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
-                                        <Link href="/contact">
-                                            <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-3 left-6 z-10 text-lg">Contact us</span>
-                                        </Link>
-                                    </button>
-                                    <Link href="/Program">
-                                        <button className="inline-flex items-center cursor-pointer px-4  md:px-6 py-3 border border-transparent text-sm md:text-lg font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
-                                            Explore Solutions
+                                <div className="flex w-9/12 items-center justify-start">
+                                    <div className='w-1/2'>
+
+                                        <button className="overflow-hidden w-28 md:w-40 p-2   md:px-6 py-3 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative z-10 group">
+                                            Contact us
+                                            <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
+                                            <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
+                                            <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
+                                            <Link href="/contact">
+                                                <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-3 left-6 z-10 text-lg">Contact us</span>
+                                            </Link>
                                         </button>
-                                    </Link>
+                                    </div>
+                                    <div className='w-1/2'>
+                                        <Link href="/Program">
+                                            <button className="inline-flex items-center cursor-pointer px-4  md:px-6 py-3 border border-transparent text-sm md:text-lg font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
+                                                Explore Solutions
+                                            </button>
+                                        </Link>
+                                    </div>
                                 </div>
 
 
-                                <div className="flex w-6/12 items-center justify-start">
+                                <div className="flex w-8/12 items-center justify-start">
                                     <div className='w-1/2 h-16 space-y-3'>
                                         <h6 className='text-[16px] w-60 font-medium text-gray-400'>Students Trusted on</h6>
                                         <div className="flex flex-row items-start relative justify-start w-[15rem] gap-2">
@@ -378,6 +381,8 @@ export default function Home() {
                             <div className="hidden md:block">
                                 <HeroIllustration />
                             </div>
+                        </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-2   gap-8 items-center">
 
 
                             <section className={`absolute left-96 right-0 top-0 mx-auto w-52 h-32 mt-5  place-content-center rounded-3xl z-50 transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}

@@ -25,8 +25,8 @@ const Ratings = () => {
 
     return (
         <>
-            <div className="md:flex hidden w-full  lg:p-10 my-5 items-center place-content-center justify-center">
-                <div className="flex place-items-center place-content-center justify-center  h-[120px] w-[600px] gap-10 bg-white md:px-10 md:py-5 md:rounded-full md:shadow-[0px_26px_40px_0px_rgba(43,45,54,0.05)] transform transition-transform duration-300 hover:scale-105">
+            <div className="md:flex hidden w-full items-center place-content-center  container mx-auto justify-center">
+                <div className="flex place-items-center place-content-center justify-center h-[120px] w-[600px]  gap-10 bg-white md:px-10 md:py-5 md:rounded-full md:shadow-[0px_26px_40px_0px_rgba(43,45,54,0.05)] transform transition-transform duration-300 hover:scale-105">
                     {items.map((item, index) => (
                         <div key={index} className="flex flex-col  items-center gap-2 text-center px-3">
                             <div className="flex items-center gap-2">

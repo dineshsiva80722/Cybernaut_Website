@@ -72,8 +72,8 @@ const Page = () => {
         <Blogs />
         <Review />
         <Contact />
-        <Footer />
       </div>
+        <Footer />
     </div>
 
   );

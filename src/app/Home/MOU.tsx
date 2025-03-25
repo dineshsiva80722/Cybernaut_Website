@@ -13,7 +13,7 @@ const MOU = () => {
 
   function OutreachCard({ icon, className }: OutreachCardProps) {
     return (
-      <Card className={`bg-red-500 hover:shadow-md border-none transition-shadow flex-1 p-0 ${className}`}>
+      <Card className={`hover:shadow-md border-none transition-shadow flex-1 p-0 ${className}`}>
         <CardContent className="flex items-center justify-center h-full p-0">
           <Image src={icon} alt="Outreach" width={300} height={200} className="object-contain" />
         </CardContent>
@@ -57,7 +57,7 @@ const MOU = () => {
 
   return (
     <>
-      <div className="container hidden lg:block overflow-hidden mx-auto xl:container h-80 p-10 px-6 text-center relative lg:my-20">
+      <div className="container hidden lg:block overflow-hidden mx-auto h-80 p-10 px-6 text-center relative lg:my-20">
         {/* Header Section */}
         <h1 className="lg:text-4xl text-xl font-extrabold py-5 lg:py-0">OUR MOU PARTNERS</h1>
         <p className="mb-8 lg:w-8/12w-12/12 mx-auto lg:text-lg text-sm lg:my-10 text-center">

@@ -301,7 +301,7 @@ const Footer = () => {
               </div>
 
               {/* WhatsApp Button - Mobile Only */}
-              <div className='block lg:hidden'>
+              <div className=''>
                 <h1 className='text-white font-bold text-lg mb-3'>Have any questions?</h1>
                 <a 
                   href="https://wa.me/916382055035"
