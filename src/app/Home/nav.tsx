@@ -54,7 +54,7 @@ export default function Navbar() {
                                 key={link}
                                 href={link}
                                 className={cn(
-                                    'text-sm font-medium transition-all hover:text-blue-500',
+                                    'text-sm font-bold transition-all hover:text-blue-500',
                                     path === link ? 'text-blue-500' : 'text-gray-700'
                                 )}
                             >

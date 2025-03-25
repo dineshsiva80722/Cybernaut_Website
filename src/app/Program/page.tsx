@@ -43,7 +43,7 @@ const Page = () => {
   <ArrowUp
     className="w-5 h-5 text-white group-hover:animate-[slide-in-bottom_0.7s_cubic-bezier(0.25,0.46,0.45,0.94)_both]"
   />
-  <span className="absolute -bottom-[18px] w-[100px] text-[0.7rem] text-black opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+  <span className="absolute lg:block hidden -bottom-[18px] w-[100px] text-[0.7rem] text-black opacity-0 group-hover:opacity-100 transition-opacity duration-700">
     Back to Top
   </span>
 </button>

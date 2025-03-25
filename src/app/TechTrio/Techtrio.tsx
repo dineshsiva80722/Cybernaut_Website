@@ -133,18 +133,7 @@ const Techtrio = () => {
         faqsRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    // const options = ['Description', 'Modules', 'Benefits', 'Certification', 'Requirements', 'Testimonials', 'FAQs'];
 
-    // const handleScroll = (event: React.UIEvent) => {
-    //     const { scrollTop, clientHeight } = event.currentTarget;
-    //     const scrollHeight = event.currentTarget.scrollHeight;
-
-    //     if (scrollTop + clientHeight >= scrollHeight) {
-    //         setVisibleOption(prev => Math.min(prev + 1, options.length - 1)); // Move to next option
-    //     } else if (scrollTop === 0) {
-    //         setVisibleOption(prev => Math.max(prev - 1, 0)); // Move to previous option
-    //     }
-    // };
     const sectionRef = useRef<HTMLDivElement>(null);
     const triggerRef = useRef<HTMLDivElement>(null);
 
@@ -377,7 +366,7 @@ const Techtrio = () => {
     };
     return (
         <section className=''>
-            <section className='mt-[10px]'>
+            <section className='lg:mt-[10px] mt-[14px]'>
                 <div className='flex flex-col lg:flex-row justify-between w-full min-h-[569px]'
                     style={{ backgroundImage: `url('https://res.cloudinary.com/dn60aovto/image/upload/v1742460976/coursesBG_dpaul6.png')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                 >
@@ -385,14 +374,14 @@ const Techtrio = () => {
                     <div className='w-full lg:w-1/2 flex items-start justify-center p-5 lg:p-24'>
                         <div className='relative lg:-top-10 w-full'>
                             {/* Navigation */}
-                            <div className='flex justify-start h-10 overflow-x-auto lg:overflow-visible'>
+                            <div className='flex justify-start min-h-10 overflow-x-auto lg:overflow-visible'>
                                 <div className="flex space-x-1 gap-5">
                                     {navItems.map(({ link, name }) => (
                                         <Link
                                             key={link}
                                             href={link}
                                             className={cn(
-                                                'text-sm font-medium transition-all hover:text-black whitespace-nowrap',
+                                                'text-sm font-medium transition-all hover:text-blue-400 whitespace-nowrap',
                                                 path === link ? 'text-white' : 'text-white'
                                             )}
                                         >
@@ -403,7 +392,7 @@ const Techtrio = () => {
                             </div>
 
                             {/* Course info */}
-                            <div className='relative top-14 text-white'>
+                            <div className='relative lg:top-14 text-white'>
                                 <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold'>{content.courseTitle}</h1>
                                 <p className='py-5 text-base lg:text-lg'>
                                     {content.courseDescription}
@@ -440,7 +429,7 @@ const Techtrio = () => {
 
                     {/* Right side form */}
                     <div className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5 '>
-                        <div className="w-full sm:w-[25rem] h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[60px]">
+                        <div className="w-full sm:w-[25rem] min-h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[60px]">
                             <div className="flex flex-col justify-center items-center">
                                 <h2 className="text-lg sm:text-xl text-center font-semibold text-zinc-500">
                                     To learn this Course <span className='p-1 rounded-md bg-blue-500 text-white'>online</span>
@@ -628,7 +617,7 @@ const Techtrio = () => {
                     <div ref={coursesRef} className="w-ful min-h-[20rem]">
                         {/* <ThreeCourses /> */}
                         <div className="min-h-[30rem]  items-center justify-center p-8">
-                            <div className='py-4'>
+                            <div className='py-4 space-y-2'>
                                 <h1 className="text-xl font-semibold">What you Learn</h1>
                                 <p className='text-md text-gray-600'>Whether your&apos;re a beginner or have prior experience, our course will equip you with the knowledge and skills needed to excel in the world of STACK development.</p>
                             </div>
@@ -1043,7 +1032,7 @@ function AccordionItem({
                     {language.subItems?.map((item, index) => (
                         <li
                             key={index}
-                            className="px-12 py-2 text-blue-500   rounded-lg"
+                            className="lg:px-12 px-2 py-2 text-blue-500 text-[0.8rem] rounded-lg"
                         >
                             {item}
                         </li>

@@ -361,11 +361,11 @@ function CourseCard({ item }: { item: CourseItem  }) {
                 {/* Price and CTA section */}
                 <div className="flex items-center justify-between mt-auto">
                     <div className="flex items-center gap-2">
-                        <span className="text-lg font-bold text-blue-600">{item.Price}</span>
-                        <span className="text-sm text-gray-400 line-through">{item.Discount}</span>
+                        <span className="lg:text-lg text-md font-bold text-blue-600">{item.Price}</span>
+                        <span className="lg:text-sm text-[0.8rem] text-gray-400 line-through">{item.Discount}</span>
                     </div>
-                    <div className="flex gap-2">
-                        <Link href={`/${item.title.replace(/ /g, '')}`} className="px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-xl transition-colors ">
+                    <div className="flex ">
+                        <Link href={`/${item.title.replace(/ /g, '')}`} className="lg:px-4 px-2 py-2 text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-xl transition-colors ">
                             {item.button}
                         </Link>
                     </div>

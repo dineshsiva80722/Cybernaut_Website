@@ -187,7 +187,7 @@ const WebDevelopment = () => {
                         <div className='relative lg:-top-10 w-full'>
                             {/* Navigation */}
                             <div className='flex justify-start h-10 overflow-x-auto lg:overflow-visible'>
-                                <div className="flex space-x-1 gap-5">
+                                <div className="flex space-x-1 gap-1  lg:gap-5">
                                     {content.navItems.map(({ link, name }) => (
                                         <Link
                                             key={link}
@@ -204,7 +204,7 @@ const WebDevelopment = () => {
                             </div>
 
                             {/* Course info */}
-                            <div className='relative top-14 text-white'>
+                            <div className='relative lg:top-14 text-white'>
                                 <h1 className='w-[40rem] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold'>{content.title}</h1>
                                 <p className='py-1 w-[50rem] text-base lg:text-lg'>{content.description}</p>
 
@@ -239,7 +239,7 @@ const WebDevelopment = () => {
 
                     {/* Right side form */}
                     <div className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5 '>
-                        <div className="w-full sm:w-[25rem] h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[10px]">
+                        <div className="w-full sm:w-[25rem] min-h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[10px]">
                             <div className="flex flex-col justify-center items-center">
                                 <h2 className="text-lg sm:text-xl text-center font-semibold text-zinc-500">
                                     {content.enrollmentMessage}

@@ -23,7 +23,7 @@ function AccordionItem({
         onClick={onClick}
       >
         <div className="flex justify-between  w-full items-center gap-3">
-          <span className="text-lg font-medium  text-gray-900">{language.name}</span>
+          <span className="lg:text-lg text-md font-medium  text-gray-900">{language.name}</span>
 
           <svg
             className={`w-5 h-5 rotate-90 text-blue-500 transform transition-transform duration-200 ease-out ${isOpen ? 'rotate-90' : ''
@@ -50,7 +50,7 @@ function AccordionItem({
           {language.subItems?.map((item, index) => (
             <div
               key={index}
-              className="px-5 py-3   text-gray-400   rounded-lg"
+              className="lg:px-5 px-2 text-[0.8rem] lg:text-md py-3   text-gray-400   rounded-lg"
             >
               {item}
             </div>
@@ -70,11 +70,11 @@ function ThreeCourses() {
       subItems: ['Learn HTML for structuring web pages, CSS for styling with Flexbox, Grid, and responsive design, and Git/GitHub for version control and collaboration. Get introduced to JavaScript fundamentals, including variables, functions, DOM manipulation, and event handling. Deploy static sites using GitHub Pages and React apps with Vercel/Netlify.'],
     }, 
     {
-      name: 'JavaScript Advanced Concepts, Node.js, and TailwindCSS:',
+      name: 'JavaScript, Node.js, and TailwindCSS:',
       subItems: ['Master JavaScript ES6+ features, asynchronous programming, and the Fetch API. Learn Node.js for backend development, work with Express.js to build REST APIs, and test APIs using Postman. Explore React basics, including components, props, state management, and lifecycle methods. Style efficiently using Tailwind CSS for utility-based responsive design.'],
     },
     {
-      name: 'Advanced React, Zustand, TypeScript, Database, and ShadCN:', 
+      name: 'React, Zustand, TypeScript, Database, and ShadCN:', 
       subItems: ['Learn advanced React concepts like React Router for navigation and Context API for global state management. Use Zustand for lightweight state management and TypeScript for type-safe development. Work with databases by integrating MongoDB with Node.js for data storage and retrieval. Build modern UI components using ShadCN.'],
     },
   ];

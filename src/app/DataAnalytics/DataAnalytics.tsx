@@ -403,7 +403,7 @@ const DataAnalytics = () => {
                             </div>
 
                             {/* Course info */}
-                            <div className='relative top-14 text-white'>
+                            <div className='relative lg:top-14 text-white'>
                                 <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold'>{content.courseTitle}</h1>
                                 <p className='py-5 text-base lg:text-lg'>
                                     {content.courseDescription}
@@ -440,7 +440,7 @@ const DataAnalytics = () => {
 
                     {/* Right side form */}
                     <div className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5 '>
-                        <div className="w-full sm:w-[25rem] h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[60px]">
+                        <div className="w-full sm:w-[25rem] min-h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[60px]">
                             <div className="flex flex-col justify-center items-center">
                                 <h2 className="text-lg sm:text-xl text-center font-semibold text-zinc-500">
                                     To learn this Course <span className='p-1 rounded-md bg-blue-500 text-white'>online</span>
@@ -1003,7 +1003,7 @@ function AccordionItem({
                 onClick={onClick}
             >
                 <div className="flex justify-between  w-full items-center gap-3">
-                    <span className="text-lg font-medium  text-gray-900">{language.name}</span>
+                    <span className="lg:text-lg md:text-md text-sm font-medium  text-gray-900">{language.name}</span>
 
                     <svg
                         className={`w-5 h-5 rotate-90 text-blue-500 transform transition-transform duration-200 ease-out ${isOpen ? 'rotate-90' : ''
@@ -1030,7 +1030,7 @@ function AccordionItem({
                     {language.subItems?.map((item, index) => (
                         <li
                             key={index}
-                            className="px-6 py-3   text-blue-600   rounded-lg"
+                            className="lg:px-6 px-2 text-[0.8rem] lg:text-md py-3   text-gray-400   rounded-lg"
                         >
                             {item}
                         </li>

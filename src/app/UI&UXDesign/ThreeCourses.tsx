@@ -23,7 +23,7 @@ function AccordionItem({
         onClick={onClick}
       >
         <div className="flex justify-between  w-full items-center gap-3">
-          <span className="text-lg font-medium  text-gray-900">{language.name}</span>
+          <span className="lg:text-lg text-md font-medium  text-gray-900">{language.name}</span>
 
           <svg
             className={`w-5 h-5 rotate-90 text-blue-500 transform transition-transform duration-200 ease-out ${isOpen ? 'rotate-90' : ''
@@ -50,7 +50,7 @@ function AccordionItem({
           {language.subItems?.map((item, index) => (
             <div
               key={index}
-              className="px-6 py-3   text-gray-400   rounded-lg"
+              className="lg:px-6 px-2 py-3   text-gray-400 text-[8px]  rounded-lg"
             >
               {item}
             </div>
@@ -66,7 +66,7 @@ function ThreeCourses() {
 
   const languages: Language[] = [
     {
-      name: 'User Interface and User Experience',
+      name: 'UI & UX',
       subItems: ['This module introduces students to the principles of user-centered design, helping them create intuitive and aesthetically pleasing digital experiences. They will explore key topics such as usability, wireframing, prototyping, and interaction design. Through real-world case studies and hands on projects, students will develop the ability to design and evaluate user-friendly interfaces. By the end of the module, they will have a strong foundation in UI/UX design, enabling them to craft seamless and engaging digital experiences.'],
     },
     {

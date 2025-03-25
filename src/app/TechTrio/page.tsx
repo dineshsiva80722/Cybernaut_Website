@@ -26,7 +26,6 @@ const Page = () => {
     <div>
       <Nav />
       <div className='w-auto h-auto float-end sticky top-[40rem] z-50 p-5'>
-
         <button
           onClick={scrollToTop}
           className={`
