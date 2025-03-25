@@ -318,17 +318,15 @@ export default function Home() {
 
             {/* Desktop View */}
             <div className="min-h-20 container mx-auto hidden pb-20 lg:block">
-                <section className='container mx-auto min-h-[140rem]  relative top-16'>
+                <section className='container mx-auto min-h-[140rem] relative top-16'>
                     <main className='mx-auto h-[40rem] rounded-xl sticky top-16 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]'>
-
-
                         <div className='flex  items-center justify-center'>
-                            <div className='min-h-[10rem]  w-1/2 p-5 space-y-6 '>
+                            <div className='min-h-[10rem] w-1/2 p-5 space-y-6 '>
                                 <p style={{ lineHeight: '40px' }} className="text-2xl md:text-3xl w-full font-extrabold text-start lg:text-3xl transition-all duration-300 ease-in-out">
                                     {getContent(scrollTranslate)}
                                 </p>
                                 <div className=" w-full">
-                                    <div className="transform  overflow-hidden">
+                                    <div className="transform overflow-hidden">
                                         <h1
                                             className={`
                                                                text-[16px]  text-gray-500
@@ -382,10 +380,10 @@ export default function Home() {
                                 <HeroIllustration />
                             </div>
                         </div>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center ">
 
 
-                            <section className={`absolute right-[17rem] top-0 mx-auto w-52 h-32 mt-5  place-content-center rounded-3xl z-50 transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
+                            <section className={`absolute right-[30rem] top-0 mx-auto w-52 h-32 mt-5  place-content-center rounded-3xl z-50 transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
                                 style={{ transform: `translateY(${scrollTranslate * 1}px)` }}
                             >
                                 <div id="animatedBox" className={`relative w-52 h-28 bg-white mx-auto place-content-center rounded-3xl b border-2 ${getBorderColor(scrollTranslate)} z-50 left-5 top-3 transition-all duration-500 ease-in-out`}>
