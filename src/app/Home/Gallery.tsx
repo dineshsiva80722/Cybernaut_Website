@@ -359,7 +359,7 @@ const Gallery = () => {
           <div className="flex items-center flex-row justify-center gap-1 lg:gap-0 md:space-y-0 md:space-x-20 w-full md:w-5/12">
             <button
               className={`px-4 py-2 md:px-6 md:py-3 flex gap-2 text-lg md:text-xl font-medium ${activeTab === 'gallery'
-                ? 'text-black underline lg:underline-none'
+                ? 'text-black underline lg:no-underline'
                 : 'text-gray-500 hover:text-gray-700'
                 }`}
               onClick={() => {
@@ -371,7 +371,7 @@ const Gallery = () => {
             </button>
             <button
               className={`px-4 py-2 md:px-6 md:py-3 flex gap-2 relative left-2 text-lg md:text-xl font-medium ${activeTab === 'outreach'
-                ? 'text-black underline lg:underline-none'
+                ? 'text-black underline lg:no-underline'
                 : 'text-gray-500 hover:text-gray-700'
                 }`}
               onClick={() => {
