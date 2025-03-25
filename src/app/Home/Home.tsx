@@ -247,9 +247,9 @@ export default function Home() {
 
             if (newContent !== content) {
                 setIsAnimating(true);
-                    setContent(newContent);
-                    setIsAnimating(false);
-    
+                setContent(newContent);
+                setIsAnimating(false);
+
             }
         };
 
@@ -382,10 +382,10 @@ export default function Home() {
                                 <HeroIllustration />
                             </div>
                         </div>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-2   gap-8 items-center">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
 
 
-                            <section className={`absolute left-96 right-0 top-0 mx-auto w-52 h-32 mt-5  place-content-center rounded-3xl z-50 transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
+                            <section className={`absolute right-[17rem] top-0 mx-auto w-52 h-32 mt-5  place-content-center rounded-3xl z-50 transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
                                 style={{ transform: `translateY(${scrollTranslate * 1}px)` }}
                             >
                                 <div id="animatedBox" className={`relative w-52 h-28 bg-white mx-auto place-content-center rounded-3xl b border-2 ${getBorderColor(scrollTranslate)} z-50 left-5 top-3 transition-all duration-500 ease-in-out`}>
@@ -395,7 +395,7 @@ export default function Home() {
                                 </div>
                             </section>
                         </div>
-                        <div className='w-screen relative t -left-10 h-20 bg-gradient-to-b from-white/10 via-white/90 to-white'>
+                        <div className='w-screen relative -left-10 h-20 bg-gradient-to-b from-white/10 via-white/90 to-white'>
 
                         </div>
                         <div style={{
