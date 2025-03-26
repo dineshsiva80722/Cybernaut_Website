@@ -279,7 +279,7 @@ function Coursecards() {
                                 /* Course container with horizontal scroll on mobile */
                                 <div className="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
                                     {/* Horizontal scroll wrapper for mobile */}
-                                    <div className="flex md:hidden w-full overflow-x-auto gap-4 pb-4 -mx-4 px-4 snap-x snap-mandatory hide-scrollbar">
+                                    <div className="flex md:hidden w-full overflow-x-auto gap-4 pb-4 mx-2 px-4 snap-x snap-mandatory hide-scrollbar">
                                         {group.courses.map((item) => (
                                             <div key={item.id} className="flex-none w-[85%] snap-start">
                                                 <CourseCard item={item} />

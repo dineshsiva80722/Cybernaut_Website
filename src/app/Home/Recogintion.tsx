@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+
 
 export default function Recognition() {
     const accreditations = [
@@ -22,7 +24,7 @@ export default function Recognition() {
             name: "ISO 9001:2015",
             logo: 'https://res.cloudinary.com/dn60aovto/image/upload/v1742447858/ISO_p9sebu.png',
             alt: "ISO 9001:2015 Certified logo",
-            
+
         },
     ];
 
@@ -33,9 +35,13 @@ export default function Recognition() {
             <div className="container mx-auto">
                 <div className="space-y-12">
                     <div className="space-y-6">
-                        <h3 className="text-2xl font-semibold text-center text-zinc-800">
+                        {/* <h3 className="text-2xl font-semibold text-center text-zinc-800">
                             We are accredited by
-                        </h3>
+                        </h3> */}
+                        <TextGenerateEffect
+                            words="We are accredited by"
+                            className="text-3xl text-center text-[#141515] font-bold mb-4 "
+                        />
                         <div className="flex flex-wrap justify-center py-10 ">
                             {accreditations.map((accreditation, index) => (
                                 <Card key={index} className="bg-transparent border-none shadow-none ">

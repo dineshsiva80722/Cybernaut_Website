@@ -607,8 +607,13 @@ const Techtrio = () => {
                                 </p>
                             </div>
                             <div className="w-full md:w-1/2 flex items-center justify-center p-4">
-                                <div className="w-full h-40 sm:h-48 md:h-60 lg:h-72 rounded-lg bg-gray-300 flex items-center justify-center">
-                                    {/* <ImageIcon className="w-12 h-12 text-gray-500" /> */}
+                                <div className="w-full min-h-40 sm:min-h-48 md:min-h-60 lg:min-h-60 rounded-lg flex items-center justify-center">
+                                    <Image
+                                        width={1000}
+                                        height={1000}
+                                        src='https://res.cloudinary.com/dn60aovto/image/upload/v1742448913/Tech_trio_avv3ny.png'
+                                        alt="Certificate"
+                                        className="w-[40rem] h-full object-contain rounded-xl" />
                                 </div>
                             </div>
                         </div>
@@ -617,7 +622,7 @@ const Techtrio = () => {
                     <div ref={coursesRef} className="w-ful min-h-[20rem]">
                         {/* <ThreeCourses /> */}
                         <div className="min-h-[30rem]  items-center justify-center p-8">
-                            <div className='py-4 space-y-2'>
+                            <div className='py-4 w-11/12 mx-auto space-y-2'>
                                 <h1 className="text-xl font-semibold">What you Learn</h1>
                                 <p className='text-md text-gray-600'>Whether your&apos;re a beginner or have prior experience, our course will equip you with the knowledge and skills needed to excel in the world of STACK development.</p>
                             </div>
@@ -998,7 +1003,7 @@ function AccordionItem({
     onClick: () => void;
 }) {
     return (
-        <div className="rounded-lg my-2 rounded-b-none border-b-[0.2rem]  border-b-blue-600">
+        <div className="rounded-lg my-2 w-11/12 mx-auto rounded-b-none border-b-[0.2rem]  border-b-blue-600">
             <button
                 className={`w-full px-6 py-4  rounded-lg flex items-center justify-between transition-colors duration-200 ${isOpen ? 'bg-white' : 'bg-white hover:bg-gray-50'
                     }`}
@@ -1032,7 +1037,7 @@ function AccordionItem({
                     {language.subItems?.map((item, index) => (
                         <li
                             key={index}
-                            className="lg:px-12 px-2 py-2 text-blue-500 text-[0.8rem] rounded-lg"
+                            className="lg:px-12 px-2 py-2 text-black lg:text-lg md:text-md text-[0.8rem] rounded-lg"
                         >
                             {item}
                         </li>

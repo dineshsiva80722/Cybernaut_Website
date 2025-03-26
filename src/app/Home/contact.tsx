@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowRight, GraduationCap } from 'lucide-react';
 import { Dancing_Script } from 'next/font/google';
 import Link from 'next/link';
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const dancingScript = Dancing_Script({ subsets: ['latin'] });
 
@@ -99,16 +100,28 @@ function Contact() {
                         <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 rounded-3xl transition-shadow duration-300 '>
                             <div className='max-w-md mx-auto space-y-6 md:space-y-4  '>
                                 <div className="space-y-6">
-                                    <h1 className={`${dancingScript.className} text-3xl md:text-4xl lg:text-5xl text-blue-600 leading-relaxed animate-fade-in`}>
+                                    {/* <h1 className={`${dancingScript.className} text-3xl md:text-4xl lg:text-5xl text-blue-600 leading-relaxed animate-fade-in`}>
                                         Get your quality
-                                    </h1>
-                                    <div className="space-y-2">
-                                        <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent'>
+                                    </h1> */}
+                                    <TextGenerateEffect
+                                        words="Get your quality"
+                                        className={`${dancingScript.className}  lg:text-3xl text-xl font-bold text-blue-600 animate-fade-in`}
+                                    />
+                                    <div className="space-y-1">
+                                        {/* <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent'>
                                             Skills Certificate
-                                        </h2>
-                                        <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800'>
+                                        </h2> */}
+                                        <TextGenerateEffect
+                                            words="Skills Certificate"
+                                            className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent animate-fade-in"
+                                        />
+                                        {/* <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800'>
                                             from the Cybernaut
-                                        </h2>
+                                        </h2> */}
+                                        <TextGenerateEffect
+                                            words="from the Cybernaut"
+                                            className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 animate-fade-in"
+                                        />
                                     </div>
                                 </div>
 
@@ -131,7 +144,11 @@ function Contact() {
                         <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 backdrop-blur-sm rounded-3xl transition-shadow duration-300'>
                             <div className='max-w-md mx-auto space-y-4'>
                                 <div className="space-y-2">
-                                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">Subscribe to Our Newsletter</h3>
+                                    {/* <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">Subscribe to Our Newsletter</h3> */}
+                                    <TextGenerateEffect
+                                        words="Subscribe to Our Newsletter"
+                                        className="text-lg md:text-xl lg:text-2xl w-full font-bold text-gray-800 animate-fade-in"
+                                    />
                                     <p className="text-gray-600 md:text-lg">Stay updated with our latest courses and opportunities</p>
                                 </div>
                                 <form onSubmit={handleSubmit} className="space-y-4">

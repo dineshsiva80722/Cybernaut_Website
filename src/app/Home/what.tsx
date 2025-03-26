@@ -2,8 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import { BookOpen, Briefcase, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const WhatWeDo = () => {
+  const words = `Cybernaut Edu-Tech empowers learners with hands-on training,
+                  future-ready tools, and expert guidance to excel in top tech companies
+                  like MAANG.`;
+
   return (
     <div className="container mx-auto">
       {/* Main container */}
@@ -28,15 +33,19 @@ const WhatWeDo = () => {
               <h3 className="text-blue-500 font-medium">About Us</h3>
 
               {/* Main heading */}
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
+              {/* <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
                 EdTech Platform for<br />Skill Development
-              </h2>
+              </h2> */}
+              
+              <TextGenerateEffect
+                words="EdTech Platform for Skill Development"
+                className="text-3xl w-96 text-[#141515] font-bold mb-4 "
+              />
 
               {/* Description */}
               <p className="text-gray-600">
-                Cybernaut Edu-Tech empowers learners with hands-on training,
-                future-ready tools, and expert guidance to excel in top tech companies
-                like MAANG.
+                {words}
+                {/* <TextGenerateEffect className='font-normal text-lg' words={words} /> */}
               </p>
 
               {/* Feature cards */}
@@ -99,10 +108,10 @@ const WhatWeDo = () => {
               <div className="relative top-5">
                 <div className="">
                   <Link href="/Aboutus">
-                  <button className='my-4 flex items-center gap-2 justify-center px-6 py-4 rounded-full bg-gradient-to-r from-[#13D8FB] to-[#00A3FF] text-white'>
-                    View More
-                    <ArrowRight className="h-4 w-4" />
-                  </button>
+                    <button className='my-4 flex items-center gap-2 justify-center px-6 py-4 rounded-full bg-gradient-to-r from-[#13D8FB] to-[#00A3FF] text-white'>
+                      View More
+                      <ArrowRight className="h-4 w-4" />
+                    </button>
                   </Link>
                 </div>
               </div>

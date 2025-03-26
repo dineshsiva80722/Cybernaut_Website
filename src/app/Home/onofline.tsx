@@ -189,6 +189,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+
 
 
 function OnlineOffline() {
@@ -232,9 +234,14 @@ function OnlineOffline() {
     return (
         <div className="container py-5">
             <div className="mx-auto flex-wrap xl:container">
-                <h1 className="text-center lg:w-full w-60 mx-auto xl:container lg:text-4xl text-xl font-bold my-4">
+                {/* <h1 className="text-center lg:w-full w-60 mx-auto xl:container lg:text-4xl text-xl font-bold my-4">
                     Learn. Practice. Earn. <br /> Have Fun!
-                </h1>
+                </h1> */}
+                <TextGenerateEffect
+                    words="Learn. Practice. Earn. Have Fun!"
+                    className="text-3xl w-96 text-[#141515] text-center mx-auto font-bold mb-4 "
+                />
+
                 <section>
                     <div className="flex justify-center my-6">
                         <div className="flex justify-center lg:gap-0 gap-6 py-5 w-full">

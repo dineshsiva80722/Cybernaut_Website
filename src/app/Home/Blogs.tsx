@@ -5,6 +5,8 @@ import React, { useState, useEffect } from 'react';
 import { ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+
 
 
 
@@ -44,7 +46,11 @@ const Blogs: React.FC = () => {
     return (
         <div className="py-10 px-4 md:px-10 mx-auto xl:container">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 className="lg:text-4xl text-xl font-bold text-gray-900 my-4">Explore the Blog</h1>
+                {/* <h1 className="lg:text-4xl text-xl font-bold text-gray-900 my-4">Explore the Blog</h1> */}
+                <TextGenerateEffect
+                words="Explore the Blog"
+                className="lg:text-4xl text-xl font-bold text-gray-900 my-4"
+              />
                 <p className="lg:text-lg text-sm text-gray-600 max-w-2xl mx-auto my-6 tracking-wide">
                     Discover the latest handpicked blog entries to get started
                 </p>

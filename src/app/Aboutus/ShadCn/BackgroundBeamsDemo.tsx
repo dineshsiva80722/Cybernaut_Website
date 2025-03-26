@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ParticleEffectWrapper } from "@/components/magicui/cool-mode";
 import { Particles } from "@/components/magicui/particles";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 export default function ParticlesDemo() {
   const { resolvedTheme } = useTheme();
   const [color, setColor] = useState("#ffffff");
@@ -17,7 +18,7 @@ export default function ParticlesDemo() {
 
     <>
       <div className="relative flex lg:h-[460px] h-[20rem] mt-[70px] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background">
-       
+
         <span className="pointer-events-none z-10 whitespace-pre-wrap text-center text-8xl font-semibold leading-none">
           <div className="relative justify-center">
           </div>
@@ -33,8 +34,27 @@ export default function ParticlesDemo() {
         <ParticleEffectWrapper>
           <Button className="p-0 w-full h-full flex flex-col bg-white text-black hover:bg-white hover:text-black shadow-none cursor-pointer">
             <h1 style={{ lineHeight: 1.2 }} className="text-2xl text-black leading-9 md:text-8xl font-bold text-center">
-              The <span className="text-blue-600">World</span> Around <br />
-              <span className="lg:text-8xl text-6xl text-blue-600">Cybernaut</span>
+              <div  className="flex items-center justify-center">
+              <TextGenerateEffect
+                words="The"
+                className="lg:text-8xl md:text-2xl text-md text-black"
+              />
+              
+              <TextGenerateEffect
+                words="World"
+                className="lg:text-8xl md:text-2xl text-md text-blue-500"
+              />
+              <TextGenerateEffect
+                words="Around"
+                className="lg:text-8xl md:text-3xl text-6xl text-black"
+              />
+              </div>
+              
+
+              <TextGenerateEffect
+                words="Cybernaut"
+                className="lg:text-8xl md:text-7xl text-6xl text-blue-600"
+              />
             </h1>
           </Button>
         </ParticleEffectWrapper>

@@ -2,6 +2,7 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 import Image from 'next/image';
 import '@/app/Home/css/MOU.css';
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { StaticImageData } from 'next/image';
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -42,7 +43,7 @@ const MOU = () => {
     { icon: 'https://res.cloudinary.com/dn60aovto/image/upload/v1742389924/Collage_Logo_02_ma5lls.png' },
     { icon: 'https://res.cloudinary.com/dn60aovto/image/upload/v1742389924/Collage_Logo_03_pghsg5.png' },
   ];
-  
+
   const Mobiledata = [
     { Mobileicon: 'https://res.cloudinary.com/dn60aovto/image/upload/v1742390110/pgp_dedepb.png' },
     { Mobileicon: 'https://res.cloudinary.com/dn60aovto/image/upload/v1742390109/VLB_plikss.png' },
@@ -54,14 +55,20 @@ const MOU = () => {
     { Mobileicon: 'https://res.cloudinary.com/dn60aovto/image/upload/v1742390103/Kingss_rvmni9.png' },
     { Mobileicon: 'https://res.cloudinary.com/dn60aovto/image/upload/v1742390102/Gnanamani_plh5hj.png' },
   ];
+  // const words = `At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution&apos;s learning experience.`;
 
   return (
     <>
-      <div className="container hidden min-h-96 lg:block overflow-hidden mx-auto mt-20 p-10 px-6 text-center relative">
+      <div className="container hidden min-h-96 lg:block overflow-hidden mx-auto mt-20 p-10 px-6 text-center relative space-y-5">
         {/* Header Section */}
-        <h1 className="lg:text-4xl text-xl font-extrabold py-5 lg:py-0">OUR MOU PARTNERS</h1>
-        <p className="mb-8 lg:w-8/12 w-12/12 mx-auto lg:text-lg text-sm lg:my-10 text-center">
-          At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution&apos;s learning experience.
+        <TextGenerateEffect 
+            words="OUR MOU PARTNERS" 
+            className=" text-[#141515] font-bold mb-4 lg:text-4xl text-xl  "
+          />
+        {/* <h1 className="lg:text-4xl text-xl font-extrabold py-5 lg:py-0">OUR MOU PARTNERS</h1> */}
+        <p className="mb-8 lg:w-8/12 w-12/12 mx-auto  text-center">
+        At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution&apos;s learning experience.
+        {/* <TextGenerateEffect className='font-normal lg:text-lg text-sm' words={words} /> */}
         </p>
         <Marquee gradient={false} pauseOnHover={true} speed={50} direction="left" className="">
           <div className="flex lg:mb-20 lg:gap-10 lg:h-auto h-40 lg:ml-10 gap-5 ml-5">

@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+
 
 const Review = () => {
     useEffect(() => {
@@ -33,9 +35,21 @@ const Review = () => {
           <section className='min-h-80  bg-sky-50 w-full py-5'>
                 <div className='w-10/12 min-h-32  mx-auto'>
                     <div className=' text-center leading-relaxed animate-fade-in space-y-2'>
-                        <h1 className='font-bold lg:text-3xl text-xl'> Don&#39;t just take our word for it,</h1>
-                        <h1 className='lg:text-3xl text-xl text-blue-500 font-bold '>Hear from our students.</h1>
-                        <h1 className='lg:text-md text-sm  text-gray-500'>Our students&#39; success stories speak volumes about the quality of our programs and mentorship.</h1>
+                        {/* <h1 className='font-bold lg:text-3xl text-xl'> Don&#39;t just take our word for it,</h1> */}
+                        <TextGenerateEffect
+                        words="Don't just take our word for it"
+                        className="lg:text-3xl text-xl font-bold mb-4 "
+                      />
+                        {/* <h1 className='lg:text-3xl text-xl text-blue-500 font-bold '>Hear from our students.</h1> */}
+                        <TextGenerateEffect
+                        words="Hear from our students"
+                        className="lg:text-3xl text-xl text-blue-500 font-bold mb-4 "
+                      />
+                        {/* <h1 className='lg:text-md text-sm  text-gray-500'>Our students&#39; success stories speak volumes about the quality of our programs and mentorship.</h1> */}
+                        <TextGenerateEffect
+                        words="Our students' success stories speak volumes about the quality of our programs and mentorship"
+                        className="lg:text-md text-sm  text-gray-500"
+                      />
                     </div>
                 </div>
                 <div

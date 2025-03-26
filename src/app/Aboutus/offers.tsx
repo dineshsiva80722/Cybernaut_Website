@@ -8,6 +8,7 @@ import What from '@/app/Home/assets/wwd.png'
 import { gsap } from 'gsap';
 import MobileOffers from './Mobile-UI/OfferscolCompany';
 import { JSX } from 'react';
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 
 type TabValue = 'colleges' | 'companies';
@@ -248,10 +249,22 @@ const Offers = () => {
                                                 ))}
                                             </div>
                                         </div>
-                                        <h1 className="text-3xl font-semibold w-[30rem] flex justify-start">What We Offer for Colleges to Enhance Learning and Growth</h1>
+
+
+
+                                        {/* <h1 className="text-3xl font-semibold w-[30rem] flex justify-start">What We Offer for Colleges to Enhance Learning and Growth</h1> */}
+
+                                        <TextGenerateEffect
+                                            words="What We Offer for Colleges to Enhance Learning and Growth"
+                                            className="text-3xl font-semibold w-[30rem]"
+                                        />
+
                                         <p className="text-gray-800 text-justify w-[565px] min-h-10">
                                             Cybernaut Edu-Tech has led 100+ outreach programs, partnered with 25+ colleges for VAC and placements, and helped 25+ institutions with tech solutions, bridging academics and industry.
                                         </p>
+
+
+
                                     </div>
                                     <div className="w-full min-h-96 flex pt-5 flex-col gap-5 ">
                                         {Colleges.map((item, i) => (
@@ -291,7 +304,11 @@ const Offers = () => {
                                                 ))}
                                             </div>
                                         </div>
-                                        <h1 className="text-3xl font-semibold flex w-[31rem] justify-start">What We Offer for Companies to Enhance Growth and Success</h1>
+                                        {/* <h1 className="text-3xl font-semibold flex w-[31rem] justify-start">What We Offer for Companies to Enhance Growth and Success</h1> */}
+                                        <TextGenerateEffect
+                                            words="What We Offer for Companies to Enhance Growth and Success"
+                                            className="text-3xl font-semibold w-[33rem] "
+                                        />
                                         <p className="text-gray-800  text-justify w-[565px] min-h-20 ">
                                             Cybernaut Edu-Tech helps companies build strong teams, streamline hiring, and drive impactful initiatives, offering solutions to grow, adapt, and thrive in a dynamic corporate landscape.
                                         </p>

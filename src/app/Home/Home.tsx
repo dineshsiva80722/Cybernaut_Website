@@ -356,7 +356,6 @@ const getImageSrc = () => {
                                                              `}
                                         >
                                             {content}
-
                                         </h1>
                                     </div>
                                 </div>
@@ -572,10 +571,10 @@ const getImageSrc = () => {
                             <div className="transform overflow-hidden">
                                 <h1
                                     className={`
-                                                          text-md text-gray-500
-                                                            transform transition-all duration-300 ease-in-out
+                                                             text-md text-gray-500
+                                                             transform transition-all duration-300 ease-in-out
                                                              ${isAnimating ? 'opacity-0' : 'opacity-100'}
-                                                                `}
+                                                 `}
                                 >
                                     {bodycontents[bodycontent]}
                                 </h1>

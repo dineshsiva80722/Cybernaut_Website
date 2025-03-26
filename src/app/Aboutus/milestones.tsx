@@ -2,7 +2,7 @@
 import { LightbulbIcon, CheckCircle } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card"
 import Marquee from 'react-fast-marquee'
-
+import { TextGenerateEffect } from '@/components/ui/text-generate-effect'
 
 interface MilestoneCardProps {
     type: "idea" | "check"
@@ -48,11 +48,15 @@ export default function Page() {
             <div className="container mx-auto relative hidden lg:flex items-center justify-center h-[40rem] ">
                 <div className='relative h-full w-full'>
                     <div className="relative left-0 z-20 w-96 bg-sky-50 p-5 h-80">
-                        <h2 className="text-5xl font-bold text-gray-900">
+                        {/* <h2 className="text-5xl font-bold text-gray-900">
                             OUR
                             <br />
                             MILESTONES
-                        </h2>
+                        </h2> */}
+                        <TextGenerateEffect
+                            words="OUR MILESTONES"
+                            className="text-5xl font-bold text-gray-900"
+                        />
                     </div>
                     <div className='w-full  h-[10rem] absolute  top-0'>
                         <div className="absolute top-0">
