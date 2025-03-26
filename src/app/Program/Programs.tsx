@@ -47,7 +47,7 @@ const Programs = () => {
                     </Slider>
 
                     {/* Thumbnail Navigation */}
-                    <div className='absolute bottom-4 left-1/2  transform -translate-x-1/2 flex space-x-2'>
+                    <div className='absolute bottom-4 left-1/2  transform -translate-x-1/2 md:flex hidden space-x-2'>
                         {sliderImages.map((image, index) => (
                             <div
                                 key={index}
