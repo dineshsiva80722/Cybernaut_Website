@@ -309,12 +309,12 @@ export default function Home() {
     return (
         <>
             {/* Desktop View */}
-            <div className="min-h-20 container mx-auto hidden pb-20 lg:block">
+            <div className="min-h-20 container mx-auto hidden lg:block">
                 <section className='container mx-auto min-h-[140rem] relative top-16'>
                     <main className='mx-auto h-[40rem] rounded-xl sticky top-16 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]'>
                         <div className='flex  items-center justify-center'>
                             <div className='min-h-[10rem] w-1/2 p-5 space-y-6'>
-                                <p style={{ lineHeight: '40px' }} className="text-2xl md:text-3xl w-full font-extrabold text-start lg:text-3xl transition-all duration-300 ease-in-out">
+                                <p style={{ lineHeight: '40px' }} className="text-2xl md:text-3xl w-full font-bold text-start lg:text-3xl transition-all duration-300 ease-in-out">
                                     {getContent(scrollTranslate)}
                                 </p>
                                 <div className=" w-full">
