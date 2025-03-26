@@ -16,46 +16,48 @@ const sliderImages = [
 const Programs = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     return (
-        <div className=' container mx-auto flex flex-col items-center justify-center  '>
+        <div className=''>
             {/* IMage Slider */}
-            <div className='w-full h-80 mt-24 rounded-xl my-10 mx-auto relative'>
-                <Slider
-                    dots={false}
-                    infinite={true}
-                    speed={500}
-                    slidesToShow={1}
-                    slidesToScroll={1}
-                    autoplay={true}
-                    autoplaySpeed={3000}
-                    arrows={false}
-                    className='flex items-center justify-center'
-                    afterChange={(index: number) => setCurrentSlide(index)}
-                >
-                    {sliderImages.map((image, index) => (
-                        <div key={index} className="relative flex items-center justify-center rounded-2xl w-full h-80 overflow-hidden">
-                            <Image
-                                width={600}
-                                height={500}
-                                src={image}
-                                alt={`Event Image ${index + 1}`}
-                                className="object-cover w-full h-full "
-                                
-                            />
-                        </div>
-                    ))}
-                </Slider>
+            <div className='min-h-80 flex items-center justify-center mt-24 rounded-xl my-10 w-full'>
+                <div className='container mx-auto mt-24'>
+                    <Slider
+                        dots={false}
+                        infinite={true}
+                        speed={500}
+                        slidesToShow={1}
+                        slidesToScroll={1}
+                        autoplay={true}
+                        autoplaySpeed={3000}
+                        arrows={false}
+                        className='flex items-center justify-center'
+                        afterChange={(index: number) => setCurrentSlide(index)}
+                    >
+                        {sliderImages.map((image, index) => (
+                            <div key={index} className="relative flex items-center justify-center rounded-2xl w-full h-80 overflow-hidden">
+                                <Image
+                                    width={600}
+                                    height={500}
+                                    src={image}
+                                    alt={`Event Image ${index + 1}`}
+                                    className="object-cover w-full h-full "
+                                    
+                                />
+                            </div>
+                        ))}
+                    </Slider>
 
-                {/* Thumbnail Navigation */}
-                <div className='absolute bottom-4 left-1/2  transform -translate-x-1/2 flex space-x-2'>
-                    {sliderImages.map((image, index) => (
-                        <div
-                            key={index}
-                            onClick={() => setCurrentSlide(index)}
-                            className={`w-5 h-1 rounded-full cursor-pointer 
-                                ${currentSlide === index ? 'bg-white w-[6rem] border-none' : 'bg-gray-500'}
-                                opacity-70 hover:opacity-100 transition-all duration-300`}
-                        />
-                    ))}
+                    {/* Thumbnail Navigation */}
+                    <div className='absolute bottom-4 left-1/2  transform -translate-x-1/2 flex space-x-2'>
+                        {sliderImages.map((image, index) => (
+                            <div
+                                key={index}
+                                onClick={() => setCurrentSlide(index)}
+                                className={`w-5 h-1 rounded-full cursor-pointer 
+                                    ${currentSlide === index ? 'bg-white w-[6rem] border-none' : 'bg-gray-500'}
+                                    opacity-70 hover:opacity-100 transition-all duration-300`}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
             
