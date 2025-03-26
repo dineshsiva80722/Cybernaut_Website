@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
 import { StaticImageData } from 'next/image';
-import Founder from '@/app/Home/Mobile-Components/Founder_img';
+// import Founder from '@/app/Home/Mobile-Components/Founder_img';
 import AnimatedTooltip from '@/components/ui/animated-tooltip'
 import React, { useEffect, useState, useCallback } from 'react';
 import './css/MOU.css';
