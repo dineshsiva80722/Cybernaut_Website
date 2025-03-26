@@ -306,6 +306,35 @@ export default function Home() {
         return () => clearInterval(interval);
     }, []);
 
+// slider
+const [, setCurrentSlide] = useState(0)
+const sliderImages = [
+    'https://res.cloudinary.com/dn60aovto/image/upload/v1742388576/teaching2_cbsc8b.jpg',
+    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Herosection1_ixcwp8.jpg',
+    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Herosection2_pg9smu.jpg',
+    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386631/Herosection4_fpza5i.jpg',
+    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386632/herosection5_bycxql.jpg',
+    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386632/Herosection6_zicjax.jpg',
+    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386631/Herosection4_fpza5i.jpg',
+    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Mou_2_oxpf57.jpg',
+    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386631/Mou_4_jemwd3.jpg',
+    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386635/Mou_11_irulgg.jpg',
+    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Community4_uropla.jpg',
+    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386629/Communit3_pev1so.jpg',
+    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/community2_nu8zpz.jpg',
+    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386634/Community1_sbfhwy.jpg'
+];
+
+const getImageSrc = () => {
+    if (scrollTranslate <= 500) return [sliderImages[0], sliderImages[3], sliderImages[5], sliderImages[6], sliderImages[2], sliderImages[4], sliderImages[1]];
+    if (scrollTranslate <= 1000) return [sliderImages[8], sliderImages[7], sliderImages[9]];
+    return [sliderImages[10], sliderImages[11], sliderImages[12], sliderImages[13]];
+};
+
+
+
+
+
     return (
         <>
             {/* Desktop View */}
@@ -339,7 +368,7 @@ export default function Home() {
                                             <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
                                             <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
                                             <Link href="/contact">
-                                                <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-3 left-6 z-10 text-lg">Contact us</span>
+                                                <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-3 left-7 z-10 text-lg">Contact us</span>
                                             </Link>
                                         </button>
                                     </div>
@@ -580,19 +609,30 @@ export default function Home() {
 
                 <div className="w-full h-96 relative items-center justify-center flex">
                     <div className="w-80 h-72 relative left-5 top-6 mx-auto rounded-xl bg-sky-300"></div>
-                    <div className="w-80   absolute border-2 overflow-hidden border-sky-300 mx-auto rounded-xl bg-white">
-                        <div className='relative '>
-                            <Image
-                                src="https://res.cloudinary.com/dn60aovto/image/upload/v1742386632/JS_fp6d5p.png"
-                                alt="Founder"
-                                width={100}
-                                height={100}
-                                className="-mt-3 mx-auto w-full z-0 object-cover"
-                            />
-                            <div className="absolute left-0 -top-4 mx-auto lg:w-full z-60">
-                                <Founder />
-                            </div>
-                        </div>
+                    <div className="w-80 h-[20rem] absolute border-2 overflow-hidden border-sky-300 mx-auto rounded-xl bg-white">
+                            <Slider
+                                dots={false}
+                                infinite={true}
+                                speed={500}
+                                slidesToShow={1}
+                                slidesToScroll={1}
+                                autoplay={true}
+                                autoplaySpeed={3000}
+                                arrows={false}
+                                afterChange={(index: number) => setCurrentSlide(index)}
+                            >
+                                {getImageSrc().map((image, index) => (
+                                    <div key={index} className="relative rounded-2xl min-w-[20rem] h-[20rem] overflow-hidden">
+                                        <Image
+                                            src={image}
+                                            alt={`Event Image ${index + 1}`}
+                                            className="object-cover w-full h-full "
+                                            width={200}
+                                            height={200}
+                                        />
+                                    </div>
+                                ))}
+                            </Slider>
                     </div>
                 </div>
             </section>

@@ -57,7 +57,7 @@ const MOU = () => {
 
   return (
     <>
-      <div className="container hidden h-96 lg:block overflow-hidden mx-auto mt-20 p-10 px-6 text-center relative">
+      <div className="container hidden min-h-96 lg:block overflow-hidden mx-auto mt-20 p-10 px-6 text-center relative">
         {/* Header Section */}
         <h1 className="lg:text-4xl text-xl font-extrabold py-5 lg:py-0">OUR MOU PARTNERS</h1>
         <p className="mb-8 lg:w-8/12 w-12/12 mx-auto lg:text-lg text-sm lg:my-10 text-center">

@@ -7,7 +7,7 @@ const WhatWeDo = () => {
   return (
     <div className="container mx-auto">
       {/* Main container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* About section */}
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
           {/* Left side - Image */}

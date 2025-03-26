@@ -214,7 +214,7 @@ const Founders = () => {
 
 
       {/* ================================================================================================================ */}
-      <section className='space-y-10 py-20'>
+      <section className='space-y-10 py-10'>
         <div className='flex flex-col justify-center space-y-5 mx-auto py-10'>
           <h1 className='lg:text-3xl text-2xl   text-center  font-bold my-2 gap-2 '>MEET OUR FOUNDERS </h1>
           <p className='text-center lg:max-w-3xl w-11/12  text-sm lg:text-lg mx-auto'>
@@ -265,7 +265,7 @@ const Founders = () => {
 
           <div className="w-full md:w-1/2 lg:w-full lg:h-[30rem] space-y-6 flex items-center justify-center ">
             <div className='relative w-full  bg-white  lg:w-[29rem] lg:min-h-96'>
-              <div className='w-80 h-80 bg-blue-200 hidden lg:block rounded-[2rem] absolute -right-5 -bottom-1'>
+              <div className='w-80 h-80 bg-blue-200 hidden lg:block rounded-[2rem] absolute -right-5 -bottom-5'>
               </div>
               <Image
                 width={350}

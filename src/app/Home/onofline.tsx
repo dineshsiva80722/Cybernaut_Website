@@ -230,7 +230,7 @@ function OnlineOffline() {
     };
 
     return (
-        <div className="container py-10">
+        <div className="container py-5">
             <div className="mx-auto flex-wrap xl:container">
                 <h1 className="text-center lg:w-full w-60 mx-auto xl:container lg:text-4xl text-xl font-bold my-4">
                     Learn. Practice. Earn. <br /> Have Fun!

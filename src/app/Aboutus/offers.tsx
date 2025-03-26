@@ -132,7 +132,7 @@ const Offers = () => {
 
     return (
         <>
-            <div className="py-10 mx-auto xl:container lg:container">
+            <div className="py-10  bg-sky-50">
                 <section className="container p-5 mx-auto px-4 max-w-7xl lg:block hidden">
                     <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as TabValue)} className="w-full">
                         <div className='py-5'>

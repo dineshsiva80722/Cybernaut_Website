@@ -7,7 +7,7 @@ import { useEffect, useRef } from "react";
 
 function About() {
     return (
-        <div className=" container mx-auto bg-white py-5">
+        <div className=" container mx-auto bg-white">
             <div className="container mx-auto px-4 lg:py-12  flex flex-col justify-center md:flex-row gap-8">
                 {/* Left Section */}
                 <div className="w-full md:w-1/2 lg:left-14 relative">
