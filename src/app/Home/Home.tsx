@@ -539,7 +539,7 @@ export default function Home() {
                         >
                             {autoContents[autoContentIndex]}
                         </p>
-                        <div className="h-32 w-full">
+                        <div className="h-20 w-full">
                             <div className="transform overflow-hidden">
                                 <h1
                                     className={`
