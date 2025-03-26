@@ -263,7 +263,7 @@ const Founders = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 lg:w-full lg:h-[30rem] space-y-6 flex items-end float-right  justify-end ">
+          <div className="w-full md:w-1/2 lg:w-full lg:h-[30rem] space-y-6 flex items-center justify-center ">
             <div className='relative w-full  bg-white  lg:w-[29rem] lg:min-h-96'>
               <div className='w-80 h-80 bg-blue-200 hidden lg:block rounded-[2rem] absolute -right-5 -bottom-1'>
               </div>
@@ -272,7 +272,7 @@ const Founders = () => {
                 height={354}
                 src="https://res.cloudinary.com/dn60aovto/image/upload/v1742450995/JS_hkszd9.png"
                 alt="Profile"
-                className="lg:rounded-[2rem]  lg:w-[30rem] w-[35rem] relative z-10 object-cover"
+                className="lg:rounded-[2rem] place-self-start  lg:w-[30rem] w-[35rem] relative z-10 object-cover"
               />
             </div>
           </div>
@@ -301,7 +301,7 @@ const Founders = () => {
             </div>
           </div>
 
-          <div className="w-full  min-h-96 flex items-center justify-end ">
+          <div className="w-full  min-h-96 flex items-center justify-center ">
             <div className='w-[33rem] min-h-80  space-y-3'>
               <h1 className="text-3xl md:text-2xl lg:text-2xl font-bold    text-[#1F1F3D]">
                 Hello, I&apos;m Manish Kumar

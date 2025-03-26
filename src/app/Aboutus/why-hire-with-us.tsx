@@ -124,7 +124,7 @@ const features = [
 export default function WhyHireWithUs() {
   return (
     <section className="bg-[#f7f7f7]  py-32">
-      <section className="container mx-auto">
+      <section className="w-10/12 mx-auto">
         <div className="space-y-1">
           <h1 className="text-center  text-3xl font-bold">
             Why <span className="text-blue-400">Hire</span> with Us?
