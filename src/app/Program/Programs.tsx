@@ -16,9 +16,9 @@ const sliderImages = [
 const Programs = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     return (
-        <div className='mx-auto xl:container rounded-xl '>
+        <div className=' container mx-auto flex flex-col items-center justify-center  '>
             {/* IMage Slider */}
-            <div className=' ml-10 lg:ml-0 w-full h-80  mt-24 rounded-xl my-10 mx-auto relative'>
+            <div className='w-full h-80 mt-24 rounded-xl my-10 mx-auto relative'>
                 <Slider
                     dots={false}
                     infinite={true}

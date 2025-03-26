@@ -140,7 +140,7 @@ function HeroIllustration() {
                 >
                 </div>
             </div>
-            <div className={`absolute rounded-[50px] -right-3 top-10 hidden sm:max-w-md  xl:max-w-[30rem]   ${getBorderClass()}`}>
+            <div className={`absolute rounded-[50px] min-w-[25rem] h-[30rem] -right-5 top-6  sm:max-w-md  ${getBorderClass()}`}>
 
             </div>
         </div>
@@ -293,9 +293,6 @@ export default function Home() {
 
     ];
 
-
-
-
     useEffect(() => {
         const interval = setInterval(() => {
             setIsAnimating(true);
@@ -309,19 +306,14 @@ export default function Home() {
         return () => clearInterval(interval);
     }, []);
 
-
-
-
-
     return (
         <>
-
             {/* Desktop View */}
             <div className="min-h-20 container mx-auto hidden pb-20 lg:block">
                 <section className='container mx-auto min-h-[140rem] relative top-16'>
                     <main className='mx-auto h-[40rem] rounded-xl sticky top-16 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]'>
                         <div className='flex  items-center justify-center'>
-                            <div className='min-h-[10rem] w-1/2 p-5 space-y-6 '>
+                            <div className='min-h-[10rem] w-1/2 p-5 space-y-6'>
                                 <p style={{ lineHeight: '40px' }} className="text-2xl md:text-3xl w-full font-extrabold text-start lg:text-3xl transition-all duration-300 ease-in-out">
                                     {getContent(scrollTranslate)}
                                 </p>
@@ -331,7 +323,7 @@ export default function Home() {
                                             className={`
                                                                text-[16px]  text-gray-500
                                                                transform transition-all duration-300 ease-in-out
-                                                               ${isAnimating ? 'opacity-0 translate-y-8' : 'opacity-100 translate-y-0'}
+                                                               ${isAnimating }
                                                              `}
                                         >
                                             {content}

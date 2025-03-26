@@ -214,21 +214,21 @@ const Founders = () => {
 
 
       {/* ================================================================================================================ */}
-      <section className='min-h-screen  py-20'>
-        <div className='flex flex-col justify-center  space-y-5 mx-auto py-10'>
+      <section className='min-h-screen space-y-10 py-20'>
+        <div className='flex flex-col justify-center space-y-5 mx-auto py-10'>
           <h1 className='lg:text-3xl text-2xl   text-center  font-bold my-2 gap-2 '>MEET OUR FOUNDERS </h1>
           <p className='text-center lg:max-w-3xl w-11/12  text-sm lg:text-lg mx-auto'>
             Unlock your potential with our advanced educational tools and top-tier training. Join 10,000+ successful learners and enhance your skills with Tech Trio, Full Stack, UI & UX, and more. Find the perfect program for your career goals today.
           </p>
         </div>
-        <div className="container px-10 flex flex-col-reverse md:flex-row items-center justify-center gap-5  mx-auto">
+        <div className="container px-10   flex flex-col-reverse md:flex-row items-center justify-center gap-5  mx-auto">
           {/* Left Content */}
-          <div className="w-full md:w-1/2 min-h-96 flex items-center justify-center  py-10 lg:py-0  ">
+          <div className="w-full  min-h-96 flex items-center justify-center py-10 lg:py-0  ">
             <div className='w-[33rem] min-h-80  space-y-2'>
-              <h1 className="text-2xl hidden lg:block md:text-2xl lg:text-2xl font-bold    text-[#1F1F3D]">
+              <h1 className="text-2xl hidden lg:block md:text-2xl lg:text-2xl font-bold text-[#1F1F3D]">
                 Hello, I&apos;m Jayasurya Gnanavel
               </h1>
-              <h1 className="text-2xl block lg:hidden md:text-2xl lg:text-2xl font-bold    text-[#1F1F3D]">
+              <h1 className="text-2xl block lg:hidden md:text-2xl lg:text-2xl font-bold text-[#1F1F3D]">
                 Jayasurya Gnanavel
               </h1>
               <h2 className="text-xl md:text-xl text-[#00A3FF] font-semibold">
@@ -263,8 +263,8 @@ const Founders = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 lg:w-full lg:h-[30rem] space-y-6  flex  justify-center ">
-            <div className='relative w-[35rem] lg:w-[29rem] lg:min-h-96'>
+          <div className="w-full md:w-1/2 lg:w-full lg:h-[30rem] space-y-6 flex items-end float-right  justify-end ">
+            <div className='relative w-full  bg-white  lg:w-[29rem] lg:min-h-96'>
               <div className='w-80 h-80 bg-blue-200 hidden lg:block rounded-[2rem] absolute -right-5 -bottom-1'>
               </div>
               <Image
@@ -278,9 +278,9 @@ const Founders = () => {
           </div>
         </div>
         {/* ----------------------------Manish---------------------------------------- */}
-        <div className="min-h-screen px-10 flex flex-col md:flex-row items-center justify-center container gap-5  mx-auto">
+        <div className="container px-10 pt-10  flex flex-col md:flex-row items-center justify-center gap-5  mx-auto">
 
-          <div className="w-full md:w-1/2 lg:w-screen lg:h-[30rem] space-y-6  flex  justify-center ">
+          <div className="w-full md:w-1/2 lg:w-full lg:h-[30rem] space-y-6 flex items-center justify-center ">
             <div className='relative  w-[29rem] lg:min-h-96'>
               <div className='w-80 h-80 bg-blue-200 hidden lg:block rounded-[2rem] absolute -left-5 -bottom-5'>
               </div>
@@ -301,7 +301,7 @@ const Founders = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 min-h-96 flex items-center justify-center   ">
+          <div className="w-full  min-h-96 flex items-center justify-end ">
             <div className='w-[33rem] min-h-80  space-y-3'>
               <h1 className="text-3xl md:text-2xl lg:text-2xl font-bold    text-[#1F1F3D]">
                 Hello, I&apos;m Manish Kumar
@@ -474,7 +474,6 @@ const Founders = () => {
                   and supports the company&apos;s growth, shaping Cybernaut&apos;s journey toward
                   long-term success and excellence in education and technology.
                 </p>
-
                 <div className="flex justify-between items-center mb-6">
                   <p className="text-lg text-gray-800">
                     Students Trained <span className="text-2xl font-bold">10K+</span>
