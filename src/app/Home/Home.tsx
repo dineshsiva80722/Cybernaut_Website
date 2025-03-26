@@ -535,7 +535,7 @@ export default function Home() {
                     <div className='w-full py-5 min-h-[13rem] '>
                         <p
                             style={{ lineHeight: '1.2' }}
-                            className="text-lg  h-20 tracking-wide py-3 text-start lg:text-5xl font-extrabold transition-all duration-300 ease-in-out"
+                            className="text-[26px] h-20 tracking-wide py-3 text-start lg:text-5xl font-extrabold transition-all duration-300 ease-in-out"
                         >
                             {autoContents[autoContentIndex]}
                         </p>
