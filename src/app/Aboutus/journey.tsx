@@ -171,7 +171,7 @@ export default function Journey() {
                     style={{ animationDelay: `${index * 200}ms` }}
                   >
                     <CardContent className="p-0">
-                      <div className="relative h-[300px] w-full">
+                      <div className="relative min-h-[200px] w-full">
                         <div className="absolute top-2 right-2 rounded-md px-2 py-1 z-10">
                           {selectedYear}
                         </div>
@@ -180,11 +180,11 @@ export default function Journey() {
                           height={300}
                           src={card.image}
                           alt={card.title}
-                          className="object-cover"
+                          className="object-cover "
                         />
                       </div>
-                      <div className="p-6">
-                        <h3 className="text-2xl font-semibold text-gray-900 mb-2">{card.title}</h3>
+                      <div className="p-6 ">
+                        <h3 className="text-2xl  font-semibold text-gray-900 mb-2">{card.title}</h3>
                         <p className="text-gray-600">{card.description}</p>
                       </div>
                     </CardContent>

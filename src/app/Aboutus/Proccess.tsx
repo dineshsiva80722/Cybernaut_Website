@@ -28,7 +28,7 @@ const Proccess = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className='absolute w-full h-10 top-2 flex items-center  justify-evenly'>
+                        <div className='absolute hidden w-full h-10 top-2 md:flex items-center  justify-evenly'>
                             <div className="w-60 h-1 border-t-2 border-blue-400">
 
                             </div>

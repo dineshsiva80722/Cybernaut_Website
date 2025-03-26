@@ -354,7 +354,7 @@ const Gallery = () => {
 
   return (
     <div className="container mx-auto lg:py-5 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl  mx-auto">
         <div className='flex justify-around my-6'>
           <div className="flex items-center flex-row justify-center gap-1 lg:gap-0 md:space-y-0 md:space-x-20 w-full md:w-5/12">
             <button
@@ -450,13 +450,13 @@ const Gallery = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevImage}
-            className="absolute lg:-left-12 -left-3 top-1/2 -translate-y-1/2 lg:bg-blue-300/80 rounded-full p-2 lg:shadow-lg lg:hover:bg-white transition-colors"
+            className="absolute lg:-left-6 -left-3 top-1/2 -translate-y-1/2 lg:bg-blue-300/80 rounded-full p-2 lg:shadow-lg lg:hover:bg-white transition-colors"
           >
             <ChevronLeft className="lg:w-6 lg:h-6 w-4 h-4   text-blue-500" />
           </button>
           <button
             onClick={nextImage}
-            className="absolute lg:-right-12 -right-3 top-1/2 -translate-y-1/2 lg:bg-blue-300/80 rounded-full p-2 lg:shadow-lg lg:hover:bg-white transition-colors"
+            className="absolute lg:-right-6 -right-3 top-1/2 -translate-y-1/2 lg:bg-blue-300/80 rounded-full p-2 lg:shadow-lg lg:hover:bg-white transition-colors"
           >
             <ChevronRight className="lg:w-6 lg:h-6 w-4 h-4   text-blue-500" />
           </button>

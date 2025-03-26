@@ -314,7 +314,7 @@ export default function Home() {
                     <main className='mx-auto h-[40rem] rounded-xl sticky top-16 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]'>
                         <div className='flex  items-center justify-center'>
                             <div className='min-h-[10rem] w-1/2 p-5 space-y-6'>
-                                <p style={{ lineHeight: '40px' }} className="text-2xl md:text-3xl w-full font-bold text-start lg:text-3xl transition-all duration-300 ease-in-out">
+                                <p style={{ lineHeight: '40px' }} className="text-2xl md:text-3xl w-full font-[700] text-start lg:text-3xl transition-all duration-300 ease-in-out">
                                     {getContent(scrollTranslate)}
                                 </p>
                                 <div className=" w-full">
@@ -331,9 +331,8 @@ export default function Home() {
                                         </h1>
                                     </div>
                                 </div>
-                                <div className="flex w-9/12 items-center justify-start">
+                                <div className="flex w-8/12 items-center justify-start">
                                     <div className='w-1/2'>
-
                                         <button className="overflow-hidden w-28 md:w-40 p-2   md:px-6 py-3 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative z-10 group">
                                             Contact us
                                             <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
@@ -354,7 +353,7 @@ export default function Home() {
                                 </div>
 
 
-                                <div className="flex w-8/12 items-center justify-start">
+                                <div className="flex w-7/12 items-center justify-start">
                                     <div className='w-1/2 h-16 space-y-3'>
                                         <h6 className='text-[16px] w-60 font-medium text-gray-400'>Students Trusted on</h6>
                                         <div className="flex flex-row items-start relative justify-start w-[15rem] gap-2">

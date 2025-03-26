@@ -57,10 +57,10 @@ const MOU = () => {
 
   return (
     <>
-      <div className="container hidden lg:block overflow-hidden mx-auto h-80 p-10 px-6 text-center relative lg:my-10">
+      <div className="container hidden h-96 lg:block overflow-hidden mx-auto mt-20 p-10 px-6 text-center relative">
         {/* Header Section */}
         <h1 className="lg:text-4xl text-xl font-extrabold py-5 lg:py-0">OUR MOU PARTNERS</h1>
-        <p className="mb-8 lg:w-8/12w-12/12 mx-auto lg:text-lg text-sm lg:my-10 text-center">
+        <p className="mb-8 lg:w-8/12 w-12/12 mx-auto lg:text-lg text-sm lg:my-10 text-center">
           At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution&apos;s learning experience.
         </p>
         <Marquee gradient={false} pauseOnHover={true} speed={50} direction="left" className="">
@@ -74,7 +74,7 @@ const MOU = () => {
             ))}
           </div>
         </Marquee>
-        <div className='w-full lg:h-[20rem] hidden md:block h-32 py-10 px-20 absolute left-0 top-40 lg:top-52 lg:flex gap-4 justify-center z-20 bg-gradient-to-r from-white via-transparent to-white overflow-x-hidden'>
+        <div className='w-full lg:h-[10rem] hidden md:block h-32 py-10 px-20 absolute left-0 top-40 lg:top-[11rem] lg:flex gap-4 justify-center z-20 bg-gradient-to-r from-white via-transparent to-white overflow-x-hidden'>
         </div>
       </div>
 
