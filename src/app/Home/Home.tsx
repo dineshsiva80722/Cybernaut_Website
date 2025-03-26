@@ -187,7 +187,7 @@ export default function Home() {
     const autoContents = [
         "Boost Up and Build Your Tech Career with our Courses ",
         "Reboot Campus Innovation: Your Go-To Hub for Tech World!",
-        "Join CDSC: The Hidden Order of Tech Clans"
+        "Join Cybernaut Developers Student Community: The Hidden Order of Tech Clans"
     ];
 
     const [bodycontent, setBodyContent] = useState(0); // Initialize with 0   
@@ -301,7 +301,7 @@ export default function Home() {
                 setBodyContent((prevIndex) => (prevIndex + 1) % bodycontents.length);
                 setIsAnimating(false);
             }, 300);
-        }, 3000); // Change content every 3 seconds
+        }, 3000); // Change content every 9 seconds
 
         return () => clearInterval(interval);
     }, []);
@@ -323,7 +323,7 @@ export default function Home() {
                                             className={`
                                                                text-[16px]  text-gray-500
                                                                transform transition-all duration-300 ease-in-out
-                                                               ${isAnimating }
+                                                               ${isAnimating}
                                                              `}
                                         >
                                             {content}
@@ -500,7 +500,7 @@ export default function Home() {
                                                     className={`
                                                           text-lg text-gray-500
                                                             transform transition-all duration-300 ease-in-out
-                                                             ${isAnimating ? 'opacity-0 translate-y-8' : 'opacity-100 translate-y-0'}
+                                                             ${isAnimating ? 'opacity-0' : 'opacity-100'}
                                                                 `}
                                                 >
                                                     {bodycontents[bodycontent]}
@@ -535,17 +535,17 @@ export default function Home() {
                     <div className='w-full py-5 min-h-[13rem] '>
                         <p
                             style={{ lineHeight: '1.2' }}
-                            className="text-[26px] h-20 tracking-wide py-3 text-start lg:text-5xl font-extrabold transition-all duration-300 ease-in-out"
+                            className={`text-[26px] min-h-32 tracking-wide py-3 text-start lg:text-5xl font-extrabold transform transition-all duration-300 ease-in-out ${isAnimating ? 'opacity-0 ' : 'opacity-100'}`}
                         >
                             {autoContents[autoContentIndex]}
                         </p>
-                        <div className="h-20 w-full">
+                        <div className="min-h-32 w-full">
                             <div className="transform overflow-hidden">
                                 <h1
                                     className={`
-                                                          text-sm text-gray-500
+                                                          text-md text-gray-500
                                                             transform transition-all duration-300 ease-in-out
-                                                             ${isAnimating ? 'opacity-0 translate-y-8' : 'opacity-100 translate-y-0'}
+                                                             ${isAnimating ? 'opacity-0' : 'opacity-100'}
                                                                 `}
                                 >
                                     {bodycontents[bodycontent]}

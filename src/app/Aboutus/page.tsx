@@ -66,14 +66,15 @@ const Page = () => {
         <Offers />
       </div>
       <Founders />
-      <Milestones />
       <div id='partner'>
-        <Partner />
+        {/* <Partner /> */}
       </div>
-      <Journey />
+      <Milestones />
       <Outreaches />
-      <Proccess />
-      <WhyHireWithUs />
+      <Journey />
+
+      {/* <Proccess /> */}
+      {/* <WhyHireWithUs /> */}
       <Contact />
       <Footer />
 

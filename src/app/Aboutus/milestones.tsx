@@ -44,8 +44,8 @@ export default function Page() {
     ] as const
 
     return (
-        <section className="container py-20  overflow-hidden md:px-6  bg-sky-50 mx-auto relative ">
-            <div className="relative hidden lg:flex items-center justify-center h-[40rem] ">
+        <section className="w-full pt-10  overflow-hidden md:px-6  bg-sky-50 mx-auto relative ">
+            <div className="container mx-auto relative hidden lg:flex items-center justify-center h-[40rem] ">
                 <div className='relative h-full w-full'>
                     <div className="relative left-0 z-20 w-96 bg-sky-50 p-5 h-80">
                         <h2 className="text-5xl font-bold text-gray-900">
