@@ -152,7 +152,7 @@ const MOU = () => {
           className="text-[#141515] font-bold mb-4 lg:text-4xl text-xl"
         />
         <p className="mb-8 lg:w-8/12 w-12/12 mx-auto text-center">
-          At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution's learning experience.
+          At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution&apos;s learning experience.
         </p>
         <Marquee gradient={false} pauseOnHover={true} speed={50} direction="left" className="">
           <div className="flex lg:mb-20 lg:gap-10 lg:h-auto h-40 lg:ml-10 gap-5 ml-5">
