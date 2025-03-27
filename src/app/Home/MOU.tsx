@@ -6,7 +6,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { StaticImageData } from 'next/image';
 import { Card, CardContent } from "@/components/ui/card";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 
 const MOU = () => {

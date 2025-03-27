@@ -183,7 +183,8 @@ interface Item {
 }
 
 interface RatingsProps {
-    // Add any props if needed
+    items: Item[];
+    className?: string;
 }
 
 const Ratings: React.FC<RatingsProps> = () => {

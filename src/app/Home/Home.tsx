@@ -1,6 +1,6 @@
 'use client';
 import { useRef } from 'react';
-import { SplitText } from "gsap/SplitText";
+// import { SplitText } from "gsap/SplitText";
 import { gsap } from "gsap";
 import Image from 'next/image';
 import Slider from "react-slick";
