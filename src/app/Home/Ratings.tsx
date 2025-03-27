@@ -183,7 +183,7 @@ interface Item {
 }
 
 interface RatingsProps {
-    items: Item[];
+
     className?: string;
 }
 
