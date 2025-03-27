@@ -1,5 +1,7 @@
 'use client';
-import { gsap } from 'gsap';
+import { useRef } from 'react';
+import { SplitText } from "gsap/SplitText";
+import { gsap } from "gsap";
 import Image from 'next/image';
 import Slider from "react-slick";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -306,30 +308,32 @@ export default function Home() {
         return () => clearInterval(interval);
     }, []);
 
-// slider
-const [, setCurrentSlide] = useState(0)
-const sliderImages = [
-    'https://res.cloudinary.com/dn60aovto/image/upload/v1742388576/teaching2_cbsc8b.jpg',
-    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Herosection1_ixcwp8.jpg',
-    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Herosection2_pg9smu.jpg',
-    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386631/Herosection4_fpza5i.jpg',
-    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386632/herosection5_bycxql.jpg',
-    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386632/Herosection6_zicjax.jpg',
-    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386631/Herosection4_fpza5i.jpg',
-    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Mou_2_oxpf57.jpg',
-    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386631/Mou_4_jemwd3.jpg',
-    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386635/Mou_11_irulgg.jpg',
-    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Community4_uropla.jpg',
-    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386629/Communit3_pev1so.jpg',
-    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/community2_nu8zpz.jpg',
-    'https://res.cloudinary.com/dn60aovto/image/upload/v1742386634/Community1_sbfhwy.jpg'
-];
+    // slider
+    const [, setCurrentSlide] = useState(0)
+    const sliderImages = [
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742388576/teaching2_cbsc8b.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Herosection1_ixcwp8.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Herosection2_pg9smu.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386631/Herosection4_fpza5i.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386632/herosection5_bycxql.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386632/Herosection6_zicjax.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386631/Herosection4_fpza5i.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Mou_2_oxpf57.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386631/Mou_4_jemwd3.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386635/Mou_11_irulgg.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Community4_uropla.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386629/Communit3_pev1so.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/community2_nu8zpz.jpg',
+        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386634/Community1_sbfhwy.jpg'
+    ];
 
-const getImageSrc = () => {
-    if (scrollTranslate <= 500) return [sliderImages[0], sliderImages[3], sliderImages[5], sliderImages[6], sliderImages[2], sliderImages[4], sliderImages[1]];
-    if (scrollTranslate <= 1000) return [sliderImages[8], sliderImages[7], sliderImages[9]];
-    return [sliderImages[10], sliderImages[11], sliderImages[12], sliderImages[13]];
-};
+    const getImageSrc = () => {
+        if (scrollTranslate <= 500) return [sliderImages[0], sliderImages[3], sliderImages[5], sliderImages[6], sliderImages[2], sliderImages[4], sliderImages[1]];
+        if (scrollTranslate <= 1000) return [sliderImages[8], sliderImages[7], sliderImages[9]];
+        return [sliderImages[10], sliderImages[11], sliderImages[12], sliderImages[13]];
+    };
+
+
 
 
 
@@ -343,9 +347,11 @@ const getImageSrc = () => {
                     <main className='mx-auto h-[40rem] rounded-xl sticky top-24 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]'>
                         <div className='flex  items-center justify-center'>
                             <div className='min-h-[10rem] w-1/2 p-5 space-y-6'>
-                                <p style={{ lineHeight: '40px' }} className="text-2xl md:text-3xl w-full font-[700] text-start lg:text-3xl transition-all duration-300 ease-in-out">
+                                {/* <p id="quote" style={{ lineHeight: '40px' }} className="text-2xl md:text-3xl w-full font-[700] text-start lg:text-3xl transition-all duration-300 ease-in-out">
                                     {getContent(scrollTranslate)}
-                                </p>
+                                </p> */}
+                                <SplitTextAnimation className="text-2xl md:text-3xl w-full font-[700] text-start lg:text-3xl transition-all duration-300 ease-in-out" text={getContent(scrollTranslate)} />
+                                {/* <SplitTextAnimation text="Hello, GSAP!" /> */}
                                 <div className=" w-full">
                                     <div className="transform overflow-hidden">
                                         <h1
@@ -609,29 +615,29 @@ const getImageSrc = () => {
                 <div className="w-full h-96 relative items-center justify-center flex">
                     <div className="w-80 h-72 relative left-5 top-6 mx-auto rounded-xl bg-sky-300"></div>
                     <div className="w-80 h-[20rem] absolute border-2 overflow-hidden border-sky-300 mx-auto rounded-xl bg-white">
-                            <Slider
-                                dots={false}
-                                infinite={true}
-                                speed={500}
-                                slidesToShow={1}
-                                slidesToScroll={1}
-                                autoplay={true}
-                                autoplaySpeed={3000}
-                                arrows={false}
-                                afterChange={(index: number) => setCurrentSlide(index)}
-                            >
-                                {getImageSrc().map((image, index) => (
-                                    <div key={index} className="relative rounded-2xl min-w-[20rem] h-[20rem] overflow-hidden">
-                                        <Image
-                                            src={image}
-                                            alt={`Event Image ${index + 1}`}
-                                            className="object-cover w-full h-full "
-                                            width={200}
-                                            height={200}
-                                        />
-                                    </div>
-                                ))}
-                            </Slider>
+                        <Slider
+                            dots={false}
+                            infinite={true}
+                            speed={500}
+                            slidesToShow={1}
+                            slidesToScroll={1}
+                            autoplay={true}
+                            autoplaySpeed={3000}
+                            arrows={false}
+                            afterChange={(index: number) => setCurrentSlide(index)}
+                        >
+                            {getImageSrc().map((image, index) => (
+                                <div key={index} className="relative rounded-2xl min-w-[20rem] h-[20rem] overflow-hidden">
+                                    <Image
+                                        src={image}
+                                        alt={`Event Image ${index + 1}`}
+                                        className="object-cover w-full h-full "
+                                        width={200}
+                                        height={200}
+                                    />
+                                </div>
+                            ))}
+                        </Slider>
                     </div>
                 </div>
             </section>
@@ -641,3 +647,34 @@ const getImageSrc = () => {
 
 
 
+
+interface SplitTextAnimationProps {
+    text: string;
+    className?: string;
+}
+
+const SplitTextAnimation: React.FC<SplitTextAnimationProps> = ({ text, className = '' }) => {
+    const textRef = useRef<HTMLHeadingElement>(null);
+
+    useEffect(() => {
+        if (textRef.current) {
+            const letters = textRef.current.querySelectorAll("span");
+
+            gsap.fromTo(
+                letters,
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, stagger: 0.02, duration: 0.5, ease: "power2.out" }
+            );
+        }
+    }, [text]);
+
+    return (
+        <h1 ref={textRef} className={className}>
+            {text.split("").map((char, index) => (
+                <span key={index} className="inline-block opacity-0">
+                    {char === " " ? "\u00A0" : char}
+                </span>
+            ))}
+        </h1>
+    );
+};
