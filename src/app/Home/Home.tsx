@@ -1,5 +1,5 @@
 'use client';
-import { useRef } from 'react';
+// import { useRef } from 'react';
 // import { SplitText } from "gsap/SplitText";
 import { gsap } from "gsap";
 import Image from 'next/image';
