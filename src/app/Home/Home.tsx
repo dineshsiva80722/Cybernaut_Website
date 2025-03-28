@@ -729,33 +729,33 @@ export default function Home() {
 
 
 
-interface SplitTextAnimationProps {
-    text: string;
-    className?: string;
-}
+// interface SplitTextAnimationProps {
+//     text: string;
+//     className?: string;
+// }
 
-const SplitTextAnimation: React.FC<SplitTextAnimationProps> = ({ text, className = '' }) => {
-    const textRef = useRef<HTMLHeadingElement>(null);
+// const SplitTextAnimation: React.FC<SplitTextAnimationProps> = ({ text, className = '' }) => {
+//     const textRef = useRef<HTMLHeadingElement>(null);
 
-    useEffect(() => {
-        if (textRef.current) {
-            const letters = textRef.current.querySelectorAll("span");
+//     useEffect(() => {
+//         if (textRef.current) {
+//             const letters = textRef.current.querySelectorAll("span");
 
-            gsap.fromTo(
-                letters,
-                { opacity: 0, y: 20 },
-                { opacity: 1, y: 0, stagger: 0.02, duration: 0.5, ease: "power2.out" }
-            );
-        }
-    }, [text]);
+//             gsap.fromTo(
+//                 letters,
+//                 { opacity: 0, y: 20 },
+//                 { opacity: 1, y: 0, stagger: 0.02, duration: 0.5, ease: "power2.out" }
+//             );
+//         }
+//     }, [text]);
 
-    return (
-        <h1 ref={textRef} className={className}>
-            {text.split("").map((char, index) => (
-                <span key={index} className="inline-block opacity-0">
-                    {char === " " ? "\u00A0" : char}
-                </span>
-            ))}
-        </h1>
-    );
-};
+//     return (
+//         <h1 ref={textRef} className={className}>
+//             {text.split("").map((char, index) => (
+//                 <span key={index} className="inline-block opacity-0">
+//                     {char === " " ? "\u00A0" : char}
+//                 </span>
+//             ))}
+//         </h1>
+//     );
+// };
