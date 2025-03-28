@@ -12,6 +12,11 @@ const sliderImages = [
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742456521/ux_Program_wjhkki.png",
     "https://res.cloudinary.com/dn60aovto/image/upload/v1742456520/Beyond_Program_nc5pcb.png",
 ]
+const mobileSliderImages = [
+    "https://res.cloudinary.com/dn60aovto/image/upload/v1743159267/Ad_Banner1_vkobud.png",
+    "https://res.cloudinary.com/dn60aovto/image/upload/v1743159267/Ad_Banner3_ulu36c.png",
+    "https://res.cloudinary.com/dn60aovto/image/upload/v1743159267/Ad_Banner2_mionuo.png",
+]
 
 const Programs = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -19,7 +24,7 @@ const Programs = () => {
         <div className=''>
             {/* IMage Slider */}
             <div className='min-h-80 flex items-center justify-center mt-24 rounded-xl my-10 w-full'>
-                <div className='container relative mx-auto  mt-24'>
+                <div className='container lg:block hidden relative mx-auto  mt-24'>
                     <Slider
                         dots={false}
                         infinite={true}
@@ -35,6 +40,46 @@ const Programs = () => {
                         {sliderImages.map((image, index) => (
                             <div key={index} className="relative flex items-center justify-center rounded-2xl w-full h-80 overflow-hidden">
                                 <Image
+                                    width={1000}
+                                    height={1000}
+                                    src={image}
+                                    alt={`Event Image ${index + 1}`}
+                                    className="object-cover w-full h-full "
+                                    
+                                />
+                            </div>
+                        ))}
+                    </Slider>
+
+                    {/* Thumbnail Navigation */}
+                    <div className='absolute  bottom-5  left-1/2  transform -translate-x-1/2 md:flex hidden space-x-2'>
+                        {sliderImages.map((image, index) => (
+                            <div
+                                key={index}
+                                onClick={() => setCurrentSlide(index)}
+                                className={`w-5 h-1 rounded-full cursor-pointer 
+                                    ${currentSlide === index ? 'bg-white w-[6rem] border-none' : 'bg-gray-500'}
+                                    opacity-70 hover:opacity-100 transition-all duration-300`}
+                            />
+                        ))}
+                    </div>
+                </div>
+                <div className='container block lg:hidden  relative mx-auto  mt-24'>
+                    <Slider
+                        dots={false}
+                        infinite={true}
+                        speed={500}
+                        slidesToShow={1}
+                        slidesToScroll={1}
+                        autoplay={true}
+                        autoplaySpeed={3000}
+                        arrows={false}
+                        className='flex items-center justify-center'
+                        afterChange={(index: number) => setCurrentSlide(index)}
+                    >
+                        {mobileSliderImages.map((image, index) => (
+                            <div key={index} className="relative flex items-center justify-center rounded-2xl w-full h-80 overflow-hidden">
+                                <Image
                                     width={600}
                                     height={500}
                                     src={image}
@@ -48,7 +93,7 @@ const Programs = () => {
 
                     {/* Thumbnail Navigation */}
                     <div className='absolute  bottom-5  left-1/2  transform -translate-x-1/2 md:flex hidden space-x-2'>
-                        {sliderImages.map((image, index) => (
+                        {mobileSliderImages.map((image, index) => (
                             <div
                                 key={index}
                                 onClick={() => setCurrentSlide(index)}
