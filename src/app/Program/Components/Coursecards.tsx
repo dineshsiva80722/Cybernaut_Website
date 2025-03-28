@@ -308,7 +308,7 @@ function Coursecards() {
 // CourseCard component
 function CourseCard({ item }: { item: CourseItem  }) {
     return (
-        <div className="flex flex-col  w-full bg-white hover:border hover:border-gray-800 rounded-xl  overflow-hidden hover:shadow-lg transition-shadow duration-300">
+        <div className="flex flex-col  min-w-64 lg:w-full bg-white hover:border hover:border-gray-800 rounded-xl  overflow-hidden hover:shadow-lg transition-shadow duration-300">
             {/* Image container with aspect ratio */}
             <div className="relative w-full pt-[56%]">
                 <Image
@@ -321,7 +321,7 @@ function CourseCard({ item }: { item: CourseItem  }) {
             </div>
 
             {/* Content section with responsive padding */}
-            <div className="flex flex-col flex-grow p-4 sm:p-5 gap-4">
+            <div className="flex flex-col  flex-grow p-4 sm:p-5 gap-4">
                 {/* Title with responsive font size */}
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 line-clamp-2">
                     {item.title}
@@ -362,9 +362,9 @@ function CourseCard({ item }: { item: CourseItem  }) {
                 <div className="flex items-center justify-between mt-auto">
                     <div className="flex items-center gap-2">
                         <span className="lg:text-lg text-md font-bold text-blue-600">{item.Price}</span>
-                        <span className="lg:text-sm text-[0.8rem] text-gray-400 line-through">{item.Discount}</span>
+                        <span className="lg:text-sm text-[0.7rem] text-gray-400 line-through">{item.Discount}</span>
                     </div>
-                    <div className="flex ">
+                    <div className="flex">
                         <Link href={`/${item.title.replace(/ /g, '')}`} className="lg:px-4 px-2 py-2 text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-xl transition-colors ">
                             {item.button}
                         </Link>

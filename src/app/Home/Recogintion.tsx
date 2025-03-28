@@ -109,7 +109,7 @@ const Recognition: React.FC = () => {
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: "bottom 80%",
-                end: "center center",
+                end: "bottom bottom",
                 scrub: true,
                 markers: false
             }
