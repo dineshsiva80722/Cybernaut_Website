@@ -13,6 +13,8 @@ import React, { useEffect, useState, useCallback } from 'react';
 import './css/MOU.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ArrowRight, Sparkles, Rocket, Leaf } from 'lucide-react';
+
 
 
 
@@ -332,7 +334,27 @@ export default function Home() {
         if (scrollTranslate <= 1000) return [sliderImages[8], sliderImages[7], sliderImages[9]];
         return [sliderImages[10], sliderImages[11], sliderImages[12], sliderImages[13]];
     };
+    // tab view
 
+
+    const icons = [
+        <Sparkles className="w-6 h-6" />,
+        <Rocket className="w-6 h-6" />,
+        <Leaf className="w-6 h-6" />
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIsAnimating(true);
+            setTimeout(() => {
+                setAutoContentIndex((prev) => (prev + 1) % autoContents.length);
+                setBodyContent((prev) => (prev + 1) % bodycontents.length);
+                setIsAnimating(false);
+            }, 500);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, []);
 
 
 
@@ -641,6 +663,66 @@ export default function Home() {
                 </section>
             </div> */}
 
+            <section className="hidden md:block lg:hidden w-full min-h-screen">
+                <div className="relative w-full">
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-sky-100 rounded-full filter blur-3xl opacity-30 -z-10"></div>
+                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-30 -z-10"></div>
+
+                    <div className="relative py-16 px-8">
+                        <div className="container mx-auto">
+                            <div className="max-w-4xl mx-auto">
+                                <div className="space-y-8">
+                                    {/* Main Content */}
+                                    <div className="space-y-6">
+                                        <h1
+                                            style={{ lineHeight: '1.2' }}
+                                            className={`text-4xl font-extrabold tracking-tight transition-all duration-500 ease-in-out ${isAnimating ? 'opacity-0 transform translate-y-4' : 'opacity-100 transform translate-y-0'
+                                                }`}
+                                        >
+                                            {autoContents[autoContentIndex]}
+                                        </h1>
+
+                                        <div className="h-32">
+                                            <p
+                                                className={`text-xl text-gray-600 transition-all duration-500 ease-in-out ${isAnimating ? 'opacity-0 transform translate-y-4' : 'opacity-100 transform translate-y-0'
+                                                    }`}
+                                            >
+                                                {bodycontents[bodycontent]}
+                                            </p>
+                                        </div>
+
+                                        {/* Buttons */}
+                                        <div className="flex flex-wrap gap-4 pt-6">
+                                            <button className="group relative overflow-hidden px-8 py-3 bg-sky-50 text-sky-600 rounded-full text-base font-medium cursor-pointer transition-all duration-300 hover:text-white">
+                                                <span className="relative z-10">Contact us</span>
+                                                <div className="absolute inset-0 h-full w-full transform scale-x-0 origin-left transition-transform duration-500 ease-out bg-gradient-to-r from-sky-400 to-sky-600 group-hover:scale-x-100"></div>
+                                            </button>
+
+                                            <button className="inline-flex items-center px-8 py-3 text-base font-medium rounded-full text-white bg-gray-900 hover:bg-gray-800 transition-all duration-300 transform hover:translate-x-2">
+                                                Explore Solutions
+                                                <ArrowRight className="ml-2 h-5 w-5 animate-pulse" />
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    {/* Image Section */}
+                                    <div className="mt-16 relative">
+                                        <div className="absolute inset-0 bg-gradient-to-r from-sky-100 to-purple-100 transform -skew-y-6 rounded-3xl -z-10"></div>
+                                        <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                                            <img
+                                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80"
+                                                alt="Team collaboration"
+                                                className="w-full h-[400px] object-cover transform hover:scale-105 transition-transform duration-700"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
 
