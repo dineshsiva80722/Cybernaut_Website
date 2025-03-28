@@ -420,16 +420,16 @@ const Techtrio = () => {
                                     </div>
                                 </div>
 
-                                <Button className='mt-2 w-32 sm:w-40 h-10 sm:h-12 text-blue-500 text-sm sm:text-base' variant='outline'>
+                                {/* <Button className='mt-2 w-32 sm:w-40 h-10 sm:h-12 text-blue-500 text-sm sm:text-base' variant='outline'>
                                     Enroll Now
-                                </Button>
+                                </Button> */}
                             </div>
                         </div>
                     </div>
 
                     {/* Right side form */}
                     <div className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5 '>
-                        <div className="w-full sm:w-[25rem] min-h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[60px]">
+                        <div className="w-full sm:w-[25rem] h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[60px]">
                             <div className="flex flex-col justify-center items-center">
                                 <h2 className="text-lg sm:text-xl text-center font-semibold text-zinc-500">
                                     To learn this Course <span className='p-1 rounded-md bg-blue-500 text-white'>online</span>
@@ -596,8 +596,13 @@ const Techtrio = () => {
                                 </p>
                             </div>
                             <div className="w-full md:w-1/2 flex items-center justify-center p-4">
-                                <div className="w-full h-40 sm:h-48 md:h-60 lg:h-72 rounded-lg bg-gray-300 flex items-center justify-center">
-                                    {/* <ImageIcon className="w-12 h-12 text-gray-500" /> */}
+                                <div className="w-full h-40 sm:h-48 md:h-60 lg:h-72 rounded-lg flex items-center justify-center">
+                                    <Image
+                                        src="https://res.cloudinary.com/dn60aovto/image/upload/v1742448914/Metazen_bvsqdi.png"
+                                        alt="MetaZen"
+                                        width={500}
+                                        height={500}
+                                        className="w-8/12 h-full rounded-lg text-gray-500" />
                                 </div>
                             </div>
                         </div>

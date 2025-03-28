@@ -1,6 +1,5 @@
 'use client';
-// import { useRef } from 'react';
-// import { SplitText } from "gsap/SplitText";
+
 import { gsap } from "gsap";
 import Image from 'next/image';
 import Slider from "react-slick";
@@ -660,27 +659,27 @@ export default function Home() {
             </div> */}
 
             <section className="hidden md:block lg:hidden w-full min-h-screen">
-                <div className="relative w-full">
+                <div className="relative w-full ">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-sky-100 rounded-full filter blur-3xl opacity-30 -z-10"></div>
                     <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-30 -z-10"></div>
 
-                    <div className="relative py-16 px-8">
+                    <div className="relative py-16 mt-10 px-8">
                         <div className="container mx-auto">
                             <div className="max-w-4xl mx-auto">
                                 <div className="space-y-8">
                                     {/* Main Content */}
-                                    <div className="space-y-6">
+                                    <div className="space-y-10">
                                         <h1
                                             style={{ lineHeight: '1.2' }}
-                                            className={`text-4xl font-extrabold tracking-tight transition-all duration-500 ease-in-out ${isAnimating ? 'opacity-0 transform translate-y-4' : 'opacity-100 transform translate-y-0'
+                                            className={`text-[clamp(2rem, 2.5vw, 3rem)] font-extrabold min-h-2  tracking-tight transition-all duration-500 ease-in-out ${isAnimating ? 'opacity-0 transform translate-y-4' : 'opacity-100 transform translate-y-0'
                                                 }`}
                                         >
                                             {autoContents[autoContentIndex]}
                                         </h1>
 
-                                        <div className="h-32">
+                                        <div className="min-h-20">
                                             <p
-                                                className={`text-xl text-gray-600 transition-all duration-500 ease-in-out ${isAnimating ? 'opacity-0 transform translate-y-4' : 'opacity-100 transform translate-y-0'
+                                                className={`text-[clamp(1rem, 1.5vw, 1.5rem)] text-gray-600 transition-all duration-500 ease-in-out ${isAnimating ? 'opacity-0 transform translate-y-4' : 'opacity-100 transform translate-y-0'
                                                     }`}
                                             >
                                                 {bodycontents[bodycontent]}
@@ -688,7 +687,7 @@ export default function Home() {
                                         </div>
 
                                         {/* Buttons */}
-                                        <div className="flex flex-wrap gap-4 pt-6">
+                                        <div className="flex flex-wrap gap-4">
                                             <button className="group relative overflow-hidden px-8 py-3 bg-sky-50 text-sky-600 rounded-full text-base font-medium cursor-pointer transition-all duration-300 hover:text-white">
                                                 <span className="relative z-10">Contact us</span>
                                                 <div className="absolute inset-0 h-full w-full transform scale-x-0 origin-left transition-transform duration-500 ease-out bg-gradient-to-r from-sky-400 to-sky-600 group-hover:scale-x-100"></div>
@@ -705,11 +704,29 @@ export default function Home() {
                                     <div className="mt-16 relative">
                                         <div className="absolute inset-0 bg-gradient-to-r from-sky-100 to-purple-100 transform -skew-y-6 rounded-3xl -z-10"></div>
                                         <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                                            <img
-                                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80"
-                                                alt="Team collaboration"
-                                                className="w-full h-[400px] object-cover transform hover:scale-105 transition-transform duration-700"
-                                            />
+                                            <Slider
+                                                dots={false}
+                                                infinite={true}
+                                                speed={500}
+                                                slidesToShow={1}
+                                                slidesToScroll={1}
+                                                autoplay={true}
+                                                autoplaySpeed={3000}
+                                                arrows={false}
+                                                afterChange={(index: number) => setCurrentSlide(index)}
+                                            >
+                                                {getImageSrc().map((image, index) => (
+                                                    <div key={index} className="relative rounded-2xl min-w-[20rem] h-[30rem] overflow-hidden">
+                                                        <Image
+                                                            src={image}
+                                                            alt={`Event Image ${index + 1}`}
+                                                            className="object-cover w-full h-full "
+                                                            width={200}
+                                                            height={200}
+                                                        />
+                                                    </div>
+                                                ))}
+                                            </Slider>
                                             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
                                         </div>
                                     </div>
