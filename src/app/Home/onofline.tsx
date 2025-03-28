@@ -239,7 +239,7 @@ function OnlineOffline() {
                 </h1> */}
                 <TextGenerateEffect
                     words="Learn. Practice. Earn. Have Fun!"
-                    className="text-3xl w-96 text-[#141515] text-center mx-auto font-bold mb-4 "
+                    className="text-[clamp(2rem, 2.5vw, 3rem)] w-full text-[#141515] text-center mx-auto font-bold mb-4 "
                 />
 
                 <section>
@@ -280,7 +280,7 @@ function OnlineOffline() {
                     </div>
 
                     <div className="flex lg:flex-row flex-col gap-5 justify-center mx-6 lg:py-14">
-                        <div className="lg:w-[40rem] space-y-4">
+                        <div className="lg:w-[40rem] w-full space-y-4">
                             <div className="relative overflow-hidden w-[15rem] lg:h-12 h-10 lg:w-full">
                                 <div
                                     className={`absolute w-full transition-all duration-700 ease-in-out ${activeTab === 'gallery'
@@ -326,7 +326,7 @@ function OnlineOffline() {
 
                         {/* Mobile and tablet view */}
                         <div className="lg:hidden block">
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="">
                                 {/* {(activeTab === 'gallery' ? onlineCards : offlineCards).map((card, index) => (
                                     <div
                                         key={index}
@@ -344,8 +344,8 @@ function OnlineOffline() {
                                         </span>
                                     </div>
                                 ))} */}
-                                <StyledWrapper className='md:w-[45rem] lg:w-full w-full md:flex items-center justify-center mx-auto '>
-                                    <div className="card flex justify-center items-center w-80 md:w-full">
+                                <StyledWrapper className='w-full md:flex items-center justify-center mx-auto '>
+                                    <div className="card flex justify-center items-center w-full">
                                         {(activeTab === 'gallery' ? onlineCards : offlineCards).map((card, index) => (
                                             <p style={{ backgroundImage: `url(${card.bgImage})`, backgroundRepeat: 'no-repeat' }} key={index}><span></span></p>
                                         ))}

@@ -164,7 +164,7 @@ const Recognition: React.FC = () => {
                     <div className="space-y-6">
                         <TextGenerateEffect
                             words="We are accredited by"
-                            className="text-3xl text-center text-[#141515] font-bold mb-4"
+                            className="text-[clamp(2rem, 2.5vw, 3rem)] text-center text-[#141515] font-bold mb-4"
                         />
                         <div 
                             ref={containerRef}

@@ -53,7 +53,7 @@ function Vision() {
         </h1> */}
         <TextGenerateEffect
                 words="Cybernaut Developers Student Community"
-                className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900"
+                className="text-[clamp(2rem, 2.5vw, 3rem)] md:text-4xl lg:text-5xl font-bold text-gray-900"
               />
 
         <p className="text-gray-700 text-lg ">

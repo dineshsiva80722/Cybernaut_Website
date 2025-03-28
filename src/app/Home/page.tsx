@@ -73,7 +73,7 @@ const Page = () => {
         <Review />
         <Contact />
       </div>
-        <Footer />
+      <Footer />
     </div>
 
   );

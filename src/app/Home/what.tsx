@@ -159,7 +159,7 @@ const WhatWeDo = () => {
       scrollTrigger: {
         trigger: imageRef.current,
         start: "top 50%",
-        end: "bottom 0%",
+        end: "center center",
         scrub: true,
         markers: false
       }
@@ -223,7 +223,7 @@ const WhatWeDo = () => {
               {/* Main heading */}
               <TextGenerateEffect
                 words="EdTech Platform for Skill Development"
-                className="text-3xl w-96 text-[#141515] font-bold mb-4"
+                className="text-[clamp(2rem, 2.5vw, 3rem)] w-full text-[#141515] font-bold mb-4"
               />
 
               {/* Description */}

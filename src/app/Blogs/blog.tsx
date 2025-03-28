@@ -184,7 +184,7 @@ function App() {
         fetch("https://medium-postscraper-api.onrender.com/scrape?url=https://cybernautblogs.medium.com/")
             .then(response => response.json())
             .then(data => {
-                const categorizedBlogs = data.map((blog: Blog) => ({ // Use the Blog type
+                const categorizedBlogs = data.map((blog: Blog) => ({  
                     ...blog,
                     category: categorizeBlog(blog)
                 }));

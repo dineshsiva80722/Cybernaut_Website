@@ -144,7 +144,7 @@ const MOU = () => {
       </div> */}
       <div
         ref={mOURef}
-        className="container hidden min-h-96 lg:block overflow-hidden mx-auto mt-20 p-10 px-6 text-center relative space-y-5"
+        className="container hidden min-h-96 lg:block overflow-hidden mx-auto  p-10 px-6 text-center relative space-y-5"
       >
         {/* Header Section */}
         <TextGenerateEffect
@@ -180,13 +180,13 @@ const MOU = () => {
 
 
       {/* Mobile view */}
-      <div className="container lg:hidden block mx-auto xl:container min-h-80 text-center overflow-hidden relative lg:my-20">
+      <div className="container  lg:hidden block mx-auto xl:container min-h-80 text-center overflow-hidden relative lg:my-20">
         {/* Header Section */}
         <h1 className="lg:text-4xl text-xl font-extrabold py-5 lg:py-0">OUR MOU PARTNERS</h1>
         <p className="w-11/12 mx-auto text-sm  text-center">
           At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution&apos;s learning experience.
         </p>
-        <Marquee gradient={false} pauseOnHover={true} speed={50} direction="left" className="pt-5 overflow-hidden">
+        <Marquee gradient={false} pauseOnHover={true} speed={50} direction="left" className="pt-5 w-full overflow-hidden">
           <div className="flex justify-center items-center min-h-32 gap-5 mx-auto">
             {Mobiledata.map((item, index) => (
               <MobileOutreachCard

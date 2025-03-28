@@ -342,17 +342,17 @@ export default function Home() {
     return (
         <>
             {/* Desktop View */}
-            <div className="container mx-auto hidden lg:block">
+            {/* <div className="container mx-auto hidden lg:block">
                 <section className='container mx-auto min-h-[140rem] relative top-24'>
                     <main className='mx-auto h-[40rem] rounded-xl sticky top-24 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]'>
                         <div className='flex  items-center justify-center'>
-                            <div className='min-h-[10rem] w-1/2 p-5 space-y-6'>
-                                {/* <p id="quote" style={{ lineHeight: '40px' }} className="text-2xl md:text-3xl w-full font-[700] text-start lg:text-3xl transition-all duration-300 ease-in-out">
+                            <div className='min-h-[10rem] w-1/2 p-5 space-y-6'> */}
+            {/* <p id="quote" style={{ lineHeight: '40px' }} className="text-2xl md:text-3xl w-full font-[700] text-start lg:text-3xl transition-all duration-300 ease-in-out">
                                     {getContent(scrollTranslate)}
                                 </p> */}
-                                <SplitTextAnimation className="text-2xl md:text-3xl w-full font-[700] text-start lg:text-3xl transition-all duration-300 ease-in-out" text={getContent(scrollTranslate)} />
-                                {/* <SplitTextAnimation text="Hello, GSAP!" /> */}
-                                <div className=" w-full">
+            {/* <SplitTextAnimation className="text-2xl md:text-3xl w-full font-[700] text-start lg:text-3xl transition-all duration-300 ease-in-out" text={getContent(scrollTranslate)} /> */}
+            {/* <SplitTextAnimation text="Hello, GSAP!" /> */}
+            {/* <div className=" w-full">
                                     <div className="transform overflow-hidden">
                                         <h1
                                             className={`
@@ -429,7 +429,86 @@ export default function Home() {
                         </div>
                     </main>
                 </section>
+            </div> */}
+
+            <div className="container mx-auto hidden lg:block w-full max-w-[90vw] min-h-screen px-4 pb-40">
+                <section className="container mx-auto min-h-[140rem] relative top-24  w-full">
+                    <main className="mx-auto h-[40rem] w-full max-w-[85vw] rounded-xl sticky top-24 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]">
+                        <div className="flex items-center justify-center w-full">
+                            <div className="min-h-[10rem] w-full max-w-[50vw] p-5 space-y-6">
+                                <h1 className="text-2xl md:text-4xl w-full text-justify font-[700] transition-all duration-300 ease-in-out">{getContent(scrollTranslate)}</h1>
+
+                                <div className="w-full">
+                                    <div className="transform overflow-hidden">
+                                        <h1 className="text-[18px] text-gray-500 transition-all duration-300 ease-in-out">
+                                            {content}
+                                        </h1>
+                                    </div>
+                                </div>
+                                <div className='max-w-[30vw]'>
+                                    <div className="flex w-full max-w-[60vw] items-center justify-between">
+                                        <div className="w-1/2">
+                                            <button className="w-28 md:w-40 p-2 md:px-6 py-3 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative group">
+                                                Contact us
+                                                <Link href="/contact">
+                                                    <span className="group-hover:opacity-100 absolute text-white top-3 left-7 z-10 text-lg opacity-0 transition-opacity duration-300">Contact us</span>
+                                                </Link>
+                                            </button>
+                                        </div>
+                                        <div className="">
+                                            <Link href="/Program">
+                                                <button className="inline-flex items-center cursor-pointer px-4 md:px-6 py-3 border border-transparent text-sm md:text-lg font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700">
+                                                    Explore Solutions
+                                                </button>
+                                            </Link>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex w-full max-w-[50vw] items-center justify-start">
+                                        <div className="w-1/2 h-16 space-y-3">
+                                            <h6 className="text-[16px] font-medium text-gray-400">Students Trusted on</h6>
+                                            <div className="flex flex-row items-start justify-start w-[15rem] gap-2">
+                                                <AnimatedTooltip items={people} />
+                                                <h1 className="pl-5 font-bold text-[25px]">1L+</h1>
+                                            </div>
+                                        </div>
+                                        <div className="w-1/2 h-16 space-y-3 text-end">
+                                            <h6 className="text-[16px] font-medium text-gray-400">Students Trained</h6>
+                                            <h1 className="pl-5 font-bold text-[25px]">75K+</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="hidden md:block">
+                                <HeroIllustration />
+                            </div>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
+                            <section className={`absolute z-50 right-[23rem] top-0 w-[13vw] h-[8vw] mt-5 rounded-3xl transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
+                                style={{ transform: `translateY(${scrollTranslate * 1}px)` }}>
+                                <div className={`relative w-[13vw] h-[7vw] flex items-center justify-center bg-white mx-auto rounded-3xl border-2 ${getBorderColor(scrollTranslate)} transition-all duration-500 ease-in-out`}>
+                                    <div className="text-sm px-4 text-gray-600  ">
+                                        <h1 className={`text-sm p-1 font-semibold ${getTextColor(scrollTranslate)}`}>
+                                            {['Connecting Minds, Collaborating on Ideas, and Creating the Future', 'Sharing Our Knowledge to Inspire Growth and Innovation', 'Connecting Minds, Collaborating on Ideas, and Creating the Future'][wordIndex]}
+                                        </h1>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div className="w-screen relative -left-10 h-20 bg-gradient-to-b from-white/10 via-white/90 to-white"></div>
+
+                        <div style={{
+                            transform: `translateY(${scrollTranslate * -1.9}px)`,
+                            transition: 'transform 0.3s ease-out'
+                        }} className={`w-full max-w-[85vw] my-5 -z-10 rounded-r-[25rem] border-[0.2rem] border-l-transparent border-b-transparent -left-40 pt-20 h-[135.1rem] absolute top-16 ${getBorderColor(scrollTranslate)}`}>
+                        </div>
+                    </main>
+                </section>
             </div>
+
+
 
             {/* <div className="min-h-20 container mx-auto hidden pb-20 lg:block">
                 <section className='container mx-auto min-h-[140rem] relative top-20'>
@@ -514,8 +593,8 @@ export default function Home() {
                 </section>
             </div> */}
 
-            <div className="w-full min-h-screen hidden md:block lg:hidden bg-gray-50">
-                {/* Tablet View */}
+            {/* Tablet View */}
+            {/* <div className="w-full min-h-screen hidden md:block lg:hidden bg-gray-50">
                 <section className='md:block w-full min-h-screen'>
                     <div className="relative w-full">
                         <div className="relative top-10 left-0 right-0 p-10">
@@ -560,7 +639,9 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-            </div>
+            </div> */}
+
+
 
 
             {/* Mobile View */}
@@ -613,8 +694,8 @@ export default function Home() {
                 </div>
 
                 <div className="w-full h-96 relative items-center justify-center flex">
-                    <div className="w-80 h-72 relative left-5 top-6 mx-auto rounded-xl bg-sky-300"></div>
-                    <div className="w-80 h-[20rem] absolute border-2 overflow-hidden border-sky-300 mx-auto rounded-xl bg-white">
+                    <div className="w-10/12 h-72 relative left-5  top-2 mx-auto rounded-xl bg-sky-300"></div>
+                    <div className="w-11/12 h-[18rem] absolute border-2 overflow-hidden border-sky-300 mx-auto rounded-xl bg-white">
                         <Slider
                             dots={false}
                             infinite={true}
