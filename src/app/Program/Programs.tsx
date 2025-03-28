@@ -19,7 +19,7 @@ const Programs = () => {
         <div className=''>
             {/* IMage Slider */}
             <div className='min-h-80 flex items-center justify-center mt-24 rounded-xl my-10 w-full'>
-                <div className='container mx-auto mt-24'>
+                <div className='container relative mx-auto  mt-24'>
                     <Slider
                         dots={false}
                         infinite={true}
@@ -47,7 +47,7 @@ const Programs = () => {
                     </Slider>
 
                     {/* Thumbnail Navigation */}
-                    <div className='absolute bottom-4 left-1/2  transform -translate-x-1/2 md:flex hidden space-x-2'>
+                    <div className='absolute  bottom-5  left-1/2  transform -translate-x-1/2 md:flex hidden space-x-2'>
                         {sliderImages.map((image, index) => (
                             <div
                                 key={index}

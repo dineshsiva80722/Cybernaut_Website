@@ -229,18 +229,15 @@ const Founders = () => {
         <div className="container px-10   flex flex-col-reverse md:flex-row items-center justify-center gap-5  mx-auto">
           {/* Left Content */}
           <div className="w-full  min-h-96 flex items-center justify-center py-10 lg:py-0  ">
-            <div className='w-[33rem] min-h-80  space-y-2'>
+            <div className='lg:w-[33rem] w-full  min-h-80  space-y-2'>
               {/* <h1 className="text-2xl hidden lg:block md:text-2xl lg:text-2xl font-bold text-[#1F1F3D]">
                 Hello, I&apos;m Jayasurya Gnanavel
               </h1> */}
               <TextGenerateEffect
                 words="Hello, I'm Jayasurya Gnanavel"
-                className="text-black lg:text-2xl text-2xl font-bold"
+                className="text-black lg:text-2xl text-[clamp(2rem, 2.5vw, 3rem)] font-bold"
               />
-              <TextGenerateEffect
-                words="Jayasurya Gnanavel"
-                className="text-2xl block w-[30rem] lg:hidden md:text-2xl lg:text-2xl font-bold text-[#1F1F3D]"
-              />
+
               <h2 className="text-xl md:text-xl text-[#00A3FF] font-semibold">
                 Founder & CEO
               </h2>
@@ -322,7 +319,7 @@ const Founders = () => {
               </h1> */}
               <TextGenerateEffect
                 words="Hello, I'm Manish Kumar"
-                className="text-black lg:text-2xl text-2xl font-bold "
+                className="text-black lg:text-2xl text-[clamp(2rem, 2.5vw, 3rem)] font-bold "
               />
              
               <h2 className="text-xl md:text-xl text-[#00A3FF] font-semibold">
@@ -391,7 +388,7 @@ const Founders = () => {
           {/* Jayasurya Section */}
           <div className="flex flex-col lg:flex-row items-center gap-12 mb-24">
             <div className="lg:w-1/2 space-y-6">
-              <div className="max-w-xl">
+              <div className=" bg-red-500 w-full">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1F1F3D] mb-2">
                   Hello, I&apos;m Jayasurya Gnanavel
                 </h2>
