@@ -337,11 +337,7 @@ export default function Home() {
     // tab view
 
 
-    const icons = [
-        <Sparkles className="w-6 h-6" />,
-        <Rocket className="w-6 h-6" />,
-        <Leaf className="w-6 h-6" />
-    ];
+
 
     useEffect(() => {
         const interval = setInterval(() => {
