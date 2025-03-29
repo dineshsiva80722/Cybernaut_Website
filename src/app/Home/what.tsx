@@ -223,7 +223,7 @@ const WhatWeDo = () => {
 
               {/* Main heading */}
               <TextGenerateEffect
-                words="EdTech Platform for Skill Development"
+                words="Edu-Tech Platform for Skill Development"
                 className="text-3xl w-full text-[#141515] font-bold mb-4"
               />
 
