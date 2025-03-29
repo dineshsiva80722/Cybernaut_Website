@@ -60,8 +60,6 @@ const StyledWrapper = styled.div`
     letter-spacing: -1px;
     border: 0;
     position: relative;
-    width: 220px;
-    height: 45px;
     transform: rotate(0deg) skewX(-2deg);
   }
 
