@@ -61,7 +61,7 @@ const StyledWrapper = styled.div`
     border: 0;
     position: relative;
     width: 220px;
-    height: 80px;
+    height: 45px;
     transform: rotate(0deg) skewX(-2deg);
   }
 
@@ -172,7 +172,7 @@ const StyledWrapper = styled.div`
     transition: all 0.3s ease;
     display: flex;
     position:relative;
-    left:12px;
+    left:5px;
     align-items: center;
     justify-content: center;
   }

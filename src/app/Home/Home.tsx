@@ -379,8 +379,8 @@ export default function Home() {
                                                 {/* <button className="inline-flex items-center cursor-pointer px-4 md:px-6 py-3 border border-transparent text-sm md:text-lg font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700">
                                                     Explore Solutions
                                                 </button> */}
-                                            <UiverseButton />
                                             </Link>
+                                            <UiverseButton />
                                         </div>
                                     </div>
 
