@@ -355,7 +355,7 @@ export default function Home() {
                             <div className="min-h-auto w-[45rem]  p-1 space-y-4">
                                 <h1 className="text-5xl w-[45rem] text-start font-[700] transition-all duration-300 ease-in-out">{getContent(scrollTranslate)}</h1>
                                 <div className="w-full">
-                                    <div className="transform py-10 overflow-hidden">
+                                    <div className="transform py-5 overflow-hidden">
                                         <h1 className="text-[18px] text-gray-500 transition-all duration-300 ease-in-out">
                                             {content}
                                         </h1>
