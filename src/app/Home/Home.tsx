@@ -12,7 +12,8 @@ import './css/MOU.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ArrowRight } from 'lucide-react';
-
+import UiverseButton from '@/components/ui/uiversebtn';
+       
 
 gsap.registerPlugin(ScrollTrigger);
 function HeroIllustration() {
@@ -351,8 +352,8 @@ export default function Home() {
                 <section className="container mx-auto min-h-[140rem] relative top-20  w-full">
                     <main className="mx-auto h-auto w-full max-w-[85vw] rounded-xl sticky top-20  place-content-center overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]">
                         <div className="flex items-center justify-center w-full">
-                            <div className="min-h-auto w-full max-w-[50vw] p-5 space-y-12">
-                                <h1 className="text-2xl md:text-4xl w-full text-justify font-[700] transition-all duration-300 ease-in-out">{getContent(scrollTranslate)}</h1>
+                            <div className="min-h-auto w-[45rem]  p-1 space-y-4">
+                                <h1 className="text-5xl w-[45rem] text-start font-[700] transition-all duration-300 ease-in-out">{getContent(scrollTranslate)}</h1>
                                 <div className="w-full">
                                     <div className="transform overflow-hidden">
                                         <h1 className="text-[18px] text-gray-500 transition-all duration-300 ease-in-out">
@@ -360,21 +361,25 @@ export default function Home() {
                                         </h1>
                                     </div>
                                 </div>
-                                <div className='max-w-[30vw] space-y-7'>
-                                    <div className="flex w-full max-w-[60vw] items-center justify-between">
+                                <div className='max-w-[30vw] space-y-3'>
+                                    <div className="flex w-full max-w-[60vw] min-h-32  items-center justify-between">
                                         <div className="w-1/2">
-                                            <button className="w-28 md:w-40 p-2 md:px-6 py-3 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative group">
+                                            <button className="overflow-hidden w-28 md:w-40 p-2   md:px-6 py-3 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative z-10 group">
                                                 Contact us
+                                                <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
+                                                <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
+                                                <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
                                                 <Link href="/contact">
-                                                    <span className="group-hover:opacity-100 absolute text-white top-3 left-7 z-10 text-lg opacity-0 transition-opacity duration-300">Contact us</span>
+                                                    <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-3 left-8 z-10 text-lg">Contact us</span>
                                                 </Link>
                                             </button>
                                         </div>
                                         <div className="">
                                             <Link href="/Program">
-                                                <button className="inline-flex items-center cursor-pointer px-4 md:px-6 py-3 border border-transparent text-sm md:text-lg font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700">
+                                                {/* <button className="inline-flex items-center cursor-pointer px-4 md:px-6 py-3 border border-transparent text-sm md:text-lg font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700">
                                                     Explore Solutions
-                                                </button>
+                                                </button> */}
+                                            <UiverseButton />
                                             </Link>
                                         </div>
                                     </div>
@@ -398,20 +403,21 @@ export default function Home() {
                                 <HeroIllustration />
                             </div>
                         </div>
+                     
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
-                        <section className={`absolute z-50 left-[35rem] right-0 mx-auto  top-0 w-[13vw] h-[8vw] mt-5 rounded-3xl transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
-                                style={{ 
+                            <section className={`absolute z-50 left-[35rem] right-0 mx-auto  top-0 w-[13vw] h-[8vw] mt-5 rounded-3xl transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
+                                style={{
                                     transform: `translateY(${scrollTranslate * 1}px)`,
                                     animation: 'float 3s ease-in-out infinite'
                                 }}>
                                 <div className={`relative w-[13vw] h-[7vw] flex items-center justify-center bg-white mx-auto rounded-3xl border-2 ${getBorderColor(scrollTranslate)} transition-all duration-500 ease-in-out`}
-                                    style={{ 
+                                    style={{
                                         animation: 'pulse 2s ease-in-out infinite',
                                         boxShadow: '0 0 15px rgba(0,0,0,0.1)'
                                     }}>
                                     <div className="text-sm px-4 text-gray-600  "
-                                        style={{ 
+                                        style={{
                                             animation: 'textFade 2s ease-in-out infinite'
                                         }}>
                                         <h1 className={`text-sm p-1 font-semibold ${getTextColor(scrollTranslate)}`}>
