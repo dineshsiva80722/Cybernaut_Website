@@ -6,7 +6,6 @@ import Slider from "react-slick";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
 import { StaticImageData } from 'next/image';
-// import Founder from '@/app/Home/Mobile-Components/Founder_img';
 import AnimatedTooltip from '@/components/ui/animated-tooltip'
 import React, { useEffect, useState, useCallback } from 'react';
 import './css/MOU.css';
@@ -15,10 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { ArrowRight } from 'lucide-react';
 
 
-
-
 gsap.registerPlugin(ScrollTrigger);
-
 function HeroIllustration() {
     const [micSvgTranslateY, setMicSvgTranslateY] = useState(0);
     const [micSvgTranslateX, setMicSvgTranslateX] = useState(0);
@@ -122,12 +118,13 @@ function HeroIllustration() {
                     afterChange={(index: number) => setCurrentSlide(index)}
                 >
                     {getImageSrc().map((image, index) => (
-                        <div key={index} className="relative rounded-2xl min-w-[20rem] h-[30rem] overflow-hidden">
+                        <div key={index} className="relative rounded-2xl min-w-[23rem] h-[30rem] overflow-hidden">
                             <Image
                                 src={image}
                                 alt={`Event Image ${index + 1}`}
-                                className="object-cover w-full h-full "
-                                fill
+                                className="object-cover h-full "
+                                width={550}
+                                height={300}
                             />
                         </div>
                     ))}
@@ -333,10 +330,6 @@ export default function Home() {
         if (scrollTranslate <= 1000) return [sliderImages[8], sliderImages[7], sliderImages[9]];
         return [sliderImages[10], sliderImages[11], sliderImages[12], sliderImages[13]];
     };
-    // tab view
-
-
-
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -351,110 +344,15 @@ export default function Home() {
         return () => clearInterval(interval);
     }, []);
 
-
-
-
-
-
     return (
         <>
             {/* Desktop View */}
-            {/* <div className="container mx-auto hidden lg:block">
-                <section className='container mx-auto min-h-[140rem] relative top-24'>
-                    <main className='mx-auto h-[40rem] rounded-xl sticky top-24 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]'>
-                        <div className='flex  items-center justify-center'>
-                            <div className='min-h-[10rem] w-1/2 p-5 space-y-6'> */}
-            {/* <p id="quote" style={{ lineHeight: '40px' }} className="text-2xl md:text-3xl w-full font-[700] text-start lg:text-3xl transition-all duration-300 ease-in-out">
-                                    {getContent(scrollTranslate)}
-                                </p> */}
-            {/* <SplitTextAnimation className="text-2xl md:text-3xl w-full font-[700] text-start lg:text-3xl transition-all duration-300 ease-in-out" text={getContent(scrollTranslate)} /> */}
-            {/* <SplitTextAnimation text="Hello, GSAP!" /> */}
-            {/* <div className=" w-full">
-                                    <div className="transform overflow-hidden">
-                                        <h1
-                                            className={`
-                                                               text-[16px]  text-gray-500
-                                                               transform transition-all duration-300 ease-in-out
-                                                               ${isAnimating}
-                                                             `}
-                                        >
-                                            {content}
-                                        </h1>
-                                    </div>
-                                </div>
-                                <div className="flex w-8/12 items-center justify-start">
-                                    <div className='w-1/2'>
-                                        <button className="overflow-hidden w-28 md:w-40 p-2   md:px-6 py-3 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative z-10 group">
-                                            Contact us
-                                            <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
-                                            <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
-                                            <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
-                                            <Link href="/contact">
-                                                <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-3 left-7 z-10 text-lg">Contact us</span>
-                                            </Link>
-                                        </button>
-                                    </div>
-                                    <div className='w-1/2'>
-                                        <Link href="/Program">
-                                            <button className="inline-flex items-center cursor-pointer px-4  md:px-6 py-3 border border-transparent text-sm md:text-lg font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
-                                                Explore Solutions
-                                            </button>
-                                        </Link>
-                                    </div>
-                                </div>
-
-
-                                <div className="flex w-7/12 items-center justify-start">
-                                    <div className='w-1/2 h-16 space-y-3'>
-                                        <h6 className='text-[16px] w-60 font-medium text-gray-400'>Students Trusted on</h6>
-                                        <div className="flex flex-row items-start relative justify-start w-[15rem] gap-2">
-                                            <AnimatedTooltip items={people} />
-                                            <h1 className='pl-5 font-bold text-[25px]'>1L+</h1>
-                                        </div>
-                                    </div>
-                                    <div className='w-1/2 h-16 space-y-3'>
-                                        <h6 className='text-[16px] text-end font-medium text-gray-400'>Students Trained</h6>
-                                        <h1 className='pl-5 text-end font-bold text-[25px]'>75K+</h1>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="hidden md:block">
-                                <HeroIllustration />
-                            </div>
-                        </div>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center ">
-
-
-                            <section className={`absolute right-[30rem] top-0 mx-auto w-52 h-32 mt-5  place-content-center rounded-3xl z-50 transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
-                                style={{ transform: `translateY(${scrollTranslate * 1}px)` }}
-                            >
-                                <div id="animatedBox" className={`relative w-52 h-28 bg-white mx-auto place-content-center rounded-3xl b border-2 ${getBorderColor(scrollTranslate)} z-50 left-5 top-3 transition-all duration-500 ease-in-out`}>
-                                    <div className='text-md mx-auto  px-1 font-normal  text-gray-600 p-2'>
-                                        <h1 className='text-[0.8rem] p-4 '> <span className={`font-semibold  ${getTextColor(scrollTranslate)}`}>{['Connecting Minds, Collaborating on Ideas, and Creating the Future', 'Sharing Our Knowledge to Inspire Growth and Innovation', 'Connecting Minds, Collaborating on Ideas, and Creating the Future'][wordIndex]}</span></h1>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                        <div className='w-screen relative -left-10 h-20 bg-gradient-to-b from-white/10 via-white/90 to-white'>
-
-                        </div>
-                        <div style={{
-                            transform: `translateY(${scrollTranslate * -1.9}px)`,
-                            transition: 'transform 0.3s ease-out'
-                        }}
-                            className={`w-10/12 my-5 -z-10 rounded-r-[25rem] border-[0.2rem]  border-l-transparent border-b-transparent left-0 pt-20 h-[135.1rem] absolute top-16 ${getBorderColor(scrollTranslate)}`}>
-                        </div>
-                    </main>
-                </section>
-            </div> */}
-
             <div className="container mx-auto hidden lg:block w-full max-w-[90vw] min-h-screen px-4 pb-40">
-                <section className="container mx-auto min-h-[140rem] relative top-24  w-full">
-                    <main className="mx-auto h-[40rem] w-full max-w-[85vw] rounded-xl sticky top-24 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]">
+                <section className="container mx-auto min-h-[140rem] relative top-20  w-full">
+                    <main className="mx-auto h-auto w-full max-w-[85vw] rounded-xl sticky top-20  place-content-center overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]">
                         <div className="flex items-center justify-center w-full">
-                            <div className="min-h-[10rem] w-full max-w-[50vw] p-5 space-y-6">
+                            <div className="min-h-auto w-full max-w-[50vw] p-5 space-y-12">
                                 <h1 className="text-2xl md:text-4xl w-full text-justify font-[700] transition-all duration-300 ease-in-out">{getContent(scrollTranslate)}</h1>
-
                                 <div className="w-full">
                                     <div className="transform overflow-hidden">
                                         <h1 className="text-[18px] text-gray-500 transition-all duration-300 ease-in-out">
@@ -462,7 +360,7 @@ export default function Home() {
                                         </h1>
                                     </div>
                                 </div>
-                                <div className='max-w-[30vw]'>
+                                <div className='max-w-[30vw] space-y-7'>
                                     <div className="flex w-full max-w-[60vw] items-center justify-between">
                                         <div className="w-1/2">
                                             <button className="w-28 md:w-40 p-2 md:px-6 py-3 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative group">
@@ -502,10 +400,20 @@ export default function Home() {
                         </div>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
-                            <section className={`absolute z-50 right-[23rem] top-0 w-[13vw] h-[8vw] mt-5 rounded-3xl transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
-                                style={{ transform: `translateY(${scrollTranslate * 1}px)` }}>
-                                <div className={`relative w-[13vw] h-[7vw] flex items-center justify-center bg-white mx-auto rounded-3xl border-2 ${getBorderColor(scrollTranslate)} transition-all duration-500 ease-in-out`}>
-                                    <div className="text-sm px-4 text-gray-600  ">
+                        <section className={`absolute z-50 left-[35rem] right-0 mx-auto  top-0 w-[13vw] h-[8vw] mt-5 rounded-3xl transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
+                                style={{ 
+                                    transform: `translateY(${scrollTranslate * 1}px)`,
+                                    animation: 'float 3s ease-in-out infinite'
+                                }}>
+                                <div className={`relative w-[13vw] h-[7vw] flex items-center justify-center bg-white mx-auto rounded-3xl border-2 ${getBorderColor(scrollTranslate)} transition-all duration-500 ease-in-out`}
+                                    style={{ 
+                                        animation: 'pulse 2s ease-in-out infinite',
+                                        boxShadow: '0 0 15px rgba(0,0,0,0.1)'
+                                    }}>
+                                    <div className="text-sm px-4 text-gray-600  "
+                                        style={{ 
+                                            animation: 'textFade 2s ease-in-out infinite'
+                                        }}>
                                         <h1 className={`text-sm p-1 font-semibold ${getTextColor(scrollTranslate)}`}>
                                             {['Connecting Minds, Collaborating on Ideas, and Creating the Future', 'Sharing Our Knowledge to Inspire Growth and Innovation', 'Connecting Minds, Collaborating on Ideas, and Creating the Future'][wordIndex]}
                                         </h1>
@@ -514,150 +422,18 @@ export default function Home() {
                             </section>
                         </div>
 
-                        <div className="w-screen relative -left-10 h-20 bg-gradient-to-b from-white/10 via-white/90 to-white"></div>
+                        <div className="w-screen relative -left-10 -bottom-5 h-28 bg-gradient-to-b from-white/10 via-white/90 to-white"></div>
 
                         <div style={{
                             transform: `translateY(${scrollTranslate * -1.9}px)`,
                             transition: 'transform 0.3s ease-out'
-                        }} className={`w-full max-w-[85vw] my-5 -z-10 rounded-r-[25rem] border-[0.2rem] border-l-transparent border-b-transparent -left-40 pt-20 h-[135.1rem] absolute top-16 ${getBorderColor(scrollTranslate)}`}>
+                        }} className={`w-full max-w-[85vw] my-5 -z-10 rounded-r-[25rem] border-[0.2rem] border-l-transparent border-b-transparent -left-40 pt-20 h-[135.1rem] absolute top-10 ${getBorderColor(scrollTranslate)}`}>
                         </div>
                     </main>
                 </section>
             </div>
 
-
-
-            {/* <div className="min-h-20 container mx-auto hidden pb-20 lg:block">
-                <section className='container mx-auto min-h-[140rem] relative top-20'>
-                    <main className='w-[91rem] mx-auto h-[40rem] rounded-xl sticky top-20 overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]'>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
-                            <div className='h-[26rem] w-[46rem] p-5 pt-14 ml-12 space-y-6 '>
-                                <p style={{ lineHeight: '60px' }} className="text-2xl md:text-3xl w-full text-start lg:text-[45px] font-bold transition-all duration-300 ease-in-out">
-                                    {getContent(scrollTranslate)}
-                                </p>
-                                <div className="w-full">
-                                    <div className="transform overflow-hidden">
-                                        <h1
-                                            className={`
-                                    text-[18px] text-gray-500
-                                    transform transition-all duration-300 ease-in-out
-                                    ${isAnimating ? 'opacity-0 translate-y-8' : 'opacity-100 translate-y-0'}
-                                `}
-                                        >
-                                            {content}
-                                        </h1>
-                                    </div>
-                                </div>
-                                <div className="flex gap-5">
-                                    <button className="overflow-hidden w-28 md:w-40 p-2 md:px-6 py-3 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative z-10 group">
-                                        Contact us
-                                        <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
-                                        <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
-                                        <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
-                                        <Link href="/contact">
-                                            <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-3 left-6 z-10 text-lg">Contact us</span>
-                                        </Link>
-                                    </button>
-                                    <Link href="/Program">
-                                        <button className="inline-flex items-center cursor-pointer px-4 md:px-6 py-3 border border-transparent text-sm md:text-lg font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
-                                            Explore Solutions
-                                        </button>
-                                    </Link>
-                                </div>
-
-                                <div className="flex w-full items-center justify-start">
-                                    <div className='w-1/2 h-16 space-y-3'>
-                                        <h6 className='text-[16px] w-60 font-medium text-gray-400'>Students Trusted on</h6>
-                                        <div className="flex flex-row items-start relative justify-start w-[15rem] gap-2">
-                                            <AnimatedTooltip items={people} />
-                                            <h1 className='pl-5 font-bold text-[25px]'>1L+</h1>
-                                        </div>
-                                    </div>
-                                    <div className='w-1/2 h-16 space-y-3'>
-                                        <h6 className='text-[16px] text-end font-medium text-gray-400'>Students Trained</h6>
-                                        <h1 className='pl-5 text-end font-bold text-[25px]'>75K+</h1>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="hidden md:block">
-                                <HeroIllustration />
-                            </div>
-                        </div>
-
-                        <section className={`absolute left-96 right-0 top-0 mx-auto w-52 h-32 mt-5 place-content-center rounded-3xl z-50 transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
-                            style={{ transform: `translateY(${scrollTranslate * 1}px)` }}
-                        >
-                            <div id="animatedBox" className={`relative w-52 h-28 bg-white mx-auto place-content-center rounded-3xl border border-2 ${getBorderColor(scrollTranslate)} z-50 left-5 top-3 transition-all duration-500 ease-in-out`}>
-                                <div className='text-md mx-auto px-1 font-normal text-gray-600 p-2'>
-                                    <h1 className='text-[0.8rem] p-4'>
-                                        <span className={`font-semibold ${getTextColor(scrollTranslate)}`}>
-                                            {['Connecting Minds, Collaborating on Ideas, and Creating the Future', 'Sharing Our Knowledge to Inspire Growth and Innovation', 'Connecting Minds, Collaborating on Ideas, and Creating the Future'][wordIndex]}
-                                        </span>
-                                    </h1>
-                                </div>
-                            </div>
-                        </section>
-
-                        <div className='w-full relative -left-10 h-20 bg-gradient-to-b from-white/10 via-white/90 to-white'></div>
-                        <div style={{
-                            transform: `translateY(${scrollTranslate * -1.9}px)`,
-                            transition: 'transform 0.3s ease-out'
-                        }}
-                            className={`w-full my-5 -z-10 rounded-r-[25rem] border-[0.2rem] border-l-transparent border-b-transparent -left-32 pt-20 h-[135.1rem] absolute top-16 ${getBorderColor(scrollTranslate)}`}
-                        >
-                        </div>
-                    </main>
-                </section>
-            </div> */}
-
-            {/* Tablet View */}
-            {/* <div className="w-full min-h-screen hidden md:block lg:hidden bg-gray-50">
-                <section className='md:block w-full min-h-screen'>
-                    <div className="relative w-full">
-                        <div className="relative top-10 left-0 right-0 p-10">
-                            <div className="container mx-auto">
-                                <div className="items-center max-w-4xl mx-auto">
-                                    <div className='w-full  py-5 p-5'>
-                                        <p
-                                            style={{ lineHeight: '1.2' }}
-                                            className="text-2xl md:text-2xl h-20 tracking-wide py-5 text-start lg:text-5xl font-extrabold transition-all duration-300 ease-in-out"
-                                        >
-                                            {autoContents[autoContentIndex]}
-                                        </p>
-                                        <div className="h-36 w-full py-1">
-                                            <div className="transform overflow-hidden">
-                                                <h1
-                                                    className={`
-                                                          text-lg text-gray-500
-                                                            transform transition-all duration-300 ease-in-out
-                                                             ${isAnimating ? 'opacity-0' : 'opacity-100'}
-                                                                `}
-                                                >
-                                                    {bodycontents[bodycontent]}
-                                                </h1>
-                                            </div>
-                                        </div>
-                                        <button className="overflow-hidden w-28 md:w-32 p-2 h-12 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative z-10 group">
-                                            Contact us
-                                            <span className="absolute w-36 h-32 -top-8 -left-2 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
-                                            <span className="absolute w-36 h-32 -top-8 -left-2 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
-                                            <span className="absolute w-36 h-32 -top-8 -left-2 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
-                                            <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-2.5 left-5 z-10">Contact us</span>
-                                        </button>
-                                        <button className="inline-flex cursor-pointer items-center px-4 md:px-6 py-3 border border-transparent text-sm md:text-base font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
-                                            Explore Solutions
-                                        </button>
-                                    </div>
-                                    <div className="mt-8">
-                                        <HeroIllustration />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div> */}
-
+            {/*Tablet View */}
             <section className="hidden md:block lg:hidden w-full min-h-screen">
                 <div className="relative w-full ">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-sky-100 rounded-full filter blur-3xl opacity-30 -z-10"></div>
@@ -736,8 +512,6 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-
-
 
             {/* Mobile View */}
             <section className='block md:hidden container min-h-screen mt-10'>
@@ -821,36 +595,3 @@ export default function Home() {
     );
 }
 
-
-
-
-// interface SplitTextAnimationProps {
-//     text: string;
-//     className?: string;
-// }
-
-// const SplitTextAnimation: React.FC<SplitTextAnimationProps> = ({ text, className = '' }) => {
-//     const textRef = useRef<HTMLHeadingElement>(null);
-
-//     useEffect(() => {
-//         if (textRef.current) {
-//             const letters = textRef.current.querySelectorAll("span");
-
-//             gsap.fromTo(
-//                 letters,
-//                 { opacity: 0, y: 20 },
-//                 { opacity: 1, y: 0, stagger: 0.02, duration: 0.5, ease: "power2.out" }
-//             );
-//         }
-//     }, [text]);
-
-//     return (
-//         <h1 ref={textRef} className={className}>
-//             {text.split("").map((char, index) => (
-//                 <span key={index} className="inline-block opacity-0">
-//                     {char === " " ? "\u00A0" : char}
-//                 </span>
-//             ))}
-//         </h1>
-//     );
-// };
