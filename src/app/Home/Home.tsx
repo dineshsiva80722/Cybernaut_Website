@@ -12,7 +12,7 @@ import './css/MOU.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ArrowRight } from 'lucide-react';
-import UiverseButton from '@/components/ui/uiversebtn';
+// import UiverseButton from '@/components/ui/uiversebtn';
        
 
 gsap.registerPlugin(ScrollTrigger);
