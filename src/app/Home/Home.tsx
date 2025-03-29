@@ -399,14 +399,14 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="hidden md:block">
+                            <div className="hidden relative right-10 md:block">
                                 <HeroIllustration />
                             </div>
                         </div>
                      
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
-                            <section className={`absolute z-50 left-[35rem] right-0 mx-auto  top-0 w-[13vw] h-[8vw] mt-5 rounded-3xl transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
+                            <section className={`absolute z-50 left-[20rem] right-0 mx-auto  top-0 w-[13vw] h-[8vw] mt-5 rounded-3xl transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
                                 style={{
                                     transform: `translateY(${scrollTranslate * 1}px)`,
                                     animation: 'float 3s ease-in-out infinite'
