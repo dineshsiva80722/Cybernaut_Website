@@ -355,14 +355,14 @@ export default function Home() {
                             <div className="min-h-auto w-[45rem]  p-1 space-y-4">
                                 <h1 className="text-5xl w-[45rem] text-start font-[700] transition-all duration-300 ease-in-out">{getContent(scrollTranslate)}</h1>
                                 <div className="w-full">
-                                    <div className="transform overflow-hidden">
+                                    <div className="transform py-10 overflow-hidden">
                                         <h1 className="text-[18px] text-gray-500 transition-all duration-300 ease-in-out">
                                             {content}
                                         </h1>
                                     </div>
                                 </div>
-                                <div className='max-w-[30vw] space-y-3'>
-                                    <div className="flex w-full max-w-[60vw] min-h-32  items-center justify-between">
+                                <div className='max-w-[30vw] '>
+                                    <div className="flex w-full max-w-[60vw]   items-center justify-between">
                                         <div className="w-1/2">
                                             <button className="overflow-hidden w-28 md:w-40 p-2   md:px-6 py-3 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative z-10 group">
                                                 Contact us
@@ -385,7 +385,7 @@ export default function Home() {
                                     </div>
 
                                     <div className="flex w-full max-w-[50vw] items-center justify-start">
-                                        <div className="w-1/2 h-16 space-y-3">
+                                        <div className="w-1/2">
                                             <h6 className="text-[16px] font-medium text-gray-400">Students Trusted on</h6>
                                             <div className="flex flex-row items-start justify-start w-[15rem] gap-2">
                                                 <AnimatedTooltip items={people} />

@@ -34,7 +34,7 @@ const Page = () => {
   return (
 
     <div className=' '>
-     
+
       <Nav />
       <Home />
 

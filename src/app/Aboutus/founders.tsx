@@ -7,7 +7,9 @@ import FounderCard from '@/app/Aboutus/Mobile-UI/FounderCard'
 import AnimatedTooltip from '@/components/ui/animated-tooltip'
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { StaticImageData } from 'next/image';
+import Commonbtn from '@/components/ui/Commonbtn';
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { ArrowRight } from 'lucide-react';
 const people: { id: number; name: string; designation: string; image: string | StaticImageData; }[] = [
   {
     id: 1,
@@ -269,7 +271,10 @@ const Founders = () => {
                 </div>
               </div>
               <a href="https://www.linkedin.com/in/jayasurya-gnanavel-b96300197">
-                <Button className='lg:p-8 p-3 px-8 bg-blue-500 rounded-full text-lg  '>Get in Touch</Button>
+                <Commonbtn className="text-white flex items-center justify-center ">
+                  Get in Touch
+                  <ArrowRight className="ml-2" />
+                </Commonbtn>
               </a>
             </div>
           </div>
@@ -321,7 +326,7 @@ const Founders = () => {
                 words="Hello, I'm Manish Kumar"
                 className="text-black lg:text-2xl text-[clamp(2rem, 2.5vw, 3rem)] font-bold "
               />
-             
+
               <h2 className="text-xl md:text-xl text-[#00A3FF] font-semibold">
                 Co-Founder & President
               </h2>
@@ -359,8 +364,10 @@ const Founders = () => {
                 </div>
               </div>
               <a href="https://www.linkedin.com/in/manish-kumar-b-175a701b0">
-
-                <Button className='p-8 px-8 bg-blue-500 rounded-full text-lg  '>Get in Touch</Button>
+                <Commonbtn className="text-white flex items-center justify-center ">
+                  Get in Touch
+                  <ArrowRight className="ml-2" />
+                </Commonbtn>
               </a>
             </div>
           </div>
@@ -438,8 +445,8 @@ const Founders = () => {
                 <a href="https://www.linkedin.com/in/jayasurya-gnanavel-b96300197"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-8 py-6 bg-blue-500 hover:bg-blue-600 rounded-full text-lg text-white transition-colors">
-                  Get in Touch
+                  className="">
+                  <Commonbtn>Get in Touch</Commonbtn>
                 </a>
               </div>
             </div>

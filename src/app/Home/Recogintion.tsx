@@ -108,8 +108,8 @@ const Recognition: React.FC = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: "bottom 80%",
-                end: "bottom bottom",
+                start: "bottom 90%",
+                end: "center center",
                 scrub: true,
                 markers: false
             }
@@ -132,23 +132,43 @@ const Recognition: React.FC = () => {
             }
         );
 
-        // Animate each card with stagger
+        // Animate each card with staggered left-to-right and right-to-left effect
         cardRefs.current.forEach((card, index) => {
             if (card) {
-                tl.fromTo(
-                    card,
-                    {
-                        opacity: 0,
-                        y: 50
-                    },
-                    {
-                        opacity: 1,
-                        y: 0,
-                        duration: 0.3,
-                        ease: "power2.out",
-                        delay: index * 0.1
-                    }
-                );
+                // First two cards animate from left to right
+                if (index < 2) {
+                    tl.fromTo(
+                        card,
+                        {
+                            opacity: 0,
+                            x: -100
+                        },
+                        {
+                            opacity: 1,
+                            x: 0,
+                            duration: 0.5,
+                            ease: "power2.out",
+                            delay: index * 0.2
+                        }
+                    );
+                }
+                // Last two cards animate from right to left
+                else {
+                    tl.fromTo(
+                        card,
+                        {
+                            opacity: 0,
+                            x: 100
+                        },
+                        {
+                            opacity: 1,
+                            x: 0,
+                            duration: 0.5,
+                            ease: "power2.out",
+                            delay: (index - 2) * 0.2
+                        }
+                    );
+                }
             }
         });
 
@@ -164,7 +184,7 @@ const Recognition: React.FC = () => {
                     <div className="space-y-6">
                         <TextGenerateEffect
                             words="We are accredited by"
-                            className="text-[clamp(2rem, 2.5vw, 3rem)] text-center text-[#141515] font-bold mb-4"
+                            className="text-3xl text-center text-[#141515] font-bold mb-4"
                         />
                         <div 
                             ref={containerRef}

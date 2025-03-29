@@ -270,7 +270,7 @@ const Ratings: React.FC<RatingsProps> = () => {
         <>
             <div
                 ref={ratingsRef}
-                className="md:flex hidden w-full items-center place-content-center container mx-auto justify-center"
+                className="md:flex hidden w-full items-center place-content-center  relative -top-10 container mx-auto justify-center"
             >
                 <div
                     className="flex place-items-center place-content-center justify-center h-[120px] w-[600px]  gap-10 bg-white md:px-10 md:py-5 md:rounded-full md:shadow-[0px_26px_40px_0px_rgba(43,45,54,0.05)] transform transition-transform duration-300 hover:scale-105"

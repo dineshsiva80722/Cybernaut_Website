@@ -3,10 +3,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-
+import Commonbtn from '@/components/ui/Commonbtn';
 
 
 
@@ -56,11 +55,11 @@ const Blogs: React.FC = () => {
                 </p>
             </div>
 
-            <div className="flex justify-center my-10">
+            <div className="flex justify-center">
                 <Link href="/Blogs">
-                    <Button className="bg-gradient-to-r from-[#13D8FB] to-[#00A3FF] p-6 rounded-full hover:from-[#00A3FF] hover:to-[#13D8FB]">
+                    <Commonbtn className='text-white' >
                         Check our Blogs
-                    </Button>
+                    </Commonbtn>
                 </Link>
             </div>
 

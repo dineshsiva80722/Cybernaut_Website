@@ -172,7 +172,7 @@ const StyledWrapper = styled.div`
     transition: all 0.3s ease;
     display: flex;
     position:relative;
-    left:5px;
+    left:8px;
     align-items: center;
     justify-content: center;
   }

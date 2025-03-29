@@ -132,6 +132,7 @@ import Image from 'next/image';
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import Link from 'next/link';
 import { BookOpen, Briefcase, ArrowRight } from 'lucide-react';
+import Commonbtn from '@/components/ui/Commonbtn';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -184,7 +185,7 @@ const WhatWeDo = () => {
 
 
     // Animate each feature card with stagger
-  
+
 
     return () => {
       tl.kill();
@@ -218,12 +219,12 @@ const WhatWeDo = () => {
           >
             <div className="space-y-5">
               {/* About Us heading */}
-              <h3 className="text-blue-500 font-medium">About Us</h3>
+              <h3 className="text-blue-500 font-bold">About Us</h3>
 
               {/* Main heading */}
               <TextGenerateEffect
                 words="EdTech Platform for Skill Development"
-                className="text-[clamp(2rem, 2.5vw, 3rem)] w-full text-[#141515] font-bold mb-4"
+                className="text-3xl w-full text-[#141515] font-bold mb-4"
               />
 
               {/* Description */}
@@ -282,11 +283,16 @@ const WhatWeDo = () => {
               <div className="relative top-5">
                 <div className="">
                   <Link href="/Aboutus">
+                    <Commonbtn className="flex items-center text-white justify-between gap-3 ">
+                      View More
+                      <ArrowRight className="h-4 w-4" />
+                    </Commonbtn>
+                  </Link>
+                  {/*                   
                     <button className='my-4 flex items-center gap-2 justify-center px-6 py-4 rounded-full bg-gradient-to-r from-[#13D8FB] to-[#00A3FF] text-white'>
                       View More
                       <ArrowRight className="h-4 w-4" />
-                    </button>
-                  </Link>
+                    </button> */}
                 </div>
               </div>
             </div>

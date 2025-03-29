@@ -190,6 +190,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import Commonbtn from '@/components/ui/Commonbtn';
+import { ArrowRight } from 'lucide-react';
 
 
 
@@ -315,11 +317,12 @@ function OnlineOffline() {
                                 )}
                             </div>
 
-                            <div className="relative overflow-hidden w-60 h-20">
+                            <div className="relative overflow-hidden w-60 min-h-10 py-2">
                                 <Link href="/Program">
-                                    <button className="my-4 px-6 py-4 rounded-full bg-gradient-to-r from-[#13D8FB] to-[#00A3FF] text-white hover:opacity-90 transition-opacity">
+                                    <Commonbtn className='text-white flex items-center justify-center gap-2 ' >
                                         View More
-                                    </button>
+                                        <ArrowRight className="h-6 w-6 " />
+                                    </Commonbtn>
                                 </Link>
                             </div>
                         </div>

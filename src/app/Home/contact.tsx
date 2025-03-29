@@ -5,6 +5,7 @@ import { ArrowRight, GraduationCap } from 'lucide-react';
 import { Dancing_Script } from 'next/font/google';
 import Link from 'next/link';
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import Commonbtn from '@/components/ui/Commonbtn';
 
 const dancingScript = Dancing_Script({ subsets: ['latin'] });
 
@@ -77,21 +78,6 @@ function Contact() {
 
     return (
         <>
-            <section className='min-h-80 hidden py-5 w-full'>
-                <div className='w-10/12 min-h-32  mx-auto'>
-                    <div className=' text-center leading-relaxed animate-fade-in space-y-2'>
-                        <h1 className='font-bold lg:text-3xl text-xl'> Don&#39;t just take our word for it,</h1>
-                        <h1 className='lg:text-3xl text-xl text-blue-500 font-bold '>Hear from our students.</h1>
-                        <h1 className='lg:text-md text-sm  text-gray-500'>Our students&#39; success stories speak volumes about the quality of our programs and mentorship.</h1>
-                    </div>
-                </div>
-                <div
-                    suppressHydrationWarning
-                    id="featurable-b7323408-197d-4e2d-90e8-054cd79c232e"
-                    data-featurable-async
-                    className='min-h-20 w-full'
-                ></div>
-            </section>
             {/* <FeaturableWidget /> */}
             <section className='relative min-h-[40rem]  justify-center items-center py-6 md:py-16 px-4 bg-white overflow-hidden'>
                 <div className='relative w-full max-w-6xl mx-auto'>
@@ -126,14 +112,14 @@ function Contact() {
                                 </div>
 
 
-                                <Link href="/Program">
-                                    <button className='group w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r  my-5 from-[#13D8FB] to-[#00A3FF] px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-medium hover:shadow-lg hover:shadow-blue-200/50 transform hover:-translate-y-0.5 transition-all duration-200'>
+                                <Link href="/Program " className=''>
+                                    <Commonbtn className="flex items-center text-white justify-between gap-3  ">
                                         Get Started Now
-                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                                    </button>
+                                        <ArrowRight className="h-4 w-4" />
+                                    </Commonbtn>
                                 </Link>
 
-                                <div className="flex items-center gap-3 text-gray-500">
+                                <div className="flex items-center gap-3 text-gray-500 pt-2">
                                     <GraduationCap className="w-5 h-5 text-blue-500" />
                                     <span className="text-sm md:text-base">Join 5000+ certified professionals</span>
                                 </div>
