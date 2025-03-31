@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
 import { StaticImageData } from 'next/image';
 import AnimatedTooltip from '@/components/ui/animated-tooltip'
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import './css/MOU.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -103,9 +103,22 @@ function HeroIllustration() {
     };
 
 
+
     return (
         <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8 my-8 sm:my-12 lg:my-16 relative ">
-
+            <div
+                style={{
+                    transform: `translateX(${Math.min(scrollTranslate - 50, 300)}px)`,
+                    transition: 'transform 0.3s ease-out'
+                }}
+                className="absolute top-80 -left-[13rem] z-50 flex items-center justify-center  right-0 mx-auto w-full " >
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="60" viewBox="0 0 39 92" fill="none">
+                    <path d="M35.2137 16.733C35.0344 8.021 27.9883 0.878886 19.3039 0.873554C10.8381 0.868217 3.94774 7.64661 3.96097 16.0972C3.96097 16.0973 3.96097 16.0973 3.96097 16.0974M35.2137 16.733L3.37288 41.7307C3.37288 37.0796 3.34518 32.4265 3.31748 27.7726C3.29432 23.8815 3.27116 19.9898 3.26418 16.0985L3.96097 16.0974M35.2137 16.733C35.2472 18.3622 35.2843 19.9901 35.3214 21.6171C35.4692 28.0984 35.6167 34.5643 35.5328 41.0339H4.06947M35.2137 16.733L4.06947 41.0339M3.96097 16.0974C3.96794 19.9794 3.99108 23.8707 4.01424 27.7633C4.04057 32.1893 4.0669 36.6168 4.06947 41.0339M3.96097 16.0974L4.06947 41.0339" fill="#13D8FB" stroke="#13D8FB" strokeWidth="1.39359" />
+                    <path d="M37.9922 42.426V42.4262L37.9978 59.4881C37.9359 64.765 33.0172 69.2791 27.6807 69.2177V69.2176H27.6727H10.3503C5.06548 69.1561 1.03003 64.828 1.09003 59.4997H1.09007V59.4918V42.4274C1.09007 40.9044 2.32499 39.6694 3.84798 39.6694H35.2343C36.7577 39.6694 37.9922 40.9033 37.9922 42.426Z" fill="#2A2A2A" stroke="#2A2A2A" strokeWidth="1.39359" />
+                    <path d="M16.5869 58.0928H22.1027V87.7957H16.5869V58.0928Z" fill="#2A2A2A" stroke="#2A2A2A" strokeWidth="1.39359" />
+                    <path d="M29.4718 85.7359C29.8562 85.7359 30.1685 86.0482 30.1685 86.4326V90.5549C30.1685 90.9393 29.8562 91.2517 29.4718 91.2517H10.3741C9.98962 91.2517 9.67726 90.9393 9.67726 90.5549V86.4326C9.67726 86.0482 9.98962 85.7359 10.3741 85.7359H29.4718Z" fill="#2A2A2A" stroke="#2A2A2A" strokeWidth="1.39359" />
+                </svg>
+            </div>
             <div className={` lg:max-w-xs sm:max-w-md  xl:max-w-[30rem] mr-12 aspect-square overflow-hidden shadow-2xl border-2 z-20  rounded-2xl lg:rounded-[50px] relative -top-10 lg:top-0 lg:left-20 ${getBorderClass()}`}>
                 <Slider
                     dots={false}
@@ -441,18 +454,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
-                            <section className={`absolute left-96 right-0 top-0 mx-auto w-52 h-32 mt-5 place-content-center rounded-3xl z-50 transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
-                                style={{ transform: `translateY(${scrollTranslate * 1.5}px)` }}
-                            >
-                                <div id="animatedBox" className={`relative w-52 h-28 bg-white mx-auto place-content-center rounded-3xl b border-2 ${getBorderColor(scrollTranslate)} z-50 left-5 top-3 transition-all duration-500 ease-in-out`}>
-                                    <div className='text-md mx-auto  px-1 font-normal  text-gray-600 p-2'>
-                                        <h1 className='text-[0.8rem] p-4 '> <span className={`font-semibold  ${getTextColor(scrollTranslate)}`}>{['Connecting Minds, Collaborating on Ideas, and Creating the Future', 'Sharing Our Knowledge to Inspire Growth and Innovation', 'Connecting Minds, Collaborating on Ideas, and Creating the Future'][wordIndex]}</span></h1>
-                                    </div>
-                                </div>
-                            </section>
-                        </div> */}
+
                         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
                             <div className="absolute top-0 left-60 z-50  right-0 mx-auto w-full">
                                 <div
