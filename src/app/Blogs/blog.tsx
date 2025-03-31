@@ -270,7 +270,7 @@ function App() {
                             className="bg-gradient-to-br from-slate-300 fixed to-slate-500 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
                         >
                             <h1 className='uppercase font-extrabold text-[#fff]'>Blog</h1> <br />
-                            <h1 className="w-[50rem] -mt-10 place-self-center text-center text-5xl mx-auto">
+                            <h1 className="lg:w-[50rem] w-[30rem]  -mt-10 place-self-center text-center lg:text-5xl md:text-2xl text-xl mx-auto">
                                 Our Mission is to make <span className="text-blue-500">Knowledge</span> and{' '}
                                 <span className="text-blue-500">News accessible</span> for <span className="text-blue-500">Everyone.</span>
                             </h1>
@@ -359,7 +359,7 @@ function App() {
                         </div> */}
 
                             {/* Left Section */}
-                            <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 rounded-3xl transition-shadow duration-300 '>
+                            <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 rounded-3xl transition-shadow min-h-10/12 duration-300 '>
                                 <div className='max-w-md mx-auto space-y-6 md:space-y-4  '>
                                     <div className="space-y-6">
                                         <h1 className={`${dancingScript.className} text-3xl md:text-4xl lg:text-5xl text-blue-600 leading-relaxed animate-fade-in`}>
