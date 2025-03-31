@@ -12,7 +12,7 @@ import './css/MOU.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ArrowRight } from 'lucide-react';
-// import UiverseButton from '@/components/ui/uiversebtn';
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -306,7 +306,6 @@ export default function Home() {
 
         return () => clearInterval(interval);
     }, []);
-
     // slider
     const [, setCurrentSlide] = useState(0)
     const sliderImages = [
@@ -344,6 +343,36 @@ export default function Home() {
 
         return () => clearInterval(interval);
     }, []);
+    // mic animeation
+
+    const [scrollY, setScrollY] = useState(0);
+    const [currentQuote, setCurrentQuote] = useState(0);
+
+    const quotes = [
+        "Connecting Minds, Collaborating on Ideas, and Creating the Future",
+        "Sharing Our Knowledge to Inspire Growth and Innovation",
+        "Building Tomorrow's Solutions Through Creative Collaboration"
+    ];
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        const interval = setInterval(() => {
+            setCurrentQuote((prev) => (prev + 2) % quotes.length);
+        }, 5000);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            clearInterval(interval);
+        };
+    }, []);
+
+    // Calculate smooth vertical movement
+    const moveDistance = Math.min(scrollY * 0.5, 450); // Stop at 800px
 
     return (
         <>
@@ -361,7 +390,7 @@ export default function Home() {
                                         </h1>
                                     </div>
                                 </div>
-                                <div className='max-w-[30vw] overflow-hidden'>
+                                <div className='max-w-[30vw] overflow-hidden space-y-3'>
                                     <div className="flex w-full max-w-[60vw]   items-center justify-between">
                                         <div className="w-1/2">
                                             <button className="overflow-hidden w-28 md:w-40 p-2 px-6 py-2 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative z-10 group">
@@ -412,36 +441,44 @@ export default function Home() {
                             </div>
                         </div>
 
-
+                        {/* 
                         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
-                            <section className={`absolute z-50 left-[20rem] right-0 mx-auto  top-0 w-[13vw] h-[8vw] mt-5 rounded-3xl transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
-                                style={{
-                                    transform: `translateY(${scrollTranslate * 1}px)`,
-                                    animation: 'float 3s ease-in-out infinite'
-                                }}>
-                                <div className={`relative w-[13vw] h-[7vw] flex items-center justify-center bg-white mx-auto rounded-3xl border-2 ${getBorderColor(scrollTranslate)} transition-all duration-500 ease-in-out`}
-                                    style={{
-                                        animation: 'pulse 2s ease-in-out infinite',
-                                        boxShadow: '0 0 15px rgba(0,0,0,0.1)'
-                                    }}>
-                                    <div className="text-sm px-4 text-gray-600  "
-                                        style={{
-                                            animation: 'textFade 2s ease-in-out infinite'
-                                        }}>
-                                        <h1 className={`text-sm p-1 font-semibold ${getTextColor(scrollTranslate)}`}>
-                                            {['Connecting Minds, Collaborating on Ideas, and Creating the Future', 'Sharing Our Knowledge to Inspire Growth and Innovation', 'Connecting Minds, Collaborating on Ideas, and Creating the Future'][wordIndex]}
-                                        </h1>
+                            <section className={`absolute left-96 right-0 top-0 mx-auto w-52 h-32 mt-5 place-content-center rounded-3xl z-50 transition-all duration-500 ease-in-out ${getBackgroundColor(scrollTranslate)}`}
+                                style={{ transform: `translateY(${scrollTranslate * 1.5}px)` }}
+                            >
+                                <div id="animatedBox" className={`relative w-52 h-28 bg-white mx-auto place-content-center rounded-3xl b border-2 ${getBorderColor(scrollTranslate)} z-50 left-5 top-3 transition-all duration-500 ease-in-out`}>
+                                    <div className='text-md mx-auto  px-1 font-normal  text-gray-600 p-2'>
+                                        <h1 className='text-[0.8rem] p-4 '> <span className={`font-semibold  ${getTextColor(scrollTranslate)}`}>{['Connecting Minds, Collaborating on Ideas, and Creating the Future', 'Sharing Our Knowledge to Inspire Growth and Innovation', 'Connecting Minds, Collaborating on Ideas, and Creating the Future'][wordIndex]}</span></h1>
                                     </div>
                                 </div>
                             </section>
+                        </div> */}
+                        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
+                            <div className="absolute top-0 left-60 z-50  right-0 mx-auto w-full">
+                                <div
+                                    className="relative w-full max-w-md mx-auto"
+                                    style={{
+                                        transform: `translateY(${moveDistance}px)`,
+                                        transition: 'transform 0.3s ease-out'
+                                    }}
+                                >
+                                    {/* Main card */}
+                                    <div className={`relative rounded-2xl p-6 shadow-xl  w-52 h-28 ${getBackgroundColor(scrollTranslate)}`}>
+                                        <div id="animatedBox" className={`relative w-52 h-28 bg-white mx-auto place-content-center rounded-3xl b border-2 ${getBorderColor(scrollTranslate)} z-50 left-0 top-0 transition-all duration-500 ease-in-out`}>
+                                            <div className='text-md mx-auto  px-1 font-normal  text-gray-600 p-2'>
+                                                <h1 className='text-[0.8rem] p-4 '> <span className={`font-semibold  ${getTextColor(scrollTranslate)}`}>{['Connecting Minds, Collaborating on Ideas, and Creating the Future', 'Sharing Our Knowledge to Inspire Growth and Innovation', 'Connecting Minds, Collaborating on Ideas, and Creating the Future'][wordIndex]}</span></h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
                         <div className="w-screen relative -left-10 -bottom-5 h-28 bg-gradient-to-b from-white/10 via-white/90 to-white"></div>
-
                         <div style={{
                             transform: `translateY(${scrollTranslate * -1.9}px)`,
                             transition: 'transform 0.3s ease-out'
-                        }} className={`w-full max-w-[85vw] my-5 -z-10 rounded-r-[25rem] border-[0.2rem] border-l-transparent border-b-transparent -left-40 pt-20 h-[135.1rem] absolute top-10 ${getBorderColor(scrollTranslate)}`}>
+                        }}
+                            className={`w-10/12 my-5 -z-10 rounded-r-[25rem] border-[0.2rem]  border-l-transparent border-b-transparent left-0 pt-20 h-[135.1rem] absolute top-16 ${getBorderColor(scrollTranslate)}`}>
                         </div>
                     </main>
                 </section>
@@ -461,7 +498,7 @@ export default function Home() {
                                     <div className="space-y-10">
                                         <h1
                                             style={{ lineHeight: '1.2' }}
-                                            className={`text-[clamp(2rem, 2.5vw, 3rem)] font-extrabold min-h-2  tracking-tight transition-all duration-500 ease-in-out ${isAnimating ? 'opacity-0 transform translate-y-4' : 'opacity-100 transform translate-y-0'
+                                            className={`text-[clamp(2rem, 2.5vw, 3rem)]  min-h-2  tracking-wide py-3 text-start lg:text-5xl font-extrabold transition-all duration-500 ease-in-out ${isAnimating ? 'opacity-0 transform translate-y-4' : 'opacity-100 transform translate-y-0'
                                                 }`}
                                         >
                                             {autoContents[autoContentIndex]}
@@ -608,4 +645,3 @@ export default function Home() {
         </>
     );
 }
-

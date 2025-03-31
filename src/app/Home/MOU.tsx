@@ -2,12 +2,8 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 import Image from 'next/image';
 import '@/app/Home/css/MOU.css';
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { StaticImageData } from 'next/image';
 import { Card, CardContent } from "@/components/ui/card";
-import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
 
 const MOU = () => {
   interface OutreachCardProps {
@@ -58,114 +54,19 @@ const MOU = () => {
     { Mobileicon: 'https://res.cloudinary.com/dn60aovto/image/upload/v1742390103/Kingss_rvmni9.png' },
     { Mobileicon: 'https://res.cloudinary.com/dn60aovto/image/upload/v1742390102/Gnanamani_plh5hj.png' },
   ];
-  // gsap animation 
-
-  const mOURef = useRef<HTMLDivElement>(null);
-  const cardRefs = useRef<HTMLDivElement[]>([]);
-
-  useEffect(() => {
-    if (!mOURef.current) return;
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: mOURef.current,
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
-        markers: false
-      }
-    });
-
-    // Animate the MOU container
-    tl.fromTo(
-      mOURef.current,
-      {
-        opacity: 0,
-        y: 100,
-        scale: 0.9
-      },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.5,
-        ease: "power2.out"
-      }
-    );
-
-    // Animate each card with stagger
-    cardRefs.current.forEach((card, index) => {
-      if (card) {
-        tl.fromTo(
-          card,
-          {
-            opacity: 0,
-            y: 100
-          },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.5,
-            ease: "power2.out",
-            delay: index * 0.1
-          }
-        );
-      }
-    });
-
-    return () => {
-      tl.kill();
-    };
-  }, [mOURef, cardRefs]);
 
   return (
     <>
-      {/* <div className="container hidden min-h-96 lg:block overflow-hidden mx-auto mt-20 p-10 px-6 text-center relative space-y-5">
-        <TextGenerateEffect 
-            words="OUR MOU PARTNERS" 
-            className=" text-[#141515] font-bold mb-4 lg:text-4xl text-xl  "
-          />
-        <p className="mb-8 lg:w-8/12 w-12/12 mx-auto  text-center">
-        At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution&apos;s learning experience.
-        </p>
-        <Marquee gradient={false} pauseOnHover={true} speed={50} direction="left" className="">
-          <div className="flex lg:mb-20 lg:gap-10 lg:h-auto h-40 lg:ml-10 gap-5 ml-5">
-            {data.map((item, index) => (
-              <OutreachCard
-                key={`additional-${index}`}
-                icon={item.icon}
-                className="lg:w-[300px] lg:h-[90px] border-none"
-              />
-            ))}
-          </div>
-        </Marquee>
-        <div className='w-full lg:h-[10rem] hidden md:block h-32 py-10 px-20 absolute left-0 top-40 lg:top-[11rem] lg:flex gap-4 justify-center z-20 bg-gradient-to-r from-white via-transparent to-white overflow-x-hidden'>
-        </div>
-      </div> */}
-      <div
-        ref={mOURef}
-        className="container hidden min-h-96 lg:block overflow-hidden mx-auto  p-10 px-6 text-center relative space-y-5"
-      >
+      <div className="container hidden min-h-20 lg:block overflow-hidden mx-auto  p-10 px-6 text-center relative space-y-5">
         {/* Header Section */}
-        <TextGenerateEffect
-          words="OUR MOU PARTNERS"
-          className="text-[#141515] font-bold mb-4 lg:text-4xl text-xl"
-        />
+        <h1 className="text-[#141515] font-bold mb-4 lg:text-4xl text-xl">OUR MOU PARTNERS</h1>
         <p className="mb-8 lg:w-8/12 w-12/12 mx-auto text-center">
           At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution&apos;s learning experience.
         </p>
         <Marquee gradient={false} pauseOnHover={true} speed={50} direction="left" className="">
           <div className="flex lg:mb-20 lg:gap-10 lg:h-auto h-40 lg:ml-10 gap-5 ml-5">
             {data.map((item, index) => (
-              <div
-                key={`additional-${index}`}
-                ref={(el: HTMLDivElement | null) => {
-                  if (el) {
-                    cardRefs.current[index] = el;
-                  }
-                }}
-                className="lg:w-[300px] lg:h-[90px] border-none"
-              >
+              <div key={`additional-${index}`} className="lg:w-[300px] lg:h-[90px] border-none">
                 <OutreachCard
                   icon={item.icon}
                   className="w-full h-full"
@@ -177,7 +78,6 @@ const MOU = () => {
         <div className='w-full lg:h-[10rem] hidden md:block h-32 py-10 px-20 absolute left-0 top-40 lg:top-[11rem] lg:flex gap-4 justify-center z-20 bg-gradient-to-r from-white via-transparent to-white overflow-x-hidden'>
         </div>
       </div>
-
 
       {/* Mobile view */}
       <div className="container  lg:hidden block mx-auto xl:container min-h-80 text-center overflow-hidden relative lg:my-20">
@@ -200,6 +100,6 @@ const MOU = () => {
       </div>
     </>
   );
-}
+};
 
 export default MOU;

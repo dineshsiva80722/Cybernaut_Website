@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 
 
@@ -48,14 +47,10 @@ function Vision() {
       {/* Left side content */}
       <div className="w-full md:w-1/2  mx-auto flex flex-col justify-center pr-0 md:pr-8  lg:space-y-5">
 
-        {/* <h1 style={{ lineHeight: "1.2" }} className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+        <h1 style={{ lineHeight: "1.2" }} className="text-3xl md:te xt-4xl lg:text-5xl font-bold text-gray-900">
           Cybernaut Developers Student Community
-        </h1> */}
-        <TextGenerateEffect
-                words="Cybernaut Developers Student Community"
-                className="text-[clamp(2rem, 2.5vw, 3rem)] md:text-4xl lg:text-5xl font-bold text-gray-900"
-              />
-
+        </h1>
+        
         <p className="text-gray-700 text-lg ">
           Connect with top tech minds and access exclusive resources. you don&#39;t just learn innovation—you build it!
         </p>

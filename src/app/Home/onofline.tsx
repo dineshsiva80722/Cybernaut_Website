@@ -189,7 +189,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import Commonbtn from '@/components/ui/Commonbtn';
 import { ArrowRight } from 'lucide-react';
 
@@ -234,15 +233,12 @@ function OnlineOffline() {
     };
 
     return (
-        <div className="container py-5">
+        <div className="container py-2">
             <div className="mx-auto flex-wrap xl:container">
-                {/* <h1 className="text-center lg:w-full w-60 mx-auto xl:container lg:text-4xl text-xl font-bold my-4">
+                <h1 className="text-center lg:w-full w-60 mx-auto xl:container lg:text-4xl text-xl font-bold my-4">
                     Learn. Practice. Earn. <br /> Have Fun!
-                </h1> */}
-                <TextGenerateEffect
-                    words="Learn. Practice. Earn. Have Fun!"
-                    className="text-[clamp(2rem, 2.5vw, 3rem)] w-full text-[#141515] text-center mx-auto font-bold mb-4 "
-                />
+                </h1>
+             
 
                 <section>
                     <div className="flex justify-center my-6">
@@ -291,7 +287,7 @@ function OnlineOffline() {
                                         }`}
                                 >
                                     <h1 className="text-4xl font-bold text-black">
-                                        Online Learning
+                                        Hi Sagos
                                     </h1>
                                 </div>
                                 <div
@@ -301,7 +297,7 @@ function OnlineOffline() {
                                         }`}
                                 >
                                     <h1 className="text-4xl font-bold text-black">
-                                        Offline Learning
+                                        Hello Sagos
                                     </h1>
                                 </div>
                             </div>

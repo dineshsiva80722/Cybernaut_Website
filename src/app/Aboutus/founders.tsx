@@ -8,7 +8,6 @@ import AnimatedTooltip from '@/components/ui/animated-tooltip'
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { StaticImageData } from 'next/image';
 import Commonbtn from '@/components/ui/Commonbtn';
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { ArrowRight } from 'lucide-react';
 const people: { id: number; name: string; designation: string; image: string | StaticImageData; }[] = [
   {
@@ -219,11 +218,8 @@ const Founders = () => {
       {/* ================================================================================================================ */}
       <section className='space-y-10 py-10'>
         <div className='flex flex-col justify-center space-y-5 mx-auto py-10'>
-          {/* <h1 className='lg:text-3xl text-2xl   text-center  font-bold my-2 gap-2 '>MEET OUR FOUNDERS </h1> */}
-          <TextGenerateEffect
-            words="MEET OUR FOUNDERS"
-            className="lg:text-3xl text-2xl text-center font-bold my-2 gap-2"
-          />
+          <h1 className='lg:text-3xl text-2xl   text-center  font-bold my-2 gap-2 '>MEET OUR FOUNDERS </h1>
+
           <p className='text-center lg:max-w-3xl w-11/12  text-sm lg:text-lg mx-auto'>
             Unlock your potential with our advanced educational tools and top-tier training. Join 10,000+ successful learners and enhance your skills with Tech Trio, Full Stack, UI & UX, and more. Find the perfect program for your career goals today.
           </p>
@@ -232,24 +228,18 @@ const Founders = () => {
           {/* Left Content */}
           <div className="w-full  min-h-96 flex items-center justify-center py-10 lg:py-0  ">
             <div className='lg:w-[33rem] w-full  min-h-80  space-y-2'>
-              {/* <h1 className="text-2xl hidden lg:block md:text-2xl lg:text-2xl font-bold text-[#1F1F3D]">
+              <h1 className="text-2xl hidden lg:block md:text-2xl lg:text-2xl font-bold text-[#1F1F3D]">
                 Hello, I&apos;m Jayasurya Gnanavel
-              </h1> */}
-              <TextGenerateEffect
-                words="Hello, I'm Jayasurya Gnanavel"
-                className="text-black lg:text-2xl text-[clamp(2rem, 2.5vw, 3rem)] font-bold"
-              />
+              </h1>
+
 
               <h2 className="text-xl md:text-xl text-[#00A3FF] font-semibold">
                 Founder & CEO
               </h2>
-              {/* <p className="text-gray-600 lg:text-md text-sm lg:text-start text-justify leading-relaxed ">
+              <p className="text-gray-600 lg:text-md text-sm lg:text-start text-justify leading-relaxed ">
                 Jaya Surya is a passionate philomath from India, dedicated to teaching, inspiring, and shaping future leaders. Specializing in career and business strategy, he guides youth in discovering their purpose and pursuing it confidently. With a mission to empower the next generation, he encourages bold thinking, decisive action, and impactful leadership.
-              </p> */}
-              <TextGenerateEffect
-                words="Jaya Surya is a passionate philomath from India, dedicated to teaching, inspiring, and shaping future leaders. Specializing in career and business strategy, he guides youth in discovering their purpose and pursuing it confidently. With a mission to empower the next generation, he encourages bold thinking, decisive action, and impactful leadership."
-                className="text-gray-600 lg:text-md text-sm font-medium lg:text-start text-justify leading-relaxed ">
-              </TextGenerateEffect>
+              </p>
+
               <div className="flex flex-row items-start relative justify-start w-[14rem]">
                 <AnimatedTooltip items={people} />
               </div>
@@ -319,24 +309,15 @@ const Founders = () => {
 
           <div className="w-full  min-h-96 flex items-center justify-center ">
             <div className='w-[33rem] min-h-80  space-y-3'>
-              {/* <h1 className="text-3xl md:text-2xl lg:text-2xl font-bold    text-[#1F1F3D]">
+              <h1 className="text-3xl md:text-2xl lg:text-2xl font-bold    text-[#1F1F3D]">
                 Hello, I&apos;m Manish Kumar
-              </h1> */}
-              <TextGenerateEffect
-                words="Hello, I'm Manish Kumar"
-                className="text-black lg:text-2xl text-[clamp(2rem, 2.5vw, 3rem)] font-bold "
-              />
-
+              </h1>
               <h2 className="text-xl md:text-xl text-[#00A3FF] font-semibold">
                 Co-Founder & President
               </h2>
-              {/* <p className="text-gray-600 text-md leading-relaxed ">
+              <p className="text-gray-600 text-md leading-relaxed ">
                 B. Manish Kumar, President and UI/UX Designer at Cybernaut, combines design expertise with strategic vision. His commitment to quality drives innovation and supports the company&apos;s growth, shaping Cybernaut&apos;s journey toward long-term success and excellence in education and technology.
-              </p> */}
-              <TextGenerateEffect
-                words="B. Manish Kumar, President and UI/UX Designer at Cybernaut, combines design expertise with strategic vision. His commitment to quality drives innovation and supports the company's growth, shaping Cybernaut's journey toward long-term success and excellence in education and technology."
-                className="text-gray-600 text-md font-medium leading-relaxed ">
-              </TextGenerateEffect>
+              </p>
               <div className="flex flex-row items-start relative justify-start w-[14rem]">
                 <AnimatedTooltip items={people} />
               </div>

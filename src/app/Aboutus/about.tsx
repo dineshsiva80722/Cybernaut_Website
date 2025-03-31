@@ -4,7 +4,6 @@ import { Trophy, Lightbulb } from 'lucide-react';
 import Image from 'next/image';
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useRef } from "react";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 function About() {
     return (
@@ -105,14 +104,9 @@ function About() {
                         </div>
                     </div>
                     {/* Main Heading */}
-                    {/* <h1 className="text-xl lg:text-4xl font-bold text-gray-800">
+                    <h1 className="text-xl lg:text-4xl max-w-xl font-bold text-gray-800">
                         Building a Community for Lifelong Learning and Growth
-                    </h1> */}
-                    <TextGenerateEffect
-                        words="Building a Community for Lifelong Learning and Growth"
-                        className="text-xl lg:text-4xl lg:w-10/12 font-bold text-gray-800"
-                    />
-
+                    </h1>
                     {/* Description */}
                     <p className="text-gray-600 lg:w-10/12 lg:text-start text-justify ">
                         At Cybernaut Edu-Tech, we offer premier educational solutions, including

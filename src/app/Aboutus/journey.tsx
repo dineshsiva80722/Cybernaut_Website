@@ -5,7 +5,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 // import { Calendar, ArrowRight } from 'lucide-react';
 import { StaticImageData } from 'next/image';
 
@@ -139,13 +138,9 @@ export default function Journey() {
       <section className="lg:block hidden px-4 py-10 bg-sky-50 md:px-6 lg:px-8 mx-auto xl:container">
         <div className="hidden lg:block mx-auto max-w-7xl">
           <div className="text-center mb-12">
-            {/* <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-4">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-4">
               Our Journey
-            </h1> */}
-            <TextGenerateEffect
-              words="Our Journey"
-              className="text-4xl font-bold text-gray-900 sm:text-5xl mb-4"
-            />
+            </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               As your business grows, Sagstainable grows with you. Our platform&apos;s flexibility allows you to adapt and scale without compromising
               on performance or sustainability.
