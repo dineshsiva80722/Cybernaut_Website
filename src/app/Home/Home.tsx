@@ -346,7 +346,7 @@ export default function Home() {
     // mic animeation
 
     const [scrollY, setScrollY] = useState(0);
-    const [currentQuote, setCurrentQuote] = useState(0);
+    const [, setCurrentQuote] = useState(0);
 
     const quotes = [
         "Connecting Minds, Collaborating on Ideas, and Creating the Future",

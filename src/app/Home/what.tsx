@@ -10,7 +10,6 @@ const WhatWeDo = () => {
                   like MAANG.`;
 
   // Refs for animation
-  const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const featureRefs = useRef<HTMLDivElement[]>([]);
 
