@@ -395,7 +395,7 @@ export default function Home() {
                     <main className="mx-auto h-auto w-full max-w-[85vw] rounded-xl sticky top-20  place-content-center overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]">
                         <div className="flex items-center justify-center w-full">
                             <div className="min-h-auto w-[45rem]  p-10 space-y-4">
-                                <h1 className="text-5xl w-[45rem] text-start font-extrabold transition-all duration-300 ease-in-out">{getContent(scrollTranslate)}</h1>
+                                <h1 className="text-5xl w-[45rem] text-start font-bold transition-all duration-300 ease-in-out">{getContent(scrollTranslate)}</h1>
                                 <div className="w-full">
                                     <div className="transform py-5 overflow-hidden">
                                         <h1 className="text-[18px] text-gray-500 transition-all duration-300 ease-in-out">
