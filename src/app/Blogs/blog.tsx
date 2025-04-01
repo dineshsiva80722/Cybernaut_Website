@@ -270,7 +270,7 @@ function App() {
                             className="bg-gradient-to-br from-slate-300 fixed to-slate-500 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
                         >
                             <h1 className='uppercase font-extrabold text-[#fff]'>Blog</h1> <br />
-                            <h1 className="lg:w-[50rem] w-[30rem]  -mt-10 place-self-center text-center lg:text-5xl md:text-2xl text-xl mx-auto">
+                            <h1 className="lg:w-[50rem] w-80  -mt-10 place-self-center text-center lg:text-5xl md:text-2xl text-sm mx-auto">
                                 Our Mission is to make <span className="text-blue-500">Knowledge</span> and{' '}
                                 <span className="text-blue-500">News accessible</span> for <span className="text-blue-500">Everyone.</span>
                             </h1>
