@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Mobileoffers() {
   const [activeTab, setActiveTab] = useState('colleges');
@@ -66,12 +67,17 @@ function Mobileoffers() {
               </div>
 
               <div className="mt-6 flex gap-4">
+                <Link href="/contact">
                 <button className="bg-blue-500 text-white px-2 py-2 rounded-md font-medium hover:bg-blue-600 transition-colors">
                   Contact us
                 </button>
+                </Link>
+
+                <Link href="/Program">
                 <button className="text-blue-500 flex items-center gap-1 px-2 py-2 font-medium hover:text-blue-600 transition-colors">
                   Learn more <ChevronRight size={16} />
                 </button>
+                </Link>
               </div>
 
               <div className="mt-6 grid grid-cols-2 gap-4">
@@ -125,12 +131,16 @@ function Mobileoffers() {
               </div>
 
               <div className="mt-6 flex gap-4">
+                <Link href="/contact">
                 <button className="bg-blue-500 text-white px-2 py-2 rounded-md font-medium hover:bg-blue-600 transition-colors">
                   Partner with us
                 </button>
+                </Link>
+                <Link href="/Program">
                 <button className="text-blue-500 flex items-center gap-1 px-2 py-2 font-medium hover:text-blue-600 transition-colors">
                   Learn more <ChevronRight size={16} />
                 </button>
+                </Link>
               </div>
 
               <div className="mt-6 grid grid-cols-2 gap-4">

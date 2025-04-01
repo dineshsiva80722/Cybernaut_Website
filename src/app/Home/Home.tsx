@@ -592,11 +592,16 @@ export default function Home() {
                     </div>
 
                     <div className="flex justify-center gap-3 ">
+
                         <button className='lg:w-80 w-1/2 h-10 text-xs border bg-sky-500 text-white border-sky-500 rounded-sm py-2'>
-                            get started
+                            <Link href="/contact">
+                                get started
+                            </Link>
                         </button>
                         <button className='lg:w-80 w-1/2 h-10 text-sm border border-sky-500 rounded-sm py-2'>
-                            Explore Solutions
+                            <Link href="/Program">
+                                Explore Solutions
+                            </Link>
                         </button>
                     </div>
 
@@ -618,7 +623,7 @@ export default function Home() {
                 <div className="w-full h-96 relative items-center justify-center flex">
                     <div className="w-10/12 h-72 relative left-5  top-2 mx-auto rounded-xl bg-sky-300"></div>
                     <div className="w-11/12 h-[18rem] absolute border-2 overflow-hidden border-sky-300 mx-auto rounded-xl bg-white">
-                        
+
                         <Slider
                             dots={false}
                             infinite={true}
