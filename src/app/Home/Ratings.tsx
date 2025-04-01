@@ -65,7 +65,7 @@ const Ratings: React.FC<RatingsProps> = () => {
                                     {item.Ratings}
                                     {item.starIcon}
                                 </h1>
-                                <p className={`text-[${index === 0 ? '0.6rem' : '0.7rem'}] font-normal text-gray-700`}>{item.Reviews}</p>
+                                <p className={`text-[${index === 0 ? '0.7rem' : '0.7rem'}] font-normal text-gray-700`}>{item.Reviews}</p>
                             </div>
                         ))}
                     </div>
