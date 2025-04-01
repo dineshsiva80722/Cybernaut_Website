@@ -8,7 +8,8 @@ import { StaticImageData } from 'next/image'
 const courseList = [
     {
         id: 1,
-        title: "Tech Trio",
+        title: "tech-trio",
+        coursename:'TechTrio',
         icon: "https://res.cloudinary.com/dn60aovto/image/upload/v1742448913/Tech_trio_avv3ny.png",
         Duriation: "60+ Hours",
         Language: "Tamil",
@@ -22,7 +23,8 @@ const courseList = [
     },
     {
         id: 2,
-        title: "MetaZen",
+        title: "metazen",
+        coursename:'Metazen',
         icon: "https://res.cloudinary.com/dn60aovto/image/upload/v1742448914/Metazen_bvsqdi.png",
         Duriation: "60+ Hours",
         Language: "Tamil",
@@ -36,7 +38,8 @@ const courseList = [
     },
     {
         id: 3,
-        title: "UI & UX Design",
+        title: "ui-ux-design",
+        coursename:'UIUXDesign',
         icon: "https://res.cloudinary.com/dn60aovto/image/upload/v1742448913/ux_xfzu2m.png",
         Duriation: "60+ Hours",
         Language: "Tamil",
@@ -50,7 +53,8 @@ const courseList = [
     },
     {
         id: 4,
-        title: "Full Stack Development",
+        title: "full-stack-development",
+        coursename:'FullStackDevelopment',
         icon: "https://res.cloudinary.com/dn60aovto/image/upload/v1742448916/Full_Stack_pwfclb.png",
         Duriation: "60+ Hours",
         Language: "Tamil",
@@ -64,7 +68,8 @@ const courseList = [
     },
     {
         id: 5,
-        title: "Data Analytics",
+        title: "data-analytics",
+        coursename:'DataAnalytics',
         icon: "https://res.cloudinary.com/dn60aovto/image/upload/v1742448915/DataAnalytics_vnount.png",
         Duriation: "60+ Hours",
         Language: "Tamil",
@@ -81,6 +86,7 @@ const courseList = [
 interface CourseItem {
     id: number;
     title: string;
+    coursename: string;
     icon: string | StaticImageData;
     Duriation: string;
     Language: string;
@@ -306,7 +312,7 @@ function Coursecards() {
 }
 
 // CourseCard component
-function CourseCard({ item }: { item: CourseItem  }) {
+function CourseCard({ item }: { item: CourseItem }) {
     return (
         <div className="flex flex-col  min-w-64 lg:w-full bg-white hover:border hover:border-gray-800 rounded-xl  overflow-hidden hover:shadow-lg transition-shadow duration-300">
             {/* Image container with aspect ratio */}
@@ -324,7 +330,7 @@ function CourseCard({ item }: { item: CourseItem  }) {
             <div className="flex flex-col  flex-grow p-4 sm:p-5 gap-4">
                 {/* Title with responsive font size */}
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 line-clamp-2">
-                    {item.title}
+                    {item.coursename}
                 </h3>
 
                 {/* Course details with responsive layout */}

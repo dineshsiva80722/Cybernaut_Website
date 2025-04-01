@@ -477,58 +477,61 @@ export default function Home() {
             </div> */}
             <div className="container mx-auto hidden lg:block w-full max-w-[90vw] min-h-screen px-4 pb-40">
                 <section className="container mx-auto min-h-[140rem] relative top-20 w-full">
-                    <main className="mx-auto h-auto w-full max-w-[85vw] rounded-xl sticky top-20 place-content-center overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]">
-                        <div className="flex items-center justify-center w-full">
-                            <div className="min-h-auto w-[45rem] md:w-[40rem] lg:w-[45rem] xl:w-[50rem] p-10 space-y-4">
-                                <h1 className="text-4xl md:text-3xl lg:text-4xl xl:text-5xl w-[40rem] md:w-[35rem] lg:w-[40rem] xl:w-[45rem] text-start font-semibold md:font-medium lg:font-semibold xl:font-bold transition-all duration-300 ease-in-out">{getContent(scrollTranslate)}</h1>
-                                <div className="w-full">
-                                    <div className="transform py-5 overflow-hidden">
-                                        <h1 className="text-[16px] md:text-[14px] lg:text-[16px] xl:text-[18px] w-[35rem] md:w-[30rem] lg:w-[35rem] xl:w-[40rem] text-gray-500 transition-all duration-300 ease-in-out">
-                                            {content}
-                                        </h1>
-                                    </div>
-                                </div>
-                                <div className='max-w-[25vw] md:max-w-[20vw] lg:max-w-[25vw] xl:max-w-[30vw] overflow-hidden space-y-3'>
-                                    <div className="flex w-full max-w-[50vw] md:max-w-[45vw] lg:max-w-[50vw] xl:max-w-[60vw] items-center justify-between">
-                                        <div className="w-1/2">
-                                            <button className="overflow-hidden w-24 md:w-32 lg:w-36 xl:w-40 p-2 px-6 py-2 bg-sky-100 text-black border-none rounded-full text-sm md:text-base lg:text-lg xl:text-xl font-medium cursor-pointer relative z-10 group">
-                                                Contact us
-                                                <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
-                                                <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
-                                                <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
-                                                <Link href="/contact">
-                                                    <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-2 left-8 z-10 text-lg">Contact us</span>
-                                                </Link>
-                                            </button>
-                                        </div>
-                                        <div className="">
-                                            <Link href="/Program">
-                                                <button className="flex justify-center cursor-pointer min-w-36 md:min-w-40 lg:min-w-44 xl:min-w-48 py-2 rounded-full text-white bg-[#2A2A2A] px-5">
-                                                    Explore Solutions
-                                                </button>
-                                            </Link>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex w-full max-w-[45vw] md:max-w-[40vw] lg:max-w-[45vw] xl:max-w-[50vw] items-center justify-start">
-                                        <div className="w-1/2">
-                                            <h6 className="text-[14px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-medium text-gray-400">Students Trusted on</h6>
-                                            <div className="flex flex-row items-start justify-start w-[12rem] md:w-[10rem] lg:w-[12rem] xl:w-[14rem] gap-2">
-                                                <AnimatedTooltip items={people} />
-                                                <h1 className="pl-5 font-bold text-[22px] md:text-[20px] lg:text-[22px] xl:text-[24px]">1L+</h1>
-                                            </div>
-                                        </div>
-                                        <div className="w-1/2 h-16 space-y-3 text-end">
-                                            <h6 className="text-[14px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-medium text-gray-400">Students Trained</h6>
-                                            <h1 className="pl-5 font-bold text-[22px] md:text-[20px] lg:text-[22px] xl:text-[24px]">75K+</h1>
-                                        </div>
-                                    </div>
+                    <main className="mx-auto h-auto w-11/12 md:w-10/12 lg:w-11/12 xl:w-11/12 rounded-xl sticky top-20 place-content-center overflow-hidden shadow-[0px_-80px_50px_5px_#F8F8F8]">                        <div className="flex items-center justify-center w-full">
+                        <div className="min-h-auto w-1/2 space-y-4">
+                            <h1 className="text-3xl md:text-2xl lg:text-3xl xl:text-4xl w-[35rem] md:w-[30rem] lg:w-[35rem] xl:w-[40rem] text-start font-semibold md:font-medium lg:font-semibold xl:font-bold transition-all duration-300 ease-in-out">
+                                <span className="text-[clamp(1.5rem,4vw,2.5rem)]">
+                                    {getContent(scrollTranslate)}
+                                </span>
+                            </h1>
+                            <div className="w-full">
+                                <div className="transform py-5 overflow-hidden">
+                                    <h1 className="text-[16px] md:text-[14px] lg:text-[16px] xl:text-[18px] w-[35rem] md:w-[30rem] lg:w-[35rem] xl:w-[40rem] text-gray-500 transition-all duration-300 ease-in-out">
+                                        {content}
+                                    </h1>
                                 </div>
                             </div>
-                            <div className="hidden relative right-10 md:block">
-                                <HeroIllustration />
+                            <div className='max-w-[25vw] md:max-w-[20vw] lg:max-w-[25vw] xl:max-w-[30vw] overflow-hidden space-y-3'>
+                                <div className="flex w-full max-w-[50vw] md:max-w-[45vw] lg:max-w-[50vw] xl:max-w-[60vw] items-center justify-between">
+                                    <div className="w-1/2">
+                                        <button className="overflow-hidden w-24 md:w-32 lg:w-36 xl:w-40 p-2 px-6 py-2 bg-sky-100 text-black border-none rounded-full text-sm md:text-base lg:text-lg xl:text-xl font-medium cursor-pointer relative z-10 group">
+                                            Contact us
+                                            <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
+                                            <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
+                                            <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
+                                            <Link href="/contact">
+                                                <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-2 left-8 z-10 text-lg">Contact us</span>
+                                            </Link>
+                                        </button>
+                                    </div>
+                                    <div className="">
+                                        <Link href="/Program">
+                                            <button className="flex justify-center cursor-pointer min-w-36 md:min-w-40 lg:min-w-44 xl:min-w-48 py-2 rounded-full text-white bg-[#2A2A2A] px-5">
+                                                Explore Solutions
+                                            </button>
+                                        </Link>
+                                    </div>
+                                </div>
+
+                                <div className="flex w-full max-w-[45vw] md:max-w-[40vw] lg:max-w-[45vw] xl:max-w-[50vw] items-center justify-start">
+                                    <div className="w-1/2">
+                                        <h6 className="text-[14px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-medium text-gray-400">Students Trusted on</h6>
+                                        <div className="flex flex-row items-start justify-start w-[12rem] md:w-[10rem] lg:w-[12rem] xl:w-[14rem] gap-2">
+                                            <AnimatedTooltip items={people} />
+                                            <h1 className="pl-5 font-bold text-[22px] md:text-[20px] lg:text-[22px] xl:text-[24px]">1L+</h1>
+                                        </div>
+                                    </div>
+                                    <div className="w-1/2 h-16 space-y-3 text-end">
+                                        <h6 className="text-[14px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-medium text-gray-400">Students Trained</h6>
+                                        <h1 className="pl-5 font-bold text-[22px] md:text-[20px] lg:text-[22px] xl:text-[24px]">75K+</h1>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div className="hidden relative right-10 md:block">
+                            <HeroIllustration />
+                        </div>
+                    </div>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
                             <div className="absolute top-0 left-60 md:left-40 lg:left-60 xl:left-80 z-50 right-0 mx-auto w-full">

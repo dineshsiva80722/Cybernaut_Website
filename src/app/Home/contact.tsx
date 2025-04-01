@@ -78,7 +78,7 @@ function Contact() {
     return (
         <>
             {/* <FeaturableWidget /> */}
-            <section className='relative min-h-[40rem]  justify-center items-center py-6 md:py-16 px-4 bg-white overflow-hidden'>
+            <section className='relative min-h-[20rem]  justify-center items-center py-6 md:pt-16 px-4 bg-white overflow-hidden'>
                 <div className='relative w-full max-w-6xl mx-auto'>
                     <div className='relative w-full lg:h-96 flex shadow-md rounded-2xl bg-white flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12 overflow-hidden'>
                         {/* Left Section */}
@@ -100,8 +100,6 @@ function Contact() {
                                   
                                     </div>
                                 </div>
-
-
                                 <Link href="/Program " className=''>
                                     <Commonbtn className="flex items-center text-white justify-between gap-3  ">
                                         Get Started Now
