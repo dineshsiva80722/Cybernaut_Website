@@ -22,19 +22,20 @@ const Page = () => {
   return (
     <div>
       <Nav />
-      <div className='w-auto h-auto float-end sticky top-[40rem] z-50 p-5'>
 
+      <div className='w-auto h-auto md:float-end md:block hidden sticky top-[40rem] z-50 p-5'>
         <button
           onClick={scrollToTop}
           className={`
-                fixed bottom-8 right-8
-                w-[45px] h-[45px]
-                bg-gradient-to-r from-[#61bdfa] to-[#4cd6f8]
-                flex items-center justify-center
-                rounded-full cursor-pointer border-none
-                group
-                 ${showButton ? 'opacity-100' : 'opacity-0'}
-                transition-opacity duration-300`}
+              fixed bottom-8 right-8
+              w-[45px] h-[45px]
+              bg-gradient-to-r from-[#61bdfa] to-[#4cd6f8]
+              flex items-center justify-center
+              rounded-full cursor-pointer border-none
+              group
+              ${showButton ? 'opacity-100' : 'opacity-0'}
+              transition-opacity duration-300
+           `}
         >
           <ArrowUp
             className="w-5 h-5 text-white group-hover:animate-[slide-in-bottom_0.7s_cubic-bezier(0.25,0.46,0.45,0.94)_both]"
@@ -43,8 +44,8 @@ const Page = () => {
             Back to Top
           </span>
         </button>
-
       </div>
+
       <FullStackDevelopment />
 
       {/* <Contact /> */}

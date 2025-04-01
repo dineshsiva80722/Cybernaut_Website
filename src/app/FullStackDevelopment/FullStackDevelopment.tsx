@@ -401,10 +401,10 @@ const WebDevelopment = () => {
 
 
                 </div>
+                <div className="w-ful pt-10 place-content-center">
+                    <Footer />
+                </div>
             </section>
-            <div ref={faqsRef} className="w-ful pt-10 place-content-center">
-                <Footer />
-            </div>
         </section>
     )
 }

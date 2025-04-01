@@ -3,6 +3,7 @@ import React from 'react'
 import MetaZen from './MetaZen'
 import Nav from '@/app/Home/nav'
 import { useState, useEffect } from 'react'
+import Footer from '@/app/Home/footer'
 import { ArrowUp } from 'lucide-react';
 
 const Page = () => {
@@ -48,7 +49,7 @@ const Page = () => {
 
       </div>
       <MetaZen />
-      {/* <Footer /> */}
+      <Footer />
       {/* <Contact /> */}
     </div>
   )
