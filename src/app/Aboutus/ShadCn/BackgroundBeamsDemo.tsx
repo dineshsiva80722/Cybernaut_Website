@@ -46,7 +46,7 @@ export default function ParticlesDemo() {
               />
               <TextGenerateEffect
                 words="Around"
-                className="lg:text-8xl md:text-3xl text-6xl text-black"
+                className="lg:text-8xl md:text-2xl text-md text-black"
               />
               </div>
               
