@@ -25,9 +25,8 @@ const content = {
     courseTitle: 'Data Analytics',
     courseDescription: 'Our Data Analytics course equips you with essential skills in data manipulation, visualization, statistical analysis, and machine learning, preparing you for a successful career as a data analyst. Full Stack Development with Meta Zen! Learn front-end, back-end, real-world projects, and soft skills. Gain hands-on experience, job-ready skills, and launch a successful web development career.',
     detailedDescription1: `The Our Data Analytics course Our Data Analytics course is designed to equip you with the essential skills needed to excel in the field of data analysis. Covering key topics such as Python, data manipulation, visualization, statistical analysis, and machine learning, you will work with industry-standard tools like Pandas, Matplotlib, Seaborn, Tableau, and Scikit-learn. The program is structured to guide you through the entire data analytics pipeline, from data cleaning to building predictive models, deploying them, and interpreting insights for business decisions. By the end of the course, you will have the technical expertise, problem-solving abilities, and industry-relevant skills required to thrive in the data-driven world. This program also includes hands-on projects and career support to help you build a strong portfolio. Start your journey to becoming a data analyst today!`,
-    // detailedDescription2: ` With placement support, industry-focused curriculum, and interactive learning, this course provides hands-on experience with HTML, CSS, JavaScript, React.js, and backend development, equipping learners with placement-ready skills for in-demand tech jobs.`,
     certificate: {
-    
+
         benefits: [
             'Earn course and internship certificates to validate expertise.',
             'Build a strong portfolio with 10+ mini projects and 5 major projects.',
@@ -131,19 +130,6 @@ const DataAnalytics = () => {
         faqsRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    // const [visibleOption, setVisibleOption] = useState(0);
-    // const options = ['Description', 'Modules', 'Benefits', 'Certification', 'Requirements', 'Testimonials', 'FAQs'];
-
-    // const handleScroll = (event: React.UIEvent) => {
-    //     const { scrollTop, clientHeight } = event.currentTarget;
-    //     const scrollHeight = event.currentTarget.scrollHeight;
-
-    //     if (scrollTop + clientHeight >= scrollHeight) {
-    //         setVisibleOption(prev => Math.min(prev + 1, options.length - 1)); // Move to next option
-    //     } else if (scrollTop === 0) {
-    //         setVisibleOption(prev => Math.max(prev - 1, 0)); // Move to previous option
-    //     }
-    // };
     const sectionRef = useRef<HTMLDivElement>(null);
     const triggerRef = useRef<HTMLDivElement>(null);
 
@@ -628,6 +614,8 @@ const DataAnalytics = () => {
                                 {/* Left side - Certificate */}
                                 <div className="w-auto h-full lg:h-[25rem] bg-white border object-contain overflow-hidden border-gray-200  rounded-lg shadow-sm">
                                     <Image
+                                        width={500}
+                                        height={500}
                                         src="https://res.cloudinary.com/dn60aovto/image/upload/v1742386629/Web_Dev_cdqdjp.png"
                                         alt="Certificate"
                                         className="object-contain w-full h-full"
@@ -842,113 +830,11 @@ const DataAnalytics = () => {
                             </div>
                         </div>
                     </div>
-
                     <div ref={faqsRef} className="w-ful pt-10 place-content-center">
                         <Fqas />
-
-                    </div>
-                    <div ref={faqsRef} className="w-ful pt-10 place-content-center">
-                        {/* <Contact /> */}
-                        <section className='relative h-[40rem] flex justify-center items-center py-8 md:py-16 px-4 bg-white overflow-hidden my-10'>
-                            <div className='relative w-full max-w-6xl mx-auto'>
-                                <div className='relative w-full lg:h-96 flex shadow-md rounded-2xl bg-white flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12 overflow-hidden'>
-                                    {/* Left Section */}
-                                    <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 rounded-3xl transition-shadow duration-300 '>
-                                        <div className='max-w-md mx-auto space-y-6 md:space-y-4  '>
-                                            <div className="space-y-6">
-                                                <h1 className={`${dancingScript.className} text-3xl md:text-4xl lg:text-5xl text-blue-600 leading-relaxed animate-fade-in`}>
-                                                    Get your quality
-                                                </h1>
-                                                <div className="space-y-2">
-                                                    <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent'>
-                                                        Skills Certificate
-                                                    </h2>
-                                                    <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800'>
-                                                        from the Cybernaut
-                                                    </h2>
-                                                </div>
-                                            </div>
-
-                                            <button className='group w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-[#13D8FB] to-[#00A3FF] px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-medium hover:shadow-lg hover:shadow-blue-200/50 transform hover:-translate-y-0.5 transition-all duration-200'>
-                                                Get Started Now
-                                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                                            </button>
-
-                                            <div className="flex items-center gap-3 text-gray-500">
-                                                <GraduationCap className="w-5 h-5 text-blue-500" />
-                                                <span className="text-sm md:text-base">Join 5000+ certified professionals</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Right Section */}
-                                    <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 backdrop-blur-sm rounded-3xl transition-shadow duration-300'>
-                                        <div className='max-w-md mx-auto space-y-4'>
-                                            <div className="space-y-2">
-                                                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">Subscribe to Our Newsletter</h3>
-                                                <p className="text-gray-600 md:text-lg">Stay updated with our latest courses and opportunities</p>
-                                            </div>
-
-                                            <form onSubmit={handleSubmit} className="space-y-4">
-
-                                                <div className="relative group">
-                                                    <input
-                                                        type="email"
-                                                        value={email}
-                                                        onChange={(e) => setEmail(e.target.value)}
-                                                        placeholder="Enter your email"
-                                                        className="w-full px-6 py-4 rounded-xl bg-white/80 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 outline-none text-base md:text-lg group-hover:border-blue-300"
-                                                        required
-                                                    />
-                                                </div>
-
-                                                <button
-                                                    type="submit"
-                                                    disabled={isLoading}
-                                                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium py-4 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] hover:shadow-lg flex items-center justify-center gap-2 text-base md:text-lg"
-                                                >
-                                                    {isLoading ? 'Sending...' : 'Subscribe Now'}
-                                                </button>
-
-                                            </form>
-
-                                            <p className="text-sm md:text-base text-gray-500 text-center">
-                                                Join 5,000+ subscribers who are already learning with us
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <style jsx>{`
-                @keyframes blob {
-                    0% { transform: translate(0px, 0px) scale(1); }
-                    33% { transform: translate(30px, -50px) scale(1.1); }
-                    66% { transform: translate(-20px, 20px) scale(0.9); }
-                    100% { transform: translate(0px, 0px) scale(1); }
-                }
-                .animate-blob {
-                    animation: blob 7s infinite;
-                }
-                .animation-delay-2000 {
-                    animation-delay: 2s;
-                }
-                .animation-delay-4000 {
-                    animation-delay: 4s;
-                }
-                @keyframes fadeIn {
-                    from { opacity: 0; transform: translateY(10px); }
-                    to { opacity: 1; transform: translateY(0); }
-                }
-                .animate-fade-in {
-                    animation: fadeIn 1s ease-out;
-                }
-            `}</style>
                     </div>
                 </div>
             </section>
-
         </section>
     )
 }
@@ -971,14 +857,14 @@ function AccordionItem({
     onClick: () => void;
 }) {
     return (
-        <div className="rounded-lg my-2 rounded-b-none border-b-[0.2rem]  border-b-blue-600">
+        <div className="rounded-lg my-2 w-11/12 mx-auto rounded-b-none border-b-[0.2rem]  border-b-blue-600">
             <button
                 className={`w-full px-6 py-4  rounded-lg flex items-center justify-between transition-colors duration-200 ${isOpen ? 'bg-white' : 'bg-white hover:bg-gray-50'
                     }`}
                 onClick={onClick}
             >
                 <div className="flex justify-between  w-full items-center gap-3">
-                    <span className="lg:text-lg md:text-md text-sm font-medium  text-gray-900">{language.name}</span>
+                    <span className="text-lg font-medium  text-gray-900">{language.name}</span>
 
                     <svg
                         className={`w-5 h-5 rotate-90 text-blue-500 transform transition-transform duration-200 ease-out ${isOpen ? 'rotate-90' : ''
@@ -1005,7 +891,7 @@ function AccordionItem({
                     {language.subItems?.map((item, index) => (
                         <li
                             key={index}
-                            className="lg:px-6 px-2 text-[0.8rem] lg:text-md py-3   text-gray-400   rounded-lg"
+                            className="lg:px-12 px-2 py-2 text-black lg:text-lg md:text-md text-[0.8rem] rounded-lg"
                         >
                             {item}
                         </li>

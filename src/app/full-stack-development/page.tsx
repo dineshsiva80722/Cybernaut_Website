@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react'
 import FullStackDevelopment from './FullStackDevelopment'
 import Nav from '@/app/Home/nav'
 import { ArrowUp } from 'lucide-react';
+import ContactUs from '../Home/contact';
+import Footer from '../Home/footer';
 
 const Page = () => {
   const [showButton, setShowButton] = useState(false);
@@ -47,8 +49,8 @@ const Page = () => {
       </div>
 
       <FullStackDevelopment />
-
-      {/* <Contact /> */}
+      <ContactUs />
+      <Footer />
     </div>
   )
 }

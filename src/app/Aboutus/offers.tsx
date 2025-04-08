@@ -279,7 +279,6 @@ const Offers = () => {
                                                 </div>
                                             </div>
                                         ))}
-                                        {/* <Button className='p-8 bg-gradient-to-r w-40 from-[#00A3FF] to-[#13D8FB] rounded-full '>Learn more</Button> */}
                                     </div>
                                 </div>
                                 <div>
@@ -323,7 +322,6 @@ const Offers = () => {
                                                 </div>
                                             </div>
                                         ))}
-                                        {/* <Button className='p-8 bg-gradient-to-r w-40 from-[#00A3FF] to-[#13D8FB] rounded-full '>Learn more</Button> */}
                                     </div>
                                 </div>
                                 <div className='w-[30rem]  items-center justify-center flex relative left-32'>

@@ -16,8 +16,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { User, Star, StarHalf, BarChart3 } from 'lucide-react';
-import Contact from '@/app/Home/contact'
-import Footer from '@/app/Home/footer'
 import Image from 'next/image'
 
 const content = {
@@ -137,20 +135,6 @@ const WebDevelopment = () => {
         faqsRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
     const path = usePathname()
-
-    // const [visibleOption, setVisibleOption] = useState(0);
-    // const options = ['Description', 'Modules', 'Benefits', 'Certification', 'Requirements', 'Testimonials', 'FAQs'];
-
-    // const handleScroll = (event: React.UIEvent) => {
-    //     const { scrollTop, clientHeight } = event.currentTarget;
-    //     const scrollHeight = event.currentTarget.scrollHeight;
-
-    //     if (scrollTop + clientHeight >= scrollHeight) {
-    //         setVisibleOption(prev => Math.min(prev + 1, options.length - 1)); // Move to next option
-    //     } else if (scrollTop === 0) {
-    //         setVisibleOption(prev => Math.max(prev - 1, 0)); // Move to previous option
-    //     }
-    // };
     const sectionRef = useRef<HTMLDivElement>(null);
     const triggerRef = useRef<HTMLDivElement>(null);
 
@@ -441,16 +425,6 @@ const WebDevelopment = () => {
                     <div ref={faqsRef} className="w-ful pt-10 place-content-center">
                         <Fqas />
                     </div>
-                    <div ref={faqsRef} className="w-ful pt-10 place-content-center">
-                        <Contact />
-                    </div>
-
-
-
-
-                </div>
-                <div className="w-ful pt-10 place-content-center">
-                    <Footer />
                 </div>
             </section>
         </section>

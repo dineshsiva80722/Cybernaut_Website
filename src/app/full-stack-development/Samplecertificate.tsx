@@ -9,6 +9,8 @@ function Samplecertificate() {
                 {/* Left side - Certificate */}
                 <div className="w-auto h-full lg:h-[25rem] bg-white border object-contain overflow-hidden border-gray-200  rounded-lg shadow-sm">
                     <Image
+                        width={500}
+                        height={500}
                         src="https://res.cloudinary.com/dn60aovto/image/upload/v1742386629/Web_Dev_cdqdjp.png"
                         alt="Certificate"
                         className="object-contain w-full h-full"

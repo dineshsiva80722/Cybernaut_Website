@@ -4,6 +4,7 @@ import Nav from '@/app/Home/nav'
 import Footer from '@/app/Home/footer'
 import DataAnalytics from './DataAnalytics'
 import { ArrowUp } from 'lucide-react';
+import ContactUs from '@/app/Home/contact'
 
 
 const Page = () => {
@@ -50,6 +51,7 @@ return (
 
     </div>
     <DataAnalytics />
+    <ContactUs />
     <Footer />
   </div>
 )

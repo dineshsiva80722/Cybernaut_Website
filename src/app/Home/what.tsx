@@ -110,11 +110,6 @@ const WhatWeDo = () => {
                       <ArrowRight className="h-4 w-4" />
                     </Commonbtn>
                   </Link>
-                  {/*                   
-                    <button className='my-4 flex items-center gap-2 justify-center px-6 py-4 rounded-full bg-gradient-to-r from-[#13D8FB] to-[#00A3FF] text-white'>
-                      View More
-                      <ArrowRight className="h-4 w-4" />
-                    </button> */}
                 </div>
               </div>
             </div>

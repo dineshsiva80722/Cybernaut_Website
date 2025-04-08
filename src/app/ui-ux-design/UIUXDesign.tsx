@@ -15,7 +15,6 @@ import { NumberTicker } from "@/components/magicui/number-ticker";
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
-import Numberbox from "./Numberbox"
 import { User, Star, StarHalf, BarChart3 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -274,9 +273,6 @@ const UIUXDesign = () => {
                                             />
                                         </div>
                                         <div>
-                                            <Numberbox />
-                                        </div>
-                                        <div>
                                             <input
                                                 className="outline-none h-[36px] border border-gray-200 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
                                                 placeholder="Education Qualification"
@@ -319,20 +315,7 @@ const UIUXDesign = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-
-            {/* <div className='flex sticky top-[70px] container mx-auto rounded-t-lg h-12 -mt-12 bg-gray-100 z-10'>
-                <ul className='flex w-full justify-start px-2 overflow-auto scroll-smooth lg:space-x-0 space-x-5 font-semibold'>
-                    <style jsx>{`ul::-webkit-scrollbar {height:1px;}`}</style>
-                    <button className={`w-32 h-10  text-center text-sm ${showDescription ? 'text-blue-600 border-b-2   lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleDescriptionClick}>Description</button>
-                    <button className={`w-32 h-10  text-center text-sm ${showCourses ? 'text-blue-600 border-b-2       lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleModulesClick}>Modules</button>
-                    <button className={`w-32 h-10  text-center text-sm ${showBenefits ? 'text-blue-600 border-b-2      lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleBenefitsClick}>Benefits</button>
-                    <button className={`w-32 h-10  text-center text-sm ${showCertification ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleCertificationClick}>Certification</button>
-                    <button className={`w-32 h-10  text-center text-sm ${showRequirements ? 'text-blue-600 border-b-2  lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleRequirementsClick}>Requirements</button>
-                    <button className={`w-32 h-10  text-center text-sm ${showTestimonials ? 'text-blue-600 border-b-2  lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleTestimonialsClick}>Testimonials</button>
-                    <button className={`w-32 h-10  text-center text-sm ${showFAQs ? 'text-blue-600 border-b-2          lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleFAQsClick}>FAQs</button>
-                </ul>
-            </div> */}
+            </section>  
             <div className='flex sticky top-[70px] w-11/12 mx-auto rounded-t-lg h-12 -mt-12 bg-gray-100 z-10'>
                 <ul className='flex w-full justify-start px-2 overflow-auto scroll-smooth lg:space-x-0 space-x-4 font-semibold'>
                     <style jsx>{`ul::-webkit-scrollbar {height:1px;}`}</style>

@@ -112,61 +112,6 @@ export default function Page() {
 
 
             <div className='block lg:hidden w-full min-h-60'>
-                {/* <div className="flex items-center justify-center p-4">
-                    <div className="bg-blue-50 rounded-3xl p-6 max-w-md w-full">
-                    
-                        <div className="bg-white rounded-3xl p-5 mb-3">
-                            <h2 className="text-lg font-bold text-center text-gray-800">
-                                10+ COLLEGES SUPPORTED
-                            </h2>
-                        </div>
-                        <div className="grid grid-cols-2 gap-3 mb-3">
-                        
-                            <div className="bg-white rounded-3xl p-5 flex items-center justify-center">
-                                <h2 className="text-lg font-bold text-center text-gray-800">
-                                    5K+ STUDENTS<br />TRAINED
-                                </h2>
-                            </div>
-
-                   
-                            <div className="grid grid-cols-1 gap-3">
-                         
-                                <div className="bg-white rounded-3xl p-5 flex items-center justify-center">
-                                    <h2 className="text-lg font-bold text-center text-gray-800">
-                                        5 YEARS OF<br />IMPACT
-                                    </h2>
-                                </div>
-
-                                <div className="bg-white rounded-3xl p-5 flex items-center justify-center">
-                                    <h2 className="text-lg font-bold text-center text-gray-800">
-                                        20+ MOUS<br />SIGNED
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-
-         
-                        <div className="grid grid-cols-2 gap-3 mb-3">
-                            <div className="bg-white rounded-3xl p-5 flex items-center justify-center">
-                                <h2 className="text-lg font-bold text-center text-gray-800">
-                                    1,000+ MAANG<br />ALUMNI
-                                </h2>
-                            </div>
-
-                            <div className="bg-white rounded-3xl p-5 flex items-center justify-center">
-                                <h2 className="text-lg font-bold text-center text-gray-800">
-                                    1500+<br />PROJECT<br />INTERN
-                                </h2>
-                            </div>
-                        </div>
-
-                        <div className="bg-white rounded-3xl p-5 flex items-center justify-center">
-                            <h2 className="text-lg font-bold text-center text-gray-800">
-                                150+ OUTREACH PROGRAMS
-                            </h2>
-                        </div>
-                    </div>
-                </div> */}
                 {/* From Uiverse.io by Uncannypotato69 */}
                 <div
                     className="fitCard flex min-h-[24em] mx-auto w-80 flex-col items-center justify-center gap-[0.5rem] rounded-[1.5em] bg-[#FFFACD] p-[0.5rem] font-monts text-[#B49A18]"

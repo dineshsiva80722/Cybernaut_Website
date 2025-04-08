@@ -49,21 +49,7 @@ const Programs = () => {
                                 />
                             </div>
                         ))}
-                    </Slider>
-
-                    {/* Thumbnail Navigation */}
-                    {/* <div className='absolute  bottom-5  left-1/2  transform -translate-x-1/2 md:flex hidden space-x-2'>
-                        {sliderImages.map((image, index) => (
-                            <div
-                                key={index}
-                                onClick={() => setCurrentSlide(index)}
-                                className={`w-5 h-1 rounded-full cursor-pointer 
-                                    ${currentSlide === index ? 'bg-white w-[6rem] border-none' : 'bg-gray-500'}
-                                    opacity-70 hover:opacity-100 transition-all duration-300`}
-                            />
-                        ))}
-                    </div> */}
-                    
+                    </Slider>                    
                 </div>
                 <div className='container block lg:hidden  relative mx-auto  mt-24'>
                     <Slider
@@ -91,20 +77,6 @@ const Programs = () => {
                             </div>
                         ))}
                     </Slider>
-
-                    {/* Thumbnail Navigation */}
-                    {/* <div className='absolute  bottom-5  left-1/2  transform -translate-x-1/2 md:flex hidden space-x-2'>
-                        {mobileSliderImages.map((image, index) => (
-                            <div
-                                key={index}
-                                onClick={() => setCurrentSlide(index)}
-                                className={`w-5 h-1 rounded-full cursor-pointer 
-                                    ${currentSlide === index ? 'bg-white w-[6rem] border-none' : 'bg-gray-500'}
-                                    opacity-70 hover:opacity-100 transition-all duration-300`}
-                            />
-                        ))}
-                    </div> */}
-                    
                 </div>
             </div>
             

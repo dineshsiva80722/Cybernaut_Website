@@ -130,19 +130,7 @@ const MetaZen = () => {
         faqsRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    // const [visibleOption, setVisibleOption] = useState(0);
-    // const options = ['Description', 'Modules', 'Benefits', 'Certification', 'Requirements', 'Testimonials', 'FAQs'];
 
-    // const handleScroll = (event: React.UIEvent) => {
-    //     const { scrollTop, clientHeight } = event.currentTarget;
-    //     const scrollHeight = event.currentTarget.scrollHeight;
-
-    //     if (scrollTop + clientHeight >= scrollHeight) {
-    //         setVisibleOption(prev => Math.min(prev + 1, options.length - 1)); // Move to next option
-    //     } else if (scrollTop === 0) {
-    //         setVisibleOption(prev => Math.max(prev - 1, 0)); // Move to previous option
-    //     }
-    // };
     const sectionRef = useRef<HTMLDivElement>(null);
     const triggerRef = useRef<HTMLDivElement>(null);
 
@@ -183,19 +171,60 @@ const MetaZen = () => {
     // three courses
 
     const [openIndex, setOpenIndex] = useState<number | null>(null);
-
     const languages: Language[] = [
         {
             name: 'Foundational Computer Science Concepts',
-            subItems: ['This module provides a strong foundation in essential computer science principles. Students will gain knowledge of core topics such as operating systems, networking, Linux commands, databases, and version control with Git and GitHub. Additionally, they will learn about the Software Development Lifecycle (SDLC), covering Agile and Waterfall methodologies, along with key software development phases, including requirement analysis, design, testing, and maintenance.'],
+            subItems: [
+                "Operating Systems Fundamentals",
+                "Networking Basics",
+                "Linux Command Line",
+                "Database Management",
+                "Git & GitHub",
+                "SDLC (Agile & Waterfall)",
+                "Requirement Analysis",
+                "Design & Testing",
+                "Software Maintenance"
+            ],
         },
         {
             name: 'Programming Language & DSA',
-            subItems: ['This module offers in-depth training in a programming language of choice—Python, Java, or C++. Students will master programming fundamentals, including variables, data types, loops, functions, recursion, and object-oriented programming concepts. The module also covers essential data structures such as arrays, linked lists, stacks, queues, trees, graphs, and hash maps. Students will dive into important algorithms, including sorting, searching, dynamic programming, and graph traversal techniques.'],
+            subItems: [
+                "Language Fundamentals",
+                "Variables & Data Types",
+                "Control Structures",
+                "Functions & Recursion",
+                "Object-Oriented Concepts",
+                "Data Structures",
+                "Arrays & Linked Lists",
+                "Stacks & Queues",
+                "Trees & Graphs",
+                "Hash Maps",
+                "Sorting Algorithms",
+                "Searching Algorithms",
+                "Dynamic Programming",
+                "Graph Traversal"
+            ],
         },
         {
             name: 'Specialization Domains',
-            subItems: ['Students can choose a specialization path to gain expertise in high-demand fields: Web Development: Covers frontend technologies like HTML, CSS, JavaScript, and React.js, along with backend development using Node.js, Express, and MongoDB. Students will also explore full-stack concepts such as state management, authentication, and authorization. Artificial Intelligence (AI): Introduces AI and machine learning using Python. Covers key libraries such as NumPy, Pandas, Scikit-learn, and TensorFlow, along with concepts of supervised and unsupervised learning, regression models, and decision trees.'],
+            subItems: [
+                "Web Development",
+                "HTML & CSS",
+                "JavaScript & React.js",
+                "Node.js & Express",
+                "MongoDB",
+                "State Management",
+                "Authentication",
+                "Authorization",
+                "AI & Machine Learning",
+                "NumPy & Pandas",
+                "Scikit-learn",
+                "TensorFlow",
+                "Supervised Learning",
+                "Unsupervised Learning",
+                "Regression Models",
+                "Decision Trees"
+            ],
         },
     ];
 
@@ -572,7 +601,6 @@ const MetaZen = () => {
                         <div className="min-h-[30rem]  items-center justify-center p-8">
                             <div className='py-4'>
                                 <h1 className="text-xl font-semibold">What you Learn</h1>
-                                {/* <p className='text-md text-gray-600'>Whether your're a beginner or have prior experience, our course will equip you with the knowledge and skills needed to excel in the world of STACK development.</p> */}
                             </div>
                             <div className="mx-auto rounded-xl overflow-hidden">
                                 {languages.map((language, index) => (
@@ -836,122 +864,6 @@ const MetaZen = () => {
                         <Fqas />
 
                     </div>
-                    <div ref={faqsRef} className="w-ful pt-10 place-content-center">
-                        {/* <Contact /> */}
-                        <section className='relative h-[40rem] flex justify-center items-center py-8 md:py-16 px-4 bg-white overflow-hidden my-10'>
-                            <div className='relative w-full max-w-6xl mx-auto'>
-                                <div className='relative w-full lg:h-96 flex shadow-md rounded-2xl bg-white flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12 overflow-hidden'>
-                                    {/* Background Image */}
-                                    {/* <div className="absolute inset-0 w-full h-full">
-                            <Image
-                                src={Bgimage}
-                                alt="Background Pattern"
-                                fill
-                                sizes="100vw"
-                                priority
-                                className="w-full h-full object-cover opacity-10"
-                                style={{ objectFit: 'cover' }}
-                            />
-                            <div className="absolute inset-0"></div>
-                        </div> */}
-
-                                    {/* Left Section */}
-                                    <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 rounded-3xl transition-shadow duration-300 '>
-                                        <div className='max-w-md mx-auto space-y-6 md:space-y-4  '>
-                                            <div className="space-y-6">
-                                                <h1 className={`${dancingScript.className} text-3xl md:text-4xl lg:text-5xl text-blue-600 leading-relaxed animate-fade-in`}>
-                                                    Get your quality
-                                                </h1>
-                                                <div className="space-y-2">
-                                                    <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent'>
-                                                        Skills Certificate
-                                                    </h2>
-                                                    <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800'>
-                                                        from the Cybernaut
-                                                    </h2>
-                                                </div>
-                                            </div>
-
-                                            <Link href="/Program">
-                                                <button className='group w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-[#13D8FB] to-[#00A3FF] px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-medium hover:shadow-lg hover:shadow-blue-200/50 transform hover:-translate-y-0.5 transition-all duration-200'>
-                                                    Get Started Now
-                                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                                                </button>
-                                            </Link>
-
-                                            <div className="flex items-center gap-3 text-gray-500">
-                                                <GraduationCap className="w-5 h-5 text-blue-500" />
-                                                <span className="text-sm md:text-base">Join 5000+ certified professionals</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Right Section */}
-                                    <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 backdrop-blur-sm rounded-3xl transition-shadow duration-300'>
-                                        <div className='max-w-md mx-auto space-y-4'>
-                                            <div className="space-y-2">
-                                                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">Subscribe to Our Newsletter</h3>
-                                                <p className="text-gray-600 md:text-lg">Stay updated with our latest courses and opportunities</p>
-                                            </div>
-
-                                            <form onSubmit={handleSubmit} className="space-y-4">
-
-                                                <div className="relative group">
-                                                    <input
-                                                        type="email"
-                                                        value={email}
-                                                        onChange={(e) => setEmail(e.target.value)}
-                                                        placeholder="Enter your email"
-                                                        className="w-full px-6 py-4 rounded-xl bg-white/80 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 outline-none text-base md:text-lg group-hover:border-blue-300"
-                                                        required
-                                                    />
-                                                </div>
-
-                                                <button
-                                                    type="submit"
-                                                    disabled={isLoading}
-                                                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium py-4 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] hover:shadow-lg flex items-center justify-center gap-2 text-base md:text-lg"
-                                                >
-                                                    {isLoading ? 'Sending...' : 'Subscribe Now'}
-                                                </button>
-
-                                            </form>
-
-                                            <p className="text-sm md:text-base text-gray-500 text-center">
-                                                Join 5,000+ subscribers who are already learning with us
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <style jsx>{`
-                @keyframes blob {
-                    0% { transform: translate(0px, 0px) scale(1); }
-                    33% { transform: translate(30px, -50px) scale(1.1); }
-                    66% { transform: translate(-20px, 20px) scale(0.9); }
-                    100% { transform: translate(0px, 0px) scale(1); }
-                }
-                .animate-blob {
-                    animation: blob 7s infinite;
-                }
-                .animation-delay-2000 {
-                    animation-delay: 2s;
-                }
-                .animation-delay-4000 {
-                    animation-delay: 4s;
-                }
-                @keyframes fadeIn {
-                    from { opacity: 0; transform: translateY(10px); }
-                    to { opacity: 1; transform: translateY(0); }
-                }
-                .animate-fade-in {
-                    animation: fadeIn 1s ease-out;
-                }
-            `}</style>
-                    </div>
-
                 </div>
             </section>
 
@@ -977,14 +889,14 @@ function AccordionItem({
     onClick: () => void;
 }) {
     return (
-        <div className="rounded-lg my-2 rounded-b-none border-b-[0.2rem]  border-b-blue-600">
+        <div className="rounded-lg my-2 w-11/12 mx-auto rounded-b-none border-b-[0.2rem]  border-b-blue-600">
             <button
                 className={`w-full px-6 py-4  rounded-lg flex items-center justify-between transition-colors duration-200 ${isOpen ? 'bg-white' : 'bg-white hover:bg-gray-50'
                     }`}
                 onClick={onClick}
             >
                 <div className="flex justify-between  w-full items-center gap-3">
-                    <span className="lg:text-lg text-md font-medium  text-gray-900">{language.name}</span>
+                    <span className="text-lg font-medium  text-gray-900">{language.name}</span>
 
                     <svg
                         className={`w-5 h-5 rotate-90 text-blue-500 transform transition-transform duration-200 ease-out ${isOpen ? 'rotate-90' : ''
@@ -1009,12 +921,12 @@ function AccordionItem({
             >
                 <div className="bg-white">
                     {language.subItems?.map((item, index) => (
-                        <div
+                        <li
                             key={index}
-                            className="lg:px-6 px-2 text-[0.8rem] lg:text-md py-3   text-gray-600   rounded-lg"
+                            className="lg:px-12 px-2 py-2 text-black lg:text-lg md:text-md text-[0.8rem] rounded-lg"
                         >
                             {item}
-                        </div>
+                        </li>
                     ))}
                 </div>
             </div>

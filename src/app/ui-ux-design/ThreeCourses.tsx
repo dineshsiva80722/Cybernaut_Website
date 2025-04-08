@@ -107,7 +107,6 @@ function ThreeCourses() {
     <div className="min-h-[30rem]  items-center justify-center p-8">
       <div className='py-4'>
         <h1 className="text-xl font-semibold">What you Learn</h1>
-        {/* <p className='text-md text-gray-600'>Whether your're a beginner or have prior experience, our course will equip you with the knowledge and skills needed to excel in the world of STACK development.</p> */}
       </div>
       <div className="mx-auto rounded-xl overflow-hidden">
         {languages.map((language, index) => (

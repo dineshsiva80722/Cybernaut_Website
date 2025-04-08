@@ -106,19 +106,6 @@ function HeroIllustration() {
 
     return (
         <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8 my-8 sm:my-12 lg:my-16 relative ">
-            {/* <div
-                style={{
-                    transform: `translateX(${Math.min(scrollTranslate - 50, 300)}px)`,
-                    transition: 'transform 0.3s ease-out'
-                }}
-                className="absolute top-80 -left-[13rem] z-50 flex items-center justify-center  right-0 mx-auto w-full " >
-                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="60" viewBox="0 0 39 92" fill="none">
-                    <path d="M35.2137 16.733C35.0344 8.021 27.9883 0.878886 19.3039 0.873554C10.8381 0.868217 3.94774 7.64661 3.96097 16.0972C3.96097 16.0973 3.96097 16.0973 3.96097 16.0974M35.2137 16.733L3.37288 41.7307C3.37288 37.0796 3.34518 32.4265 3.31748 27.7726C3.29432 23.8815 3.27116 19.9898 3.26418 16.0985L3.96097 16.0974M35.2137 16.733C35.2472 18.3622 35.2843 19.9901 35.3214 21.6171C35.4692 28.0984 35.6167 34.5643 35.5328 41.0339H4.06947M35.2137 16.733L4.06947 41.0339M3.96097 16.0974C3.96794 19.9794 3.99108 23.8707 4.01424 27.7633C4.04057 32.1893 4.0669 36.6168 4.06947 41.0339M3.96097 16.0974L4.06947 41.0339" fill="#13D8FB" stroke="#13D8FB" strokeWidth="1.39359" />
-                    <path d="M37.9922 42.426V42.4262L37.9978 59.4881C37.9359 64.765 33.0172 69.2791 27.6807 69.2177V69.2176H27.6727H10.3503C5.06548 69.1561 1.03003 64.828 1.09003 59.4997H1.09007V59.4918V42.4274C1.09007 40.9044 2.32499 39.6694 3.84798 39.6694H35.2343C36.7577 39.6694 37.9922 40.9033 37.9922 42.426Z" fill="#2A2A2A" stroke="#2A2A2A" strokeWidth="1.39359" />
-                    <path d="M16.5869 58.0928H22.1027V87.7957H16.5869V58.0928Z" fill="#2A2A2A" stroke="#2A2A2A" strokeWidth="1.39359" />
-                    <path d="M29.4718 85.7359C29.8562 85.7359 30.1685 86.0482 30.1685 86.4326V90.5549C30.1685 90.9393 29.8562 91.2517 29.4718 91.2517H10.3741C9.98962 91.2517 9.67726 90.9393 9.67726 90.5549V86.4326C9.67726 86.0482 9.98962 85.7359 10.3741 85.7359H29.4718Z" fill="#2A2A2A" stroke="#2A2A2A" strokeWidth="1.39359" />
-                </svg>
-            </div> */}
             <div className={` lg:max-w-xs sm:max-w-md  xl:max-w-[30rem] mr-12 aspect-square overflow-hidden shadow-2xl border-2 z-20  rounded-2xl lg:rounded-[50px] relative -top-10 lg:top-0 lg:left-20 ${getBorderClass()}`}>
                 <Slider
                     dots={false}
@@ -390,91 +377,6 @@ export default function Home() {
     return (
         <>
             {/* Desktop View */}
-            {/* <div className="container mx-auto hidden lg:block w-full max-w-[90vw] min-h-screen px-4 pb-40">
-                <section className="container mx-auto min-h-[140rem] relative top-20  w-full">
-                    <main className="mx-auto h-auto w-full max-w-[85vw] rounded-xl sticky top-20  place-content-center overflow-hidden p-5 shadow-[0px_-80px_50px_5px_#F8F8F8]">
-                        <div className="flex items-center justify-center w-full">
-                            <div className="min-h-auto w-[45rem]  p-10 space-y-4">
-                                <h1 className="text-5xl w-[45rem] text-start font-bold transition-all duration-300 ease-in-out">{getContent(scrollTranslate)}</h1>
-                                <div className="w-full">
-                                    <div className="transform py-5 overflow-hidden">
-                                        <h1 className="text-[18px] text-gray-500 transition-all duration-300 ease-in-out">
-                                            {content}
-                                        </h1>
-                                    </div>
-                                </div>
-                                <div className='max-w-[30vw] overflow-hidden space-y-3'>
-                                    <div className="flex w-full max-w-[60vw]   items-center justify-between">
-                                        <div className="w-1/2">
-                                            <button className="overflow-hidden w-28 md:w-40 p-2 px-6 py-2 bg-sky-100 text-black border-none rounded-full text-base md:text-lg font-medium cursor-pointer relative z-10 group">
-                                                Contact us
-                                                <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
-                                                <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
-                                                <span className="absolute w-40 h-32 -top-8 left-0 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
-                                                <Link href="/contact">
-                                                    <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute text-white top-2 left-8 z-10 text-lg">Contact us</span>
-                                                </Link>
-                                            </button>
-                                        </div>
-                                        <div className="">
-                                            <Link href="/Program">
-                                                <button className="flex justify-center cursor-pointer min-w-40 py-2 rounded-full text-white bg-[#2A2A2A] px-5"
-                                                >
-                                                    Explore Solutions
-
-                                                </button>
-                                            </Link>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex w-full max-w-[50vw] items-center justify-start">
-                                        <div className="w-1/2">
-                                            <h6 className="text-[16px] font-medium text-gray-400">Students Trusted on</h6>
-                                            <div className="flex flex-row items-start justify-start w-[15rem] gap-2">
-                                                <AnimatedTooltip items={people} />
-                                                <h1 className="pl-5 font-bold text-[25px]">1L+</h1>
-                                            </div>
-                                        </div>
-                                        <div className="w-1/2 h-16 space-y-3 text-end">
-                                            <h6 className="text-[16px] font-medium text-gray-400">Students Trained</h6>
-                                            <h1 className="pl-5 font-bold text-[25px]">75K+</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="hidden relative right-10 md:block">
-                                <HeroIllustration />
-                            </div>
-                        </div>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
-                            <div className="absolute top-0 left-60 z-50  right-0 mx-auto w-full">
-                                <div
-                                    className="relative w-full max-w-md mx-auto"
-                                    style={{
-                                        transform: `translateY(${moveDistance}px)`,
-                                        transition: 'transform 0.4s ease-out'
-                                    }}
-                                >
-                                    <div className={`relative rounded-2xl p-6 shadow-xl  w-52 h-28 ${getBackgroundColor(scrollTranslate)}`}>
-                                        <div id="animatedBox" className={`relative w-52 h-28 bg-white mx-auto place-content-center rounded-3xl b border-2 ${getBorderColor(scrollTranslate)} z-50 left-0 top-0 transition-all duration-500 ease-in-out`}>
-                                            <div className='text-md mx-auto  px-1 font-normal  text-gray-600 p-2'>
-                                                <h1 className='text-[0.8rem] p-4 '> <span className={`font-semibold  ${getTextColor(scrollTranslate)}`}>{['Connecting Minds, Collaborating on Ideas, and Creating the Future', 'Sharing Our Knowledge to Inspire Growth and Innovation', 'Connecting Minds, Collaborating on Ideas, and Creating the Future'][wordIndex]}</span></h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="w-screen relative -left-10 -bottom-5 h-28 bg-gradient-to-b from-white/10 via-white/90 to-white"></div>
-                        <div style={{
-                            transform: `translateY(${scrollTranslate * -1.9}px)`,
-                            transition: 'transform 0.3s ease-out'
-                        }}
-                            className={`w-10/12 my-5 -z-10 rounded-r-[25rem] border-[0.2rem]  border-l-transparent border-b-transparent left-0 pt-20 h-[135.1rem] absolute top-16 ${getBorderColor(scrollTranslate)}`}>
-                        </div>
-                    </main>
-                </section>
-            </div> */}
             <div className="container mx-auto hidden lg:block w-full max-w-[90vw] min-h-screen px-4 pb-40">
                 <section className="container mx-auto min-h-[140rem] relative top-24 w-full">
                     <main className="mx-auto h-auto w-12/12 rounded-xl sticky top-24 place-content-center overflow-hidden shadow-[0px_-80px_50px_5px_#F8F8F8]">                        <div className="flex items-center justify-center w-full">

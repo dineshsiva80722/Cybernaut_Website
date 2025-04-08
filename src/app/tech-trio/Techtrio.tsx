@@ -596,6 +596,8 @@ const Techtrio = () => {
                                 {/* Left side - Certificate */}
                                 <div className="w-auto h-full lg:h-[25rem] bg-white border object-contain overflow-hidden border-gray-200  rounded-lg shadow-sm">
                                     <Image
+                                        width={1000}
+                                        height={500}
                                         src="https://res.cloudinary.com/dn60aovto/image/upload/v1742386629/TechTrioC_soqlgo.png"
                                         alt="Certificate"
                                         className="object-contain w-full h-full"
@@ -782,12 +784,8 @@ const Techtrio = () => {
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                                     {testimonials.map((testimonial, index) => (
-                                        <div
-                                            key={index}
-                                            className="bg-white rounded-lg p-8 shadow-[0_0_20px_rgba(0,0,0,0.08)]"
-                                        >
+                                        <div key={index} className="bg-white rounded-lg p-8 shadow-[0_0_20px_rgba(0,0,0,0.08)]">
                                             <p className="text-gray-700 mb-6">{testimonial.text}</p>
-
                                             <div className="flex mb-4">
                                                 {renderStars(testimonial.rating)}
                                             </div>

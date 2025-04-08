@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image'
 
-// Sample course data with added categories
 const courseList = [
     {
         id: 1,

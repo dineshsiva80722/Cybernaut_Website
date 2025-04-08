@@ -6,15 +6,12 @@ import About from './about'
 import Offers from './offers'
 import Founders from './founders'
 import Milestones from './milestones'
-// import Partner from './partner'
 import Journey from './journey'
 import Contact from '../Home/contact'
 import Footer from '../Home/footer'
-// import Proccess from './Proccess'
 import BackgroundBeamsDemo from './ShadCn/BackgroundBeamsDemo'
 import Outreaches from './Outreaches'
 import { ArrowUp } from 'lucide-react';
-// import WhyHireWithUs from './why-hire-with-us';
 
 
 const Page = () => {
