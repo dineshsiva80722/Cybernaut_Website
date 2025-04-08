@@ -15,7 +15,6 @@ import { NumberTicker } from "@/components/magicui/number-ticker";
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
-import Numberbox from "./Numberbox"
 import { User, Star, StarHalf, BarChart3 } from 'lucide-react';
 import Contact from '@/app/Home/contact'
 import Footer from '@/app/Home/footer'

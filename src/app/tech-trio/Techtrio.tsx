@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { User, Star, StarHalf, BarChart3 } from 'lucide-react';
-import { ChevronDown } from 'lucide-react';
+
 import { countries } from './countries';
 import { Package } from 'lucide-react';
 import Image from 'next/image';
@@ -166,18 +166,7 @@ const Techtrio = () => {
 
     ]
     // numberbox
-    const [selectedCountry, setSelectedCountry] = useState(countries[0]);
-    const [isOpen, setIsOpen] = useState(false);
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [searchQuery, setSearchQuery] = useState('');
 
-    const filteredCountries = searchQuery
-        ? countries.filter(country =>
-            country.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            country.code.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            country.dial_code.includes(searchQuery)
-        )
-        : countries;
 
     // three courses
 
@@ -339,6 +328,7 @@ const Techtrio = () => {
     ];
     //web3 forms 
     const courseName = "Tech Trio"; // This matches your file name tech-trio
+    const [phoneNumber, setPhoneNumber] = useState('');
 
     const [, setResult] = React.useState("");
     const formRef = useRef<HTMLFormElement>(null);
