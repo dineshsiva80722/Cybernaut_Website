@@ -52,7 +52,7 @@ const Programs = () => {
                     </Slider>
 
                     {/* Thumbnail Navigation */}
-                    <div className='absolute  bottom-5  left-1/2  transform -translate-x-1/2 md:flex hidden space-x-2'>
+                    {/* <div className='absolute  bottom-5  left-1/2  transform -translate-x-1/2 md:flex hidden space-x-2'>
                         {sliderImages.map((image, index) => (
                             <div
                                 key={index}
@@ -62,7 +62,7 @@ const Programs = () => {
                                     opacity-70 hover:opacity-100 transition-all duration-300`}
                             />
                         ))}
-                    </div>
+                    </div> */}
                 </div>
                 <div className='container block lg:hidden  relative mx-auto  mt-24'>
                     <Slider
