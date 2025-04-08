@@ -23,7 +23,7 @@ const courseList = [
     },
     {
         id: 2,
-        title: "metazen",
+        title: "meta-zen",
         coursename:'Metazen',
         icon: "https://res.cloudinary.com/dn60aovto/image/upload/v1742448914/Metazen_bvsqdi.png",
         Duriation: "60+ Hours",
