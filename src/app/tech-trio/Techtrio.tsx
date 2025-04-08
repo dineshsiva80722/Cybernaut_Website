@@ -11,7 +11,6 @@ import { cn } from '@/lib/utils'
 import { User, Star, StarHalf, BarChart3 } from 'lucide-react';
 import { Package } from 'lucide-react';
 import Image from 'next/image';
-import TechImage from '@/app/Home/assets/Certificate/TechTrioC++.png';
 import { Code2, Network } from 'lucide-react';
 import { MonitorPlay, LineChart } from 'lucide-react';
 
@@ -21,7 +20,6 @@ const content = {
     detailedDescription: `Tech Trio is a 6-month program designed   to help students and professionals master C++, Java, and Python while working on real-world projects. The first three months focus on core programming, OOP, data structures, and algorithms through interactive sessions and coding challenges. The next phase includes an internship, where learners apply skills in web scraping, backend development, machine learning, and automation, working on mini-projects and capstone projects with industry mentors.
     The program also provides career support, including soft skills training, Git & GitHub collaboration, resume building, and LinkedIn optimization. With HackerRank challenges and certifications, learners develop top tech skills. Join Tech Trio and advance your coding journey`,
     certificate: {
-        image: TechImage,
         benefits: [
             'Earn 3 course completion certificates and 1 internship certificate.',
             'Prepare for certifications like HackerRank and LeetCode.',
@@ -598,7 +596,7 @@ const Techtrio = () => {
                                 {/* Left side - Certificate */}
                                 <div className="w-auto h-full lg:h-[25rem] bg-white border object-contain overflow-hidden border-gray-200  rounded-lg shadow-sm">
                                     <Image
-                                        src={content.certificate.image}
+                                        src="https://res.cloudinary.com/dn60aovto/image/upload/v1742386629/TechTrioC_soqlgo.png"
                                         alt="Certificate"
                                         className="object-contain w-full h-full"
                                     />

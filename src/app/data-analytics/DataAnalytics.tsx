@@ -9,10 +9,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { User, Star, StarHalf, BarChart3 } from 'lucide-react';
-
 import { Package } from 'lucide-react';
 import Image from 'next/image';
-import MetaZen from '@/app/Home/assets/Certificate/TechTrioC++.png';
 import { Code2, Network } from 'lucide-react';
 import { MonitorPlay, LineChart } from 'lucide-react';
 import { ArrowRight, GraduationCap } from 'lucide-react';
@@ -29,7 +27,7 @@ const content = {
     detailedDescription1: `The Our Data Analytics course Our Data Analytics course is designed to equip you with the essential skills needed to excel in the field of data analysis. Covering key topics such as Python, data manipulation, visualization, statistical analysis, and machine learning, you will work with industry-standard tools like Pandas, Matplotlib, Seaborn, Tableau, and Scikit-learn. The program is structured to guide you through the entire data analytics pipeline, from data cleaning to building predictive models, deploying them, and interpreting insights for business decisions. By the end of the course, you will have the technical expertise, problem-solving abilities, and industry-relevant skills required to thrive in the data-driven world. This program also includes hands-on projects and career support to help you build a strong portfolio. Start your journey to becoming a data analyst today!`,
     // detailedDescription2: ` With placement support, industry-focused curriculum, and interactive learning, this course provides hands-on experience with HTML, CSS, JavaScript, React.js, and backend development, equipping learners with placement-ready skills for in-demand tech jobs.`,
     certificate: {
-        image: MetaZen,
+    
         benefits: [
             'Earn course and internship certificates to validate expertise.',
             'Build a strong portfolio with 10+ mini projects and 5 major projects.',
@@ -630,7 +628,7 @@ const DataAnalytics = () => {
                                 {/* Left side - Certificate */}
                                 <div className="w-auto h-full lg:h-[25rem] bg-white border object-contain overflow-hidden border-gray-200  rounded-lg shadow-sm">
                                     <Image
-                                        src={content.certificate.image}
+                                        src="https://res.cloudinary.com/dn60aovto/image/upload/v1742386629/Web_Dev_cdqdjp.png"
                                         alt="Certificate"
                                         className="object-contain w-full h-full"
                                     />

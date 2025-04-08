@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import UIUX from '@/app/Home/assets/Certificate/Ux Figma.png';
 function Samplecertificate() {
     return (
         <div className=" w-11/12 mx-auto p-8 py-10 ">
@@ -10,7 +9,7 @@ function Samplecertificate() {
                 {/* Left side - Certificate */}
                 <div className="w-auto h-full lg:h-[25rem] bg-white border object-contain overflow-hidden border-gray-200  rounded-lg shadow-sm">
                     <Image
-                        src={UIUX}
+                        src="https://res.cloudinary.com/dn60aovto/image/upload/v1742386629/Ux_Figma_buwmbx.png"
                         alt="Certificate"
                         className="object-contain w-full h-full"
                     />

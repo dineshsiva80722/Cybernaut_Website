@@ -11,7 +11,6 @@ import { cn } from '@/lib/utils'
 import { User, Star, StarHalf, BarChart3 } from 'lucide-react';
 import { Package } from 'lucide-react';
 import Image from 'next/image';
-import MetaZen from '@/app/Home/assets/Certificate/TechTrioC++.png';
 import { Code2, Network } from 'lucide-react';
 import { MonitorPlay, LineChart } from 'lucide-react';
 import { ArrowRight, GraduationCap } from 'lucide-react';
@@ -28,7 +27,6 @@ const content = {
     detailedDescription1: `The Meta Zen Full Stack Development Course is designed for students, professionals, and tech enthusiasts looking to build websites and apps like a pro. This program covers everything from basic coding to advanced full-stack development, ensuring a step-by-step learning process. You'll master front-end and back-end technologies, work on real-world projects, and develop problem-solving skills. The course also includes soft skills training and job-specific preparation, making it ideal for those aiming to start or advance their careers in web development. `,
     detailedDescription2: ` With placement support, industry-focused curriculum, and interactive learning, this course provides hands-on experience with HTML, CSS, JavaScript, React.js, and backend development, equipping learners with placement-ready skills for in-demand tech jobs.`,
     certificate: {
-        image: MetaZen,
         benefits: [
             'Earn course and internship certificates to validate expertise.',
             'Gain hands-on experience with real-world projects.',
@@ -38,7 +36,7 @@ const content = {
     }
 };
 
-const Techtrio = () => {
+const MetaZen = () => {
     const [showCourses, setShowCourses] = useState(false);
     const [showDescription, setShowDescription] = useState(true);
     const [showBenefits, setShowBenefits] = useState(false);
@@ -439,10 +437,6 @@ const Techtrio = () => {
                                         </span>
                                     </div>
                                 </div>
-
-                                {/* <Button className='mt-2 w-32 sm:w-40 h-10 sm:h-12 text-blue-500 text-sm sm:text-base' variant='outline'>
-                                    Enroll Now
-                                </Button> */}
                             </div>
                         </div>
                     </div>
@@ -620,7 +614,9 @@ const Techtrio = () => {
                                 {/* Left side - Certificate */}
                                 <div className="w-auto h-full lg:h-[25rem] bg-white border object-contain overflow-hidden border-gray-200  rounded-lg shadow-sm">
                                     <Image
-                                        src={content.certificate.image}
+                                        width={500}
+                                        height={500}
+                                        src="https://res.cloudinary.com/dn60aovto/image/upload/v1742386629/TechTrioC_soqlgo.png"
                                         alt="Certificate"
                                         className="object-contain w-full h-full"
                                     />
@@ -659,12 +655,14 @@ const Techtrio = () => {
                                     <div className="flex items-start gap-2 sm:gap-3">
                                         <div className="text-blue-500">▶</div>
                                         <p className="text-base sm:text-lg text-gray-700">
-                                            Certificates are globally recognized & they upgrade your programming profile.                                        </p>
+                                            Certificates are globally recognized & they upgrade your programming profile.
+                                        </p>
                                     </div>
                                     <div className="flex items-start gap-2 sm:gap-3">
                                         <div className="text-blue-500">▶</div>
                                         <p className="text-base sm:text-lg text-gray-700">
-                                            Certificates are generated after the completion of course.                                        </p>
+                                            Certificates are generated after the completion of course.
+                                        </p>
                                     </div>
                                 </div>
 
@@ -961,7 +959,7 @@ const Techtrio = () => {
     )
 }
 
-export default Techtrio;
+export default MetaZen;
 
 interface Language {
     name: string;
