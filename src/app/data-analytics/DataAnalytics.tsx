@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { User, Star, StarHalf, BarChart3 } from 'lucide-react';
-import { countries } from './countries';
+
 import { Package } from 'lucide-react';
 import Image from 'next/image';
 import MetaZen from '@/app/Home/assets/Certificate/TechTrioC++.png';
@@ -178,7 +178,7 @@ const DataAnalytics = () => {
 
     ]
 
-    
+
     // three courses
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
