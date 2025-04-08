@@ -175,6 +175,35 @@ const WebDevelopment = () => {
         };
     }, []);
 
+        //web3 forms 
+        const courseName = "Full Stack Development"; // This matches your file name full-stack-development
+    
+        const [, setResult] = React.useState("");
+        const formRef = useRef<HTMLFormElement>(null);
+        const onSubmit = async (event: React.FormEvent) => {
+            event.preventDefault();
+            setResult("Sending....");
+            const formData = new FormData(event.target as HTMLFormElement);
+            formData.append("access_key", "701509da-ad7d-43d7-9c9e-6f849ee8ff6d");
+            formData.append("course_name", courseName); // Add course name
+    
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+            const data = await response.json();
+            if (data.success) {
+                setResult("Form Submitted Successfully");
+                alert("Form Submitted Successfully");
+                if (formRef.current) {
+                    formRef.current.reset();
+                }
+            } else {
+                console.log("Error", data);
+                setResult(data.message);
+            }
+        };
+
 
     return (
         <section className=''>
@@ -245,7 +274,9 @@ const WebDevelopment = () => {
                                 </h2>
                             </div>
 
-                            <form className="w-full mt-1 space-y-4 sm:space-y-2.5 place-content-center">
+                            <form 
+                            onSubmit={onSubmit}
+                            className="w-full mt-1 space-y-4 sm:space-y-2.5 place-content-center">
                                 <div>
                                     <input
                                         className="outline-none h-[36px] border border-gray-200 rounded-md px-2 w-full text-slate-500 focus:border-blue-300"
@@ -267,7 +298,14 @@ const WebDevelopment = () => {
                                     />
                                 </div>
                                 <div>
-                                    <Numberbox />
+                                    <input
+                                        className="outline-none h-[36px] border border-gray-200 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                        placeholder="Phone Number"
+                                        id="phone"
+                                        name="phone"
+                                        type="tel"
+                                        required
+                                    />
                                 </div>
                                 <div>
                                     <input

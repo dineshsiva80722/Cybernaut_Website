@@ -374,6 +374,35 @@ const DataAnalytics = () => {
         }
     };
 
+        //web3 forms 
+        const courseName = "Data Analytics"; // This matches your file name data-analytics
+    
+        const [, setResult] = React.useState("");
+        const formRef = useRef<HTMLFormElement>(null);
+        const onSubmit = async (event: React.FormEvent) => {
+            event.preventDefault();
+            setResult("Sending....");
+            const formData = new FormData(event.target as HTMLFormElement);
+            formData.append("access_key", "701509da-ad7d-43d7-9c9e-6f849ee8ff6d");
+            formData.append("course_name", courseName); // Add course name
+    
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+            const data = await response.json();
+            if (data.success) {
+                setResult("Form Submitted Successfully");
+                alert("Form Submitted Successfully");
+                if (formRef.current) {
+                    formRef.current.reset();
+                }
+            } else {
+                console.log("Error", data);
+                setResult(data.message);
+            }
+        };
+
     return (
         <section className=''>
             <section className='mt-[70px]'>
@@ -447,7 +476,9 @@ const DataAnalytics = () => {
                                 </h2>
                             </div>
 
-                            <form className="w-full mt-4 space-y-4 sm:space-y-2.5 place-content-center">
+                            <form 
+                            onSubmit={onSubmit}
+                            className="w-full mt-4 space-y-4 sm:space-y-2.5 place-content-center">
                                 <div>
                                     <input
                                         className="outline-none h-[36px] border border-gray-200 rounded-md px-2 w-full text-slate-500 focus:border-blue-300"
@@ -469,73 +500,14 @@ const DataAnalytics = () => {
                                     />
                                 </div>
                                 <div>
-                                    {/* <Numberbox /> */}
-                                    <div className=" bg-gray-100 flex flex-col items-center justify-center ">
-                                        <div className="w-full max-w-md">
-                                            <div className="relative">
-                                                <div className="flex h-[36px] items-center border border-gray-300 rounded-lg overflow-hidden bg-white">
-                                                    {/* Country selector button */}
-                                                    <button
-                                                        type="button"
-                                                        className="flex items-center space-x-1 px-3 py-2 border-r border-gray-300 bg-gray-50 hover:bg-gray-100"
-                                                        onClick={() => setIsOpen(!isOpen)}
-                                                    >
-                                                        <span className="text-lg">{selectedCountry.flag}</span>
-                                                        <span className="text-gray-700 font-medium">{selectedCountry.dial_code}</span>
-                                                        <ChevronDown size={16} className="text-gray-500" />
-                                                    </button>
-
-                                                    {/* Phone number input */}
-                                                    <input
-                                                        type="tel"
-                                                        className="flex-1  px-4 py-2 outline-none"
-                                                        placeholder="Phone number"
-                                                        value={phoneNumber}
-                                                        onChange={(e) => setPhoneNumber(e.target.value)}
-                                                    />
-                                                </div>
-
-                                                {/* Country dropdown */}
-                                                {isOpen && (
-                                                    <div className="absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-80 overflow-y-auto">
-                                                        <div className="sticky top-0 bg-white p-2 border-b border-gray-200">
-                                                            <input
-                                                                type="text"
-                                                                className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                                                                placeholder="Search countries..."
-                                                                value={searchQuery}
-                                                                onChange={(e) => setSearchQuery(e.target.value)}
-                                                            />
-                                                        </div>
-
-                                                        <div>
-                                                            {filteredCountries.map((country) => (
-                                                                <button
-                                                                    key={country.code}
-                                                                    className="flex items-center w-full px-4 py-2 hover:bg-gray-100 text-left"
-                                                                    onClick={() => {
-                                                                        setSelectedCountry(country);
-                                                                        setIsOpen(false);
-                                                                        setSearchQuery('');
-                                                                    }}
-                                                                >
-                                                                    <span className="text-lg mr-2">{country.flag}</span>
-                                                                    <span className="font-medium">{country.name}</span>
-                                                                    <span className="ml-auto text-gray-500">{country.dial_code}</span>
-                                                                </button>
-                                                            ))}
-
-                                                            {filteredCountries.length === 0 && (
-                                                                <div className="px-4 py-3 text-gray-500 text-center">
-                                                                    No countries found
-                                                                </div>
-                                                            )}
-                                                        </div>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <input
+                                        className="outline-none h-[36px] border border-gray-200 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                        placeholder="Phone Number"
+                                        id="phone"
+                                        name="phone"
+                                        type="tel"
+                                        required
+                                    />
                                 </div>
                                 <div>
                                     <input

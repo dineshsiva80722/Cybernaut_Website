@@ -337,33 +337,35 @@ const Techtrio = () => {
             rating: 4
         }
     ];
-    // FQAs
-    const [email, setEmail] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
+    //web3 forms 
+    const courseName = "Tech Trio"; // This matches your file name tech-trio
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setIsLoading(true);
+    const [, setResult] = React.useState("");
+    const formRef = useRef<HTMLFormElement>(null);
+    const onSubmit = async (event: React.FormEvent) => {
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target as HTMLFormElement);
+        formData.append("access_key", "701509da-ad7d-43d7-9c9e-6f849ee8ff6d");
+        formData.append("course_name", courseName); // Add course name
 
-        try {
-            const response = await fetch('/api/sendEmail', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email }),
-            });
-
-            if (response.ok) {
-                alert('Thank you for subscribing!');
-            } else {
-                alert('Failed to subscribe. Please try again.');
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+        const data = await response.json();
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            alert("Form Submitted Successfully");
+            if (formRef.current) {
+                formRef.current.reset();
             }
-        } catch (error) {
-            alert(`An error occurred. Please try again. ${error}`);
-        } finally {
-            setIsLoading(false);
-            setEmail('');
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
         }
     };
+
     return (
         <section className=''>
             <section className='lg:mt-[10px] mt-[14px]'>
@@ -436,11 +438,10 @@ const Techtrio = () => {
                                 </h2>
                             </div>
 
-                            {/* <form className="w-full mt-4 space-y-4 sm:space-y-2.5 place-content-center"> */}
                             <form
+                                onSubmit={onSubmit}
                                 className='w-full mt-4 space-y-4 sm:space-y-2.5 place-content-center'
-                                action="https://api.web3forms.com/submit"
-                                method="POST"
+
                             >
                                 {/* Hidden Access Key */}
                                 <input
@@ -469,73 +470,15 @@ const Techtrio = () => {
                                     />
                                 </div>
                                 <div>
-                                    {/* <Numberbox /> */}
-                                    <div className=" bg-gray-100 flex flex-col items-center justify-center ">
-                                        <div className="w-full max-w-md">
-                                            <div className="relative">
-                                                <div className="flex h-[36px] items-center border border-gray-300 rounded-lg overflow-hidden bg-white">
-                                                    {/* Country selector button */}
-                                                    <button
-                                                        type="button"
-                                                        className="flex items-center space-x-1 px-3 py-2 border-r border-gray-300 bg-gray-50 hover:bg-gray-100"
-                                                        onClick={() => setIsOpen(!isOpen)}
-                                                    >
-                                                        <span className="text-lg">{selectedCountry.flag}</span>
-                                                        <span className="text-gray-700 font-medium">{selectedCountry.dial_code}</span>
-                                                        <ChevronDown size={16} className="text-gray-500" />
-                                                    </button>
-
-                                                    {/* Phone number input */}
-                                                    <input
-                                                        type="tel"
-                                                        className="flex-1  px-4 py-2 outline-none"
-                                                        placeholder="Phone number"
-                                                        value={phoneNumber}
-                                                        onChange={(e) => setPhoneNumber(e.target.value)}
-                                                    />
-                                                </div>
-
-                                                {/* Country dropdown */}
-                                                {isOpen && (
-                                                    <div className="absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-80 overflow-y-auto">
-                                                        <div className="sticky top-0 bg-white p-2 border-b border-gray-200">
-                                                            <input
-                                                                type="text"
-                                                                className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                                                                placeholder="Search countries..."
-                                                                value={searchQuery}
-                                                                onChange={(e) => setSearchQuery(e.target.value)}
-                                                            />
-                                                        </div>
-
-                                                        <div>
-                                                            {filteredCountries.map((country) => (
-                                                                <button
-                                                                    key={country.code}
-                                                                    className="flex items-center w-full px-4 py-2 hover:bg-gray-100 text-left"
-                                                                    onClick={() => {
-                                                                        setSelectedCountry(country);
-                                                                        setIsOpen(false);
-                                                                        setSearchQuery('');
-                                                                    }}
-                                                                >
-                                                                    <span className="text-lg mr-2">{country.flag}</span>
-                                                                    <span className="font-medium">{country.name}</span>
-                                                                    <span className="ml-auto text-gray-500">{country.dial_code}</span>
-                                                                </button>
-                                                            ))}
-
-                                                            {filteredCountries.length === 0 && (
-                                                                <div className="px-4 py-3 text-gray-500 text-center">
-                                                                    No countries found
-                                                                </div>
-                                                            )}
-                                                        </div>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <input
+                                        className="outline-none border border-gray-300 h-[36px]  rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                        placeholder="Phone number"
+                                        id="phone"
+                                        name="phone"
+                                        type="tel"
+                                        value={phoneNumber}
+                                        onChange={(e) => setPhoneNumber(e.target.value)}
+                                    />
                                 </div>
                                 <div>
                                     <input
@@ -910,43 +853,6 @@ const Techtrio = () => {
                                                 <GraduationCap className="w-5 h-5 text-blue-500" />
                                                 <span className="text-sm md:text-base">Join 5000+ certified professionals</span>
                                             </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Right Section */}
-                                    <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 backdrop-blur-sm rounded-3xl transition-shadow duration-300'>
-                                        <div className='max-w-md mx-auto space-y-4'>
-                                            <div className="space-y-2">
-                                                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">Subscribe to Our Newsletter</h3>
-                                                <p className="text-gray-600 md:text-lg">Stay updated with our latest courses and opportunities</p>
-                                            </div>
-
-                                            <form onSubmit={handleSubmit} className="space-y-4">
-
-                                                <div className="relative group">
-                                                    <input
-                                                        type="email"
-                                                        value={email}
-                                                        onChange={(e) => setEmail(e.target.value)}
-                                                        placeholder="Enter your email"
-                                                        className="w-full px-6 py-4 rounded-xl bg-white/80 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 outline-none text-base md:text-lg group-hover:border-blue-300"
-                                                        required
-                                                    />
-                                                </div>
-
-                                                <button
-                                                    type="submit"
-                                                    disabled={isLoading}
-                                                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium py-4 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] hover:shadow-lg flex items-center justify-center gap-2 text-base md:text-lg"
-                                                >
-                                                    {isLoading ? 'Sending...' : 'Subscribe Now'}
-                                                </button>
-
-                                            </form>
-
-                                            <p className="text-sm md:text-base text-gray-500 text-center">
-                                                Join 5,000+ subscribers who are already learning with us
-                                            </p>
                                         </div>
                                     </div>
                                 </div>

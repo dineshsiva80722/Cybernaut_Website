@@ -160,6 +160,34 @@ const UIUXDesign = () => {
 
     ]
 
+    //web3 forms 
+    const courseName = "UIUXDesign"; // This matches your file name ui-ux-design
+
+    const [, setResult] = React.useState("");
+    const formRef = useRef<HTMLFormElement>(null);
+    const onSubmit = async (event: React.FormEvent) => {
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target as HTMLFormElement);
+        formData.append("access_key", "701509da-ad7d-43d7-9c9e-6f849ee8ff6d");
+        formData.append("course_name", courseName); // Add course name
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+        const data = await response.json();
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            alert("Form Submitted Successfully");
+            if (formRef.current) {
+                formRef.current.reset();
+            }
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
+        }
+    };
     return (
         <section className=''>
             <section className='mt-[20px]'>
@@ -228,7 +256,9 @@ const UIUXDesign = () => {
                                 </h2>
                             </div>
 
-                            <form className="w-full mt-4 space-y-4 sm:space-y-2.5 place-content-center">
+                            <form
+                                onSubmit={onSubmit}
+                                className="w-full mt-4 space-y-4 sm:space-y-2.5 place-content-center">
                                 <div>
                                     <input
                                         className="outline-none h-[36px] border border-gray-200 rounded-md px-2 w-full text-slate-500 focus:border-blue-300"
@@ -334,12 +364,12 @@ const UIUXDesign = () => {
                             </div>
                             <div className="w-full md:w-1/2 flex items-center justify-center p-4">
                                 <div className="w-full h-40 sm:h-48 md:h-60 lg:h-72 rounded-lg  flex items-center justify-center">
-                                <Image
-                                    width={500}
-                                    height={500}
-                                    src='https://res.cloudinary.com/dn60aovto/image/upload/v1742448913/ux_xfzu2m.png'
-                                    alt=""
-                                    className="w-8/12 h-full rounded-lg object-cover" />
+                                    <Image
+                                        width={500}
+                                        height={500}
+                                        src='https://res.cloudinary.com/dn60aovto/image/upload/v1742448913/ux_xfzu2m.png'
+                                        alt=""
+                                        className="w-8/12 h-full rounded-lg object-cover" />
                                 </div>
                             </div>
                         </div>
