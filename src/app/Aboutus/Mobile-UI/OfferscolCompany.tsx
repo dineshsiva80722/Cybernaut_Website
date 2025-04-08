@@ -8,7 +8,7 @@ function Mobileoffers() {
   const [activeTab, setActiveTab] = useState('colleges');
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+    <div className="min-h-screen  flex items-center justify-center p-4">
       <div className="bg-white rounded-xl shadow-lg max-w-2xl w-full overflow-hidden">
         {/* Tabs */}
         <div className="flex border-b">

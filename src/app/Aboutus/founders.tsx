@@ -216,7 +216,7 @@ const Founders = () => {
 
 
       {/* ================================================================================================================ */}
-      <section className='space-y-10 py-10'>
+      <section className='space-y-10 lg:py-10'>
         <div className='flex flex-col justify-center space-y-5 mx-auto py-10'>
           <h1 className='lg:text-3xl text-2xl   text-center  font-bold my-2 gap-2 '>MEET OUR FOUNDERS </h1>
 
