@@ -82,7 +82,7 @@ const MOU = () => {
       {/* Mobile view */}
       <div className="container  lg:hidden block mx-auto xl:container min-h-80 text-center overflow-hidden relative lg:my-20">
         {/* Header Section */}
-        <h1 className="lg:text-4xl text-xl font-extrabold py-5 lg:py-0">OUR MOU PARTNERS</h1>
+        <h1 className="lg:text-4xl text-xl font-bold py-5 lg:py-0">OUR MOU PARTNERS</h1>
         <p className="w-11/12 mx-auto text-sm  text-center">
           At Cybernaut Edu-Tech, we offer premier educational solutions, including products, services, and training programs. Partner with us to enhance your institution&apos;s learning experience.
         </p>

@@ -53,14 +53,14 @@ function OnlineOffline() {
                 <h1 className="text-center lg:w-full w-60 mx-auto xl:container lg:text-4xl text-xl font-bold my-4">
                     Learn. Practice. Earn. <br /> Have Fun!
                 </h1>
-             
+
 
                 <section>
                     <div className="flex justify-center my-6">
-                        <div className="flex justify-center lg:gap-0 gap-6 py-5 w-full">
+                        <div className="flex lg:justify-center justify-around lg:gap-0 gap-2 py-5 w-full">
                             <button
                                 className={`lg:px-7 lg:py-3 text-xl font-medium ${activeTab === 'gallery'
-                                    ? 'text-black underline lg:no-underline'
+                                    ? 'text-black'
                                     : 'text-gray-500 hover:text-gray-700'
                                     }`}
                                 onClick={() => {
@@ -72,7 +72,7 @@ function OnlineOffline() {
                             </button>
                             <button
                                 className={`lg:px-7 lg:py-3 text-xl font-medium ${activeTab === 'outreach'
-                                    ? 'text-black underline lg:no-underline'
+                                    ? 'text-black'
                                     : 'text-gray-500 hover:text-gray-700'
                                     }`}
                                 onClick={() => {
@@ -90,6 +90,13 @@ function OnlineOffline() {
                             className={`lg:w-[8rem] w-[9rem] h-[0.3rem] absolute left-0 top-0 bg-blue-500 transform transition-transform duration-300 ${activeTab === 'outreach' ? 'lg:translate-x-[130px] translate-x-[140px]' : 'translate-x-0'
                                 }`}
                         />
+                    </div>
+                    <div className='lg:hidden flex mb-5 relative mx-auto w-10/12 h-[0.1rem] overflow-hidden -mt-9 bg-gray-300'>
+                        <div className={`w-[40%] h-[0.2rem] absolute left-0 top-0 bg-blue-500 transform transition-transform duration-300 ${activeTab === 'outreach'
+                            ? 'translate-x-[100%] md:translate-x-[15rem] w-[50%] md:w-[21rem]'
+                            : 'translate-x-0'
+                            }`}>
+                        </div>
                     </div>
 
                     <div className="flex lg:flex-row flex-col gap-5 justify-center mx-6 lg:py-14">

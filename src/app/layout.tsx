@@ -31,8 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-       
+        className={`${geistSans.variable} ${geistMono.variable} antialiased __variable_4d318d __variable_ea5f4b`}
+        cz-shortcut-listen="true"
+        suppressHydrationWarning
       >
         <SmoothScrolling>
           {children}

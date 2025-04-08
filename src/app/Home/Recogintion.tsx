@@ -33,7 +33,7 @@ const Recognition: React.FC = () => {
                 <div className="space-y-12">
                     <div className="space-y-6">
                         <h1 className="text-3xl text-center text-[#141515] font-bold mb-4">We are accredited by</h1>
-                        <div className="flex flex-wrap gap-5 justify-center py-10">
+                        <div className="flex flex-wrap gap-5 justify-center lg:py-10">
                             {accreditations.map((accreditation, index) => (
                                 <Card 
                                     key={index}

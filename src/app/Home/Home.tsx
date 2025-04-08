@@ -543,7 +543,7 @@ export default function Home() {
             </section>
 
             {/* Mobile View */}
-            <section className='block md:hidden container min-h-screen mt-10'>
+            <section className='block md:hidden container  mt-10'>
                 <div className="heading pb-5 p-4">
                     <div className='w-full py-5 min-h-[13rem] '>
                         <p
@@ -556,9 +556,9 @@ export default function Home() {
                             <div className="transform overflow-hidden">
                                 <h1
                                     className={`
-                                                             text-md text-gray-500
-                                                             transform transition-all duration-300 ease-in-out
-                                                             ${isAnimating ? 'opacity-0' : 'opacity-100'}
+                                        text-md text-gray-500
+                                        transform transition-all duration-300 ease-in-out
+                                        ${isAnimating ? 'opacity-0' : 'opacity-100'}
                                                  `}
                                 >
                                     {bodycontents[bodycontent]}
@@ -571,7 +571,7 @@ export default function Home() {
 
                         <button className='lg:w-80 w-1/2 h-10 text-xs border bg-sky-500 text-white border-sky-500 rounded-sm py-2'>
                             <Link href="/contact">
-                                get started
+                                Get started
                             </Link>
                         </button>
                         <button className='lg:w-80 w-1/2 h-10 text-sm border border-sky-500 rounded-sm py-2'>
@@ -596,7 +596,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="w-full h-96 relative items-center justify-center flex">
+                <div className="w-full min-h-60 relative items-center justify-center flex">
                     <div className="w-10/12 h-72 relative left-5  top-2 mx-auto rounded-xl bg-sky-300"></div>
                     <div className="w-11/12 h-[18rem] absolute border-2 overflow-hidden border-sky-300 mx-auto rounded-xl bg-white">
 

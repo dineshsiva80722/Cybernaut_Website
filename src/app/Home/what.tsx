@@ -102,7 +102,7 @@ const WhatWeDo = () => {
               </div>
 
               {/* CTA Button */}
-              <div className="relative top-5">
+              <div className="relative top-1">
                 <div className="">
                   <Link href="/Aboutus">
                     <Commonbtn className="flex items-center text-white justify-between gap-3 ">

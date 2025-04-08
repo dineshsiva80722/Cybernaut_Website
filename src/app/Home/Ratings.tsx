@@ -56,8 +56,9 @@ const Ratings: React.FC<RatingsProps> = () => {
             </div>
 
             {/* Mobile view */}
-            <div className="flex md:hidden w-full p-4 lg:p-10 my-10 items-center justify-center">
-                <div className="w-80 h-20 rounded-full flex place-items-center place-content-center justify-center bg-white shadow-[0px_26px_40px_0px_rgba(43,45,54,0.05)]">
+            <div className=" md:hidden w-full py-10 space-y-2">
+                <h1 className="lg:text-4xl text-xl font-bold py-5 lg:py-0 text-center">MILESTONES</h1>
+                <div className="w-80 mx-auto h-20 rounded-full flex place-items-center place-content-center justify-center bg-white shadow-[0px_26px_40px_0px_rgba(43,45,54,0.05)]">
                     <div className="flex justify-center items-center gap-2 text-center px-2">
                         {items.map((item, index) => (
                             <div key={index} className={`flex flex-col justify-center items-center w-20 h-16 ${index < items.length - 1 ? 'border-r-2 border-blue-500' : ''}`}>
