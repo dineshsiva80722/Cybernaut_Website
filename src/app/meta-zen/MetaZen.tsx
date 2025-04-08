@@ -13,12 +13,6 @@ import { Package } from 'lucide-react';
 import Image from 'next/image';
 import { Code2, Network } from 'lucide-react';
 import { MonitorPlay, LineChart } from 'lucide-react';
-import { ArrowRight, GraduationCap } from 'lucide-react';
-import { Dancing_Script } from 'next/font/google';
-
-
-
-const dancingScript = Dancing_Script({ subsets: ['latin'] });
 
 
 const content = {
@@ -351,33 +345,7 @@ const MetaZen = () => {
             rating: 4
         }
     ];
-    // FQAs
-    const [email, setEmail] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setIsLoading(true);
-
-        try {
-            const response = await fetch('/api/sendEmail', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email }),
-            });
-
-            if (response.ok) {
-                alert('Thank you for subscribing!');
-            } else {
-                alert('Failed to subscribe. Please try again.');
-            }
-        } catch (error) {
-            alert(`An error occurred. Please try again. ${error}`);
-        } finally {
-            setIsLoading(false);
-            setEmail('');
-        }
-    };
     //web3 forms 
     const courseName = "MetaZen"; // This matches your file name metazen
 
