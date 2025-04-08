@@ -379,6 +379,10 @@ const Techtrio = () => {
             setResult(data.message);
         }
     };
+
+    // join noew btn 
+    const formjoinRef = useRef<HTMLDivElement>(null);
+    const nameInputRef = useRef<HTMLInputElement>(null);
     return (
         <section className=''>
             <section className='mt-[20px]'>
@@ -444,7 +448,7 @@ const Techtrio = () => {
                     </div>
 
                     {/* Right side form */}
-                    <div className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5 '>
+                    <div ref={formjoinRef} className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5 '>
                         <div className="w-full sm:w-[25rem] h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[60px]">
                             <div className="flex flex-col justify-center items-center">
                                 <h2 className="text-lg sm:text-xl text-center font-semibold text-zinc-500">
@@ -457,6 +461,7 @@ const Techtrio = () => {
                                 className="w-full mt-4 space-y-4 sm:space-y-2.5 place-content-center">
                                 <div>
                                     <input
+                                        ref={nameInputRef}
                                         className="outline-none h-[36px] border border-gray-200 rounded-md px-2 w-full text-slate-500 focus:border-blue-300"
                                         placeholder="Name"
                                         id="Name"
@@ -724,7 +729,15 @@ const Techtrio = () => {
                             <div className="w-full md:w-1/2 flex items-center justify-center">
                                 <Button
                                     variant="outline"
-                                    className="w-full md:w-60 h-12 bg-blue-500 text-white hover:bg-blue-600 shadow-[4px_4px_2px_1px_#3DE4EB] transition-all"
+                                    className="w-full md:w-60 h-12 bg-blue-500 text-white cursor-pointer hover:bg-blue-600 shadow-[4px_4px_2px_1px_#3DE4EB] transition-all"
+                                    onClick={() => {
+                                        if (formjoinRef.current) {
+                                            formjoinRef.current.scrollIntoView({ behavior: 'smooth' });
+                                            if (nameInputRef.current) {
+                                                nameInputRef.current.focus();
+                                            }
+                                        }
+                                    }}
                                 >
                                     Enroll Now
                                 </Button>

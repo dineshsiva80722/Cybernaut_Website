@@ -63,6 +63,7 @@ const Programs = () => {
                             />
                         ))}
                     </div> */}
+                    
                 </div>
                 <div className='container block lg:hidden  relative mx-auto  mt-24'>
                     <Slider
@@ -103,6 +104,7 @@ const Programs = () => {
                             />
                         ))}
                     </div> */}
+                    
                 </div>
             </div>
             

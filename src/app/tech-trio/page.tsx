@@ -5,6 +5,7 @@ import Nav from '@/app/Home/nav'
 import Footer from '@/app/Home/footer'
 import { useState, useEffect } from 'react'
 import { ArrowUp } from 'lucide-react';
+import Contact from '@/app/Home/contact'
 
 
 const Page = () => {
@@ -49,8 +50,8 @@ const Page = () => {
 
       </div>
       <Techtrio />
+      <Contact />
       <Footer />
-      {/* <Contact /> */}
     </div>
   )
 }

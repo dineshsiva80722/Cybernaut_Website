@@ -17,9 +17,8 @@ import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import Numberbox from "./Numberbox"
 import { User, Star, StarHalf, BarChart3 } from 'lucide-react';
-import Contact from '@/app/Home/contact'
 import Image from 'next/image';
-import Footer from '@/app/Home/footer'
+
 
 
 
@@ -117,19 +116,10 @@ const UIUXDesign = () => {
         faqsRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-
-    // const handleScroll = (event: React.UIEvent) => {
-    //     const { scrollTop, clientHeight } = event.currentTarget;
-    //     const scrollHeight = event.currentTarget.scrollHeight;
-
-    //     if (scrollTop + clientHeight >= scrollHeight) {
-    //         setVisibleOption(prev => Math.min(prev + 1, options.length - 1)); // Move to next option
-    //     } else if (scrollTop === 0) {
-    //         setVisibleOption(prev => Math.max(prev - 1, 0)); // Move to previous option
-    //     }
-    // };
     const sectionRef = useRef<HTMLDivElement>(null);
     const triggerRef = useRef<HTMLDivElement>(null);
+    const formjoinRef = useRef<HTMLInputElement>(null);
+    const nameInputRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         const pin = gsap.to(sectionRef.current, {
@@ -248,78 +238,84 @@ const UIUXDesign = () => {
                     </div>
 
                     {/* Right side form */}
-                    <div className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5 '>
+                    <div ref={formjoinRef} className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5  '>
                         <div className="w-full sm:w-[25rem] lg:h-[400px] h-auto rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[60px]">
                             <div className="flex flex-col justify-center items-center">
                                 <h2 className="text-lg sm:text-xl text-center font-semibold text-zinc-500">
                                     To learn this Course <span className='p-1 rounded-md bg-blue-500 text-white'>online</span>
                                 </h2>
                             </div>
+                            <div>
+                                <div>
+                                    <form
 
-                            <form
-                                onSubmit={onSubmit}
-                                className="w-full mt-4 space-y-4 sm:space-y-2.5 place-content-center">
-                                <div>
-                                    <input
-                                        className="outline-none h-[36px] border border-gray-200 rounded-md px-2 w-full text-slate-500 focus:border-blue-300"
-                                        placeholder="Name"
-                                        id="Name"
-                                        name="Name"
-                                        type="text"
-                                        required
-                                    />
-                                </div>
-                                <div>
-                                    <input
-                                        className="outline-none h-[36px] border border-gray-200  rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
-                                        placeholder="Email"
-                                        id="email"
-                                        name="email"
-                                        type="email"
-                                        required
-                                    />
-                                </div>
-                                <div>
-                                    <Numberbox />
-                                </div>
-                                <div>
-                                    <input
-                                        className="outline-none h-[36px] border border-gray-200 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
-                                        placeholder="Education Qualification"
-                                        id="education"
-                                        name="education"
-                                        type="text"
-                                        required
-                                    />
-                                </div>
-                                <div>
-                                    <input
-                                        className="outline-none h-[36px] border border-gray-200 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
-                                        placeholder="Current Profile"
-                                        id="currentprofile"
-                                        name="currentprofile"
-                                        type="text"
-                                        required
-                                    />
-                                </div>
+                                        onSubmit={onSubmit}
+                                        className="w-full mt-4 space-y-4 sm:space-y-2.5 place-content-center">
 
-                                <button
-                                    className="w-full justify-center py-1 bg-blue-500 hover:bg-blue-600 active:bg-blue-700 rounded-md text-white"
-                                    id="login"
-                                    name="login"
-                                    type="submit"
-                                >
-                                    Enroll Now
-                                </button>
+                                        <div>
+                                            <input
+                                                ref={nameInputRef}
+                                                className="outline-none h-[36px] border border-gray-200 rounded-md px-2 w-full text-slate-500 focus:border-blue-300"
+                                                placeholder="Name"
+                                                id="Name"
+                                                name="Name"
+                                                type="text"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <input
+                                                className="outline-none h-[36px] border border-gray-200  rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                                placeholder="Email"
+                                                id="email"
+                                                name="email"
+                                                type="email"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <Numberbox />
+                                        </div>
+                                        <div>
+                                            <input
+                                                className="outline-none h-[36px] border border-gray-200 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                                placeholder="Education Qualification"
+                                                id="education"
+                                                name="education"
+                                                type="text"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <input
+                                                className="outline-none h-[36px] border border-gray-200 rounded-md px-2 text-slate-500 w-full focus:border-blue-300"
+                                                placeholder="Current Profile"
+                                                id="currentprofile"
+                                                name="currentprofile"
+                                                type="text"
+                                                required
+                                            />
+                                        </div>
 
-                                <p className="flex justify-center gap-2 space-x-1 bg-[#EAF7FF] py-1 rounded-md text-[#00A3FF] text-xs sm:text-sm">
-                                    <NumberTicker
-                                        value={1450}
-                                        className="whitespace-pre-wrap font-semibold text-base sm:text-lg tracking-tighter text-[#00A3FF]"
-                                    />
-                                    enrolled in this course
-                                </p>
-                            </form>
+                                        <button
+                                            className="w-full justify-center py-1 bg-blue-500 hover:bg-blue-600 active:bg-blue-700 rounded-md text-white"
+                                            id="login"
+                                            name="login"
+                                            type="submit"
+                                        >
+                                            Enroll Now
+                                        </button>
+
+                                        <p className="flex justify-center gap-2 space-x-1 bg-[#EAF7FF] py-1 rounded-md text-[#00A3FF] text-xs sm:text-sm">
+                                            <NumberTicker
+                                                value={1450}
+                                                className="whitespace-pre-wrap font-semibold text-base sm:text-lg tracking-tighter text-[#00A3FF]"
+                                            />
+                                            enrolled in this course
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -337,7 +333,7 @@ const UIUXDesign = () => {
                     <button className={`w-32 h-10  text-center text-sm ${showFAQs ? 'text-blue-600 border-b-2          lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleFAQsClick}>FAQs</button>
                 </ul>
             </div> */}
-            <div className='flex sticky top-[70px] container mx-auto rounded-t-lg h-12 -mt-12 bg-gray-100 z-10'>
+            <div className='flex sticky top-[70px] w-11/12 mx-auto rounded-t-lg h-12 -mt-12 bg-gray-100 z-10'>
                 <ul className='flex w-full justify-start px-2 overflow-auto scroll-smooth lg:space-x-0 space-x-4 font-semibold'>
                     <style jsx>{`ul::-webkit-scrollbar {height:1px;}`}</style>
                     <button className={`flex items-center justify-center w-32 h-10 text-center text-sm ${showDescription ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleDescriptionClick}>Description</button>
@@ -394,12 +390,20 @@ const UIUXDesign = () => {
                     <div className="w-full flex flex-col items-center justify-center p-4">
                         <div className="flex flex-col md:flex-row justify-between items-center w-full  p-4 md:p-5 gap-6 rounded-lg  bg-transparent ">
                             <div className="w-full md:w-1/2 p-4 md:p-8 lg:p-12 ">
-                                <h1 className="text-3xl md:text-5xl font-bold">Join the Most Popular Tech Trio Course now!</h1>
+                                <h1 className="text-3xl md:text-5xl font-bold">Join the Most Popular UI/UX Design Course now!</h1>
                             </div>
                             <div className="w-full md:w-1/2 flex items-center justify-center">
                                 <Button
                                     variant="outline"
-                                    className="w-full md:w-60 h-12 bg-blue-500 text-white hover:bg-blue-600 shadow-[4px_4px_2px_1px_#3DE4EB] transition-all"
+                                    className="w-full md:w-60 h-12 bg-blue-500 text-white cursor-pointer hover:bg-blue-600 shadow-[4px_4px_2px_1px_#3DE4EB] transition-all"
+                                    onClick={() => {
+                                        if (formjoinRef.current) {
+                                            formjoinRef.current.scrollIntoView({ behavior: 'smooth' });
+                                            if (nameInputRef.current) {
+                                                nameInputRef.current.focus();
+                                            }
+                                        }
+                                    }}
                                 >
                                     Enroll Now
                                 </Button>
@@ -418,15 +422,11 @@ const UIUXDesign = () => {
                     <div ref={faqsRef} className="w-ful pt-10 place-content-center">
                         <Fqas />
                     </div>
-                    <div ref={faqsRef} className="w-ful pt-10 place-content-center">
-                        <Contact />
-                    </div>
+
 
                 </div>
             </section>
-            <div ref={faqsRef} className="w-ful pt-10 place-content-center">
-                <Footer />
-            </div>
+
         </section>
     )
 }

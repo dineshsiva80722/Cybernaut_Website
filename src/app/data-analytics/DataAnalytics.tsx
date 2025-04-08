@@ -186,10 +186,10 @@ const DataAnalytics = () => {
         {
             name: 'Python for Data Analysis',
             subItems: [`Introduction to Python & Data Handling`,
-                 `Data Structures & Manipulation`,
-                 `Importing & Cleaning Data`,
-                 `Working with Pandas & NumPy`,
-                ],
+                `Data Structures & Manipulation`,
+                `Importing & Cleaning Data`,
+                `Working with Pandas & NumPy`,
+            ],
         },
         {
             name: 'Data Visualization & Statistics',
@@ -359,34 +359,39 @@ const DataAnalytics = () => {
         }
     };
 
-        //web3 forms 
-        const courseName = "Data Analytics"; // This matches your file name data-analytics
-    
-        const [, setResult] = React.useState("");
-        const formRef = useRef<HTMLFormElement>(null);
-        const onSubmit = async (event: React.FormEvent) => {
-            event.preventDefault();
-            setResult("Sending....");
-            const formData = new FormData(event.target as HTMLFormElement);
-            formData.append("access_key", "701509da-ad7d-43d7-9c9e-6f849ee8ff6d");
-            formData.append("course_name", courseName); // Add course name
-    
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                body: formData
-            });
-            const data = await response.json();
-            if (data.success) {
-                setResult("Form Submitted Successfully");
-                alert("Form Submitted Successfully");
-                if (formRef.current) {
-                    formRef.current.reset();
-                }
-            } else {
-                console.log("Error", data);
-                setResult(data.message);
+    //web3 forms 
+    const courseName = "Data Analytics"; // This matches your file name data-analytics
+
+    const [, setResult] = React.useState("");
+    const formRef = useRef<HTMLFormElement>(null);
+    const onSubmit = async (event: React.FormEvent) => {
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target as HTMLFormElement);
+        formData.append("access_key", "701509da-ad7d-43d7-9c9e-6f849ee8ff6d");
+        formData.append("course_name", courseName); // Add course name
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+        const data = await response.json();
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            alert("Form Submitted Successfully");
+            if (formRef.current) {
+                formRef.current.reset();
             }
-        };
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
+        }
+    };
+
+
+    // join noew btn 
+    const formjoinRef = useRef<HTMLDivElement>(null);
+    const nameInputRef = useRef<HTMLInputElement>(null);
 
     return (
         <section className=''>
@@ -453,7 +458,7 @@ const DataAnalytics = () => {
                     </div>
 
                     {/* Right side form */}
-                    <div className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5 '>
+                    <div ref={formjoinRef} className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5 '>
                         <div className="w-full sm:w-[25rem] h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[60px]">
                             <div className="flex flex-col justify-center items-center">
                                 <h2 className="text-lg sm:text-xl text-center font-semibold text-zinc-500">
@@ -461,11 +466,13 @@ const DataAnalytics = () => {
                                 </h2>
                             </div>
 
-                            <form 
-                            onSubmit={onSubmit}
-                            className="w-full mt-4 space-y-4 sm:space-y-2.5 place-content-center">
+                            <form
+                                onSubmit={onSubmit}
+                                className="w-full mt-4 space-y-4 sm:space-y-2.5 place-content-center">
                                 <div>
                                     <input
+                                        ref={nameInputRef}
+
                                         className="outline-none h-[36px] border border-gray-200 rounded-md px-2 w-full text-slate-500 focus:border-blue-300"
                                         placeholder="Name"
                                         id="Name"
@@ -667,7 +674,7 @@ const DataAnalytics = () => {
                                     <div className="flex items-start gap-2 sm:gap-3">
                                         <div className="text-blue-500">▶</div>
                                         <p className="text-base sm:text-lg text-gray-700">
-                                        No Prior Coding Experience: The course starts from the fundamentals, but prior exposure to any programming language will be helpful.
+                                            No Prior Coding Experience: The course starts from the fundamentals, but prior exposure to any programming language will be helpful.
                                         </p>
                                     </div>
                                 </div>
@@ -733,7 +740,15 @@ const DataAnalytics = () => {
                             <div className="w-full md:w-1/2 flex items-center justify-center">
                                 <Button
                                     variant="outline"
-                                    className="w-full md:w-60 h-12 bg-blue-500 text-white hover:bg-blue-600 shadow-[4px_4px_2px_1px_#3DE4EB] transition-all"
+                                    className="w-full md:w-60 h-12 bg-blue-500 text-white cursor-pointer hover:bg-blue-600 shadow-[4px_4px_2px_1px_#3DE4EB] transition-all"
+                                    onClick={() => {
+                                        if (formjoinRef.current) {
+                                            formjoinRef.current.scrollIntoView({ behavior: 'smooth' });
+                                            if (nameInputRef.current) {
+                                                nameInputRef.current.focus();
+                                            }
+                                        }
+                                    }}
                                 >
                                     Enroll Now
                                 </Button>
@@ -748,10 +763,10 @@ const DataAnalytics = () => {
                             {/* Header Section */}
                             <div className="max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
                                 <h1 className="text-4xl md:text-5xl tracking-wider font-bold text-center text-gray-900 mb-6">
-                                Data Analytics Projects You Will Do!
+                                    Data Analytics Projects You Will Do!
                                 </h1>
                                 <p className="text-xl text-center text-gray-600 max-w-4xl mx-auto">
-                                Our Data Analytics Course is a project-based course. Our syllabus is structured in such a way that in every module, you will be assigned a project.
+                                    Our Data Analytics Course is a project-based course. Our syllabus is structured in such a way that in every module, you will be assigned a project.
                                 </p>
                             </div>
 
@@ -763,7 +778,7 @@ const DataAnalytics = () => {
                                             <div className="aspect-[16/9] w-full">
                                                 <Image
                                                     width={1000}
-                                                    height={1000}   
+                                                    height={1000}
                                                     src={project.image}
                                                     alt={project.title}
                                                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -832,7 +847,7 @@ const DataAnalytics = () => {
 
                     <div ref={faqsRef} className="w-ful pt-10 place-content-center">
                         <Fqas />
-                       
+
                     </div>
                     <div ref={faqsRef} className="w-ful pt-10 place-content-center">
                         {/* <Contact /> */}

@@ -162,6 +162,7 @@ import { LampContainer } from "@/components/ui/lamp";
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight, GraduationCap } from 'lucide-react';
+import Contact from '../Home/contact';
 
 import { Dancing_Script } from 'next/font/google';
 const dancingScript = Dancing_Script({ subsets: ['latin'] });
@@ -286,7 +287,7 @@ function App() {
                             transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
                             className="bg-gradient-to-br from-slate-300 to-slate-500 mt-20 block lg:hidden bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
                         >
-                            <h1 className='uppercase font-extrabold text-[#fff] text-2xl md:text-4xl'>Blog</h1> 
+                            <h1 className='uppercase font-extrabold text-[#fff] text-2xl md:text-4xl'>Blog</h1>
                             <br />
                             <h1 className="lg:w-[50rem] w-full -mt-8 place-self-center text-center lg:text-5xl md:text-2xl text-base mx-auto px-4">
                                 Our Mission is to make <span className="text-blue-500">Knowledge</span> and{' '}
@@ -359,94 +360,7 @@ function App() {
                 )}
             </section>
             <section>
-                <section className='relative h-[40rem]  justify-center items-center py-8 md:py-16 px-4 bg-white overflow-hidden'>
-                    <div className='relative w-full max-w-6xl mx-auto'>
-                        <div className='relative w-full lg:h-96 flex shadow-md rounded-2xl bg-white flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12 overflow-hidden'>
-                            {/* Background Image */}
-                            {/* <div className="absolute inset-0 w-full h-full">
-                            <Image
-                                src={Bgimage}
-                                alt="Background Pattern"
-                                fill
-                                sizes="100vw"
-                                priority
-                                className="w-full h-full object-cover opacity-10"
-                                style={{ objectFit: 'cover' }}
-                            />
-                            <div className="absolute inset-0"></div>
-                        </div> */}
-
-                            {/* Left Section */}
-                            <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 rounded-3xl transition-shadow min-h-10/12 duration-300 '>
-                                <div className='max-w-md mx-auto space-y-6 md:space-y-4  '>
-                                    <div className="space-y-6">
-                                        <h1 className={`${dancingScript.className} text-3xl md:text-4xl lg:text-5xl text-blue-600 leading-relaxed animate-fade-in`}>
-                                            Get your quality
-                                        </h1>
-                                        <div className="space-y-2">
-                                            <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent'>
-                                                Skills Certificate
-                                            </h2>
-                                            <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800'>
-                                                from the Cybernaut
-                                            </h2>
-                                        </div>
-                                    </div>
-
-
-                                    <Link href="/Program">
-                                        <button className='group w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r  mt-5 from-[#13D8FB] to-[#00A3FF] px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-medium hover:shadow-lg hover:shadow-blue-200/50 transform hover:-translate-y-0.5 transition-all duration-200'>
-                                            Get Started Now
-                                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                                        </button>
-                                    </Link>
-
-                                    <div className="flex items-center gap-3 text-gray-500">
-                                        <GraduationCap className="w-5 h-5 text-blue-500" />
-                                        <span className="text-sm md:text-base">Join 5000+ certified professionals</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Right Section */}
-                            <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 backdrop-blur-sm rounded-3xl transition-shadow duration-300'>
-                                <div className='max-w-md mx-auto space-y-4'>
-                                    <div className="space-y-2">
-                                        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">Email Us</h3>
-                                        <p className="text-gray-600 md:text-lg">Stay updated with our latest courses and opportunities</p>
-                                    </div>
-                                    <form onSubmit={handleSubmit} className="space-y-4">
-
-                                        <div className="relative group">
-                                            <input
-                                                type="email"
-                                                value={email}
-                                                onChange={(e) => setEmail(e.target.value)}
-                                                placeholder="Enter your email"
-                                                className="w-full px-6 py-4 rounded-xl bg-white/80 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 outline-none text-base md:text-lg group-hover:border-blue-300"
-                                                required
-                                            />
-                                        </div>
-
-                                        <button
-                                            type="submit"
-                                            disabled={isLoading}
-                                            className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium py-4 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] hover:shadow-lg flex items-center justify-center gap-2 text-base md:text-lg"
-                                        >
-                                            {isLoading ? 'Sending...' : 'Subscribe Now'}
-                                        </button>
-
-                                    </form>
-
-
-                                    <p className="text-sm md:text-base text-gray-500 text-center">
-                                        Join 5,000+ subscribers who are already learning with us
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <Contact />
             </section>
             <Footer />
         </div>

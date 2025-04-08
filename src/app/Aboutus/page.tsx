@@ -62,7 +62,6 @@ const Page = () => {
       </div>
       <About />
       <div id='offers'>
-
         <Offers />
       </div>
       <Founders />
@@ -72,7 +71,6 @@ const Page = () => {
       <Milestones />
       <Outreaches />
       <Journey />
-
       {/* <Proccess /> */}
       {/* <WhyHireWithUs /> */}
       <Contact />

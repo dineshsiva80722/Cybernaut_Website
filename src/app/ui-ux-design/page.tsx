@@ -4,6 +4,8 @@ import UIUXDesign from './UIUXDesign'
 import Nav from '@/app/Home/nav'
 import { useState, useEffect } from 'react'
 import { ArrowUp } from 'lucide-react';
+import Footer from '../Home/footer'
+import Contact from '../Home/contact'
 
 
 const Page = () => {
@@ -50,7 +52,8 @@ const Page = () => {
       </div>
       <UIUXDesign />
 
-      {/* <Contact /> */}
+      <Contact />
+      <Footer/>
     </div>
   )
 }

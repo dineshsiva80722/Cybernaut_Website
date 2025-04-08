@@ -14,7 +14,6 @@ import Image from 'next/image';
 import TechImage from '@/app/Home/assets/Certificate/TechTrioC++.png';
 import { Code2, Network } from 'lucide-react';
 import { MonitorPlay, LineChart } from 'lucide-react';
-import { ArrowRight, GraduationCap } from 'lucide-react';
 import { Dancing_Script } from 'next/font/google';
 
 
@@ -324,6 +323,8 @@ const Techtrio = () => {
             rating: 4
         }
     ];
+
+
     //web3 forms 
     const courseName = "Tech Trio"; // This matches your file name tech-trio
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -353,6 +354,10 @@ const Techtrio = () => {
             setResult(data.message);
         }
     };
+
+    // join now btn 
+    const formjoinRef = useRef<HTMLDivElement>(null);
+    const nameInputRef = useRef<HTMLInputElement>(null);
 
     return (
         <section className=''>
@@ -418,7 +423,7 @@ const Techtrio = () => {
                     </div>
 
                     {/* Right side form */}
-                    <div className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5 '>
+                    <div ref={formjoinRef} className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5 '>
                         <div className="w-full sm:w-[25rem] min-h-[400px] lg:h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[60px]">
                             <div className="flex flex-col justify-center items-center">
                                 <h2 className="text-lg sm:text-xl text-center font-semibold text-zinc-500">
@@ -439,6 +444,7 @@ const Techtrio = () => {
                                 />
                                 <div>
                                     <input
+                                        ref={nameInputRef}
                                         className="outline-none border border-gray-300 h-[36px] rounded-md px-2 w-full text-slate-500 focus:border-blue-300"
                                         placeholder="Name"
                                         id="Name"
@@ -513,7 +519,7 @@ const Techtrio = () => {
 
             {/* Number box */}
 
-            <div className='flex w-11/12 h-12 mx-auto bg-gray-100 sticky top-[70px] rounded-t-lg -mt-12 z-10'>
+            <div className='flex w-11/12  h-12 mx-auto bg-gray-100 sticky top-[70px] rounded-t-lg -mt-12 z-10'>
                 <ul className='flex w-full justify-start px-2 overflow-auto scroll-smooth lg:space-x-0 space-x-5 font-semibold'>
                     <style jsx>{`ul::-webkit-scrollbar {height:1px;}`}</style>
                     <button className={`w-32 h-10 text-center text-sm ${showDescription ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleDescriptionClick}>Description</button>
@@ -708,7 +714,15 @@ const Techtrio = () => {
                             <div className="w-full md:w-1/2 flex items-center justify-center">
                                 <Button
                                     variant="outline"
-                                    className="w-full md:w-60 h-12 bg-blue-500 text-white hover:bg-blue-600 shadow-[4px_4px_2px_1px_#3DE4EB] transition-all"
+                                    className="w-full md:w-60 h-12 bg-blue-500 text-white cursor-pointer hover:bg-blue-600 shadow-[4px_4px_2px_1px_#3DE4EB] transition-all"
+                                    onClick={() => {
+                                        if (formjoinRef.current) {
+                                            formjoinRef.current.scrollIntoView({ behavior: 'smooth' });
+                                            if (nameInputRef.current) {
+                                                nameInputRef.current.focus();
+                                            }
+                                        }
+                                    }}
                                 >
                                     Enroll Now
                                 </Button>
@@ -809,69 +823,6 @@ const Techtrio = () => {
                         <Fqas />
                     </div>
 
-                    <div ref={faqsRef} className="w-ful pt-10 place-content-center">
-                        {/* <Contact /> */}
-                        <section className='relative h-[40rem] flex justify-center items-center py-8 md:py-16 px-4 bg-white overflow-hidden my-10'>
-                            <div className='relative w-full max-w-6xl mx-auto'>
-                                <div className='relative w-full lg:h-96 flex shadow-md rounded-2xl bg-white flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12 overflow-hidden'>
-                                    {/* Left Section */}
-                                    <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 rounded-3xl transition-shadow duration-300 '>
-                                        <div className='max-w-md mx-auto space-y-6 md:space-y-4  '>
-                                            <div className="space-y-6">
-                                                <h1 className={`${dancingScript.className} text-3xl md:text-4xl lg:text-5xl text-blue-600 leading-relaxed animate-fade-in`}>
-                                                    Get your quality
-                                                </h1>
-                                                <div className="space-y-2">
-                                                    <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent'>
-                                                        Skills Certificate
-                                                    </h2>
-                                                    <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800'>
-                                                        from the Cybernaut
-                                                    </h2>
-                                                </div>
-                                            </div>
-                                            <Link href="/Program">
-                                                <button className='group w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-[#13D8FB] to-[#00A3FF] px-6 md:px-8 py-3 md:py-4 rounded-full text-white font-medium hover:shadow-lg hover:shadow-blue-200/50 transform hover:-translate-y-0.5 transition-all duration-200'>
-                                                    Get Started Now
-                                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                                                </button>
-                                            </Link>
-
-                                            <div className="flex items-center gap-3 text-gray-500">
-                                                <GraduationCap className="w-5 h-5 text-blue-500" />
-                                                <span className="text-sm md:text-base">Join 5000+ certified professionals</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <style jsx>{`
-                @keyframes blob {
-                    0% { transform: translate(0px, 0px) scale(1); }
-                    33% { transform: translate(30px, -50px) scale(1.1); }
-                    66% { transform: translate(-20px, 20px) scale(0.9); }
-                    100% { transform: translate(0px, 0px) scale(1); }
-                }
-                .animate-blob {
-                    animation: blob 7s infinite;
-                }
-                .animation-delay-2000 {
-                    animation-delay: 2s;
-                }
-                .animation-delay-4000 {
-                    animation-delay: 4s;
-                }
-                @keyframes fadeIn {
-                    from { opacity: 0; transform: translateY(10px); }
-                    to { opacity: 1; transform: translateY(0); }
-                }
-                .animate-fade-in {
-                    animation: fadeIn 1s ease-out;
-                }
-            `}</style>
-                    </div>
                 </div>
             </section>
 

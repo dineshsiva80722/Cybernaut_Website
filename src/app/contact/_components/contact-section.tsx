@@ -305,7 +305,7 @@ export default function ContactSection() {
               content="Browse through all of our Courses"
               isLinkVisible={true}
               linkTitle="Browse Courses"
-              linkURL="/programs"
+              linkURL="/Program"
               isArrowVisible={true}
             >
               <CircleHelp className="size-4" />
@@ -316,7 +316,7 @@ export default function ContactSection() {
               content="Get to know more about us."
               isLinkVisible={true}
               linkTitle="Know more"
-              linkURL="/about-us"
+              linkURL="/Aboutus"
               isArrowVisible={true}
             >
               <MessageCircle className="size-4" />
@@ -338,7 +338,7 @@ export default function ContactSection() {
               targetBlack
               linkTitle="Visit Us"
               isAddressVisible={true}
-              linkURL="https://www.google.com/maps?s=web&client=firefox-b-d&lqi=CgljeWJlcm5hdXRIksGnvOG3gIAIWhUQABgAIgljeWJlcm5hdXQqBAgCEACSARdlZHVjYXRpb25hbF9pbnN0aXR1dGlvbqoBMRABMh4QASIadfgcke1U64wBmU2xjJVDbJs6Q7F8v9IhOrsyDRACIgljeWJlcm5hdXQ&vet=12ahUKEwjLzpfS1vKIAxVzwzgGHbS3BdEQ1YkKegQIJRAB..i&cs=1&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KWV0K7EtYVI6MUcSIlhYMTU0&daddr=43/a,+Nehru+Nagar,+Rayanur,+Thoronakkalpatti,+Karur,+Tamil+Nadu+639003"
+              linkURL="https://www.google.com/maps/place/Cybernaut+Edu-Tech/@10.9401924,78.0816167,17z/data=!3m1!4b1!4m6!3m5!1s0x3a52612db12b7465:0x3435315858221247!8m2!3d10.9401871!4d78.0841916!16s%2Fg%2F11rscsms4l?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D"
               addressContent="43/a, Nehru Nagar, Rayanur, Thoronakkalpatti, Karur, Tamil Nadu 639003"
             >
               <MapPinned className="size-4" />
