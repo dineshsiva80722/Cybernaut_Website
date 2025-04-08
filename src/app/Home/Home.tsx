@@ -476,8 +476,8 @@ export default function Home() {
                 </section>
             </div> */}
             <div className="container mx-auto hidden lg:block w-full max-w-[90vw] min-h-screen px-4 pb-40">
-                <section className="container mx-auto min-h-[140rem] relative top-20 w-full">
-                    <main className="mx-auto h-auto w-11/12 md:w-10/12 lg:w-11/12 xl:w-11/12 rounded-xl sticky top-20 place-content-center overflow-hidden shadow-[0px_-80px_50px_5px_#F8F8F8]">                        <div className="flex items-center justify-center w-full">
+                <section className="container mx-auto min-h-[140rem] relative top-24 w-full">
+                    <main className="mx-auto h-auto w-11/12  lg:w-11/12 xl:w-11/12 rounded-xl sticky top-24 place-content-center overflow-hidden shadow-[0px_-80px_50px_5px_#F8F8F8]">                        <div className="flex items-center justify-center w-full">
                         <div className="min-h-auto w-1/2 space-y-4">
                             <h1 className="text-3xl md:text-2xl lg:text-3xl xl:text-4xl w-[35rem] md:w-[30rem] lg:w-[35rem] xl:w-[40rem] text-start font-semibold md:font-medium lg:font-semibold xl:font-bold transition-all duration-300 ease-in-out">
                                 <span className="text-[clamp(1.5rem,4vw,2.5rem)]">
@@ -534,7 +534,7 @@ export default function Home() {
                     </div>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
-                            <div className="absolute top-0 left-60 md:left-40 lg:left-60 xl:left-80 z-50 right-0 mx-auto w-full">
+                            <div className="absolute top-0 left-60 md:left-40 lg:left-60  z-50 right-0 mx-auto w-full">
                                 <div className="relative w-full max-w-md mx-auto" style={{
                                     transform: `translateY(${moveDistance}px)`,
                                     transition: 'transform 0.4s ease-out'

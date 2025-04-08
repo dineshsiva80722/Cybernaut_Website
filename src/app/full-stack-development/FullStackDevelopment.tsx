@@ -206,9 +206,8 @@ const WebDevelopment = () => {
 
                             {/* Course info */}
                             <div className='relative lg:top-14 text-white'>
-                                <h1 className='w-[40rem] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold'>{content.title}</h1>
-                                <p className='py-1 w-[50rem] text-base lg:text-lg'>{content.description}</p>
-
+                                <h1 className='lg:w-[40rem] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold'>{content.title}</h1>
+                                <p className='py-1 lg:w-[50rem] text-base lg:text-lg'>{content.description}</p>
                                 {/* Stats */}
                                 <div className='flex flex-col sm:flex-row justify-start items-start sm:items-center py-5 text-white gap-3 sm:gap-5'>
                                     <span className='flex items-center justify-center gap-1 text-sm sm:text-base'>
@@ -230,7 +229,6 @@ const WebDevelopment = () => {
                                         </span>
                                     </div>
                                 </div>
-
                                 {/* <Button className='mt-2 w-32 sm:w-40 h-10 sm:h-12 text-blue-500 text-sm sm:text-base' variant='outline'>
                                     {content.buttons.enrollNow}
                                 </Button> */}

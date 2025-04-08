@@ -162,9 +162,9 @@ const UIUXDesign = () => {
 
     return (
         <section className=''>
-            <section className='mt-[70px]'>
+            <section className='mt-[20px]'>
                 <div
-                    className='flex flex-col lg:flex-row justify-between w-full min-h-[569px]'
+                    className='flex flex-col lg:flex-row justify-between container mx-auto min-h-[569px]'
                     style={{ backgroundImage: `url('https://res.cloudinary.com/dn60aovto/image/upload/v1742460377/HeadBg_jmdshj.png')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                 >
                     {/* Left side content */}
@@ -194,7 +194,6 @@ const UIUXDesign = () => {
                                 <p className='py-5 text-base lg:text-lg'>
                                     Master graphic design with our hands-on course using Figma and Adobe Illustrator. Gain essential skills to create stunning visual content and elevate your creativity to new heights.
                                 </p>
-
                                 {/* Stats */}
                                 <div className='flex flex-col sm:flex-row justify-start items-start sm:items-center py-5 text-white gap-3 sm:gap-5'>
                                     <span className='flex items-center justify-center gap-1 text-sm sm:text-base'>
@@ -216,8 +215,6 @@ const UIUXDesign = () => {
                                         </span>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -298,7 +295,7 @@ const UIUXDesign = () => {
                 </div>
             </section>
 
-            <div className='flex sticky top-[70px] w-11/12 mx-auto rounded-t-lg h-12 -mt-12 bg-gray-100 z-10'>
+            {/* <div className='flex sticky top-[70px] container mx-auto rounded-t-lg h-12 -mt-12 bg-gray-100 z-10'>
                 <ul className='flex w-full justify-start px-2 overflow-auto scroll-smooth lg:space-x-0 space-x-5 font-semibold'>
                     <style jsx>{`ul::-webkit-scrollbar {height:1px;}`}</style>
                     <button className={`w-32 h-10  text-center text-sm ${showDescription ? 'text-blue-600 border-b-2   lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleDescriptionClick}>Description</button>
@@ -309,10 +306,22 @@ const UIUXDesign = () => {
                     <button className={`w-32 h-10  text-center text-sm ${showTestimonials ? 'text-blue-600 border-b-2  lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleTestimonialsClick}>Testimonials</button>
                     <button className={`w-32 h-10  text-center text-sm ${showFAQs ? 'text-blue-600 border-b-2          lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleFAQsClick}>FAQs</button>
                 </ul>
+            </div> */}
+            <div className='flex sticky top-[70px] container mx-auto rounded-t-lg h-12 -mt-12 bg-gray-100 z-10'>
+                <ul className='flex w-full justify-start px-2 overflow-auto scroll-smooth lg:space-x-0 space-x-4 font-semibold'>
+                    <style jsx>{`ul::-webkit-scrollbar {height:1px;}`}</style>
+                    <button className={`flex items-center justify-center w-32 h-10 text-center text-sm ${showDescription ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleDescriptionClick}>Description</button>
+                    <button className={`flex items-center justify-center w-32 h-10 text-center text-sm ${showCourses ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleModulesClick}>Modules</button>
+                    <button className={`flex items-center justify-center w-32 h-10 text-center text-sm ${showBenefits ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleBenefitsClick}>Benefits</button>
+                    <button className={`flex items-center justify-center w-32 h-10 text-center text-sm ${showCertification ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleCertificationClick}>Certification</button>
+                    <button className={`flex items-center justify-center w-32 h-10 text-center text-sm ${showRequirements ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleRequirementsClick}>Requirements</button>
+                    <button className={`flex items-center justify-center w-32 h-10 text-center text-sm ${showTestimonials ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleTestimonialsClick}>Testimonials</button>
+                    <button className={`flex items-center justify-center w-32 h-10 text-center text-sm ${showFAQs ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleFAQsClick}>FAQs</button>
+                </ul>
             </div>
 
-            <section className='w-full min-h-[40rem]  relative '>
-                <div className='lg:w-11/12 bg-[#f5f5f5] shadow-xl  mx-start mx-auto overflow-hidden rounded-lg'>
+            <section className='container mx-auto min-h-[40rem]  relative '>
+                <div className=' bg-[#f5f5f5] shadow-xl  mx-start mx-auto overflow-hidden rounded-lg'>
                     <div className=" bg-gray-100 flex items-center justify-center p-4">
                         <div ref={descriptionRef} className="w-full  flex flex-col md:flex-row justify-around gap-6  p-4">
                             <div className="w-full md:w-1/2 place-content-center p-4 md:p-8">
@@ -357,7 +366,6 @@ const UIUXDesign = () => {
                             <div className="w-full md:w-1/2 p-4 md:p-8 lg:p-12 ">
                                 <h1 className="text-3xl md:text-5xl font-bold">Join the Most Popular Tech Trio Course now!</h1>
                             </div>
-
                             <div className="w-full md:w-1/2 flex items-center justify-center">
                                 <Button
                                     variant="outline"
@@ -368,7 +376,6 @@ const UIUXDesign = () => {
                             </div>
                         </div>
                     </div>
-
 
                     <div ref={requirementsRef} className="w-ful pt-10 place-content-center">
                         <OurProject />

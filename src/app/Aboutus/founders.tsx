@@ -228,7 +228,7 @@ const Founders = () => {
           {/* Left Content */}
           <div className="w-full  min-h-96 flex items-center justify-center py-10 lg:py-0  ">
             <div className='lg:w-[33rem] w-full  min-h-80  space-y-2'>
-              <h1 className="text-2xl hidden lg:block md:text-2xl lg:text-2xl font-bold text-[#1F1F3D]">
+              <h1 className="text-lg  md:text-2xl lg:text-2xl font-bold text-[#1F1F3D]">
                 Hello, I&apos;m Jayasurya Gnanavel
               </h1>
 
@@ -309,7 +309,7 @@ const Founders = () => {
 
           <div className="w-full  min-h-96 flex items-center justify-center ">
             <div className='w-[33rem] min-h-80  space-y-3'>
-              <h1 className="text-3xl md:text-2xl lg:text-2xl font-bold    text-[#1F1F3D]">
+              <h1 className="text-lg md:text-2xl lg:text-2xl font-bold    text-[#1F1F3D]">
                 Hello, I&apos;m Manish Kumar
               </h1>
               <h2 className="text-xl md:text-xl text-[#00A3FF] font-semibold">
