@@ -376,10 +376,10 @@ export default function Page() {
                         <p
                             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[1rem] font-bold duration-500 group-hover:-translate-x-[250%]"
                         >
-                            Today's Quote
+                            Today&apos;s Quote
                         </p>
                         <p
-                            className="absolute left-1/2 top-1/2 h-fit w-full -translate-y-1/2 translate-x-1/2 px-[1rem] text-left text-[0.75rem] font-bold duration-500 group-hover:-translate-x-1/2 text-center"
+                            className="absolute left-1/2 top-1/2 h-fit w-full -translate-y-1/2 translate-x-1/2 px-[1rem] text-center text-[0.75rem] font-bold duration-500 group-hover:-translate-x-1/2"
                         >
                             “The real workout starts when you want to stop.” – Ronnie Coleman
                         </p>
