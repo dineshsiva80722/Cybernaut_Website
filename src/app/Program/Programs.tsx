@@ -19,7 +19,7 @@ const mobileSliderImages = [
 ]
 
 const Programs = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [, setCurrentSlide] = useState(0);
     return (
         <div className=''>
             {/* IMage Slider */}
