@@ -168,7 +168,7 @@ const dancingScript = Dancing_Script({ subsets: ['latin'] });
 
 interface Blog {
     title: string;
-    content: string; 
+    content: string;
     url: string;
     category: string;
     description: string;
@@ -184,7 +184,7 @@ function App() {
         fetch("https://medium-postscraper-api.onrender.com/scrape?url=https://cybernautblogs.medium.com/")
             .then(response => response.json())
             .then(data => {
-                const categorizedBlogs = data.map((blog: Blog) => ({  
+                const categorizedBlogs = data.map((blog: Blog) => ({
                     ...blog,
                     category: categorizeBlog(blog)
                 }));
@@ -265,17 +265,35 @@ function App() {
                     <LampContainer>
                         <motion.h1
                             initial={{ opacity: 0.5, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            whileInView={{ opacity: 1, y: -20 }}
                             transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-                            className="bg-gradient-to-br from-slate-300 fixed to-slate-500 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+                            className="bg-gradient-to-br from-slate-300 fixed to-slate-500 hidden lg:block bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
                         >
-                            <h1 className='uppercase font-extrabold text-[#fff]'>Blog</h1> <br />
-                            <h1 className="lg:w-[50rem] w-80  -mt-10 place-self-center text-center lg:text-5xl md:text-2xl text-sm mx-auto">
+                            <h1 className='uppercase font-extrabold text-[#fff] text-2xl md:text-4xl'>Blog</h1>
+                            <br />
+                            <h1 className="lg:w-[50rem] w-full -mt-8 place-self-center text-center lg:text-5xl md:text-2xl text-base mx-auto px-4">
                                 Our Mission is to make <span className="text-blue-500">Knowledge</span> and{' '}
                                 <span className="text-blue-500">News accessible</span> for <span className="text-blue-500">Everyone.</span>
                             </h1>
                             <br />
-                            <p className="text-sm -mt-10 tracking-wide">
+                            <p className="text-sm -mt-8 tracking-wide px-4">
+                                Stay informed with the latest insights, trends, and updates. Explore expert opinions, industry news, and valuable knowledge—all in one place.
+                            </p>
+                        </motion.h1>
+                        <motion.h1
+                            initial={{ opacity: 0.5, y: 200 }}
+                            whileInView={{ opacity: 1, y: 100 }}
+                            transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+                            className="bg-gradient-to-br from-slate-300 to-slate-500 mt-20 block lg:hidden bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+                        >
+                            <h1 className='uppercase font-extrabold text-[#fff] text-2xl md:text-4xl'>Blog</h1> 
+                            <br />
+                            <h1 className="lg:w-[50rem] w-full -mt-8 place-self-center text-center lg:text-5xl md:text-2xl text-base mx-auto px-4">
+                                Our Mission is to make <span className="text-blue-500">Knowledge</span> and{' '}
+                                <span className="text-blue-500">News accessible</span> for <span className="text-blue-500">Everyone.</span>
+                            </h1>
+                            <br />
+                            <p className="text-sm -mt-8 tracking-wide px-4">
                                 Stay informed with the latest insights, trends, and updates. Explore expert opinions, industry news, and valuable knowledge—all in one place.
                             </p>
                         </motion.h1>
@@ -284,12 +302,12 @@ function App() {
             </section>
 
             {/* Filter Buttons */}
-            <div className="flex justify-center gap-4 mt-4">
+            <div className="flex justify-center w-11/12 mx-auto lg:ap-4 mt-4">
                 {['All', 'Business', 'Technology', 'Marketing', 'Other'].map(category => (
                     <Button
                         key={category}
                         onClick={() => handleFilterChange(category)}
-                        className={`shadow-none bg-transparent  px-4 py-2 hover:bg-transparent rounded-md ${activeCategory === category ? ' text-blue-500' : ' text-black '}`}
+                        className={`shadow-none bg-transparent  lg:px-4 lg:py-2 hover:bg-transparent rounded-md ${activeCategory === category ? ' text-blue-500' : ' text-black '}`}
                     >
                         {category}
                     </Button>
@@ -297,8 +315,8 @@ function App() {
             </div>
 
             {/* Search Bar (Moved Below Categories) */}
-            <div className="flex justify-center mt-6 relative max-w-md mx-auto">
-                <div className="relative w-full">
+            <div className="flex justify-center mt-6 relative lg:max-w-md mx-auto">
+                <div className="relative lg:w-full w-11/12">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
                     <input
                         type="text"
