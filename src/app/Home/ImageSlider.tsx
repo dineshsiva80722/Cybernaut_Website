@@ -141,7 +141,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
                     </h2>
                     <p className="text-gray-600 lg:text-lg min-h-10 text-sm max-w-6xl mx-auto">
                         {activeTab === 'gallery'
-                            ? <>At Cybernaut Edu-Tech, we're shaping futures with long-term programs in top institutions. <br /><span className="font-bold ">It's not a moment, it's a movement!</span></>
+                            ? <>At Cybernaut Edu-Tech, we&apos;re shaping futures with long-term programs in top institutions. <br /><span className="font-bold ">It&apos;s not a moment, it&apos;s a movement!</span></>
                             : <>Cybernaut Edu-Tech brings the power of hands-on learning and outreach events <br /> <span className="font-bold "> Real skills, real impact, real change! </span></>}
                     </p>
                 </div>
