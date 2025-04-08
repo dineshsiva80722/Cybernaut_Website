@@ -160,12 +160,8 @@ import Footer from '@/app/Home/footer';
 import { motion } from "framer-motion";
 import { LampContainer } from "@/components/ui/lamp";
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { ArrowRight, GraduationCap } from 'lucide-react';
 import Contact from '../Home/contact';
 
-import { Dancing_Script } from 'next/font/google';
-const dancingScript = Dancing_Script({ subsets: ['latin'] });
 
 interface Blog {
     title: string;
@@ -227,34 +223,6 @@ function App() {
             );
         }
         setFilteredBlogs(filtered);
-    };
-
-
-    const [email, setEmail] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setIsLoading(true);
-
-        try {
-            const response = await fetch('/api/sendEmail', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email }),
-            });
-
-            if (response.ok) {
-                alert('Thank you for subscribing!');
-            } else {
-                alert('Failed to subscribe. Please try again.');
-            }
-        } catch (error) {
-            alert(`An error occurred. Please try again.${error}`);
-        } finally {
-            setIsLoading(false);
-            setEmail('');
-        }
     };
 
 

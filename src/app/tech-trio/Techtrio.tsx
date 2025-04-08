@@ -14,12 +14,7 @@ import Image from 'next/image';
 import TechImage from '@/app/Home/assets/Certificate/TechTrioC++.png';
 import { Code2, Network } from 'lucide-react';
 import { MonitorPlay, LineChart } from 'lucide-react';
-import { Dancing_Script } from 'next/font/google';
 
-
-
-
-const dancingScript = Dancing_Script({ subsets: ['latin'] });
 const content = {
     courseTitle: 'Tech trio - core coding',
     courseDescription: 'Master C++, Java, and Python with 15+ projects,  earn certificates, gain internship experience, and enhance your resume with free Git/GitHub and soft skills Master Class.',
