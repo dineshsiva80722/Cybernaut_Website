@@ -180,9 +180,10 @@ const Offers = () => {
                             </div>
 
                             <div className='flex lg:hidden mb-10 relative  mx-auto rounded-full w-5/12 h-[0.1rem] overflow-hidden -mt-1 bg-gray-100'>
-                                <div className="w-1/2 h-[0.1rem] moving-mobile-bar rounded-full absolute left-0 top-0 bg-red-500">
+                                <div className="w-1/2 h-[0.1rem] moving-mobile-bar rounded-full absolute left-0 top-0">
                                 </div>
                             </div>
+                            
                         </div>
 
 
