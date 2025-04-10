@@ -8,7 +8,7 @@ import AnimatedTooltip from '@/components/ui/animated-tooltip'
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { StaticImageData } from 'next/image';
 import Commonbtn from '@/components/ui/Commonbtn';
-import { ArrowRight } from 'lucide-react';
+// import { ArrowRight } from 'lucide-react';
 const people: { id: number; name: string; designation: string; image: string | StaticImageData; }[] = [
   {
     id: 1,
