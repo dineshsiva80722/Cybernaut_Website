@@ -55,7 +55,7 @@ export default function ContactSection() {
 
         <div className="mt-12 grid items-center gap-6 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col rounded-xl p-4 sm:p-6 lg:p-8">
-            <h2 className="mb-8 text-xl font-bold text-neutral-700 dark:text-white">
+            <h2 className="mb-8 text-xl font-bold text-neutral-700">
               Fill in the form below
             </h2>
 
