@@ -29,10 +29,11 @@ const footerData = {
     {
       title: "Programs",
       links: [
-        { label: "Tech Trio", href: "/TechTrio" },
-        { label: "UI/UX Design", href: "/UI&UXDesign" },
-        { label: "Full Stack", href: "/FullStackDevelopment" },
-        { label: "MetaZen", href: "/MetaZen" }
+        { label: "Tech Trio", href: "/tech-trio" },
+        { label: "UI/UX Design", href: "/ui-ux-design" },
+        { label: "Full Stack", href: "/full-stack-development" },
+        { label: "Data Analysis", href: "/data-analytics" },
+        { label: "MetaZen", href: "/meta-zen" }
       ]
     },
     {
@@ -106,7 +107,7 @@ const Footer = () => {
                         <button
                           key={linkIndex}
                           onClick={() => handleNavigation(link.href)}
-                          className='block text-white text-sm hover:text-gray-300 transition-colors'
+                          className='block text-white text-sm hover:text-gray-300 cursor-pointer transition-colors'
                         >
                           {link.label}
                         </button>
@@ -144,7 +145,7 @@ const Footer = () => {
               {/* WhatsApp Button - Mobile Only */}
               <div className=''>
                 <h1 className='text-white font-bold text-lg mb-3'>Have any questions?</h1>
-                <a 
+                <a target='_blank'
                   href="https://wa.me/916382055035"
                   className="inline-block px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors text-sm font-medium"
                 >

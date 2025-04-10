@@ -103,7 +103,7 @@ function App() {
             </section>
 
             {/* Filter Buttons */}
-            <div className="flex justify-center w-11/12 mx-auto lg:ap-4 mt-4">
+            {/* <div className="flex lg:justify-center w-full lg:w-11/12 mx-auto lg:ap-4 mt-4">
                 {['All', 'Business', 'Technology', 'Marketing', 'Other'].map(category => (
                     <Button
                         key={category}
@@ -113,18 +113,35 @@ function App() {
                         {category}
                     </Button>
                 ))}
+            </div> */}
+            <div className="flex flex-wrap justify-center w-full px-4 py-2 gap-2 lg:gap-4">
+                {['All', 'Business', 'Technology', 'Marketing', 'Other'].map(category => (
+                    <Button
+                        key={category}
+                        onClick={() => handleFilterChange(category)}
+                        className={`shadow-none bg-transparent w-full sm:w-auto px-2 sm:px-4 py-1 sm:py-2 rounded-md text-sm sm:text-base
+                                   hover:bg-transparent transition-colors duration-200
+                                   ${activeCategory === category ? 'text-blue-500' : 'text-black'}`}
+                    >
+                        {category}
+                    </Button>
+                ))}
             </div>
 
             {/* Search Bar (Moved Below Categories) */}
-            <div className="flex justify-center mt-6 relative lg:max-w-md mx-auto">
-                <div className="relative lg:w-full w-11/12">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
+            <div className="flex justify-center mt-6 relative w-full px-4">
+                <div className="relative w-full max-w-md">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <Search className="text-gray-400 h-5 w-5" />
+                    </div>
                     <input
                         type="text"
                         placeholder="Search by title or description..."
                         value={searchQuery}
                         onChange={handleSearchChange}
-                        className="border p-3 pl-10 w-full rounded-md text-black shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        className="w-full px-10 py-3 rounded-lg bg-white border border-gray-200 shadow-sm
+                                 focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+                                 placeholder-gray-400 text-sm sm:text-base transition-all duration-200"
                     />
                 </div>
             </div>
@@ -223,7 +240,8 @@ function App() {
                                                     rel="noopener noreferrer"
                                                     className="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-800 transition-colors"
                                                 >
-                                                    Read More <ChevronRight size={16} />
+                                                    Read More
+                                                    <ChevronRight size={16} />
                                                 </a>
                                             </div>
                                         </div>
@@ -235,7 +253,7 @@ function App() {
                 </div>
             </section>
             <section>
-                <Contact />
+            <Contact />
             </section>
             <Footer />
         </div>
