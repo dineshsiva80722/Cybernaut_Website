@@ -359,7 +359,7 @@ const Techtrio = () => {
                     style={{ backgroundImage: `url('https://res.cloudinary.com/dn60aovto/image/upload/v1742460976/coursesBG_dpaul6.png')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
                 >
                     {/* Left side content */}
-                    <div className='w-full lg:w-1/2 flex items-start justify-center p-5 lg:p-24'>
+                    <div className='w-full lg:w-1/2 flex items-start justify-center p-10  lg:p-24'>
                         <div className='relative lg:-top-10 w-full'>
                             {/* Navigation */}
                             <div className='flex justify-start min-h-10 overflow-x-auto lg:overflow-visible'>
@@ -408,9 +408,9 @@ const Techtrio = () => {
                                     </div>
                                 </div>
 
-                                <Button className='mt-2 w-32 sm:w-40 h-10 sm:h-12 text-blue-500 text-sm sm:text-base' variant='outline'>
+                                {/* <Button className='mt-2 w-32 sm:w-40 h-10 sm:h-12 text-blue-500 text-sm sm:text-base' variant='outline'>
                                     Enroll Now
-                                </Button>
+                                </Button> */}
                             </div>
                         </div>
                     </div>
@@ -512,7 +512,7 @@ const Techtrio = () => {
 
             {/* Number box */}
 
-            <div className='flex w-11/12  h-12 mx-auto bg-gray-100 sticky top-[70px] rounded-t-lg -mt-12 z-10'>
+            <div className='flex lg:w-11/12  h-12 mx-auto bg-gray-100 sticky top-[70px] rounded-t-lg -mt-12 z-10'>
                 <ul className='flex w-full justify-start px-2 overflow-auto scroll-smooth lg:space-x-0 space-x-5 font-semibold'>
                     <style jsx>{`ul::-webkit-scrollbar {height:1px;}`}</style>
                     <button className={`w-32 h-10 text-center text-sm ${showDescription ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleDescriptionClick}>Description</button>
@@ -589,7 +589,7 @@ const Techtrio = () => {
 
                     <div ref={certificationRef} className="w-ful place-content-center">
                         {/* <Samplecertificate /> */}
-                        <div className=" w-11/12 mx-auto p-8 py-10 ">
+                        <div className=" w-11/12 mx-auto p-8 lg:py-10 ">
                             <h1 className="text-3xl font-bold mb-8">Certificate on Completion</h1>
 
                             <div className="lg:flex justify-between  gap-8 ">
@@ -616,7 +616,7 @@ const Techtrio = () => {
                             </div>
 
                             {/* Shareable section */}
-                            <div className="mt-8 flex items-center gap-2">
+                            <div className="lg:mt-8 flex items-center gap-2">
                                 <h1 className="text-gray-700">Shareable on <span className='text-blue-500 font-bold text-lg font-serif'>LinkedIn</span> </h1>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 128 128"><path fill="#0076b2" d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3" /><path fill="#fff" d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 1 1-10.5 10.49a10.5 10.5 0 0 1 10.5-10.49m20.41 29h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z" /></svg>
                             </div>
@@ -839,7 +839,7 @@ function AccordionItem({
     onClick: () => void;
 }) {
     return (
-        <div className="rounded-lg my-2 w-11/12 mx-auto rounded-b-none border-b-[0.2rem]  border-b-blue-600">
+        <div className="rounded-lg my-2 lg:w-11/12 mx-auto rounded-b-none border-b-[0.2rem]  border-b-blue-600">
             <button
                 className={`w-full px-6 py-4  rounded-lg flex items-center justify-between transition-colors duration-200 ${isOpen ? 'bg-white' : 'bg-white hover:bg-gray-50'
                     }`}
@@ -873,7 +873,7 @@ function AccordionItem({
                     {language.subItems?.map((item, index) => (
                         <li
                             key={index}
-                            className="lg:px-12 px-2 py-2 text-black lg:text-lg md:text-md text-[0.8rem] rounded-lg"
+                            className="lg:px-12 px-2 py-2 text-black lg:text-lg md:text-md text-[0.7rem] rounded-lg"
                         >
                             {item}
                         </li>

@@ -5,14 +5,14 @@ import { User, Code2, Network } from 'lucide-react';
 function StartCourse() {
 
   const [selectedCard, setSelectedCard] = useState<number | null>(1);
-
+  
   const getCardClasses = (index: number) => {
     const isSelected = selectedCard === index;
-    return `rounded-lg h-auto text-md w-96 p-5 shadow-lg cursor-pointer transition-all duration-300 ${isSelected
-      ? 'bg-blue-500 text-white'
-      : 'bg-white text-gray-900 border border-gray-100'
-      }`;
-  };
+  return `rounded-lg h-auto text-md lg:w-96 p-5 shadow-lg cursor-pointer transition-all duration-300 ${isSelected
+    ? 'bg-blue-500 text-white'
+    : 'bg-white text-gray-900 border border-gray-100'
+    }`;
+};
 
   const getIconClass = (index: number) => {
     return `w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-4 md:mb-6 ${selectedCard === index ? 'text-white' : 'text-gray-600'}`;

@@ -51,7 +51,7 @@ const Programs = () => {
                         ))}
                     </Slider>                    
                 </div>
-                <div className='container block lg:hidden  relative mx-auto  mt-24'>
+                <div className='container block lg:hidden  relative mx-auto mt-10'>
                     <Slider
                         dots={false}
                         infinite={true}

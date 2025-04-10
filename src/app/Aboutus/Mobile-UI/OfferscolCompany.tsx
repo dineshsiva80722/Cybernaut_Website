@@ -46,17 +46,26 @@ function Mobileoffers() {
                 Empowering institutions with innovative learning, industry connections, and success.
               </p>
 
-              <ul className="mt-6 list-disc list-inside space-y-4 text-blue-500">
-                <li className="text-gray-700">
-                  Cybernaut Edu-Tech connects colleges with industry experts to foster innovation and career growth.
-                </li>
-                <li className="text-gray-700">
-                  We equip students with essential skills, certifications, and job readiness through VAC and placement training.
-                </li>
-                <li className="text-gray-700">
-                  Our expert team provides software solutions and tech support to enhance learning experiences.
-                </li>
-              </ul>
+              <div className="mt-6 space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5"></div>
+                  <p className="text-gray-700 w-64">
+                    Cybernaut Edu-Tech connects colleges with industry experts to foster innovation and career growth.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5"></div>
+                  <p className="text-gray-700 w-64">
+                    We equip students with essential skills, certifications, and job readiness through VAC and placement training.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5"></div>
+                  <p className="text-gray-700 w-64">
+                    Our expert team provides software solutions and tech support to enhance learning experiences.
+                  </p>
+                </div>
+              </div>
 
               <div className="mt-6 flex gap-4">
                 <Link href="/contact">
@@ -104,19 +113,19 @@ function Mobileoffers() {
               <div className="mt-6 space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5"></div>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 w-64">
                     Access to a pool of skilled graduates ready for industry challenges.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-4 h-4 rounded-full bg-blue-500 mt-1.5"></div>
-                  <p className="text-gray-700">
+                  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5"></div>
+                  <p className="text-gray-700 w-64">
                     Customized training programs to bridge skill gaps and enhance workforce capabilities.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-4 h-4 rounded-full bg-blue-500 mt-1.5"></div>
-                  <p className="text-gray-700">
+                  <div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5"></div>
+                  <p className="text-gray-700 w-64">
                     Collaborative research opportunities and innovation partnerships with academic institutions.
                   </p>
                 </div>

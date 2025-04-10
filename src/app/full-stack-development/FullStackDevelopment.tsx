@@ -41,7 +41,7 @@ const content = {
     joinMessage: 'Join the Most Popular Tech Trio Course now!',
 };
 
-const WebDevelopment = () => {
+const FullStackDevelopment = () => {
     const [showCourses, setShowCourses] = useState(false);
     const [showDescription, setShowDescription] = useState(true);
     const [showBenefits, setShowBenefits] = useState(false);
@@ -338,35 +338,35 @@ const WebDevelopment = () => {
                 </div>
             </section>
 
-            <div className='flex w-11/12 mx-auto h-12 bg-gray-100 sticky -my-12 rounded-t-lg top-[70px] z-10'>
+            <div className='flex lg:w-11/12 mx-auto h-12 bg-gray-100 sticky -my-12 rounded-t-lg top-[70px] z-10'>
                 <ul className='flex w-full justify-start px-2 overflow-auto scroll-smooth lg:space-x-0 space-x-5 font-semibold'>
                     <style jsx>{`ul::-webkit-scrollbar {height:1px;}`}</style>
-                    <button className={`w-32 h-10 text-center text-sm ${showDescription ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleDescriptionClick}>Description</button>
-                    <button className={`w-32 h-10 text-center text-sm ${showCourses ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleModulesClick}>Modules</button>
-                    <button className={`w-32 h-10 text-center text-sm ${showBenefits ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleBenefitsClick}>Benefits</button>
-                    <button className={`w-32 h-10 text-center text-sm ${showCertification ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleCertificationClick}>Certification</button>
-                    <button className={`w-32 h-10 text-center text-sm ${showRequirements ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleRequirementsClick}>Requirements</button>
-                    <button className={`w-32 h-10 text-center text-sm ${showTestimonials ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleTestimonialsClick}>Testimonials</button>
-                    <button className={`w-32 h-10 text-center text-sm ${showFAQs ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleFAQsClick}>FAQs</button>
+                    <button className={`w-32 h-10 text-center text-sm ${showDescription ? 'text-blue-600  lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleDescriptionClick}>Description</button>
+                    <button className={`w-32 h-10 text-center text-sm ${showCourses ? 'text-blue-600 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleModulesClick}>Modules</button>
+                    <button className={`w-32 h-10 text-center text-sm ${showBenefits ? 'text-blue-600 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleBenefitsClick}>Benefits</button>
+                    <button className={`w-32 h-10 text-center text-sm ${showCertification ? 'text-blue-600 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleCertificationClick}>Certification</button>
+                    <button className={`w-32 h-10 text-center text-sm ${showRequirements ? 'text-blue-600 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleRequirementsClick}>Requirements</button>
+                    <button className={`w-32 h-10 text-center text-sm ${showTestimonials ? 'text-blue-600 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleTestimonialsClick}>Testimonials</button>
+                    <button className={`w-32 h-10 text-center text-sm ${showFAQs ? 'text-blue-600 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleFAQsClick}>FAQs</button>
                 </ul>
             </div>
 
             <section className='w-full min-h-[40rem] relative'>
                 <div className='lg:w-11/12 bg-[#f5f5f5] shadow-xl mx-auto overflow-hidden rounded-lg'>
-                    <div className=" bg-gray-100 flex items-center justify-center p-4">
-                        <div ref={descriptionRef} className="w-full  flex flex-col md:flex-row justify-around gap-6  p-4">
+                    <div className=" bg-gray-100 flex items-center justify-center lg:p-4">
+                        <div ref={descriptionRef} className="w-full  flex flex-col md:flex-row justify-around gap-6 mt-10 lg:p-4">
                             <div className="w-full md:w-1/2 place-content-center p-4 md:p-8">
                                 <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800">Course Description</h1>
                                 <p className="text-xs sm:text-sm md:text-base pt-3 md:pt-5 text-gray-600 text-justify">{content.courseDescription}</p>
                             </div>
                             <div className="w-full md:w-1/2 flex items-center justify-center p-4">
-                                <div className="w-full h-40 sm:h-48 md:h-60 lg:h-72 rounded-lg flex items-center justify-center">
+                                <div className="w-full  sm:h-48 md:h-60 lg:h-72 rounded-lg flex items-center justify-center">
                                     <Image
                                         width={500}
                                         height={500}
                                         src='https://res.cloudinary.com/dn60aovto/image/upload/v1742448916/Full_Stack_pwfclb.png'
                                         alt=""
-                                        className="w-8/12 h-full rounded-lg object-cover" />
+                                        className="w-full h-full rounded-lg object-cover" />
                                 </div>
                             </div>
                         </div>
@@ -431,4 +431,4 @@ const WebDevelopment = () => {
     )
 }
 
-export default WebDevelopment;
+export default FullStackDevelopment;

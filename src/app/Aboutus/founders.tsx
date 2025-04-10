@@ -217,7 +217,7 @@ const Founders = () => {
 
       {/* ================================================================================================================ */}
       <section className='space-y-10 lg:py-10'>
-        <div className='flex flex-col justify-center space-y-5 mx-auto py-10'>
+        <div className='flex flex-col justify-center space-y-5 mx-auto lg:py-10'>
           <h1 className='lg:text-3xl text-2xl   text-center  font-bold my-2 gap-2 '>MEET OUR FOUNDERS </h1>
 
           <p className='text-center lg:max-w-3xl w-11/12  text-sm lg:text-lg mx-auto'>
@@ -226,7 +226,7 @@ const Founders = () => {
         </div>
         <div className="container px-10   flex flex-col-reverse md:flex-row items-center justify-center gap-5  mx-auto">
           {/* Left Content */}
-          <div className="w-full  min-h-96 flex items-center justify-center py-10 lg:py-0  ">
+          <div className="w-full  min-h-96 flex items-center justify-center lg:py-0  ">
             <div className='lg:w-[33rem] w-full  min-h-80  space-y-2'>
               <h1 className="text-lg  md:text-2xl lg:text-2xl font-bold text-[#1F1F3D]">
                 Hello, I&apos;m Jayasurya Gnanavel
@@ -260,12 +260,12 @@ const Founders = () => {
                   </a>
                 </div>
               </div>
-              <a href="https://www.linkedin.com/in/jayasurya-gnanavel-b96300197">
+              {/* <a href="https://www.linkedin.com/in/jayasurya-gnanavel-b96300197">
                 <Commonbtn className="text-white flex items-center justify-center ">
                   Get in Touch
                   <ArrowRight className="ml-2" />
                 </Commonbtn>
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -284,7 +284,7 @@ const Founders = () => {
           </div>
         </div>
         {/* ----------------------------Manish---------------------------------------- */}
-        <div className="container px-10 pt-10  flex flex-col md:flex-row items-center justify-center gap-5  mx-auto">
+        <div className="container px-10 lg:pt-10  flex flex-col md:flex-row items-center justify-center gap-5  mx-auto">
 
           <div className="w-full md:w-1/2 lg:w-full lg:h-[30rem] space-y-6 flex items-center justify-center ">
             <div className='relative  w-[29rem] lg:min-h-96'>
@@ -338,12 +338,12 @@ const Founders = () => {
                   </a>
                 </div>
               </div>
-              <a href="https://www.linkedin.com/in/manish-kumar-b-175a701b0">
+              {/* <a href="https://www.linkedin.com/in/manish-kumar-b-175a701b0">
                 <Commonbtn className="text-white flex items-center justify-center ">
                   Get in Touch
                   <ArrowRight className="ml-2" />
                 </Commonbtn>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

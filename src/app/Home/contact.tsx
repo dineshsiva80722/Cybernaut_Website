@@ -52,9 +52,9 @@ function Contact() {
         <>
             <section className='relative min-h-[20rem] justify-center items-center py-6 md:pt-16 px-4 bg-white overflow-hidden'>
                 <div className='relative w-full max-w-6xl mx-auto'>
-                    <div className='relative w-full lg:h-96 flex shadow-md rounded-2xl bg-white flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12 overflow-hidden'>
+                    <div className='relative w-full lg:h-96 flex shadow-md rounded-2xl bg-white flex-col lg:flex-row gap-0 md:gap-8 lg:gap-12 overflow-hidden'>
                         {/* Left Section */}
-                        <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 rounded-3xl transition-shadow duration-300 '>
+                        <div className='relative w-full lg:w-1/2 px-6 py-2 md:p-8 lg:p-12 rounded-3xl transition-shadow duration-300 '>
                             <div className='max-w-md mx-auto space-y-6 md:space-y-4'>
                                 <div className="space-y-6">
                                     <h1 className={`${dancingScript.className} text-3xl md:text-4xl lg:text-5xl text-blue-600 leading-relaxed animate-fade-in`}>
@@ -83,7 +83,7 @@ function Contact() {
                         </div>
 
                         {/* Right Section */}
-                        <div className='relative w-full lg:w-1/2 p-6 md:p-8 lg:p-12 backdrop-blur-sm rounded-3xl transition-shadow duration-300'>
+                        <div className='relative w-full  px-6 py-2  lg:w-1/2 p-6 md:p-8 lg:p-12 backdrop-blur-sm rounded-3xl transition-shadow duration-300'>
                             <div className='max-w-md mx-auto space-y-4'>
                                 <div className="space-y-2 animate-fade-in">
                                     <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">Subscribe to Our Newsletter</h3>

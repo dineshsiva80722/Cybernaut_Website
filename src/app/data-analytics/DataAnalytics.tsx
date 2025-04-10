@@ -346,7 +346,7 @@ const DataAnalytics = () => {
 
     return (
         <section className=''>
-            <section className='mt-[70px]'>
+            <section className='lg:mt-[70px] mt-[30px]'>
                 <div
                     className='flex flex-col lg:flex-row justify-between w-full min-h-[569px]'
                     style={{ backgroundImage: `url('https://res.cloudinary.com/dn60aovto/image/upload/v1742460976/coursesBG_dpaul6.png')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -410,7 +410,7 @@ const DataAnalytics = () => {
 
                     {/* Right side form */}
                     <div ref={formjoinRef} className='w-full lg:w-1/2 flex justify-center lg:justify-end p-5 '>
-                        <div className="w-full sm:w-[25rem] h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[60px]">
+                        <div className="w-full sm:w-[25rem] min-h-[400px] rounded-lg shadow p-4 sm:p-6 bg-white relative overflow-hidden mx-auto lg:mr-20 mb-10 lg:mb-0 lg:mt-[60px]">
                             <div className="flex flex-col justify-center items-center">
                                 <h2 className="text-lg sm:text-xl text-center font-semibold text-zinc-500">
                                     To learn this Course <span className='p-1 rounded-md bg-blue-500 text-white'>online</span>
@@ -495,24 +495,24 @@ const DataAnalytics = () => {
                 </div>
             </section>
             {/* Number box */}
-            <div className='flex w-11/12 mx-auto h-12 bg-gray-100 sticky top-[70px] -mt-12 rounded-t-lg z-10'>
+            <div className='flex lg:w-11/12 mx-auto h-12 bg-gray-100 sticky top-[70px] -mt-12 rounded-t-lg z-10'>
                 <ul className='flex w-full justify-start px-2 overflow-auto scroll-smooth lg:space-x-0 space-x-5 font-semibold'>
                     <style jsx>{`ul::-webkit-scrollbar {height:1px;}`}</style>
-                    <button className={`w-32 h-10 text-center text-sm ${showDescription ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleDescriptionClick}>Description</button>
-                    <button className={`w-32 h-10 text-center text-sm ${showCourses ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleModulesClick}>Modules</button>
-                    <button className={`w-32 h-10 text-center text-sm ${showBenefits ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleBenefitsClick}>Benefits</button>
-                    <button className={`w-32 h-10 text-center text-sm ${showCertification ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleCertificationClick}>Certification</button>
-                    <button className={`w-32 h-10 text-center text-sm ${showRequirements ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleRequirementsClick}>Requirements</button>
-                    <button className={`w-32 h-10 text-center text-sm ${showTestimonials ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleTestimonialsClick}>Testimonials</button>
-                    <button className={`w-32 h-10 text-center text-sm ${showFAQs ? 'text-blue-600 border-b-2 lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleFAQsClick}>FAQs</button>
+                    <button className={`w-32 h-10 text-center text-sm ${showDescription ? 'text-blue-600  lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleDescriptionClick}>Description</button>
+                    <button className={`w-32 h-10 text-center text-sm ${showCourses ? 'text-blue-600  lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleModulesClick}>Modules</button>
+                    <button className={`w-32 h-10 text-center text-sm ${showBenefits ? 'text-blue-600  lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleBenefitsClick}>Benefits</button>
+                    <button className={`w-32 h-10 text-center text-sm ${showCertification ? 'text-blue-600  lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleCertificationClick}>Certification</button>
+                    <button className={`w-32 h-10 text-center text-sm ${showRequirements ? 'text-blue-600  lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleRequirementsClick}>Requirements</button>
+                    <button className={`w-32 h-10 text-center text-sm ${showTestimonials ? 'text-blue-600  lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleTestimonialsClick}>Testimonials</button>
+                    <button className={`w-32 h-10 text-center text-sm ${showFAQs ? 'text-blue-600  lg:bg-blue-100 border-blue-600' : ''}`} onClick={handleFAQsClick}>FAQs</button>
                 </ul>
             </div>
             <section className='w-full min-h-[40rem]  relative '>
                 <div className='lg:w-11/12 mx-auto bg-[#f5f5f5] shadow-xl  mx-start  overflow-hidden rounded-lg'>
 
                     <div className=" bg-gray-100 flex items-center justify-center p-4">
-                        <div ref={descriptionRef} className="w-full  flex flex-col md:flex-row justify-around gap-6  p-4">
-                            <div className="w-full md:w-1/2 place-content-center p-4 md:p-8">
+                        <div ref={descriptionRef} className="w-full  flex flex-col md:flex-row justify-around gap-6">
+                            <div className="w-full md:w-1/2 place-content-center  md:p-8">
                                 <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800">Course Description</h1>
                                 <p className="text-xs sm:text-sm md:text-base pt-3 text-justify md:pt-5 text-gray-600">
                                     {content.detailedDescription1}
@@ -522,13 +522,13 @@ const DataAnalytics = () => {
                                 </p> */}
                             </div>
                             <div className="w-full md:w-1/2 flex items-center justify-center p-4">
-                                <div className="w-full h-40 sm:h-48 md:h-60 lg:h-72 rounded-lg flex items-center justify-center">
+                                <div className="w-full lg:h-72 rounded-lg flex items-center justify-center">
                                     <Image
                                         src="https://res.cloudinary.com/dn60aovto/image/upload/v1742448915/DataAnalytics_vnount.png"
                                         alt="Data Analytics"
                                         width={500}
                                         height={500}
-                                        className="w-8/12 h-full rounded-lg text-gray-500" />
+                                        className="lg:w-8/12 h-full rounded-lg text-gray-500" />
                                 </div>
                             </div>
                         </div>
@@ -824,14 +824,14 @@ function AccordionItem({
     onClick: () => void;
 }) {
     return (
-        <div className="rounded-lg my-2 w-11/12 mx-auto rounded-b-none border-b-[0.2rem]  border-b-blue-600">
+        <div className="rounded-lg my-2 lg:w-11/12 mx-auto rounded-b-none border-b-[0.2rem]  border-b-blue-600">
             <button
-                className={`w-full px-6 py-4  rounded-lg flex items-center justify-between transition-colors duration-200 ${isOpen ? 'bg-white' : 'bg-white hover:bg-gray-50'
+                className={`w-full lg:px-6 py-4  rounded-lg flex items-center justify-between transition-colors duration-200 ${isOpen ? 'bg-white' : 'bg-white hover:bg-gray-50'
                     }`}
                 onClick={onClick}
             >
                 <div className="flex justify-between  w-full items-center gap-3">
-                    <span className="text-lg font-medium  text-gray-900">{language.name}</span>
+                    <span className="text-md font-medium  text-gray-900">{language.name}</span>
 
                     <svg
                         className={`w-5 h-5 rotate-90 text-blue-500 transform transition-transform duration-200 ease-out ${isOpen ? 'rotate-90' : ''

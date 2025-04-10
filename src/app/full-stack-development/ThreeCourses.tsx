@@ -18,12 +18,12 @@ function AccordionItem({
   return (
     <div className="rounded-lg my-2 w-11/12 mx-auto rounded-b-none border-b-[0.2rem]  border-b-blue-600">
       <button
-        className={`w-full px-6 py-4  rounded-lg flex items-center justify-between transition-colors duration-200 ${isOpen ? 'bg-white' : 'bg-white hover:bg-gray-50'
+        className={`w-full lg:px-6 px-2 py-4 rounded-lg flex items-center justify-between transition-colors duration-200 ${isOpen ? 'bg-white' : 'bg-white hover:bg-gray-50'
           }`}
         onClick={onClick}
       >
-        <div className="flex justify-between  w-full items-center gap-3">
-          <span className="text-lg font-medium  text-gray-900">{language.name}</span>
+        <div className="flex justify-between  w-full items-start gap-3">
+          <span className="text-md font-medium  text-gray-900">{language.name}</span>
 
           <svg
             className={`w-5 h-5 rotate-90 text-blue-500 transform transition-transform duration-200 ease-out ${isOpen ? 'rotate-90' : ''
