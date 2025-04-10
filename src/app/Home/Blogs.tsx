@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import Commonbtn from '@/components/ui/Commonbtn';
+import Image from 'next/image';
 
 // Define the Blog type
 interface Blog {
@@ -63,8 +64,19 @@ const Blogs: React.FC = () => {
                     <p className="text-center text-gray-500 text-lg mt-10">No posts found.</p>
                 ) : (
                     <div className="grid sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8 md:gap-12 mt-10">
+
                         {blogs.map((blog, index) => (
                             <div key={index} className="rounded-lg overflow-hidden bg-white hover:shadow-md shadow-lg -transition-transform hover:scale-105 duration-300 p-6">
+                                <div className="mb-6">
+                                    <div className=" w-full h-[15rem] aspect-h-9 relative">
+                                        <Image
+                                            src={"https://res.cloudinary.com/dn60aovto/image/upload/v1744274935/Cybernaut_Logo_White_Background_Vertical_bzb2w6.png"}
+                                            alt={"cybernaut logo"}
+                                            fill
+                                            className="object-cover rounded-xl"
+                                        />
+                                    </div>
+                                </div>
                                 <h3 className="font-bold text-2xl text-gray-900 mb-3">{blog.title}</h3>
                                 <p className="text-gray-600">{blog.description}</p>
                                 <a href={blog.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 flex items-center gap-2 hover:gap-3 transition-all mt-4 font-semibold">
