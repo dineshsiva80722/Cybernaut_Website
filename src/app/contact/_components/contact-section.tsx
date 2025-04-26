@@ -10,33 +10,48 @@ import { toast } from 'sonner';
 export default function ContactSection() {
   const [loading, setLoading] = React.useState(false);
   const [thankYouVisible, setThankYouVisible] = React.useState(false);
+  const [result, setResult] = React.useState("");
+  const [isSubmitted, setIsSubmitted] = React.useState(false);
+  const [email, setEmail] = React.useState("");
+  const [Newsletter, setNewsletter] = React.useState("");
+  const formRef = React.useRef<HTMLFormElement>(null);
 
-  const handleFormSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target as HTMLFormElement);
-    const scriptUrl = 'https://api.web3forms.com/submit';
-    
-    setLoading(true); // Set loading state
-    setThankYouVisible(false); // Reset thank you message visibility
+  const onSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target as HTMLFormElement);
+    formData.append("access_key", "a197629c-d626-4f94-aa93-8f0862d38c39");
+    formData.append("Newsletter", Newsletter);
+    formData.append("email", email);
 
+    setLoading(true);
     try {
-        const response = await fetch(scriptUrl, {
-            method: 'POST',
-            body: formData,
-        });
-        
-        if (response.ok) {
-            toast.success('We got your message, Cybernaut Team will get back to you.');
-            setThankYouVisible(true); // Show thank you message
-        } else {
-            toast.error('Error in submitting form, please try again.');
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSubmitted(true);
+        setResult("Form Submitted Successfully");
+        setThankYouVisible(true);
+        if (formRef.current) {
+          formRef.current.reset();
         }
+        setEmail(""); // Clear the email state
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setThankYouVisible(false);
+        }, 2000);
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
     } catch (error) {
-        toast.error(`Error in submitting form, please try again. ${error}`);
+      setResult(`Error in submitting form, please try again. ${error}`);
     } finally {
-        setLoading(false); // Reset loading state
-        const form = e.target as HTMLFormElement;
-        form?.reset(); // Reset the form
+      setLoading(false);
     }
   };
 
@@ -59,7 +74,7 @@ export default function ContactSection() {
               Fill in the form below
             </h2>
 
-            <form onSubmit={handleFormSubmit}>
+            <form ref={formRef} onSubmit={onSubmit}>
               {/* Hidden Access Key */}
               <input
                 type="hidden"
@@ -90,6 +105,8 @@ export default function ContactSection() {
                   required
                   type="email"
                   placeholder="Email"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
                 />
                 <Input
                   type="tel"
@@ -108,7 +125,7 @@ export default function ContactSection() {
 
               <div className="mt-4 grid">
                 <Button type="submit" disabled={loading} size="lg">
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
               </div>
 
@@ -118,13 +135,22 @@ export default function ContactSection() {
                 </p>
               </div>
 
+              {/* Submission Result Message */}
+              {result && (
+                <div className="mt-4 text-center">
+                  <p className={`text-lg font-semibold ${isSubmitted ? "text-green-600" : "text-red-600"}`}>
+                    {result}
+                  </p>
+                </div>
+              )}
+
               {/* Thank You Message */}
               {thankYouVisible && (
-                  <div className="mt-4 text-center">
-                      <p className="text-lg font-semibold text-green-600">
-                          Thank you for your message! We will get back to you shortly.
-                      </p>
-                  </div>
+                <div className="mt-4 text-center">
+                  <p className="text-lg font-semibold text-green-600">
+                    Thank you for your message! We will get back to you shortly.
+                  </p>
+                </div>
               )}
             </form>
           </div>

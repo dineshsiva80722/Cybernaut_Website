@@ -22,7 +22,7 @@ function Contact() {
         event.preventDefault();
         setResult("Sending....");
         const formData = new FormData(event.target as HTMLFormElement);
-        formData.append("access_key", "701509da-ad7d-43d7-9c9e-6f849ee8ff6d");
+        formData.append("access_key", "a197629c-d626-4f94-aa93-8f0862d38c39");
         formData.append("Newsletter", Newsletter);
         formData.append("email", email);
 

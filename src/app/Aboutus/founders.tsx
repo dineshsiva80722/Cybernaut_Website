@@ -9,33 +9,34 @@ import { NumberTicker } from "@/components/magicui/number-ticker";
 import { StaticImageData } from 'next/image';
 import Commonbtn from '@/components/ui/Commonbtn';
 // import { ArrowRight } from 'lucide-react';
-const people: { id: number; name: string; designation: string; image: string | StaticImageData; }[] = [
+const people: { id: number; name: string; designation: string; image: string | StaticImageData }[] = [
   {
     id: 1,
-    name: "N.R.Bharani Dharan",
+    name: "Anitha",
     designation: "Grapic Designer",
-    image: "https://res.cloudinary.com/dn60aovto/image/upload/v1742386633/Bharanik_lkp0mm.png"
+    image: 'https://res.cloudinary.com/dn60aovto/image/upload/v1745684466/iamge_5_p6bhi7.jpg'
   },
   {
     id: 2,
-    name: "Mohan",
+    name: "Rajkumar",
     designation: "Data Analyst",
-    image: "https://res.cloudinary.com/dn60aovto/image/upload/v1742386634/Motta_sbzvjc.png"
+    image: 'https://res.cloudinary.com/dn60aovto/image/upload/v1745684466/image_3_ak86ua.jpg'
   },
   {
     id: 3,
-    name: "Dinesh",
+    name: "Kavitha",
     designation: "Web Developer",
-    image: "https://res.cloudinary.com/dn60aovto/image/upload/v1742386634/Dinrsh_gnoytj.png"
+    image: 'https://res.cloudinary.com/dn60aovto/image/upload/v1745684468/image_4_klk704.jpg'
   },
   {
     id: 4,
-    name: "Chezhaiyan",
+    name: "MohanKumar",
     designation: "Web Developer",
-    image: "https://res.cloudinary.com/dn60aovto/image/upload/v1742386633/ChALIYAN_ahfzsr.png"
+    image: 'https://res.cloudinary.com/dn60aovto/image/upload/v1745684469/image_1_ozdukk.jpg'
   }
 
 ];
+
 
 const images = ["https://res.cloudinary.com/dn60aovto/image/upload/v1742450995/JS_hkszd9.png", "https://res.cloudinary.com/dn60aovto/image/upload/v1742451262/Manish_q6qmq6.png"]; // Array of images
 
