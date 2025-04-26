@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { CircleHelp, MailOpen, MapPinned, MessageCircle } from 'lucide-react';
 import React from 'react';
 import ContactIconBlock from './contact-icon-block';
-import { toast } from 'sonner';
 
 export default function ContactSection() {
   const [loading, setLoading] = React.useState(false);
@@ -13,7 +12,7 @@ export default function ContactSection() {
   const [result, setResult] = React.useState("");
   const [isSubmitted, setIsSubmitted] = React.useState(false);
   const [email, setEmail] = React.useState("");
-  const [Newsletter, setNewsletter] = React.useState("");
+  const [Newsletter, ] = React.useState("");
   const formRef = React.useRef<HTMLFormElement>(null);
 
   const onSubmit = async (event: React.FormEvent) => {
