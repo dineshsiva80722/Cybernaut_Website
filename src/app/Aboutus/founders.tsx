@@ -30,8 +30,8 @@ const people: { id: number; name: string; designation: string; image: string | S
   },
   {
     id: 4,
-    name: "MohanKumar",
-    designation: "Web Developer",
+    name: "MohanKumar ",
+    designation: "AI Expert",
     image: 'https://res.cloudinary.com/dn60aovto/image/upload/v1745684469/image_1_ozdukk.jpg'
   }
 
