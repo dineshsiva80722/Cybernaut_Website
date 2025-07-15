@@ -92,14 +92,13 @@ function HeroIllustration() {
         'https://res.cloudinary.com/dn60aovto/image/upload/v1742386635/Mou_11_irulgg.jpg',
         'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/Community4_uropla.jpg',
         'https://res.cloudinary.com/dn60aovto/image/upload/v1742386629/Communit3_pev1so.jpg',
-        'https://res.cloudinary.com/dn60aovto/image/upload/v1742386630/community2_nu8zpz.jpg',
         'https://res.cloudinary.com/dn60aovto/image/upload/v1742386634/Community1_sbfhwy.jpg'
     ];
 
     const getImageSrc = () => {
         if (scrollTranslate <= 500) return [sliderImages[0], sliderImages[3], sliderImages[5], sliderImages[6], sliderImages[2], sliderImages[4], sliderImages[1]];
         if (scrollTranslate <= 1000) return [sliderImages[8], sliderImages[7], sliderImages[9]];
-        return [sliderImages[10], sliderImages[11], sliderImages[12], sliderImages[13]];
+        return [sliderImages[10], sliderImages[11], sliderImages[12]];
     };
 
 
